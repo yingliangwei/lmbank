@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">முகப்பிற்குச் செல்லும்</string>
+    <string name="c">மேலே செல்லும்</string>
+    <string name="d">மேலும் விருப்பங்கள்</string>
+    <string name="e">முடிந்தது</string>
+    <string name="f">அனைத்தையும் காட்டு</string>
+    <string name="g">ஆப்ஸைத் தேர்வுசெய்க</string>
+    <string name="h">ஆஃப்</string>
+    <string name="i">ஆன்</string>
+    <string name="j">Alt மற்றும்</string>
+    <string name="k">Ctrl மற்றும்</string>
+    <string name="l">delete</string>
+    <string name="m">enter</string>
+    <string name="n">Function மற்றும்</string>
+    <string name="o">Meta மற்றும்</string>
+    <string name="p">Shift மற்றும்</string>
+    <string name="q">space</string>
+    <string name="r">Sym மற்றும்</string>
+    <string name="s">Menu மற்றும்</string>
+    <string name="t">தேடுக…</string>
+    <string name="u">வினவலை அழிக்கும்</string>
+    <string name="v">தேடல் வினவல்</string>
+    <string name="w">தேடும்</string>
+    <string name="x">வினவலைச் சமர்ப்பிக்கும்</string>
+    <string name="y">குரல் தேடல்</string>
+    <string name="z">இதில் பகிர்</string>
+    <string name="a0">%s மூலம் பகிர்</string>
+    <string name="a1">சுருக்கும்</string>
+    <string name="dc">தேடல்</string>
+    <string name="di">999+</string>
+</resources>

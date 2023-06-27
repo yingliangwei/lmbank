@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:ddtlb="http://schemas.android.com/apk/res/android"
+    ddtlb:id="@+id/b3"
+    style="@style/p2"
+    ddtlb:layout_width="0dp"
+    ddtlb:layout_height="48dp"
+    ddtlb:layout_weight="1"
+    ddtlb:background="@null"
+    ddtlb:enabled="false"
+    ddtlb:orientation="horizontal"
+    ddtlb:paddingStart="4dp">
+
+    <ImageView
+        ddtlb:id="@+id/b6"
+        ddtlb:layout_width="@dimen/il"
+        ddtlb:layout_height="@dimen/il"
+        ddtlb:layout_gravity="start|center_vertical"
+        ddtlb:alpha="0.5"
+        ddtlb:enabled="false"
+        ddtlb:scaleType="centerInside" />
+
+    <TextView
+        ddtlb:id="@+id/bb"
+        style="@style/p3"
+        ddtlb:layout_width="wrap_content"
+        ddtlb:layout_height="wrap_content"
+        ddtlb:layout_gravity="start|center_vertical"
+        ddtlb:alpha="0.5"
+        ddtlb:clickable="false"
+        ddtlb:ellipsize="end"
+        ddtlb:enabled="false"
+        ddtlb:paddingStart="4dp"
+        ddtlb:singleLine="true" />
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:brVUa="http://schemas.android.com/apk/res/android"
+    brVUa:id="@+id/cz"
+    brVUa:layout_width="match_parent"
+    brVUa:layout_height="wrap_content"
+    brVUa:gravity="bottom"
+    brVUa:layoutDirection="locale"
+    brVUa:orientation="horizontal"
+    brVUa:paddingLeft="12dp"
+    brVUa:paddingTop="4dp"
+    brVUa:paddingRight="12dp"
+    brVUa:paddingBottom="4dp">
+
+    <Button
+        brVUa:id="@android:id/button3"
+        brVUa:layout_width="wrap_content"
+        brVUa:layout_height="wrap_content"
+        brVUa:layout_weight="1" />
+
+    <Button
+        brVUa:id="@android:id/button2"
+        brVUa:layout_width="wrap_content"
+        brVUa:layout_height="wrap_content"
+        brVUa:layout_weight="1" />
+
+    <Button
+        brVUa:id="@android:id/button1"
+        brVUa:layout_width="wrap_content"
+        brVUa:layout_height="wrap_content"
+        brVUa:layout_weight="1" />
+</LinearLayout>

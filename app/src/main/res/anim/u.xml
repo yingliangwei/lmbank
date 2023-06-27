@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:oaOaV="http://schemas.android.com/apk/res/android">
+    <set oaOaV:ordering="sequentially">
+        <objectAnimator oaOaV:interpolator="@interpolator/g" oaOaV:duration="183" oaOaV:valueFrom="2" oaOaV:valueTo="2" oaOaV:valueType="floatType" oaOaV:propertyName="strokeWidth"/>
+        <objectAnimator oaOaV:interpolator="@interpolator/g" oaOaV:duration="16" oaOaV:valueFrom="2" oaOaV:valueTo="18" oaOaV:valueType="floatType" oaOaV:propertyName="strokeWidth"/>
+        <objectAnimator oaOaV:interpolator="@interpolator/g" oaOaV:duration="300" oaOaV:valueFrom="18" oaOaV:valueTo="2" oaOaV:valueType="floatType" oaOaV:propertyName="strokeWidth"/>
+    </set>
+</set>

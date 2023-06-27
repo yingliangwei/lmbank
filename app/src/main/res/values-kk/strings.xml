@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">Негізгі бетке өту</string>
+    <string name="c">Жоғары қарай өту</string>
+    <string name="d">Басқа опциялар</string>
+    <string name="e">Дайын</string>
+    <string name="f">Барлығын көру</string>
+    <string name="g">Қолданбаны таңдау</string>
+    <string name="h">ӨШІРУ</string>
+    <string name="i">ҚОСУ</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">delete</string>
+    <string name="m">enter</string>
+    <string name="n">Function+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Shift+</string>
+    <string name="q">бос орын</string>
+    <string name="r">Sym+</string>
+    <string name="s">Menu+</string>
+    <string name="t">Іздеу…</string>
+    <string name="u">Сұрауды өшіру</string>
+    <string name="v">Іздеу сұрауы</string>
+    <string name="w">Іздеу</string>
+    <string name="x">Сұрауды жіберу</string>
+    <string name="y">Дауыспен іздеу</string>
+    <string name="z">Бөлісу</string>
+    <string name="a0">%s қолданбасымен бөлісу</string>
+    <string name="a1">Жию</string>
+    <string name="dc">Іздеу</string>
+    <string name="di">999+</string>
+</resources>

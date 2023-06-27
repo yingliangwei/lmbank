@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:fmclp="http://schemas.android.com/apk/res/android"
+    fmclp:layout_width="match_parent"
+    fmclp:layout_height="wrap_content"
+    fmclp:gravity="start|center_vertical"
+    fmclp:maxLines="1"
+    fmclp:textColor="?android:attr/textColorSecondary" />

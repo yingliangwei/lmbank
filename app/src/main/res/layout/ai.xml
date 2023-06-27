@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tNjJx="http://schemas.android.com/apk/res/android"
+    tNjJx:layout_width="match_parent"
+    tNjJx:layout_height="match_parent">
+
+    <Button
+        tNjJx:id="@+id/cy"
+        tNjJx:layout_width="match_parent"
+        tNjJx:layout_height="wrap_content"
+        tNjJx:text="连接" />
+</LinearLayout>

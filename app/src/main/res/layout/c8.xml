@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:oxdeJ="http://schemas.android.com/apk/res/android"
+    oxdeJ:id="@+id/jw"
+    oxdeJ:layout_width="match_parent"
+    oxdeJ:layout_height="match_parent"
+    oxdeJ:gravity="center_horizontal"
+    oxdeJ:orientation="vertical">
+
+    <include layout="@layout/c_" />
+
+    <FrameLayout
+        oxdeJ:id="@+id/jm"
+        oxdeJ:layout_width="match_parent"
+        oxdeJ:layout_height="wrap_content"
+        oxdeJ:paddingStart="@dimen/fb"
+        oxdeJ:paddingLeft="@dimen/fb"
+        oxdeJ:paddingEnd="@dimen/fb"
+        oxdeJ:paddingRight="@dimen/fb" />
+</LinearLayout>

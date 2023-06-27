@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:mYfod="http://schemas.android.com/apk/res/android"
+    mYfod:id="@+id/ng"
+    mYfod:layout_width="match_parent"
+    mYfod:layout_height="128dp">
+
+    <include
+        layout="@layout/co"
+        mYfod:layout_width="@dimen/iq"
+        mYfod:layout_height="@dimen/ip" />
+
+    <include
+        layout="@layout/ci"
+        mYfod:layout_width="48dp"
+        mYfod:layout_height="48dp"
+        mYfod:layout_alignParentEnd="true"
+        mYfod:layout_alignParentRight="true"
+        mYfod:layout_marginLeft="2dp"
+        mYfod:layout_marginRight="2dp" />
+
+    <LinearLayout
+        mYfod:id="@+id/kc"
+        mYfod:layout_width="match_parent"
+        mYfod:layout_height="wrap_content"
+        mYfod:layout_marginStart="@dimen/ip"
+        mYfod:layout_marginLeft="@dimen/ip"
+        mYfod:layout_toStartOf="@+id/da"
+        mYfod:layout_toLeftOf="@+id/da"
+        mYfod:minHeight="@dimen/ip"
+        mYfod:orientation="horizontal"
+        mYfod:paddingTop="@dimen/ir">
+
+        <FrameLayout
+            mYfod:id="@+id/kb"
+            mYfod:layout_width="match_parent"
+            mYfod:layout_height="wrap_content"
+            mYfod:layout_marginStart="@dimen/io"
+            mYfod:layout_marginLeft="@dimen/io"
+            mYfod:layout_marginEnd="8dp"
+            mYfod:layout_marginRight="8dp"
+            mYfod:layout_marginBottom="8dp"
+            mYfod:layout_weight="1" />
+
+        <FrameLayout
+            mYfod:id="@+id/lt"
+            mYfod:layout_width="wrap_content"
+            mYfod:layout_height="wrap_content"
+            mYfod:layout_marginEnd="8dp"
+            mYfod:layout_marginRight="8dp"
+            mYfod:paddingTop="@dimen/iu">
+
+            <TimePicker
+                mYfod:id="@+id/oh"
+                mYfod:layout_width="wrap_content"
+                mYfod:layout_height="wrap_content"
+                mYfod:layout_gravity="end|top"
+                mYfod:singleLine="true"
+                mYfod:textAppearance="@style/it"
+                mYfod:visibility="gone" />
+
+            <Chronometer
+                mYfod:id="@+id/dx"
+                mYfod:layout_width="wrap_content"
+                mYfod:layout_height="wrap_content"
+                mYfod:layout_gravity="end|top"
+                mYfod:singleLine="true"
+                mYfod:textAppearance="@style/it"
+                mYfod:visibility="gone" />
+
+            <TextView
+                mYfod:id="@+id/hp"
+                mYfod:layout_width="wrap_content"
+                mYfod:layout_height="wrap_content"
+                mYfod:layout_gravity="end|bottom"
+                mYfod:layout_marginTop="20dp"
+                mYfod:singleLine="true"
+                mYfod:textAppearance="@style/io" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        mYfod:id="@+id/j4"
+        mYfod:layout_width="match_parent"
+        mYfod:layout_height="48dp"
+        mYfod:layout_alignParentBottom="true"
+        mYfod:layout_marginLeft="12dp"
+        mYfod:layout_marginRight="12dp"
+        mYfod:layoutDirection="ltr"
+        mYfod:orientation="horizontal" />
+
+    <ImageView
+        mYfod:id="@+id/b5"
+        mYfod:layout_width="match_parent"
+        mYfod:layout_height="1dp"
+        mYfod:layout_above="@+id/j4"
+        mYfod:background="?android:attr/dividerHorizontal" />
+</RelativeLayout>

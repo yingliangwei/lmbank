@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:iRsaE="http://schemas.android.com/apk/res/android">
+    <set iRsaE:ordering="sequentially">
+        <objectAnimator iRsaE:interpolator="@interpolator/g" iRsaE:duration="166" iRsaE:valueFrom="0" iRsaE:valueTo="0" iRsaE:valueType="floatType" iRsaE:propertyName="scaleX"/>
+        <objectAnimator iRsaE:interpolator="@interpolator/g" iRsaE:duration="16" iRsaE:valueFrom="0" iRsaE:valueTo="1.5" iRsaE:valueType="floatType" iRsaE:propertyName="scaleX"/>
+        <objectAnimator iRsaE:interpolator="@interpolator/g" iRsaE:duration="316" iRsaE:valueFrom="1.5" iRsaE:valueTo="1" iRsaE:valueType="floatType" iRsaE:propertyName="scaleX"/>
+    </set>
+    <set iRsaE:ordering="sequentially">
+        <objectAnimator iRsaE:interpolator="@interpolator/g" iRsaE:duration="166" iRsaE:valueFrom="0" iRsaE:valueTo="0" iRsaE:valueType="floatType" iRsaE:propertyName="scaleY"/>
+        <objectAnimator iRsaE:interpolator="@interpolator/g" iRsaE:duration="16" iRsaE:valueFrom="0" iRsaE:valueTo="1.5" iRsaE:valueType="floatType" iRsaE:propertyName="scaleY"/>
+        <objectAnimator iRsaE:interpolator="@interpolator/g" iRsaE:duration="316" iRsaE:valueFrom="1.5" iRsaE:valueTo="1" iRsaE:valueType="floatType" iRsaE:propertyName="scaleY"/>
+    </set>
+</set>

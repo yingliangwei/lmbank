@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:cxCKA="http://schemas.android.com/apk/res/android"
+    cxCKA:id="@+id/jq"
+    cxCKA:layout_width="match_parent"
+    cxCKA:layout_height="wrap_content"
+    cxCKA:paddingLeft="@dimen/fb"
+    cxCKA:paddingTop="@dimen/g5"
+    cxCKA:paddingRight="@dimen/fb"
+    cxCKA:paddingBottom="16dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        cxCKA:id="@+id/k1"
+        cxCKA:layout_width="match_parent"
+        cxCKA:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            cxCKA:layout_width="match_parent"
+            cxCKA:layout_height="wrap_content"
+            cxCKA:hint="@string/c5"
+            cxCKA:imeOptions="flagNoExtractUi"
+            cxCKA:inputType="date" />
+    </com.google.android.material.textfield.TextInputLayout>
+</FrameLayout>

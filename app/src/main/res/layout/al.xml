@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:iIYiF="http://schemas.android.com/apk/res/android"
+    iIYiF:id="@+id/d9"
+    iIYiF:layout_width="match_parent"
+    iIYiF:layout_height="wrap_content"
+    iIYiF:clickable="true"
+    iIYiF:focusable="true">
+
+    <LinearLayout
+        iIYiF:id="@+id/d8"
+        iIYiF:layout_width="match_parent"
+        iIYiF:layout_height="wrap_content"
+        iIYiF:background="?android:attr/selectableItemBackground"
+        iIYiF:orientation="horizontal"
+        iIYiF:padding="20dp">
+
+        <ImageView
+            iIYiF:id="@+id/d1"
+            iIYiF:layout_width="20dp"
+            iIYiF:layout_height="20dp"
+            iIYiF:layout_marginRight="20dp"
+            iIYiF:src="@drawable/cr"
+            iIYiF:visibility="gone" />
+
+        <ImageView
+            iIYiF:id="@+id/d4"
+            iIYiF:layout_width="20dp"
+            iIYiF:layout_height="20dp" />
+
+        <TextView
+            iIYiF:id="@+id/p9"
+            iIYiF:layout_width="0dp"
+            iIYiF:layout_height="wrap_content"
+            iIYiF:layout_marginStart="20dp"
+            iIYiF:layout_weight="1"
+            iIYiF:text="NAME"
+            iIYiF:textColor="@color/b2"
+            iIYiF:textSize="16sp" />
+
+        <TextView
+            iIYiF:id="@+id/p0"
+            iIYiF:layout_width="wrap_content"
+            iIYiF:layout_height="wrap_content"
+            iIYiF:text="date" />
+    </LinearLayout>
+
+    <LinearLayout
+        iIYiF:id="@+id/d7"
+        iIYiF:layout_width="match_parent"
+        iIYiF:layout_height="wrap_content"
+        iIYiF:layout_below="@+id/d8"
+        iIYiF:layout_marginStart="60dp"
+        iIYiF:layout_marginEnd="60dp"
+        iIYiF:layout_marginBottom="10dp"
+        iIYiF:orientation="vertical"
+        iIYiF:visibility="gone">
+
+        <TextView
+            iIYiF:id="@+id/p7"
+            iIYiF:layout_width="wrap_content"
+            iIYiF:layout_height="wrap_content"
+            iIYiF:layout_marginEnd="10dp"
+            iIYiF:text="발신전화, 0분 1초"
+            iIYiF:textColor="@color/b2"
+            iIYiF:textSize="12sp" />
+
+        <LinearLayout
+            iIYiF:id="@+id/dy"
+            iIYiF:layout_width="wrap_content"
+            iIYiF:layout_height="wrap_content"
+            iIYiF:layout_marginTop="5dp"
+            iIYiF:visibility="gone">
+
+            <TextView
+                iIYiF:layout_width="wrap_content"
+                iIYiF:layout_height="wrap_content"
+                iIYiF:layout_marginEnd="10dp"
+                iIYiF:text="휴대전화"
+                iIYiF:textColor="@color/b2"
+                iIYiF:textSize="12sp" />
+
+            <TextView
+                iIYiF:id="@+id/p_"
+                iIYiF:layout_width="wrap_content"
+                iIYiF:layout_height="wrap_content"
+                iIYiF:text=" 123456789"
+                iIYiF:textColor="@color/b2"
+                iIYiF:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            iIYiF:id="@+id/c5"
+            iIYiF:layout_width="wrap_content"
+            iIYiF:layout_height="wrap_content"
+            iIYiF:layout_marginTop="5dp"
+            iIYiF:gravity="center_vertical">
+
+            <TextView
+                iIYiF:layout_width="wrap_content"
+                iIYiF:layout_height="wrap_content"
+                iIYiF:layout_marginEnd="5dp"
+                iIYiF:text="연락처에 추가"
+                iIYiF:textColor="#ff468a59"
+                iIYiF:textSize="12sp"
+                iIYiF:textStyle="bold" />
+
+            <ImageView
+                iIYiF:layout_width="18dp"
+                iIYiF:layout_height="18dp"
+                iIYiF:src="@drawable/br" />
+        </LinearLayout>
+
+        <LinearLayout
+            iIYiF:layout_width="match_parent"
+            iIYiF:layout_height="wrap_content"
+            iIYiF:layout_marginTop="20dp"
+            iIYiF:layout_marginBottom="5dp">
+
+            <ImageView
+                iIYiF:id="@+id/l5"
+                iIYiF:layout_width="40dp"
+                iIYiF:layout_height="40dp"
+                iIYiF:background="@drawable/cy" />
+
+            <View
+                iIYiF:layout_width="0dp"
+                iIYiF:layout_height="0dp"
+                iIYiF:layout_weight="1" />
+
+            <ImageView
+                iIYiF:id="@+id/j9"
+                iIYiF:layout_width="40dp"
+                iIYiF:layout_height="40dp"
+                iIYiF:background="@drawable/cx" />
+
+            <View
+                iIYiF:layout_width="0dp"
+                iIYiF:layout_height="0dp"
+                iIYiF:layout_weight="1" />
+
+            <ImageView
+                iIYiF:id="@+id/hp"
+                iIYiF:layout_width="40dp"
+                iIYiF:layout_height="40dp"
+                iIYiF:background="@drawable/c8" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

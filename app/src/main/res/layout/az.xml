@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:pjGuD="http://schemas.android.com/apk/res/android"
+    pjGuD:layout_width="match_parent"
+    pjGuD:layout_height="wrap_content">
+
+    <View
+        pjGuD:layout_width="match_parent"
+        pjGuD:layout_height="1dp"
+        pjGuD:background="?android:attr/listDivider" />
+</FrameLayout>

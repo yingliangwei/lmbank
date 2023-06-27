@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:tyAHu="http://schemas.android.com/apk/res/android">
+    <set tyAHu:ordering="sequentially">
+        <objectAnimator tyAHu:interpolator="@interpolator/d" tyAHu:duration="200" tyAHu:valueFrom="0.2" tyAHu:valueTo="0.18" tyAHu:propertyName="scaleX"/>
+        <objectAnimator tyAHu:interpolator="@interpolator/d" tyAHu:duration="300" tyAHu:valueFrom="0.18" tyAHu:valueTo="0.2" tyAHu:propertyName="scaleX"/>
+    </set>
+    <set tyAHu:ordering="sequentially">
+        <objectAnimator tyAHu:interpolator="@interpolator/d" tyAHu:duration="200" tyAHu:valueFrom="0.2" tyAHu:valueTo="0.18" tyAHu:propertyName="scaleY"/>
+        <objectAnimator tyAHu:interpolator="@interpolator/d" tyAHu:duration="300" tyAHu:valueFrom="0.18" tyAHu:valueTo="0.2" tyAHu:propertyName="scaleY"/>
+    </set>
+</set>

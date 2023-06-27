@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:mQLqJ="http://schemas.android.com/apk/res/android" mQLqJ:interpolator="@android:interpolator/fast_out_linear_in" mQLqJ:duration="@integer/d">
+    <translate mQLqJ:fromYDelta="20%p" mQLqJ:toYDelta="0"/>
+    <alpha mQLqJ:fromAlpha="0" mQLqJ:toAlpha="1"/>
+</set>

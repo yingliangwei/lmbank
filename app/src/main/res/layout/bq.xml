@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:sGnjz="http://schemas.android.com/apk/res/android"
+    sGnjz:id="@+id/oq"
+    sGnjz:layout_width="match_parent"
+    sGnjz:layout_height="wrap_content"
+    sGnjz:orientation="vertical">
+
+    <LinearLayout
+        sGnjz:id="@+id/ok"
+        style="en"
+        sGnjz:layout_width="wrap_content"
+        sGnjz:layout_height="match_parent">
+
+        <ImageView
+            sGnjz:id="@android:id/icon"
+            sGnjz:layout_width="wrap_content"
+            sGnjz:layout_height="wrap_content" />
+
+        <TextView
+            sGnjz:id="@+id/c6"
+            sGnjz:layout_width="wrap_content"
+            sGnjz:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <android.widget.Space
+        sGnjz:id="@+id/oj"
+        sGnjz:layout_width="match_parent"
+        sGnjz:layout_height="@dimen/ab"
+        sGnjz:visibility="gone" />
+</LinearLayout>

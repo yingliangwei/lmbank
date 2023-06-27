@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:rcwkM="http://schemas.android.com/apk/res/android"
+    rcwkM:layout_width="wrap_content"
+    rcwkM:layout_height="wrap_content"
+    rcwkM:background="@color/g3"
+    rcwkM:gravity="center"
+    rcwkM:minWidth="180dp"
+    rcwkM:minHeight="60dp"
+    rcwkM:orientation="vertical"
+    rcwkM:padding="10dp">
+
+    <ProgressBar
+        rcwkM:layout_width="100dp"
+        rcwkM:layout_height="100dp"
+        rcwkM:layout_centerInParent="true"
+        rcwkM:indeterminateDrawable="@drawable/dd" />
+
+    <TextView
+        rcwkM:id="@+id/hc"
+        rcwkM:layout_width="wrap_content"
+        rcwkM:layout_height="wrap_content"
+        rcwkM:layout_marginTop="5dp"
+        rcwkM:textSize="14dp"
+        rcwkM:visibility="invisible" />
+</LinearLayout>

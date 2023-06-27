@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:elaOf="http://schemas.android.com/apk/res/android"
+    xmlns:p2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    elaOf:id="@android:id/text1"
+    elaOf:layout_width="match_parent"
+    elaOf:layout_height="wrap_content"
+    elaOf:drawablePadding="20dp"
+    elaOf:ellipsize="marquee"
+    elaOf:gravity="center"
+    elaOf:paddingStart="@dimen/av"
+    elaOf:paddingLeft="@dimen/av"
+    elaOf:textAlignment="viewStart"
+    p2:drawableLeftCompat="?android:attr/listChoiceIndicatorSingle"
+    p2:drawableStartCompat="?android:attr/listChoiceIndicatorSingle"
+    tools:ignore="RtlCompat" />

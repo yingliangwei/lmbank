@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:gvdsH="http://schemas.android.com/apk/res/android"
+    style="@style/g9"
+    gvdsH:layout_width="match_parent"
+    gvdsH:layout_height="58dp">
+
+    <ImageView
+        gvdsH:id="@android:id/icon1"
+        style="@style/g_"
+        gvdsH:layout_width="@dimen/ae"
+        gvdsH:layout_height="48dp"
+        gvdsH:layout_alignParentTop="true"
+        gvdsH:layout_alignParentBottom="true"
+        gvdsH:scaleType="centerInside"
+        gvdsH:visibility="invisible" />
+
+    <ImageView
+        gvdsH:id="@+id/fh"
+        style="@style/gb"
+        gvdsH:layout_width="48dp"
+        gvdsH:layout_height="48dp"
+        gvdsH:layout_alignParentTop="true"
+        gvdsH:layout_alignParentBottom="true"
+        gvdsH:scaleType="centerInside"
+        gvdsH:visibility="gone" />
+
+    <ImageView
+        gvdsH:id="@android:id/icon2"
+        style="@style/ga"
+        gvdsH:layout_width="48dp"
+        gvdsH:layout_height="48dp"
+        gvdsH:layout_alignWithParentIfMissing="true"
+        gvdsH:layout_alignParentTop="true"
+        gvdsH:layout_alignParentBottom="true"
+        gvdsH:scaleType="centerInside"
+        gvdsH:visibility="gone" />
+
+    <TextView
+        gvdsH:id="@android:id/text2"
+        style="?android:attr/dropDownItemStyle"
+        gvdsH:layout_width="match_parent"
+        gvdsH:layout_height="29dp"
+        gvdsH:layout_alignWithParentIfMissing="true"
+        gvdsH:layout_alignParentBottom="true"
+        gvdsH:gravity="top"
+        gvdsH:paddingBottom="4dp"
+        gvdsH:singleLine="true"
+        gvdsH:visibility="gone" />
+
+    <TextView
+        gvdsH:id="@android:id/text1"
+        style="?android:attr/dropDownItemStyle"
+        gvdsH:layout_width="match_parent"
+        gvdsH:layout_height="wrap_content"
+        gvdsH:layout_above="@android:id/text2"
+        gvdsH:layout_centerVertical="true"
+        gvdsH:singleLine="true" />
+</RelativeLayout>

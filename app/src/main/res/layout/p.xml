@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:qoMQm="http://schemas.android.com/apk/res/android"
+    qoMQm:id="@+id/h4"
+    qoMQm:layout_width="wrap_content"
+    qoMQm:layout_height="wrap_content"
+    qoMQm:layout_gravity="center_vertical"
+    qoMQm:layout_marginLeft="8dp"
+    qoMQm:layout_marginTop="8dp"
+    qoMQm:layout_marginRight="-8dp"
+    qoMQm:layout_marginBottom="8dp"
+    qoMQm:duplicateParentState="true"
+    qoMQm:scaleType="centerInside" />

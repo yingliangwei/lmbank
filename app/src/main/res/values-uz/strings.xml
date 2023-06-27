@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">Boshiga o‘tish</string>
+    <string name="c">Yopish</string>
+    <string name="d">Yana</string>
+    <string name="e">OK</string>
+    <string name="f">Hammasi</string>
+    <string name="g">Ilovani tanlang</string>
+    <string name="h">YOQILMAGAN</string>
+    <string name="i">YONIQ</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">Delete</string>
+    <string name="m">Enter</string>
+    <string name="n">Fn+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Shift+</string>
+    <string name="q">Probel</string>
+    <string name="r">Sym+</string>
+    <string name="s">Menyu+</string>
+    <string name="t">Qidirish…</string>
+    <string name="u">So‘rovni o‘chirish</string>
+    <string name="v">Qidiruv so‘rovi</string>
+    <string name="w">Qidiruv</string>
+    <string name="x">So‘rov yaratish</string>
+    <string name="y">Ovozli qidiruv</string>
+    <string name="z">Ulashish</string>
+    <string name="a0">%s orqali ulashish</string>
+    <string name="a1">Yig‘ish</string>
+    <string name="dc">Qidiruv</string>
+    <string name="di">999+</string>
+</resources>

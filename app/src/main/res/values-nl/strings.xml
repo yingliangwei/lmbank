@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">Navigeren naar startpositie</string>
+    <string name="c">Omhoog navigeren</string>
+    <string name="d">Meer opties</string>
+    <string name="e">Gereed</string>
+    <string name="f">Alles weergeven</string>
+    <string name="g">Een app selecteren</string>
+    <string name="h">UIT</string>
+    <string name="i">AAN</string>
+    <string name="j">Alt +</string>
+    <string name="k">Ctrl +</string>
+    <string name="l">Delete</string>
+    <string name="m">Enter</string>
+    <string name="n">Functie +</string>
+    <string name="o">Meta +</string>
+    <string name="p">Shift +</string>
+    <string name="q">spatie</string>
+    <string name="r">Sym +</string>
+    <string name="s">Menu +</string>
+    <string name="t">Zoeken…</string>
+    <string name="u">Zoekopdracht wissen</string>
+    <string name="v">Zoekopdracht</string>
+    <string name="w">Zoeken</string>
+    <string name="x">Zoekopdracht verzenden</string>
+    <string name="y">Gesproken zoekopdracht</string>
+    <string name="z">Delen met</string>
+    <string name="a0">Delen met %s</string>
+    <string name="a1">Samenvouwen</string>
+    <string name="dc">Zoeken</string>
+    <string name="di">999+</string>
+</resources>

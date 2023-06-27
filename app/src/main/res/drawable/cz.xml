@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:aMGse="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape aMGse:shape="oval">
+            <solid aMGse:color="@color/ah" />
+            <size
+                aMGse:width="24dp"
+                aMGse:height="24dp" />
+        </shape>
+    </item>
+    <item
+        aMGse:width="20dp"
+        aMGse:height="20dp"
+        aMGse:drawable="@drawable/cn"
+        aMGse:gravity="center" />
+</layer-list>

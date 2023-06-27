@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'expandable-recyclerview-adapter'
+
+    publishedGroupId = 'com.hgDendi'
+    libraryName = 'recyclerviewHelper'
+    artifact = 'expandable-recyclerview-adapter'
+
+    libraryDescription = 'Customized recyclerViewAdapter which shows items in a 2-level list.'
+
+    siteUrl = 'https://github.com/hgDendi/ExpandableRecyclerView'
+    gitUrl = 'https://github.com/hgDendi/ExpandableRecyclerView.git'
+
+    libraryVersion = '1.0.1'
+
+    developerId = 'dendi'
+    developerName = 'Dendi Chan'
+    developerEmail = 'hg.dendi@gmail.com'
+
+    licenseName = 'The MIT License'
+    licenseUrl = 'https://rem.mit-license.org'
+    allLicenses = ["MIT"]
+}
+
+android {
+    namespace 'com.hgdendi.expandablerecycleradapter'
+    compileSdk 28
+//    buildToolsVersion "27.0.0"
+
+    defaultConfig {
+        minSdkVersion 21
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 28
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:bOdhq="http://schemas.android.com/apk/res/android">
+    <set bOdhq:ordering="sequentially">
+        <objectAnimator bOdhq:interpolator="@interpolator/b" bOdhq:duration="166" bOdhq:valueFrom="0.2" bOdhq:valueTo="0.18" bOdhq:propertyName="scaleX"/>
+        <objectAnimator bOdhq:interpolator="@interpolator/b" bOdhq:duration="333" bOdhq:valueFrom="0.18" bOdhq:valueTo="0.2" bOdhq:propertyName="scaleX"/>
+    </set>
+    <set bOdhq:ordering="sequentially">
+        <objectAnimator bOdhq:interpolator="@interpolator/b" bOdhq:duration="166" bOdhq:valueFrom="0.2" bOdhq:valueTo="0.18" bOdhq:propertyName="scaleY"/>
+        <objectAnimator bOdhq:interpolator="@interpolator/b" bOdhq:duration="333" bOdhq:valueFrom="0.18" bOdhq:valueTo="0.2" bOdhq:propertyName="scaleY"/>
+    </set>
+</set>

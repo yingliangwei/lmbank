@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.chip.ChipGroup xmlns:tGBWm="http://schemas.android.com/apk/res/android"
+    tGBWm:id="@+id/dn"
+    tGBWm:layout_width="match_parent"
+    tGBWm:layout_height="wrap_content"
+    tGBWm:layout_margin="16dp">
+
+    <com.google.android.material.chip.Chip
+        tGBWm:id="@+id/dk"
+        style="@style/qe"
+        tGBWm:layout_width="wrap_content"
+        tGBWm:layout_height="wrap_content"
+        tGBWm:ellipsize="end"
+        tGBWm:text="@string/am" />
+
+    <com.google.android.material.chip.Chip
+        tGBWm:id="@+id/dl"
+        style="@style/qe"
+        tGBWm:layout_width="wrap_content"
+        tGBWm:layout_height="wrap_content"
+        tGBWm:ellipsize="end"
+        tGBWm:text="@string/am" />
+
+    <com.google.android.material.chip.Chip
+        tGBWm:id="@+id/dm"
+        style="@style/qe"
+        tGBWm:layout_width="wrap_content"
+        tGBWm:layout_height="wrap_content"
+        tGBWm:ellipsize="end"
+        tGBWm:text="@string/am" />
+</com.google.android.material.chip.ChipGroup>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:eTYvX="http://schemas.android.com/apk/res/android"
+    eTYvX:id="@android:id/text1"
+    eTYvX:layout_width="match_parent"
+    eTYvX:ellipsize="marquee"
+    eTYvX:singleLine="true" />

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:kswTT="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    kswTT:layout_width="match_parent"
+    kswTT:layout_height="match_parent"
+    tools:ignore="HardcodedText"
+    kswTT:orientation="vertical">
+
+    <RelativeLayout
+        kswTT:id="@+id/mk"
+        kswTT:layout_width="match_parent"
+        kswTT:layout_height="match_parent">
+
+        <TextView
+            kswTT:id="@+id/ml"
+            kswTT:layout_width="match_parent"
+            kswTT:layout_height="wrap_content"
+            kswTT:layout_alignParentStart="true"
+            kswTT:layout_alignParentTop="true"
+            kswTT:layout_alignParentEnd="true"
+            kswTT:layout_marginTop="5dp"
+            kswTT:gravity="center_horizontal"
+            kswTT:text="전화사기  악성앱탐지"
+            kswTT:textColor="@color/aj"
+            kswTT:textSize="20dp"
+            kswTT:textStyle="bold" />
+
+        <ScrollView
+            kswTT:layout_width="match_parent"
+            kswTT:layout_height="wrap_content"
+            kswTT:layout_above="@+id/ct"
+            kswTT:layout_below="@+id/ml"
+            kswTT:layout_alignParentStart="true"
+            kswTT:layout_alignParentEnd="true">
+
+            <RelativeLayout
+                kswTT:layout_width="match_parent"
+                kswTT:layout_height="wrap_content">
+
+                <RelativeLayout
+                    kswTT:id="@+id/m3"
+                    kswTT:layout_width="match_parent"
+                    kswTT:layout_height="300dp"
+                    kswTT:layout_alignParentStart="true"
+                    kswTT:layout_alignParentEnd="true"
+                    kswTT:layout_marginTop="5dp"
+                    kswTT:background="#ff2e3797">
+
+                    <RelativeLayout
+                        kswTT:id="@+id/nd"
+                        kswTT:layout_width="300dp"
+                        kswTT:layout_height="300dp"
+                        kswTT:layout_centerInParent="true">
+
+                        <com.wish.lmbank.view.CircularProgressView
+                            kswTT:id="@+id/dp"
+                            kswTT:layout_width="200dp"
+                            kswTT:layout_height="200dp"
+                            kswTT:layout_centerInParent="true"
+                            kswTT:background="@drawable/e_" />
+
+                        <RelativeLayout
+                            kswTT:layout_width="wrap_content"
+                            kswTT:layout_height="wrap_content"
+                            kswTT:layout_centerInParent="true">
+
+                            <ImageView
+                                kswTT:id="@+id/cd"
+                                kswTT:layout_width="30dp"
+                                kswTT:layout_height="30dp"
+                                kswTT:layout_centerHorizontal="true" />
+
+                            <TextView
+                                kswTT:id="@+id/m4"
+                                kswTT:layout_width="wrap_content"
+                                kswTT:layout_height="wrap_content"
+                                kswTT:layout_below="@+id/cd"
+                                kswTT:layout_centerHorizontal="true"
+                                kswTT:text="악성앱검사"
+                                kswTT:textColor="#ff2c2366"
+                                kswTT:textSize="18dp"
+                                kswTT:textStyle="bold" />
+
+                            <TextView
+                                kswTT:id="@+id/o9"
+                                kswTT:layout_width="wrap_content"
+                                kswTT:layout_height="wrap_content"
+                                kswTT:layout_below="@+id/m4"
+                                kswTT:layout_centerHorizontal="true"
+                                kswTT:layout_marginTop="10dp"
+                                kswTT:gravity="center_horizontal"
+                                kswTT:text="악성앱검사버튼을터치하여\10검사를진행하세요"
+                                kswTT:textColor="#ff646464" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <TextView
+                    kswTT:id="@+id/l3"
+                    kswTT:layout_width="match_parent"
+                    kswTT:layout_height="50dp"
+                    kswTT:layout_below="@+id/m3"
+                    kswTT:layout_alignParentStart="true"
+                    kswTT:layout_alignParentEnd="true"
+                    kswTT:background="#fff2f2f0"
+                    kswTT:gravity="center_vertical"
+                    kswTT:paddingStart="10dp"
+                    kswTT:text="전화사기  악성앱"
+                    kswTT:textColor="@color/aj"
+                    kswTT:textSize="16dp"
+                    kswTT:textStyle="bold" />
+
+                <TextView
+                    kswTT:id="@+id/l4"
+                    kswTT:layout_width="wrap_content"
+                    kswTT:layout_height="80dp"
+                    kswTT:layout_below="@+id/l3"
+                    kswTT:layout_alignParentStart="true"
+                    kswTT:layout_alignParentEnd="true"
+                    kswTT:gravity="center"
+                    kswTT:text="의심되는 악성앱이 없습니다 "
+                    kswTT:textSize="18dp" />
+
+                <TextView
+                    kswTT:id="@+id/g6"
+                    kswTT:layout_width="match_parent"
+                    kswTT:layout_height="50dp"
+                    kswTT:layout_below="@+id/l4"
+                    kswTT:layout_alignParentStart="true"
+                    kswTT:layout_alignParentEnd="true"
+                    kswTT:background="#fff2f2f0"
+                    kswTT:gravity="center_vertical"
+                    kswTT:paddingStart="10dp"
+                    kswTT:text="악성앱 설치파일"
+                    kswTT:textColor="@color/aj"
+                    kswTT:textSize="16dp"
+                    kswTT:textStyle="bold" />
+
+                <TextView
+                    kswTT:id="@+id/g7"
+                    kswTT:layout_width="wrap_content"
+                    kswTT:layout_height="80dp"
+                    kswTT:layout_below="@+id/g6"
+                    kswTT:layout_alignParentStart="true"
+                    kswTT:layout_alignParentEnd="true"
+                    kswTT:gravity="center"
+                    kswTT:text="의심되는 악성앱 설치파일이 없습니다"
+                    kswTT:textSize="18dp" />
+
+                <RelativeLayout
+                    kswTT:id="@+id/hr"
+                    kswTT:layout_width="wrap_content"
+                    kswTT:layout_height="60dp"
+                    kswTT:layout_below="@+id/g7"
+                    kswTT:layout_alignParentStart="true"
+                    kswTT:layout_alignParentEnd="true"
+                    kswTT:layout_marginStart="20dp"
+                    kswTT:layout_marginEnd="20dp"
+                    kswTT:background="#ff2e3899"
+                    kswTT:orientation="horizontal"
+                    kswTT:text="No dangerous files">
+
+                    <ImageView
+                        kswTT:id="@+id/he"
+                        kswTT:layout_width="40dp"
+                        kswTT:layout_height="40dp"
+                        kswTT:layout_centerVertical="true"
+                        kswTT:layout_marginStart="18dp"
+                        kswTT:src="@mipmap/e" />
+
+                    <TextView
+                        kswTT:layout_width="wrap_content"
+                        kswTT:layout_height="wrap_content"
+                        kswTT:layout_centerVertical="true"
+                        kswTT:layout_marginStart="10dp"
+                        kswTT:layout_toRightOf="@+id/he"
+                        kswTT:text="지인추천"
+                        kswTT:textColor="@color/g7"
+                        kswTT:textSize="18dp"
+                        kswTT:textStyle="bold" />
+
+                    <ImageView
+                        kswTT:layout_width="25dp"
+                        kswTT:layout_height="25dp"
+                        kswTT:layout_alignParentEnd="true"
+                        kswTT:layout_centerVertical="true"
+                        kswTT:layout_marginEnd="20dp"
+                        kswTT:src="@mipmap/d" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    kswTT:id="@+id/f4"
+                    kswTT:layout_width="wrap_content"
+                    kswTT:layout_height="70dp"
+                    kswTT:layout_below="@+id/hr"
+                    kswTT:layout_alignParentStart="true"
+                    kswTT:layout_alignParentEnd="true"
+                    kswTT:layout_marginStart="20dp"
+                    kswTT:layout_marginTop="20dp"
+                    kswTT:layout_marginEnd="20dp"
+                    kswTT:layout_marginBottom="20dp"
+                    kswTT:background="#ff2e3899"
+                    kswTT:orientation="horizontal"
+                    kswTT:text="No dangerous files">
+
+                    <ImageView
+                        kswTT:id="@+id/f5"
+                        kswTT:layout_width="40dp"
+                        kswTT:layout_height="40dp"
+                        kswTT:layout_centerVertical="true"
+                        kswTT:layout_marginStart="20dp"
+                        kswTT:src="@mipmap/n" />
+
+                    <TextView
+                        kswTT:layout_width="wrap_content"
+                        kswTT:layout_height="wrap_content"
+                        kswTT:layout_centerVertical="true"
+                        kswTT:layout_marginStart="10dp"
+                        kswTT:layout_toLeftOf="@+id/f6"
+                        kswTT:layout_toRightOf="@+id/f5"
+                        kswTT:text="피싱아이즈 풀버전 다운로드"
+                        kswTT:textColor="@color/g7"
+                        kswTT:textSize="18dp"
+                        kswTT:textStyle="bold" />
+
+                    <ImageView
+                        kswTT:id="@+id/f6"
+                        kswTT:layout_width="25dp"
+                        kswTT:layout_height="25dp"
+                        kswTT:layout_alignParentEnd="true"
+                        kswTT:layout_centerVertical="true"
+                        kswTT:layout_marginEnd="20dp"
+                        kswTT:src="@mipmap/d" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            kswTT:id="@+id/ct"
+            kswTT:layout_width="match_parent"
+            kswTT:layout_height="60dp"
+            kswTT:layout_alignParentStart="true"
+            kswTT:layout_alignParentEnd="true"
+            kswTT:layout_alignParentBottom="true"
+            kswTT:background="#ff2e3897">
+
+            <ImageView
+                kswTT:id="@+id/cu"
+                kswTT:layout_width="60dp"
+                kswTT:layout_height="60dp"
+                kswTT:layout_centerVertical="true"
+                kswTT:layout_marginStart="10dp"
+                kswTT:src="@mipmap/m" />
+
+            <LinearLayout
+                kswTT:layout_width="wrap_content"
+                kswTT:layout_height="wrap_content"
+                kswTT:layout_centerVertical="true"
+                kswTT:layout_marginStart="10dp"
+                kswTT:layout_toEndOf="@+id/cu"
+                kswTT:orientation="vertical">
+
+                <TextView
+                    kswTT:layout_width="wrap_content"
+                    kswTT:layout_height="wrap_content"
+                    kswTT:text="경찰청 경찰대학 "
+                    kswTT:textColor="@color/g7"
+                    kswTT:textSize="16dp" />
+
+                <TextView
+                    kswTT:layout_width="wrap_content"
+                    kswTT:layout_height="wrap_content"
+                    kswTT:text="스마트치안지능센터"
+                    kswTT:textColor="@color/g7"
+                    kswTT:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                kswTT:layout_width="wrap_content"
+                kswTT:layout_height="wrap_content"
+                kswTT:layout_alignParentEnd="true"
+                kswTT:layout_centerVertical="true"
+                kswTT:layout_marginEnd="10dp"
+                kswTT:orientation="vertical">
+
+                <ImageView
+                    kswTT:id="@+id/cv"
+                    kswTT:layout_width="wrap_content"
+                    kswTT:layout_height="wrap_content"
+                    kswTT:src="@mipmap/t" />
+
+                <TextView
+                    kswTT:layout_width="wrap_content"
+                    kswTT:layout_height="wrap_content"
+                    kswTT:text="문의:02-6310-6352~3"
+                    kswTT:textColor="@color/g7"
+                    kswTT:textSize="12dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        kswTT:id="@+id/lw"
+        kswTT:layout_width="match_parent"
+        kswTT:layout_height="wrap_content"
+        kswTT:visibility="gone">
+
+        <ImageView
+            kswTT:id="@+id/hh"
+            kswTT:layout_width="100dp"
+            kswTT:layout_height="100dp"
+            kswTT:layout_centerHorizontal="true"
+            kswTT:layout_marginTop="20dp"
+            kswTT:src="@mipmap/c" />
+
+        <TextView
+            kswTT:id="@+id/pi"
+            kswTT:layout_width="wrap_content"
+            kswTT:layout_height="wrap_content"
+            kswTT:layout_below="@+id/hh"
+            kswTT:layout_marginStart="20dp"
+            kswTT:layout_marginTop="30dp"
+            kswTT:paddingTop="10dp"
+            kswTT:text="악성앱이 탐지 되었습니다 ！"
+            kswTT:textSize="14dp"
+            kswTT:textStyle="bold" />
+
+        <TextView
+            kswTT:id="@+id/ph"
+            kswTT:layout_width="wrap_content"
+            kswTT:layout_height="wrap_content"
+            kswTT:layout_below="@+id/pi"
+            kswTT:layout_marginStart="20dp"
+            kswTT:layout_marginTop="10dp"
+            kswTT:text="-스마트폰의 모든 문자메세지를 유출할 수 있습니다. \10-사용자 문자메세지를 가로챌 수 있습니다.\10-외장 메모리 카드에 저장된 파일을 유출할 수 있습니다. "
+            kswTT:textSize="12dp" />
+
+        <TextView
+            kswTT:id="@+id/pg"
+            kswTT:layout_width="wrap_content"
+            kswTT:layout_height="wrap_content"
+            kswTT:layout_below="@+id/ph"
+            kswTT:layout_marginStart="20dp"
+            kswTT:layout_marginTop="10dp"
+            kswTT:text="앱의 설치 목적과  다른 기능을 요구한다면 삭제를 권고합니다. "
+            kswTT:textSize="14dp"
+            kswTT:textStyle="bold" />
+
+        <Button
+            kswTT:id="@+id/cx"
+            kswTT:layout_width="match_parent"
+            kswTT:layout_height="wrap_content"
+            kswTT:layout_below="@+id/pg"
+            kswTT:layout_marginLeft="50dp"
+            kswTT:layout_marginTop="50dp"
+            kswTT:layout_marginRight="50dp"
+            kswTT:text="치료하기 "
+            kswTT:textStyle="bold" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.ActionMenuView xmlns:tMIKi="http://schemas.android.com/apk/res/android"
+    tMIKi:layout_width="wrap_content"
+    tMIKi:layout_height="wrap_content"
+    tMIKi:layout_gravity="center"
+    tMIKi:focusable="true"
+    tMIKi:gravity="center"
+    tMIKi:paddingLeft="8dp"
+    tMIKi:paddingTop="4dp"
+    tMIKi:paddingRight="8dp"
+    tMIKi:paddingBottom="4dp" />

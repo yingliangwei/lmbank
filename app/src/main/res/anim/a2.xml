@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:gVuQi="http://schemas.android.com/apk/res/android" gVuQi:interpolator="@android:interpolator/linear_out_slow_in" gVuQi:duration="250">
+    <translate gVuQi:fromYDelta="20%p" gVuQi:toYDelta="0"/>
+    <alpha gVuQi:fromAlpha="0" gVuQi:toAlpha="1"/>
+</set>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:bMOpn="http://schemas.android.com/apk/res/android"
+    xmlns:p6="http://schemas.android.com/apk/res-auto"
+    bMOpn:id="@+id/jd"
+    bMOpn:layout_width="match_parent"
+    bMOpn:layout_height="wrap_content"
+    bMOpn:orientation="horizontal"
+    bMOpn:paddingTop="@dimen/fz"
+    bMOpn:paddingBottom="@dimen/fx">
+
+    <FrameLayout
+        bMOpn:layout_width="0dp"
+        bMOpn:layout_height="match_parent"
+        bMOpn:layout_weight="1">
+
+        <com.google.android.material.button.MaterialButton
+            bMOpn:id="@+id/je"
+            p6:icon="@drawable/dj"
+            p6:iconPadding="4dp"
+            bMOpn:layout_width="wrap_content"
+            bMOpn:layout_height="@dimen/fy"
+            bMOpn:layout_gravity="start"
+            bMOpn:gravity="start|center_vertical"
+            bMOpn:insetTop="0dp"
+            bMOpn:insetBottom="0dp" />
+    </FrameLayout>
+
+    <com.google.android.material.button.MaterialButton
+        bMOpn:id="@+id/jg"
+        p6:icon="@drawable/dh"
+        bMOpn:layout_width="@dimen/hh"
+        bMOpn:layout_height="@dimen/fy"
+        bMOpn:contentDescription="@string/bl"
+        bMOpn:gravity="center"
+        bMOpn:insetTop="0dp"
+        bMOpn:insetBottom="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        bMOpn:id="@+id/jf"
+        p6:icon="@drawable/di"
+        bMOpn:layout_width="@dimen/hh"
+        bMOpn:layout_height="@dimen/fy"
+        bMOpn:contentDescription="@string/bk"
+        bMOpn:gravity="center"
+        bMOpn:insetTop="0dp"
+        bMOpn:insetBottom="0dp" />
+</LinearLayout>

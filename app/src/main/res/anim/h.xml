@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translate xmlns:klFAM="http://schemas.android.com/apk/res/android" klFAM:interpolator="@android:anim/decelerate_interpolator" klFAM:duration="@android:integer/config_mediumAnimTime" klFAM:fromYDelta="-50%p" klFAM:toYDelta="0"/>

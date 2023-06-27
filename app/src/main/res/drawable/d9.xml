@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:nEtZl="http://schemas.android.com/apk/res/android" nEtZl:shape="oval">
+    <solid nEtZl:color="#20020000"/>
+    <corners nEtZl:radius="10000px"/>
+</shape>

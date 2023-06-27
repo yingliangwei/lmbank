@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:qgGgx="http://schemas.android.com/apk/res/android"
+    qgGgx:id="@+id/h8"
+    qgGgx:layout_width="@dimen/iq"
+    qgGgx:layout_height="@dimen/ip">
+
+    <ImageView
+        qgGgx:id="@+id/h4"
+        qgGgx:layout_width="match_parent"
+        qgGgx:layout_height="match_parent"
+        qgGgx:layout_marginStart="@dimen/in"
+        qgGgx:layout_marginTop="@dimen/in"
+        qgGgx:layout_marginEnd="@dimen/in"
+        qgGgx:layout_marginBottom="@dimen/in"
+        qgGgx:scaleType="centerInside" />
+
+    <ImageView
+        qgGgx:id="@+id/ls"
+        qgGgx:layout_width="@dimen/it"
+        qgGgx:layout_height="@dimen/it"
+        qgGgx:layout_gravity="end|bottom"
+        qgGgx:layout_marginEnd="8dp"
+        qgGgx:layout_marginBottom="8dp"
+        qgGgx:scaleType="centerInside"
+        qgGgx:visibility="gone" />
+</FrameLayout>

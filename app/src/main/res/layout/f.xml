@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:hIiot="http://schemas.android.com/apk/res/android"
+    xmlns:p2="http://schemas.android.com/apk/res-auto"
+    hIiot:id="@+id/ba"
+    hIiot:layout_width="wrap_content"
+    hIiot:layout_height="match_parent"
+    hIiot:layout_marginEnd="16dp"
+    hIiot:layout_marginRight="16dp"
+    hIiot:clickable="true"
+    hIiot:contentDescription="@string/e"
+    hIiot:focusable="true"
+    hIiot:paddingStart="8dp"
+    hIiot:paddingLeft="8dp" />

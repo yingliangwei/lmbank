@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view xmlns:mDfdb="http://schemas.android.com/apk/res/android"
+    mDfdb:id="@+id/bx"
+    class="androidx.appcompat.widget.ActivityChooserView$InnerLayout"
+    mDfdb:layout_width="wrap_content"
+    mDfdb:layout_height="match_parent"
+    mDfdb:layout_gravity="center">
+
+    <FrameLayout
+        mDfdb:id="@+id/fw"
+        mDfdb:layout_width="wrap_content"
+        mDfdb:layout_height="match_parent"
+        mDfdb:layout_gravity="center"
+        mDfdb:addStatesFromChildren="true"
+        mDfdb:focusable="true"
+        mDfdb:paddingLeft="12dp"
+        mDfdb:paddingTop="2dp"
+        mDfdb:paddingRight="12dp"
+        mDfdb:paddingBottom="2dp">
+
+        <ImageView
+            mDfdb:id="@+id/h"
+            mDfdb:layout_width="32dp"
+            mDfdb:layout_height="32dp"
+            mDfdb:layout_gravity="center"
+            mDfdb:adjustViewBounds="true"
+            mDfdb:scaleType="fitCenter" />
+    </FrameLayout>
+
+    <FrameLayout
+        mDfdb:id="@+id/eg"
+        mDfdb:layout_width="wrap_content"
+        mDfdb:layout_height="match_parent"
+        mDfdb:layout_gravity="center"
+        mDfdb:addStatesFromChildren="true"
+        mDfdb:focusable="true"
+        mDfdb:paddingLeft="12dp"
+        mDfdb:paddingTop="2dp"
+        mDfdb:paddingRight="12dp"
+        mDfdb:paddingBottom="2dp">
+
+        <ImageView
+            mDfdb:id="@+id/hi"
+            mDfdb:layout_width="32dp"
+            mDfdb:layout_height="32dp"
+            mDfdb:layout_gravity="center"
+            mDfdb:adjustViewBounds="true"
+            mDfdb:scaleType="fitCenter" />
+    </FrameLayout>
+</view>

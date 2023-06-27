@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:pgzul="http://schemas.android.com/apk/res/android"
+    xmlns:p8="http://schemas.android.com/apk/res-auto"
+    pgzul:id="@+id/e1"
+    pgzul:layout_width="match_parent"
+    pgzul:layout_height="wrap_content"
+    pgzul:clickable="true"
+    pgzul:focusable="true">
+
+    <LinearLayout
+        pgzul:id="@+id/e0"
+        pgzul:layout_width="match_parent"
+        pgzul:layout_height="wrap_content"
+        pgzul:background="?android:attr/selectableItemBackground"
+        pgzul:gravity="center_vertical"
+        pgzul:orientation="horizontal"
+        pgzul:padding="10dp">
+
+        <FrameLayout
+            pgzul:layout_width="wrap_content"
+            pgzul:layout_height="wrap_content"
+            pgzul:layout_gravity="center"
+            pgzul:layout_marginStart="10dp">
+
+            <com.wish.lmbank.dialer.contact.RoundLetterView
+                pgzul:id="@+id/pv"
+                p8:rlv_titleSize="17sp"
+                pgzul:layout_width="35dp"
+                pgzul:layout_height="35dp"
+                pgzul:layout_gravity="center" />
+
+            <ImageView
+                pgzul:id="@+id/i4"
+                pgzul:layout_width="35dp"
+                pgzul:layout_height="35dp"
+                pgzul:layout_gravity="center"
+                pgzul:src="@drawable/cr"
+                pgzul:visibility="invisible" />
+        </FrameLayout>
+
+        <TextView
+            pgzul:id="@+id/p5"
+            pgzul:layout_width="match_parent"
+            pgzul:layout_height="wrap_content"
+            pgzul:layout_gravity="center_vertical"
+            pgzul:layout_marginStart="20dp"
+            pgzul:text="TextView"
+            pgzul:textColor="@color/b2"
+            pgzul:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        pgzul:id="@+id/dz"
+        pgzul:layout_width="match_parent"
+        pgzul:layout_height="wrap_content"
+        pgzul:layout_below="@+id/e0"
+        pgzul:layout_marginStart="60dp"
+        pgzul:layout_marginEnd="60dp"
+        pgzul:layout_marginBottom="10dp"
+        pgzul:orientation="vertical"
+        pgzul:visibility="gone">
+
+        <LinearLayout
+            pgzul:layout_width="wrap_content"
+            pgzul:layout_height="wrap_content">
+
+            <TextView
+                pgzul:layout_width="wrap_content"
+                pgzul:layout_height="wrap_content"
+                pgzul:layout_marginStart="18dp"
+                pgzul:layout_marginEnd="10dp"
+                pgzul:text="휴대전화"
+                pgzul:textColor="@color/b2"
+                pgzul:textSize="12sp" />
+
+            <TextView
+                pgzul:id="@+id/p_"
+                pgzul:layout_width="wrap_content"
+                pgzul:layout_height="wrap_content"
+                pgzul:text=" 123456789"
+                pgzul:textColor="@color/b2"
+                pgzul:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            pgzul:layout_width="match_parent"
+            pgzul:layout_height="wrap_content"
+            pgzul:layout_marginTop="20dp"
+            pgzul:layout_marginBottom="10dp">
+
+            <ImageView
+                pgzul:id="@+id/l5"
+                pgzul:layout_width="40dp"
+                pgzul:layout_height="40dp"
+                pgzul:background="@drawable/cy" />
+
+            <View
+                pgzul:layout_width="0dp"
+                pgzul:layout_height="0dp"
+                pgzul:layout_weight="1" />
+
+            <ImageView
+                pgzul:id="@+id/j9"
+                pgzul:layout_width="40dp"
+                pgzul:layout_height="40dp"
+                pgzul:background="@drawable/cx" />
+
+            <View
+                pgzul:layout_width="0dp"
+                pgzul:layout_height="0dp"
+                pgzul:layout_weight="1" />
+
+            <ImageView
+                pgzul:id="@+id/fg"
+                pgzul:layout_width="40dp"
+                pgzul:layout_height="40dp"
+                pgzul:background="@drawable/c2" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        pgzul:id="@+id/dx"
+        pgzul:layout_width="match_parent"
+        pgzul:layout_height="1dp"
+        pgzul:layout_below="@+id/dz"
+        pgzul:layout_marginStart="60dp"
+        pgzul:layout_marginEnd="15dp"
+        pgzul:background="@color/a_" />
+</RelativeLayout>

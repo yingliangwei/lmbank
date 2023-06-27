@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:hNphu="http://schemas.android.com/apk/res/android" hNphu:interpolator="@android:interpolator/fast_out_slow_in" hNphu:duration="@integer/d">
+    <translate hNphu:fromYDelta="0" hNphu:toYDelta="20%p"/>
+    <alpha hNphu:fromAlpha="1" hNphu:toAlpha="0"/>
+</set>

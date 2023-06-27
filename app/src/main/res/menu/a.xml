@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:kdbBX="http://schemas.android.com/apk/res/android">
+    <item kdbBX:id="@+id/j8" kdbBX:title="@string/bf"/>
+    <item kdbBX:id="@+id/j5" kdbBX:title="@string/be"/>
+</menu>

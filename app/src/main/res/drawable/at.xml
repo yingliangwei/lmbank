@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:npBdF="http://schemas.android.com/apk/res/android" npBdF:shape="rectangle" npBdF:useLevel="false">
+    <solid npBdF:color="@color/g7"/>
+    <corners npBdF:radius="25dp"/>
+</shape>

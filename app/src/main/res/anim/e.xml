@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:cpAYS="http://schemas.android.com/apk/res/android" cpAYS:shareInterpolator="false">
+    <alpha cpAYS:interpolator="@android:anim/decelerate_interpolator" cpAYS:duration="@integer/b" cpAYS:fromAlpha="1" cpAYS:toAlpha="0"/>
+</set>

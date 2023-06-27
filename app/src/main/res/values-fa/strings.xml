@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">پیمایش به صفحه اصلی</string>
+    <string name="c">رفتن به بالا</string>
+    <string name="d">گزینه‌های بیشتر</string>
+    <string name="e">تمام</string>
+    <string name="f">دیدن همه</string>
+    <string name="g">انتخاب برنامه</string>
+    <string name="h">خاموش</string>
+    <string name="i">روشن</string>
+    <string name="j">‎Alt+‎</string>
+    <string name="k">‎Ctrl+‎</string>
+    <string name="l">حذف</string>
+    <string name="m">enter</string>
+    <string name="n">‎Function+‎</string>
+    <string name="o">‎Meta+‎</string>
+    <string name="p">‎Shift+‎</string>
+    <string name="q">فاصله</string>
+    <string name="r">‎Sym+‎</string>
+    <string name="s">منو+</string>
+    <string name="t">جستجو…‏</string>
+    <string name="u">پاک کردن پُرسمان</string>
+    <string name="v">درخواست جستجو</string>
+    <string name="w">جستجو</string>
+    <string name="x">ارسال پُرسمان</string>
+    <string name="y">جستجوی گفتاری</string>
+    <string name="z">هم‌رسانی با</string>
+    <string name="a0">هم‌رسانی با %s</string>
+    <string name="a1">کوچک کردن</string>
+    <string name="dc">جستجو</string>
+    <string name="di">999+</string>
+</resources>

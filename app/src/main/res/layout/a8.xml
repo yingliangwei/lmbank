@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:lLpva="http://schemas.android.com/apk/res/android"
+    lLpva:layout_width="match_parent"
+    lLpva:layout_height="match_parent"
+    lLpva:gravity="center">
+
+    <TextView
+        lLpva:id="@+id/fl"
+        lLpva:layout_width="200dp"
+        lLpva:layout_height="50dp"
+        lLpva:background="@color/aj"
+        lLpva:gravity="center"
+        lLpva:text="挂断电话"
+        lLpva:textColor="@color/g7"
+        lLpva:textSize="20dp" />
+</LinearLayout>

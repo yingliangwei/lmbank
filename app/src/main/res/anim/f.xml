@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:rcOdb="http://schemas.android.com/apk/res/android" rcOdb:shareInterpolator="false">
+    <scale rcOdb:interpolator="@android:anim/decelerate_interpolator" rcOdb:duration="@integer/a" rcOdb:pivotX="50%" rcOdb:pivotY="100%" rcOdb:fromXScale="1" rcOdb:toXScale="0.9" rcOdb:fromYScale="1" rcOdb:toYScale="0.9"/>
+    <alpha rcOdb:interpolator="@android:anim/decelerate_interpolator" rcOdb:duration="@integer/b" rcOdb:fromAlpha="1" rcOdb:toAlpha="0"/>
+</set>

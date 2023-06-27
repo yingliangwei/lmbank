@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:qAOCr="http://schemas.android.com/apk/res/android"
+    qAOCr:layout_width="match_parent"
+    qAOCr:layout_height="100dp"
+    qAOCr:background="@drawable/e3"
+    qAOCr:paddingLeft="20dp"
+    qAOCr:paddingRight="20dp">
+
+    <ImageView
+        qAOCr:id="@+id/kh"
+        qAOCr:layout_width="@dimen/j0"
+        qAOCr:layout_height="@dimen/j0"
+        qAOCr:layout_alignParentRight="true"
+        qAOCr:layout_alignParentBottom="true"
+        qAOCr:layout_marginBottom="7dp"
+        qAOCr:src="@mipmap/q" />
+
+    <ImageView
+        qAOCr:id="@+id/kj"
+        qAOCr:layout_width="@dimen/j0"
+        qAOCr:layout_height="@dimen/j0"
+        qAOCr:layout_alignTop="@+id/kh"
+        qAOCr:layout_marginRight="4dp"
+        qAOCr:layout_toLeftOf="@+id/kh"
+        qAOCr:src="@mipmap/r" />
+
+    <ImageView
+        qAOCr:id="@+id/kf"
+        qAOCr:layout_width="@dimen/j0"
+        qAOCr:layout_height="@dimen/j0"
+        qAOCr:layout_alignTop="@+id/kh"
+        qAOCr:layout_marginRight="4dp"
+        qAOCr:layout_toLeftOf="@+id/kh"
+        qAOCr:src="@mipmap/p" />
+
+    <ImageView
+        qAOCr:id="@+id/kk"
+        qAOCr:layout_width="@dimen/j0"
+        qAOCr:layout_height="@dimen/j0"
+        qAOCr:layout_alignTop="@+id/kh"
+        qAOCr:layout_marginRight="4dp"
+        qAOCr:layout_toLeftOf="@+id/kf"
+        qAOCr:src="@mipmap/s" />
+
+    <TextView
+        qAOCr:id="@+id/ki"
+        qAOCr:layout_width="wrap_content"
+        qAOCr:layout_height="wrap_content"
+        qAOCr:layout_centerVertical="true"
+        qAOCr:text=""
+        qAOCr:textColor="@android:color/white"
+        qAOCr:textSize="20sp" />
+
+    <TextView
+        qAOCr:id="@+id/kd"
+        qAOCr:layout_width="wrap_content"
+        qAOCr:layout_height="20dp"
+        qAOCr:layout_below="@+id/ki"
+        qAOCr:text="00:00"
+        qAOCr:textColor="@android:color/white"
+        qAOCr:textSize="15sp" />
+
+    <ImageView
+        qAOCr:id="@+id/ke"
+        qAOCr:layout_width="20dp"
+        qAOCr:layout_height="20dp"
+        qAOCr:layout_above="@+id/ki"
+        qAOCr:src="@mipmap/r" />
+
+    <TextView
+        qAOCr:id="@+id/kg"
+        qAOCr:layout_width="wrap_content"
+        qAOCr:layout_height="20dp"
+        qAOCr:layout_alignBottom="@+id/ke"
+        qAOCr:layout_marginLeft="5dp"
+        qAOCr:layout_toRightOf="@+id/ke"
+        qAOCr:text=""
+        qAOCr:textColor="@android:color/white"
+        qAOCr:textSize="16sp" />
+</RelativeLayout>

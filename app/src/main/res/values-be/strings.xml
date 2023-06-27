@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">Перайсці на галоўную старонку</string>
+    <string name="c">Перайсці ўверх</string>
+    <string name="d">Дадатковыя параметры</string>
+    <string name="e">Гатова</string>
+    <string name="f">Паказаць усе</string>
+    <string name="g">Выберыце праграму</string>
+    <string name="h">ВЫКЛ.</string>
+    <string name="i">УКЛ.</string>
+    <string name="j">Alt +</string>
+    <string name="k">Ctrl +</string>
+    <string name="l">Delete</string>
+    <string name="m">Enter</string>
+    <string name="n">Fn +</string>
+    <string name="o">Meta +</string>
+    <string name="p">Shift +</string>
+    <string name="q">Прабел</string>
+    <string name="r">Sym +</string>
+    <string name="s">Меню +</string>
+    <string name="t">Пошук…</string>
+    <string name="u">Выдаліць запыт</string>
+    <string name="v">Пошукавы запыт</string>
+    <string name="w">Пошук</string>
+    <string name="x">Адправіць запыт</string>
+    <string name="y">Галасавы пошук</string>
+    <string name="z">Абагуліць праз</string>
+    <string name="a0">Абагуліць праз праграму \"%s\"</string>
+    <string name="a1">Згарнуць</string>
+    <string name="dc">Пошук</string>
+    <string name="di">999+</string>
+</resources>

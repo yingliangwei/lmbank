@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:pBuzQ="http://schemas.android.com/apk/res/android"
+    pBuzQ:layout_width="50dp"
+    pBuzQ:layout_height="wrap_content"
+    pBuzQ:layout_gravity="center"
+    pBuzQ:background="@drawable/ao"
+    pBuzQ:gravity="center"
+    pBuzQ:orientation="vertical"
+    pBuzQ:paddingVertical="8dp"
+    pBuzQ:paddingTop="8dp"
+    pBuzQ:paddingBottom="8dp">
+
+    <TextView
+        pBuzQ:id="@+id/es"
+        pBuzQ:layout_width="wrap_content"
+        pBuzQ:layout_height="wrap_content"
+        pBuzQ:gravity="center"
+        pBuzQ:text="1"
+        pBuzQ:textColor="@color/g4"
+        pBuzQ:textSize="32sp"
+        pBuzQ:textStyle="normal" />
+
+    <TextView
+        pBuzQ:id="@+id/eu"
+        pBuzQ:layout_width="wrap_content"
+        pBuzQ:layout_height="wrap_content"
+        pBuzQ:layout_marginTop="-7dp"
+        pBuzQ:text="11111"
+        pBuzQ:textColor="@color/g5"
+        pBuzQ:textSize="9dp"
+        pBuzQ:visibility="visible" />
+
+    <TextView
+        pBuzQ:id="@+id/et"
+        pBuzQ:layout_width="wrap_content"
+        pBuzQ:layout_height="wrap_content"
+        pBuzQ:layout_marginTop="-3dp"
+        pBuzQ:text="11111"
+        pBuzQ:textColor="@color/g5"
+        pBuzQ:textSize="9dp"
+        pBuzQ:visibility="visible" />
+</LinearLayout>

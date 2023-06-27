@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">မူလနေရာကို ပြန်သွားရန်</string>
+    <string name="c">အပေါ်သို့ ရွှေ့ရန်</string>
+    <string name="d">နောက်ထပ် ရွေးစရာများ</string>
+    <string name="e">ပြီးပြီ</string>
+    <string name="f">အားလုံး ကြည့်ရန်</string>
+    <string name="g">အက်ပ်တစ်ခုကို ရွေးရန်</string>
+    <string name="h">ပိတ်ရန်</string>
+    <string name="i">ဖွင့်ရန်</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">delete</string>
+    <string name="m">enter</string>
+    <string name="n">Function+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Shift+</string>
+    <string name="q">space</string>
+    <string name="r">Sym+</string>
+    <string name="s">Menu+</string>
+    <string name="t">ရှာဖွေရန်…</string>
+    <string name="u">ရှာဖွေမှုကို ဖယ်ရှားရန်</string>
+    <string name="v">ရှာဖွေရန် မေးခွန်း</string>
+    <string name="w">ရှာရန်</string>
+    <string name="x">ရှာဖွေစရာ အချက်အလက်ကို ပေးပို့ရန်</string>
+    <string name="y">အသံဖြင့် ရှာရန်</string>
+    <string name="z">နှင့် မျှဝေရန်</string>
+    <string name="a0">%s ဖြင့် မျှဝေရန်</string>
+    <string name="a1">လျှော့ပြရန်</string>
+    <string name="dc">ရှာဖွေမှု</string>
+    <string name="di">၉၉၉+</string>
+</resources>

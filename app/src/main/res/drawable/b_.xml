@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:axReF="http://schemas.android.com/apk/res/android">
+    <gradient axReF:startColor="#ff1d6b6b" axReF:endColor="#ff4a6d83" axReF:angle="270" axReF:centerX="70%" axReF:centerColor="#ff305371"/>
+</shape>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:tLdqc="http://schemas.android.com/apk/res/android"
+    tLdqc:id="@+id/az"
+    tLdqc:layout_width="match_parent"
+    tLdqc:layout_height="match_parent"
+    tLdqc:fitsSystemWindows="true">
+
+    <include layout="@layout/u" />
+
+    <ViewStub
+        tLdqc:id="@+id/b_"
+        tLdqc:layout_width="match_parent"
+        tLdqc:layout_height="wrap_content"
+        tLdqc:inflatedId="@+id/b9"
+        tLdqc:layout="@layout/e" />
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:quouu="http://schemas.android.com/apk/res/android"
+    quouu:id="@+id/oa"
+    quouu:layout_width="wrap_content"
+    quouu:layout_height="wrap_content"
+    quouu:layout_gravity="start|center_vertical"
+    quouu:layout_marginEnd="@dimen/id"
+    quouu:minWidth="48dp"
+    quouu:minHeight="48dp" />

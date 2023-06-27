@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view xmlns:iVypu="http://schemas.android.com/apk/res/android"
+    class="com.google.android.material.snackbar.SnackbarContentLayout"
+    iVypu:layout_width="match_parent"
+    iVypu:layout_height="wrap_content"
+    iVypu:layout_gravity="bottom">
+
+    <TextView
+        iVypu:id="@+id/my"
+        iVypu:layout_width="wrap_content"
+        iVypu:layout_height="wrap_content"
+        iVypu:layout_gravity="start|center_vertical"
+        iVypu:layout_weight="1" />
+
+    <Button
+        iVypu:id="@+id/mx"
+        iVypu:layout_width="wrap_content"
+        iVypu:layout_height="wrap_content"
+        iVypu:layout_gravity="end|center_vertical"
+        iVypu:layout_marginStart="@dimen/cr"
+        iVypu:layout_marginLeft="@dimen/cr"
+        iVypu:minWidth="48dp"
+        iVypu:visibility="gone" />
+</view>

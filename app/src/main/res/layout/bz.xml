@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:cVLiQ="http://schemas.android.com/apk/res/android"
+    cVLiQ:layout_width="match_parent"
+    cVLiQ:layout_height="wrap_content"
+    cVLiQ:orientation="vertical">
+
+    <TextView
+        cVLiQ:id="@+id/jh"
+        style="@style/jk"
+        cVLiQ:layout_width="match_parent"
+        cVLiQ:layout_height="@dimen/fd"
+        cVLiQ:focusable="true"
+        cVLiQ:gravity="start|center_vertical" />
+
+    <include layout="@layout/by" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:fhixP="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        fhixP:id="@+id/ax"
+        fhixP:layout_width="match_parent"
+        fhixP:layout_height="match_parent"
+        fhixP:foreground="?android:attr/windowContentOverlay"
+        fhixP:foregroundGravity="top|fill_horizontal" />
+</merge>

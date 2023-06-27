@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">Zur Startseite</string>
+    <string name="c">Nach oben</string>
+    <string name="d">Weitere Optionen</string>
+    <string name="e">Fertig</string>
+    <string name="f">Alle anzeigen</string>
+    <string name="g">App auswählen</string>
+    <string name="h">AUS</string>
+    <string name="i">AN</string>
+    <string name="j">Alt +</string>
+    <string name="k">Strg +</string>
+    <string name="l">Löschen</string>
+    <string name="m">Eingabetaste</string>
+    <string name="n">Funktionstaste +</string>
+    <string name="o">Meta-Taste +</string>
+    <string name="p">Umschalttaste +</string>
+    <string name="q">Leertaste</string>
+    <string name="r">Sym-Taste +</string>
+    <string name="s">Menütaste +</string>
+    <string name="t">Suchen…</string>
+    <string name="u">Suchanfrage löschen</string>
+    <string name="v">Suchanfrage</string>
+    <string name="w">Suche</string>
+    <string name="x">Anfrage senden</string>
+    <string name="y">Sprachsuche</string>
+    <string name="z">Teilen mit</string>
+    <string name="a0">Mit %s teilen</string>
+    <string name="a1">Minimieren</string>
+    <string name="dc">Suche</string>
+    <string name="di">999+</string>
+</resources>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translate xmlns:bbylM="http://schemas.android.com/apk/res/android" bbylM:interpolator="@android:anim/accelerate_interpolator" bbylM:duration="@android:integer/config_mediumAnimTime" bbylM:fromYDelta="0" bbylM:toYDelta="50%p"/>

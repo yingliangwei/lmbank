@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:dKDIU="http://schemas.android.com/apk/res/android"
+    dKDIU:layout_width="match_parent"
+    dKDIU:layout_height="match_parent"
+    dKDIU:orientation="vertical">
+
+    <LinearLayout
+        dKDIU:layout_width="match_parent"
+        dKDIU:layout_height="wrap_content">
+
+        <ImageView
+            dKDIU:id="@+id/i1"
+            dKDIU:layout_width="50dp"
+            dKDIU:layout_height="match_parent"
+            dKDIU:padding="10dp"
+            dKDIU:src="@drawable/bs" />
+
+        <EditText
+            dKDIU:id="@+id/fp"
+            dKDIU:layout_width="match_parent"
+            dKDIU:layout_height="50dp"
+            dKDIU:layout_weight="1"
+            dKDIU:background="@null"
+            dKDIU:inputType="text"
+            dKDIU:singleLine="true" />
+
+        <ImageView
+            dKDIU:id="@+id/i2"
+            dKDIU:layout_width="50dp"
+            dKDIU:layout_height="match_parent"
+            dKDIU:padding="15dp"
+            dKDIU:src="@drawable/c1"
+            dKDIU:visibility="gone" />
+    </LinearLayout>
+
+    <ExpandableListView
+        dKDIU:id="@+id/fj"
+        dKDIU:layout_width="match_parent"
+        dKDIU:layout_height="match_parent"
+        dKDIU:groupIndicator="@null" />
+</LinearLayout>

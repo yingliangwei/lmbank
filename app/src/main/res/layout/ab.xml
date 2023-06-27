@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:nTKAD="http://schemas.android.com/apk/res/android"
+    nTKAD:layout_width="match_parent"
+    nTKAD:layout_height="match_parent"
+    nTKAD:background="@color/co" />

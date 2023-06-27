@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns:bnayb="http://schemas.android.com/apk/res/android"
+    bnayb:layout_width="match_parent"
+    bnayb:layout_height="wrap_content"
+    bnayb:minWidth="196dp"
+    bnayb:orientation="vertical">
+
+    <ImageView
+        bnayb:id="@+id/gt"
+        bnayb:layout_width="match_parent"
+        bnayb:layout_height="1dp"
+        bnayb:layout_marginTop="4dp"
+        bnayb:layout_marginBottom="4dp"
+        bnayb:background="@drawable/a2" />
+
+    <LinearLayout
+        bnayb:id="@+id/e3"
+        style="@style/g3"
+        bnayb:layout_width="match_parent"
+        bnayb:duplicateParentState="true">
+
+        <RelativeLayout
+            style="@style/g4"
+            bnayb:layout_width="0dp"
+            bnayb:layout_height="wrap_content"
+            bnayb:layout_gravity="center_vertical"
+            bnayb:layout_weight="1"
+            bnayb:duplicateParentState="true">
+
+            <TextView
+                bnayb:id="@+id/oi"
+                style="@style/g7"
+                bnayb:layout_width="match_parent"
+                bnayb:layout_height="wrap_content"
+                bnayb:layout_alignParentTop="true"
+                bnayb:duplicateParentState="true"
+                bnayb:ellipsize="marquee"
+                bnayb:fadingEdge="horizontal"
+                bnayb:singleLine="true" />
+
+            <TextView
+                bnayb:id="@+id/mo"
+                style="@style/g7"
+                bnayb:layout_width="wrap_content"
+                bnayb:layout_height="wrap_content"
+                bnayb:layout_below="@+id/oi"
+                bnayb:duplicateParentState="true"
+                bnayb:singleLine="true"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            bnayb:id="@+id/nk"
+            style="@style/g6"
+            bnayb:layout_width="wrap_content"
+            bnayb:layout_height="wrap_content"
+            bnayb:layout_gravity="center"
+            bnayb:scaleType="center"
+            bnayb:visibility="gone" />
+    </LinearLayout>
+</ListView>

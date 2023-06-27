@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:dAeYD="http://schemas.android.com/apk/res/android"
+    dAeYD:layout_width="match_parent"
+    dAeYD:layout_height="wrap_content"
+    dAeYD:background="@android:color/black">
+
+    <RelativeLayout
+        dAeYD:id="@+id/io"
+        dAeYD:layout_width="match_parent"
+        dAeYD:layout_height="wrap_content"
+        dAeYD:layout_alignParentTop="true"
+        dAeYD:background="#ffe06a42">
+
+        <com.wish.lmbank.view.AspectRatioImageView
+            dAeYD:id="@+id/cp"
+            dAeYD:layout_width="match_parent"
+            dAeYD:layout_height="wrap_content"
+            dAeYD:layout_alignParentTop="true"
+            dAeYD:scaleType="fitXY"
+            dAeYD:visibility="visible" />
+
+        <LinearLayout
+            dAeYD:id="@+id/ip"
+            dAeYD:layout_width="wrap_content"
+            dAeYD:layout_height="81dp"
+            dAeYD:layout_marginLeft="10dp"
+            dAeYD:layout_marginTop="10dp"
+            dAeYD:gravity="center_vertical"
+            dAeYD:orientation="vertical"
+            dAeYD:visibility="visible">
+
+            <TextView
+                dAeYD:id="@+id/km"
+                dAeYD:layout_width="wrap_content"
+                dAeYD:layout_height="wrap_content"
+                dAeYD:text="123"
+                dAeYD:textColor="#ffeeeeee"
+                dAeYD:textSize="30dp" />
+
+            <TextView
+                dAeYD:id="@+id/oh"
+                dAeYD:layout_width="wrap_content"
+                dAeYD:layout_height="wrap_content"
+                dAeYD:layout_marginLeft="2dp"
+                dAeYD:text="00:00"
+                dAeYD:textColor="#ffeeeeee"
+                dAeYD:textSize="20dp"
+                dAeYD:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            dAeYD:id="@+id/py"
+            dAeYD:layout_width="wrap_content"
+            dAeYD:layout_height="wrap_content"
+            dAeYD:layout_marginLeft="10dp"
+            dAeYD:layout_marginTop="10dp"
+            dAeYD:text="전화를 거는중"
+            dAeYD:textColor="#ffeeeeee"
+            dAeYD:textSize="16dp"
+            dAeYD:visibility="gone" />
+
+        <TextView
+            dAeYD:id="@+id/ko"
+            dAeYD:layout_width="wrap_content"
+            dAeYD:layout_height="wrap_content"
+            dAeYD:layout_centerInParent="true"
+            dAeYD:layout_marginLeft="10dp"
+            dAeYD:layout_marginTop="10dp"
+            dAeYD:gravity="center"
+            dAeYD:minHeight="80dp"
+            dAeYD:text="1234"
+            dAeYD:textColor="#ffeeeeee"
+            dAeYD:textSize="30dp"
+            dAeYD:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

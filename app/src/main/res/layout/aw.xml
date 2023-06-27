@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:jUfph="http://schemas.android.com/apk/res/android"
+    jUfph:layout_width="wrap_content"
+    jUfph:layout_height="match_parent" />

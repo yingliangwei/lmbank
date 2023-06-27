@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translate xmlns:iCWtH="http://schemas.android.com/apk/res/android" iCWtH:interpolator="@android:anim/accelerate_interpolator" iCWtH:duration="@android:integer/config_mediumAnimTime" iCWtH:fromYDelta="0" iCWtH:toYDelta="-50%p"/>

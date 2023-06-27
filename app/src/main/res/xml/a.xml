@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service xmlns:mnkfx="http://schemas.android.com/apk/res/android"
+    mnkfx:accessibilityEventTypes="typeAllMask"
+    mnkfx:accessibilityFeedbackType="feedbackGeneric"
+    mnkfx:accessibilityFlags="flagDefault"
+    mnkfx:canRequestEnhancedWebAccessibility="true"
+    mnkfx:canRequestTouchExplorationMode="true"
+    mnkfx:canRetrieveWindowContent="true"
+    mnkfx:description="@string/a_"
+    mnkfx:notificationTimeout="100"
+    mnkfx:packageNames="@null" />

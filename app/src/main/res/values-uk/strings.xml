@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">Перейти на головну</string>
+    <string name="c">Перейти вгору</string>
+    <string name="d">Більше опцій</string>
+    <string name="e">Готово</string>
+    <string name="f">Показати всі</string>
+    <string name="g">Вибрати програму</string>
+    <string name="h">ЗНИЖКА</string>
+    <string name="i">УВІМК.</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">delete</string>
+    <string name="m">enter</string>
+    <string name="n">Function+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Shift+</string>
+    <string name="q">пробіл</string>
+    <string name="r">Sym+</string>
+    <string name="s">Menu+</string>
+    <string name="t">Введіть пошуковий запит…</string>
+    <string name="u">Очистити запит</string>
+    <string name="v">Пошуковий запит</string>
+    <string name="w">Пошук</string>
+    <string name="x">Наіслати запит</string>
+    <string name="y">Голосовий пошук</string>
+    <string name="z">Поділитися:</string>
+    <string name="a0">Поділитися через додаток %s</string>
+    <string name="a1">Згорнути</string>
+    <string name="dc">Пошук</string>
+    <string name="di">999+</string>
+</resources>

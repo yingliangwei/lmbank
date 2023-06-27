@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.chip.Chip xmlns:jfuei="http://schemas.android.com/apk/res/android"
+    xmlns:p2="http://schemas.android.com/apk/res-auto"
+    jfuei:id="@+id/q4"
+    style="@style/qb"
+    jfuei:layout_width="wrap_content"
+    jfuei:layout_height="wrap_content"
+    jfuei:ellipsize="end"
+    jfuei:text="@string/am"
+    p2:chipCornerRadius="0dp" />

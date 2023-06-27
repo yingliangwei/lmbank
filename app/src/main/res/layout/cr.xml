@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:bJKIj="http://schemas.android.com/apk/res/android"
+    bJKIj:id="@+id/ng"
+    bJKIj:layout_width="match_parent"
+    bJKIj:layout_height="64dp"
+    bJKIj:orientation="horizontal">
+
+    <include
+        layout="@layout/co"
+        bJKIj:layout_width="@dimen/iq"
+        bJKIj:layout_height="@dimen/ip" />
+
+    <LinearLayout
+        bJKIj:id="@+id/kc"
+        bJKIj:layout_width="0dp"
+        bJKIj:layout_height="wrap_content"
+        bJKIj:layout_toStartOf="@+id/da"
+        bJKIj:layout_toLeftOf="@+id/da"
+        bJKIj:layout_weight="1"
+        bJKIj:minHeight="@dimen/ip"
+        bJKIj:orientation="horizontal"
+        bJKIj:paddingTop="@dimen/ir">
+
+        <FrameLayout
+            bJKIj:id="@+id/kb"
+            bJKIj:layout_width="match_parent"
+            bJKIj:layout_height="wrap_content"
+            bJKIj:layout_marginStart="@dimen/io"
+            bJKIj:layout_marginLeft="@dimen/io"
+            bJKIj:layout_marginEnd="8dp"
+            bJKIj:layout_marginRight="8dp"
+            bJKIj:layout_marginBottom="8dp"
+            bJKIj:layout_weight="1" />
+
+        <FrameLayout
+            bJKIj:id="@+id/lt"
+            bJKIj:layout_width="wrap_content"
+            bJKIj:layout_height="wrap_content"
+            bJKIj:layout_marginEnd="8dp"
+            bJKIj:layout_marginRight="8dp"
+            bJKIj:paddingTop="@dimen/iu">
+
+            <TimePicker
+                bJKIj:id="@+id/oh"
+                bJKIj:layout_width="wrap_content"
+                bJKIj:layout_height="wrap_content"
+                bJKIj:layout_gravity="end|top"
+                bJKIj:singleLine="true"
+                bJKIj:textAppearance="@style/it"
+                bJKIj:visibility="gone" />
+
+            <Chronometer
+                bJKIj:id="@+id/dx"
+                bJKIj:layout_width="wrap_content"
+                bJKIj:layout_height="wrap_content"
+                bJKIj:layout_gravity="end|top"
+                bJKIj:singleLine="true"
+                bJKIj:textAppearance="@style/it"
+                bJKIj:visibility="gone" />
+
+            <TextView
+                bJKIj:id="@+id/hp"
+                bJKIj:layout_width="wrap_content"
+                bJKIj:layout_height="wrap_content"
+                bJKIj:layout_gravity="end|bottom"
+                bJKIj:layout_marginTop="20dp"
+                bJKIj:singleLine="true"
+                bJKIj:textAppearance="@style/io" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        bJKIj:id="@+id/j4"
+        bJKIj:layout_width="wrap_content"
+        bJKIj:layout_height="match_parent"
+        bJKIj:layout_gravity="end|center_vertical"
+        bJKIj:layoutDirection="ltr"
+        bJKIj:orientation="horizontal" />
+
+    <include
+        layout="@layout/ci"
+        bJKIj:layout_width="48dp"
+        bJKIj:layout_height="match_parent"
+        bJKIj:layout_marginEnd="6dp"
+        bJKIj:layout_marginRight="6dp" />
+
+    <ImageView
+        bJKIj:id="@+id/fm"
+        bJKIj:layout_width="6dp"
+        bJKIj:layout_height="match_parent" />
+</LinearLayout>

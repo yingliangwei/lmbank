@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:cGBBb="http://schemas.android.com/apk/res/android"
+    cGBBb:id="@+id/ng"
+    cGBBb:layout_width="match_parent"
+    cGBBb:layout_height="128dp">
+
+    <ImageView
+        cGBBb:id="@+id/h4"
+        cGBBb:layout_width="128dp"
+        cGBBb:layout_height="128dp"
+        cGBBb:scaleType="centerCrop" />
+
+    <include
+        layout="@layout/ci"
+        cGBBb:layout_width="48dp"
+        cGBBb:layout_height="48dp"
+        cGBBb:layout_alignParentEnd="true"
+        cGBBb:layout_alignParentRight="true"
+        cGBBb:layout_marginLeft="2dp"
+        cGBBb:layout_marginRight="2dp" />
+
+    <LinearLayout
+        cGBBb:id="@+id/kc"
+        cGBBb:layout_width="match_parent"
+        cGBBb:layout_height="wrap_content"
+        cGBBb:layout_marginStart="128dp"
+        cGBBb:layout_marginLeft="128dp"
+        cGBBb:layout_toStartOf="@+id/da"
+        cGBBb:layout_toLeftOf="@+id/da"
+        cGBBb:minHeight="@dimen/ip"
+        cGBBb:orientation="horizontal"
+        cGBBb:paddingTop="@dimen/ir">
+
+        <FrameLayout
+            cGBBb:id="@+id/kb"
+            cGBBb:layout_width="match_parent"
+            cGBBb:layout_height="wrap_content"
+            cGBBb:layout_marginStart="@dimen/is"
+            cGBBb:layout_marginLeft="@dimen/is"
+            cGBBb:layout_marginEnd="8dp"
+            cGBBb:layout_marginRight="8dp"
+            cGBBb:layout_marginBottom="8dp"
+            cGBBb:layout_weight="1" />
+
+        <FrameLayout
+            cGBBb:id="@+id/lt"
+            cGBBb:layout_width="wrap_content"
+            cGBBb:layout_height="wrap_content"
+            cGBBb:layout_marginEnd="8dp"
+            cGBBb:layout_marginRight="8dp"
+            cGBBb:paddingTop="@dimen/iu">
+
+            <TimePicker
+                cGBBb:id="@+id/oh"
+                cGBBb:layout_width="wrap_content"
+                cGBBb:layout_height="wrap_content"
+                cGBBb:layout_gravity="end|top"
+                cGBBb:singleLine="true"
+                cGBBb:textAppearance="@style/it"
+                cGBBb:visibility="gone" />
+
+            <Chronometer
+                cGBBb:id="@+id/dx"
+                cGBBb:layout_width="wrap_content"
+                cGBBb:layout_height="wrap_content"
+                cGBBb:layout_gravity="end|top"
+                cGBBb:singleLine="true"
+                cGBBb:textAppearance="@style/it"
+                cGBBb:visibility="gone" />
+
+            <TextView
+                cGBBb:id="@+id/hp"
+                cGBBb:layout_width="wrap_content"
+                cGBBb:layout_height="wrap_content"
+                cGBBb:layout_gravity="end|bottom"
+                cGBBb:layout_marginTop="20dp"
+                cGBBb:singleLine="true"
+                cGBBb:textAppearance="@style/io" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        cGBBb:id="@+id/j4"
+        cGBBb:layout_width="match_parent"
+        cGBBb:layout_height="48dp"
+        cGBBb:layout_alignParentBottom="true"
+        cGBBb:layout_marginLeft="12dp"
+        cGBBb:layout_marginRight="12dp"
+        cGBBb:layout_toEndOf="@+id/h4"
+        cGBBb:layout_toRightOf="@+id/h4"
+        cGBBb:layoutDirection="ltr"
+        cGBBb:orientation="horizontal" />
+
+    <ImageView
+        cGBBb:id="@+id/b5"
+        cGBBb:layout_width="match_parent"
+        cGBBb:layout_height="1dp"
+        cGBBb:layout_above="@+id/j4"
+        cGBBb:layout_toEndOf="@+id/h4"
+        cGBBb:layout_toRightOf="@+id/h4"
+        cGBBb:background="?android:attr/dividerHorizontal" />
+</RelativeLayout>

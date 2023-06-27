@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">Eve gidiş yolunu göster</string>
+    <string name="c">Yukarı git</string>
+    <string name="d">Diğer seçenekler</string>
+    <string name="e">Bitti</string>
+    <string name="f">Tümünü göster</string>
+    <string name="g">Bir uygulama seçin</string>
+    <string name="h">KAPAT</string>
+    <string name="i">AÇ</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">sil</string>
+    <string name="m">enter</string>
+    <string name="n">Function+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Üst Karakter+</string>
+    <string name="q">boşluk</string>
+    <string name="r">Sym+</string>
+    <string name="s">Menü+</string>
+    <string name="t">Ara…</string>
+    <string name="u">Sorguyu temizle</string>
+    <string name="v">Arama sorgusu</string>
+    <string name="w">Ara</string>
+    <string name="x">Sorguyu gönder</string>
+    <string name="y">Sesli arama</string>
+    <string name="z">Şununla paylaş:</string>
+    <string name="a0">%s ile paylaş</string>
+    <string name="a1">Daralt</string>
+    <string name="dc">Ara</string>
+    <string name="di">999+</string>
+</resources>

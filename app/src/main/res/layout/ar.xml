@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:tFltz="http://schemas.android.com/apk/res/android"
+    xmlns:p6="http://schemas.android.com/apk/res-auto"
+    tFltz:id="@+id/e2"
+    tFltz:layout_width="match_parent"
+    tFltz:layout_height="match_parent"
+    tFltz:fitsSystemWindows="true">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        tFltz:id="@+id/e5"
+        tFltz:layout_width="match_parent"
+        tFltz:layout_height="match_parent"
+        tFltz:fitsSystemWindows="true">
+
+        <View
+            tFltz:id="@+id/or"
+            tFltz:layout_width="match_parent"
+            tFltz:layout_height="match_parent"
+            tFltz:focusable="false"
+            tFltz:importantForAccessibility="no"
+            tFltz:soundEffectsEnabled="false" />
+
+        <FrameLayout
+            tFltz:id="@+id/el"
+            p6:layout_behavior="@string/ad"
+            tFltz:layout_width="match_parent"
+            tFltz:layout_height="wrap_content"
+            tFltz:layout_gravity="top|center_horizontal" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

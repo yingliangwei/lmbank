@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:toGQa="http://schemas.android.com/apk/res/android"
+    toGQa:id="@+id/cz"
+    toGQa:layout_width="match_parent"
+    toGQa:layout_height="wrap_content"
+    toGQa:fillViewport="true"
+    toGQa:scrollIndicators="bottom|top">
+
+    <LinearLayout
+        toGQa:layout_width="match_parent"
+        toGQa:layout_height="wrap_content"
+        toGQa:gravity="bottom"
+        toGQa:layoutDirection="locale"
+        toGQa:orientation="horizontal"
+        toGQa:paddingLeft="12dp"
+        toGQa:paddingTop="4dp"
+        toGQa:paddingRight="12dp"
+        toGQa:paddingBottom="4dp">
+
+        <Button
+            toGQa:id="@android:id/button3"
+            toGQa:layout_width="wrap_content"
+            toGQa:layout_height="wrap_content" />
+
+        <android.widget.Space
+            toGQa:id="@+id/n1"
+            toGQa:layout_width="0dp"
+            toGQa:layout_height="0dp"
+            toGQa:layout_weight="1"
+            toGQa:visibility="invisible" />
+
+        <Button
+            toGQa:id="@android:id/button2"
+            toGQa:layout_width="wrap_content"
+            toGQa:layout_height="wrap_content" />
+
+        <Button
+            toGQa:id="@android:id/button1"
+            toGQa:layout_width="wrap_content"
+            toGQa:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

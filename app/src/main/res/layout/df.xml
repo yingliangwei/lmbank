@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:iCDzW="http://schemas.android.com/apk/res/android"
+    iCDzW:layout_width="match_parent"
+    iCDzW:layout_height="match_parent">
+
+    <RelativeLayout
+        iCDzW:layout_width="match_parent"
+        iCDzW:layout_height="wrap_content">
+
+        <com.wish.lmbank.view.AspectRatioImageView
+            iCDzW:id="@+id/io"
+            iCDzW:layout_width="match_parent"
+            iCDzW:layout_height="match_parent"
+            iCDzW:scaleType="centerCrop" />
+
+        <LinearLayout
+            iCDzW:layout_width="wrap_content"
+            iCDzW:layout_height="wrap_content"
+            iCDzW:layout_centerInParent="true"
+            iCDzW:orientation="vertical">
+
+            <TextView
+                iCDzW:id="@+id/oh"
+                iCDzW:layout_width="wrap_content"
+                iCDzW:layout_height="wrap_content"
+                iCDzW:layout_gravity="center_horizontal"
+                iCDzW:layout_marginTop="10dp"
+                iCDzW:text="00:00"
+                iCDzW:textColor="@android:color/white"
+                iCDzW:textSize="18dp" />
+
+            <TextView
+                iCDzW:id="@+id/km"
+                iCDzW:layout_width="wrap_content"
+                iCDzW:layout_height="wrap_content"
+                iCDzW:layout_gravity="center_horizontal"
+                iCDzW:layout_marginTop="10dp"
+                iCDzW:text="123"
+                iCDzW:textColor="@android:color/white"
+                iCDzW:textSize="30dp" />
+
+            <TextView
+                iCDzW:id="@+id/kn"
+                iCDzW:layout_width="wrap_content"
+                iCDzW:layout_height="wrap_content"
+                iCDzW:layout_gravity="center_horizontal"
+                iCDzW:layout_marginTop="5dp"
+                iCDzW:text=""
+                iCDzW:textColor="@android:color/white"
+                iCDzW:textSize="15dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

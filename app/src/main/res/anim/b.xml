@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alpha xmlns:ifbqW="http://schemas.android.com/apk/res/android" ifbqW:interpolator="@android:anim/decelerate_interpolator" ifbqW:duration="@android:integer/config_mediumAnimTime" ifbqW:fromAlpha="1" ifbqW:toAlpha="0"/>

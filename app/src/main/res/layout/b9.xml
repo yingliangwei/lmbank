@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:nAYZJ="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        nAYZJ:id="@+id/g2"
+        nAYZJ:layout_width="wrap_content"
+        nAYZJ:layout_height="wrap_content"
+        nAYZJ:layout_gravity="end"
+        nAYZJ:gravity="center"
+        nAYZJ:maxLines="1"
+        nAYZJ:visibility="gone" />
+
+    <FrameLayout
+        nAYZJ:id="@+id/g4"
+        nAYZJ:layout_width="wrap_content"
+        nAYZJ:layout_height="match_parent"
+        nAYZJ:paddingStart="@dimen/dx"
+        nAYZJ:paddingLeft="@dimen/dx"
+        nAYZJ:paddingEnd="@dimen/dn"
+        nAYZJ:paddingRight="@dimen/dn"
+        nAYZJ:visibility="gone">
+
+        <ImageView
+            nAYZJ:id="@+id/g5"
+            nAYZJ:layout_width="wrap_content"
+            nAYZJ:layout_height="match_parent"
+            nAYZJ:layout_gravity="center_horizontal" />
+
+        <ImageView
+            nAYZJ:id="@+id/g3"
+            nAYZJ:layout_width="wrap_content"
+            nAYZJ:layout_height="wrap_content"
+            nAYZJ:layout_gravity="center_horizontal" />
+    </FrameLayout>
+</merge>

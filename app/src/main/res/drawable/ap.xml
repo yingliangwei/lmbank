@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:bXkNy="http://schemas.android.com/apk/res/android" bXkNy:color="#33434343">
+    <item>
+        <shape bXkNy:shape="rectangle">
+            <solid bXkNy:color="#fff1f1f1"/>
+            <corners bXkNy:radius="25dp"/>
+        </shape>
+    </item>
+</ripple>

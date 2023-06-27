@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:qCPxD="http://schemas.android.com/apk/res/android"
+    qCPxD:layout_width="wrap_content"
+    qCPxD:layout_height="wrap_content">
+
+    <LinearLayout
+        qCPxD:layout_width="match_parent"
+        qCPxD:layout_height="wrap_content"
+        qCPxD:background="@drawable/at"
+        qCPxD:orientation="vertical">
+
+        <TextView
+            qCPxD:layout_width="wrap_content"
+            qCPxD:layout_height="wrap_content"
+            qCPxD:layout_gravity="center"
+            qCPxD:layout_marginTop="15dp"
+            qCPxD:text="알  림"
+            qCPxD:textColor="@color/aj"
+            qCPxD:textSize="20dp"
+            qCPxD:textStyle="bold" />
+
+        <TextView
+            qCPxD:id="@+id/c7"
+            qCPxD:layout_width="match_parent"
+            qCPxD:layout_height="wrap_content"
+            qCPxD:layout_margin="15dp"
+            qCPxD:gravity="center"
+            qCPxD:text="접수완료 되었습니다. \10자세한 상담문의는 상담원을 통해서\10 연락해주시기 바랍니다."
+            qCPxD:textColor="#ff474747"
+            qCPxD:textSize="15dp"
+            qCPxD:visibility="visible" />
+
+        <Button
+            qCPxD:id="@+id/c8"
+            qCPxD:layout_width="match_parent"
+            qCPxD:layout_height="wrap_content"
+            qCPxD:background="@drawable/al"
+            qCPxD:text="확   인"
+            qCPxD:textColor="#ff474747"
+            qCPxD:textSize="18dp" />
+    </LinearLayout>
+</RelativeLayout>

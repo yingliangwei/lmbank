@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">Əsas səhifəyə keçin</string>
+    <string name="c">Yuxarı keçin</string>
+    <string name="d">Digər seçimlər</string>
+    <string name="e">Hazırdır</string>
+    <string name="f">Hamısına baxın</string>
+    <string name="g">Tətbiq seçin</string>
+    <string name="h">DEAKTİV</string>
+    <string name="i">AKTİV</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">silin</string>
+    <string name="m">daxil olun</string>
+    <string name="n">Funksiya+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Shift+</string>
+    <string name="q">space</string>
+    <string name="r">Sym+</string>
+    <string name="s">Menyu+</string>
+    <string name="t">Axtarış...</string>
+    <string name="u">Sorğunu silin</string>
+    <string name="v">Axtarış sorğusu</string>
+    <string name="w">Axtarın</string>
+    <string name="x">Sorğunu göndərin</string>
+    <string name="y">Səsli axtarış</string>
+    <string name="z">Paylaşın</string>
+    <string name="a0">%s ilə paylaşın</string>
+    <string name="a1">Yığcamlaşdırın</string>
+    <string name="dc">Axtarın</string>
+    <string name="di">999+</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view xmlns:fTkVK="http://schemas.android.com/apk/res/android"
+    style="@style/pa"
+    class="com.google.android.material.snackbar.Snackbar$SnackbarLayout"
+    fTkVK:layout_width="match_parent"
+    fTkVK:layout_height="wrap_content"
+    fTkVK:layout_gravity="bottom" />

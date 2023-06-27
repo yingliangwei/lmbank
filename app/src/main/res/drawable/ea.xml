@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:atMqD="http://schemas.android.com/apk/res/android">
+    <item atMqD:state_enabled="true" atMqD:color="@color/ev"/>
+    <item atMqD:color="@color/ex" atMqD:alpha="0.38"/>
+</selector>

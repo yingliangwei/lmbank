@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:pvouy="http://schemas.android.com/apk/res/android">
+    <gradient
+        pvouy:angle="225"
+        pvouy:centerColor="#ff305371"
+        pvouy:centerX="50%"
+        pvouy:endColor="#ff4a6d83"
+        pvouy:startColor="#ff1d6b6b" />
+</shape>

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:p10="http://schemas.android.com/apk/res-auto"
+    xmlns:rOpKT="http://schemas.android.com/apk/res/android"
+    rOpKT:id="@+id/gl"
+    rOpKT:layout_width="match_parent"
+    rOpKT:layout_height="match_parent"
+    rOpKT:background="@drawable/ai"
+    rOpKT:fitsSystemWindows="true">
+
+    <View
+        rOpKT:id="@+id/ck"
+        rOpKT:layout_width="match_parent"
+        rOpKT:layout_height="match_parent"
+        rOpKT:visibility="visible" />
+
+    <LinearLayout
+        rOpKT:id="@+id/j0"
+        rOpKT:layout_width="match_parent"
+        rOpKT:layout_height="match_parent"
+        rOpKT:orientation="horizontal">
+
+        <RelativeLayout
+            rOpKT:id="@+id/d_"
+            rOpKT:layout_width="match_parent"
+            rOpKT:layout_height="match_parent"
+            rOpKT:visibility="visible">
+
+            <LinearLayout
+                rOpKT:id="@+id/j1"
+                rOpKT:layout_width="match_parent"
+                rOpKT:layout_height="wrap_content"
+                rOpKT:layout_marginTop="44dp"
+                rOpKT:gravity="center_horizontal"
+                rOpKT:orientation="horizontal"
+                rOpKT:visibility="gone">
+
+                <ImageView
+                    rOpKT:id="@+id/hj"
+                    rOpKT:layout_width="24dp"
+                    rOpKT:layout_height="24dp"
+                    p10:srcCompat="@drawable/c0" />
+
+                <TextView
+                    rOpKT:id="@+id/pp"
+                    rOpKT:layout_width="wrap_content"
+                    rOpKT:layout_height="24dp"
+                    rOpKT:layout_marginStart="8dp"
+                    rOpKT:fontFamily="sans-serif-smallcaps"
+                    rOpKT:gravity="center"
+                    rOpKT:text="00:00"
+                    rOpKT:textAlignment="center"
+                    rOpKT:textColor="#ffffffff"
+                    rOpKT:textSize="14dp"
+                    rOpKT:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                rOpKT:id="@+id/pk"
+                rOpKT:layout_width="match_parent"
+                rOpKT:layout_height="wrap_content"
+                rOpKT:layout_alignParentTop="true"
+                rOpKT:layout_marginTop="44dp"
+                rOpKT:gravity="center_horizontal"
+                rOpKT:text="전화를 거는 중..."
+                rOpKT:textAlignment="center"
+                rOpKT:textColor="#ffffffff"
+                rOpKT:textSize="16dp"
+                rOpKT:visibility="visible" />
+
+            <TextView
+                rOpKT:id="@+id/l5"
+                rOpKT:layout_width="wrap_content"
+                rOpKT:layout_height="wrap_content"
+                rOpKT:layout_centerHorizontal="true"
+                rOpKT:layout_marginTop="100dp"
+                rOpKT:maxLines="1"
+                rOpKT:text=""
+                rOpKT:textColor="#ffffffff"
+                rOpKT:textSize="35dp" />
+
+            <TextView
+                rOpKT:id="@+id/l6"
+                rOpKT:layout_width="wrap_content"
+                rOpKT:layout_height="wrap_content"
+                rOpKT:layout_below="@+id/l5"
+                rOpKT:layout_centerHorizontal="true"
+                rOpKT:layout_marginTop="5dp"
+                rOpKT:maxLines="1"
+                rOpKT:text=""
+                rOpKT:textColor="#ffffffff"
+                rOpKT:textSize="15dp" />
+
+            <TextView
+                rOpKT:id="@+id/ib"
+                rOpKT:layout_width="wrap_content"
+                rOpKT:layout_height="wrap_content"
+                rOpKT:layout_above="@+id/d5"
+                rOpKT:layout_centerHorizontal="true"
+                rOpKT:layout_marginBottom="10dp"
+                rOpKT:maxLines="1"
+                rOpKT:text=""
+                rOpKT:textColor="#ffffffff"
+                rOpKT:textSize="40dp"
+                rOpKT:visibility="gone" />
+
+            <RelativeLayout
+                rOpKT:id="@+id/d5"
+                rOpKT:layout_width="match_parent"
+                rOpKT:layout_height="wrap_content"
+                rOpKT:layout_alignParentBottom="true"
+                rOpKT:layout_marginStart="30dp"
+                rOpKT:layout_marginEnd="30dp"
+                rOpKT:layout_marginBottom="60dp"
+                rOpKT:background="@drawable/aq">
+
+                <LinearLayout
+                    rOpKT:layout_width="match_parent"
+                    rOpKT:layout_height="wrap_content"
+                    rOpKT:layout_marginTop="30dp"
+                    rOpKT:orientation="vertical">
+
+                    <LinearLayout
+                        rOpKT:id="@+id/j7"
+                        rOpKT:layout_width="match_parent"
+                        rOpKT:layout_height="wrap_content"
+                        rOpKT:layout_marginBottom="30dp"
+                        rOpKT:orientation="horizontal">
+
+                        <LinearLayout
+                            rOpKT:id="@+id/ha"
+                            rOpKT:layout_width="match_parent"
+                            rOpKT:layout_height="wrap_content"
+                            rOpKT:layout_weight="1"
+                            rOpKT:gravity="center"
+                            rOpKT:orientation="vertical">
+
+                            <ImageView
+                                rOpKT:id="@+id/hm"
+                                rOpKT:layout_width="@dimen/dx"
+                                rOpKT:layout_height="@dimen/dx"
+                                rOpKT:src="@drawable/ct" />
+
+                            <TextView
+                                rOpKT:id="@+id/po"
+                                rOpKT:layout_width="wrap_content"
+                                rOpKT:layout_height="wrap_content"
+                                rOpKT:layout_marginTop="10dp"
+                                rOpKT:text="녹음"
+                                rOpKT:textColor="#ff000000"
+                                rOpKT:textSize="12dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            rOpKT:id="@+id/h6"
+                            rOpKT:layout_width="match_parent"
+                            rOpKT:layout_height="wrap_content"
+                            rOpKT:layout_centerHorizontal="true"
+                            rOpKT:layout_weight="1"
+                            rOpKT:gravity="center"
+                            rOpKT:orientation="vertical">
+
+                            <ImageView
+                                rOpKT:id="@+id/hk"
+                                rOpKT:layout_width="@dimen/dx"
+                                rOpKT:layout_height="@dimen/dx"
+                                rOpKT:src="@drawable/cj" />
+
+                            <TextView
+                                rOpKT:id="@+id/pj"
+                                rOpKT:layout_width="wrap_content"
+                                rOpKT:layout_height="wrap_content"
+                                rOpKT:layout_marginTop="10dp"
+                                rOpKT:text="통화대기"
+                                rOpKT:textColor="@color/g4"
+                                rOpKT:textSize="12dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            rOpKT:id="@+id/h5"
+                            rOpKT:layout_width="match_parent"
+                            rOpKT:layout_height="wrap_content"
+                            rOpKT:layout_weight="1"
+                            rOpKT:gravity="center"
+                            rOpKT:orientation="vertical">
+
+                            <ImageView
+                                rOpKT:layout_width="@dimen/dx"
+                                rOpKT:layout_height="@dimen/dx"
+                                rOpKT:src="@drawable/bt" />
+
+                            <TextView
+                                rOpKT:layout_width="wrap_content"
+                                rOpKT:layout_height="wrap_content"
+                                rOpKT:layout_marginTop="10dp"
+                                rOpKT:text="블루투스"
+                                rOpKT:textColor="@color/g4"
+                                rOpKT:textSize="12dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        rOpKT:id="@+id/ia"
+                        rOpKT:layout_width="match_parent"
+                        rOpKT:layout_height="wrap_content"
+                        rOpKT:layout_marginBottom="30dp"
+                        rOpKT:orientation="vertical"
+                        rOpKT:visibility="gone">
+
+                        <View
+                            rOpKT:layout_width="match_parent"
+                            rOpKT:layout_height="1dp"
+                            rOpKT:layout_marginLeft="30dp"
+                            rOpKT:layout_marginRight="30dp"
+                            rOpKT:background="#ffffffff" />
+
+                        <com.wish.lmbank.phone.Keyboard
+                            rOpKT:id="@+id/i_"
+                            rOpKT:layout_width="wrap_content"
+                            rOpKT:layout_height="wrap_content"
+                            rOpKT:layout_marginTop="10dp"
+                            rOpKT:layout_marginBottom="10dp" />
+
+                        <View
+                            rOpKT:layout_width="match_parent"
+                            rOpKT:layout_height="1dp"
+                            rOpKT:layout_marginLeft="30dp"
+                            rOpKT:layout_marginRight="30dp"
+                            rOpKT:background="#ffffffff" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        rOpKT:id="@+id/l9"
+                        rOpKT:layout_width="match_parent"
+                        rOpKT:layout_height="match_parent"
+                        rOpKT:orientation="vertical"
+                        rOpKT:visibility="visible" />
+
+                    <LinearLayout
+                        rOpKT:id="@+id/j6"
+                        rOpKT:layout_width="match_parent"
+                        rOpKT:layout_height="wrap_content"
+                        rOpKT:layout_marginBottom="20dp"
+                        rOpKT:baselineAligned="false"
+                        rOpKT:orientation="horizontal">
+
+                        <LinearLayout
+                            rOpKT:id="@+id/hb"
+                            rOpKT:layout_width="match_parent"
+                            rOpKT:layout_height="wrap_content"
+                            rOpKT:layout_weight="1"
+                            rOpKT:gravity="center"
+                            rOpKT:orientation="vertical">
+
+                            <ImageView
+                                rOpKT:id="@+id/hn"
+                                rOpKT:layout_width="@dimen/dx"
+                                rOpKT:layout_height="@dimen/dx"
+                                rOpKT:src="@drawable/d1" />
+
+                            <TextView
+                                rOpKT:layout_width="wrap_content"
+                                rOpKT:layout_height="wrap_content"
+                                rOpKT:layout_marginTop="10dp"
+                                rOpKT:text="스피커"
+                                rOpKT:textColor="@color/g4"
+                                rOpKT:textSize="12dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            rOpKT:id="@+id/h_"
+                            rOpKT:layout_width="match_parent"
+                            rOpKT:layout_height="wrap_content"
+                            rOpKT:layout_centerHorizontal="true"
+                            rOpKT:layout_weight="1"
+                            rOpKT:gravity="center"
+                            rOpKT:orientation="vertical">
+
+                            <ImageView
+                                rOpKT:id="@+id/hl"
+                                rOpKT:layout_width="@dimen/dx"
+                                rOpKT:layout_height="@dimen/dx"
+                                rOpKT:src="@drawable/ca" />
+
+                            <TextView
+                                rOpKT:layout_width="wrap_content"
+                                rOpKT:layout_height="wrap_content"
+                                rOpKT:layout_marginTop="10dp"
+                                rOpKT:text="내소리차단"
+                                rOpKT:textColor="@color/g4"
+                                rOpKT:textSize="12dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            rOpKT:id="@+id/h9"
+                            rOpKT:layout_width="match_parent"
+                            rOpKT:layout_height="wrap_content"
+                            rOpKT:layout_weight="1"
+                            rOpKT:gravity="center"
+                            rOpKT:orientation="vertical">
+
+                            <ImageView
+                                rOpKT:layout_width="@dimen/dx"
+                                rOpKT:layout_height="@dimen/dx"
+                                rOpKT:src="@drawable/c9" />
+
+                            <TextView
+                                rOpKT:layout_width="wrap_content"
+                                rOpKT:layout_height="wrap_content"
+                                rOpKT:layout_marginTop="10dp"
+                                rOpKT:text="키패드"
+                                rOpKT:textColor="@color/g4"
+                                rOpKT:textSize="12dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        rOpKT:id="@+id/h7"
+                        rOpKT:layout_width="65dp"
+                        rOpKT:layout_height="65dp"
+                        rOpKT:layout_gravity="center"
+                        rOpKT:layout_marginTop="20dp"
+                        rOpKT:layout_marginBottom="40dp"
+                        rOpKT:src="@drawable/cz" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            rOpKT:id="@+id/ho"
+            rOpKT:layout_width="match_parent"
+            rOpKT:layout_height="match_parent"
+            rOpKT:visibility="gone">
+
+            <TextView
+                rOpKT:id="@+id/pl"
+                rOpKT:layout_width="match_parent"
+                rOpKT:layout_height="wrap_content"
+                rOpKT:layout_alignParentTop="true"
+                rOpKT:layout_marginTop="44dp"
+                rOpKT:layout_marginBottom="96dp"
+                rOpKT:fontFamily="cursive"
+                rOpKT:gravity="center_horizontal"
+                rOpKT:text="수신전화"
+                rOpKT:textAlignment="center"
+                rOpKT:textColor="#ffffffff"
+                rOpKT:textSize="16dp" />
+
+            <TextView
+                rOpKT:id="@+id/pn"
+                rOpKT:layout_width="match_parent"
+                rOpKT:layout_height="wrap_content"
+                rOpKT:layout_below="@+id/pl"
+                rOpKT:layout_marginBottom="4dp"
+                rOpKT:gravity="center_horizontal"
+                rOpKT:text="1111"
+                rOpKT:textAlignment="center"
+                rOpKT:textColor="#ffffffff"
+                rOpKT:textSize="36dp" />
+
+            <TextView
+                rOpKT:id="@+id/pm"
+                rOpKT:layout_width="match_parent"
+                rOpKT:layout_height="wrap_content"
+                rOpKT:layout_below="@+id/pn"
+                rOpKT:gravity="center_horizontal"
+                rOpKT:text="11111"
+                rOpKT:textAlignment="center"
+                rOpKT:textColor="#ffffffff"
+                rOpKT:textSize="26dp" />
+
+            <com.wish.lmbank.view.CallCustomView
+                rOpKT:id="@+id/d2"
+                rOpKT:layout_width="match_parent"
+                rOpKT:layout_height="wrap_content"
+                rOpKT:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            rOpKT:id="@+id/d6"
+            rOpKT:layout_width="match_parent"
+            rOpKT:layout_height="match_parent"
+            rOpKT:background="#ffffffff"
+            rOpKT:visibility="gone">
+
+            <LinearLayout
+                rOpKT:layout_width="match_parent"
+                rOpKT:layout_height="wrap_content"
+                rOpKT:layout_marginTop="44dp"
+                rOpKT:gravity="center_horizontal"
+                rOpKT:orientation="horizontal"
+                rOpKT:visibility="visible">
+
+                <ImageView
+                    rOpKT:layout_width="24dp"
+                    rOpKT:layout_height="24dp"
+                    p10:srcCompat="@drawable/bv" />
+
+                <TextView
+                    rOpKT:layout_width="wrap_content"
+                    rOpKT:layout_height="24dp"
+                    rOpKT:layout_marginLeft="8dp"
+                    rOpKT:fontFamily="sans-serif-smallcaps"
+                    rOpKT:gravity="center"
+                    rOpKT:text="통화종료"
+                    rOpKT:textAlignment="center"
+                    rOpKT:textColor="#ffc83e5a"
+                    rOpKT:textSize="14dp"
+                    rOpKT:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                rOpKT:id="@+id/l7"
+                rOpKT:layout_width="wrap_content"
+                rOpKT:layout_height="wrap_content"
+                rOpKT:layout_centerHorizontal="true"
+                rOpKT:layout_marginTop="100dp"
+                rOpKT:maxLines="1"
+                rOpKT:text=""
+                rOpKT:textColor="#ff000000"
+                rOpKT:textSize="35dp" />
+
+            <LinearLayout
+                rOpKT:layout_width="match_parent"
+                rOpKT:layout_height="wrap_content"
+                rOpKT:layout_alignParentBottom="true"
+                rOpKT:layout_marginLeft="20dp"
+                rOpKT:layout_marginRight="20dp"
+                rOpKT:layout_marginBottom="130dp"
+                rOpKT:orientation="vertical"
+                rOpKT:visibility="visible">
+
+                <LinearLayout
+                    rOpKT:layout_width="match_parent"
+                    rOpKT:layout_height="wrap_content"
+                    rOpKT:layout_marginLeft="30dp"
+                    rOpKT:layout_marginRight="30dp"
+                    rOpKT:layout_marginBottom="50dp"
+                    rOpKT:orientation="horizontal">
+
+                    <LinearLayout
+                        rOpKT:layout_width="match_parent"
+                        rOpKT:layout_height="wrap_content"
+                        rOpKT:layout_weight="1"
+                        rOpKT:gravity="center"
+                        rOpKT:orientation="vertical">
+
+                        <ImageView
+                            rOpKT:layout_width="@dimen/dy"
+                            rOpKT:layout_height="@dimen/dy"
+                            rOpKT:src="@drawable/aw" />
+
+                        <TextView
+                            rOpKT:layout_width="wrap_content"
+                            rOpKT:layout_height="wrap_content"
+                            rOpKT:layout_marginTop="10dp"
+                            rOpKT:text="차단"
+                            rOpKT:textColor="#ff000000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        rOpKT:layout_width="match_parent"
+                        rOpKT:layout_height="wrap_content"
+                        rOpKT:layout_weight="1"
+                        rOpKT:gravity="center"
+                        rOpKT:orientation="vertical">
+
+                        <ImageView
+                            rOpKT:layout_width="@dimen/dy"
+                            rOpKT:layout_height="@dimen/dy"
+                            rOpKT:src="@drawable/bb" />
+
+                        <TextView
+                            rOpKT:layout_width="wrap_content"
+                            rOpKT:layout_height="wrap_content"
+                            rOpKT:layout_marginTop="10dp"
+                            rOpKT:text="연락처에 추가"
+                            rOpKT:textColor="#ff000000" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    rOpKT:layout_width="match_parent"
+                    rOpKT:layout_height="wrap_content"
+                    rOpKT:layout_marginLeft="30dp"
+                    rOpKT:layout_marginRight="30dp"
+                    rOpKT:layout_marginBottom="20dp"
+                    rOpKT:baselineAligned="false"
+                    rOpKT:orientation="horizontal">
+
+                    <LinearLayout
+                        rOpKT:layout_width="match_parent"
+                        rOpKT:layout_height="wrap_content"
+                        rOpKT:layout_weight="1"
+                        rOpKT:gravity="center"
+                        rOpKT:orientation="vertical">
+
+                        <ImageView
+                            rOpKT:layout_width="50dp"
+                            rOpKT:layout_height="50dp"
+                            rOpKT:src="@mipmap/f" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        rOpKT:layout_width="match_parent"
+                        rOpKT:layout_height="wrap_content"
+                        rOpKT:layout_weight="1"
+                        rOpKT:gravity="center"
+                        rOpKT:orientation="vertical">
+
+                        <ImageView
+                            rOpKT:layout_width="50dp"
+                            rOpKT:layout_height="50dp"
+                            rOpKT:src="@drawable/d6" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TimePicker xmlns:oRlQt="http://schemas.android.com/apk/res/android"
+    oRlQt:id="@+id/oh"
+    oRlQt:layout_width="wrap_content"
+    oRlQt:layout_height="wrap_content"
+    oRlQt:singleLine="true"
+    oRlQt:textAppearance="@style/is" />

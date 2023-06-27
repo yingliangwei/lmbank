@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alpha xmlns:aRHrd="http://schemas.android.com/apk/res/android" aRHrd:interpolator="@android:interpolator/decelerate_quad" aRHrd:duration="@integer/f" aRHrd:fromAlpha="0" aRHrd:toAlpha="1"/>

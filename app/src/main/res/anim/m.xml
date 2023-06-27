@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:itnue="http://schemas.android.com/apk/res/android">
+    <objectAnimator itnue:interpolator="@interpolator/d" itnue:duration="166" itnue:valueFrom="M -7.0,-7.0 l 14.0,0.0 c 0.0,0.0 0.0,0.0 0.0,0.0 l 0.0,14.0 c 0.0,0.0 0.0,0.0 0.0,0.0 l -14.0,0.0 c 0.0,0.0 0.0,0.0 0.0,0.0 l 0.0,-14.0 c 0.0,0.0 0.0,0.0 0.0,0.0 Z M 7.0,-9.0 c 0.0,0.0 -14.0,0.0 -14.0,0.0 c -1.1044921875,0.0 -2.0,0.8955078125 -2.0,2.0 c 0.0,0.0 0.0,14.0 0.0,14.0 c 0.0,1.1044921875 0.8955078125,2.0 2.0,2.0 c 0.0,0.0 14.0,0.0 14.0,0.0 c 1.1044921875,0.0 2.0,-0.8955078125 2.0,-2.0 c 0.0,0.0 0.0,-14.0 0.0,-14.0 c 0.0,-1.1044921875 -0.8955078125,-2.0 -2.0,-2.0 c 0.0,0.0 0.0,0.0 0.0,0.0 Z" itnue:valueTo="M 0.0,-0.05 l 0.0,0.0 c 0.02761423749,0.0 0.05,0.02238576251 0.05,0.05 l 0.0,0.0 c 0.0,0.02761423749 -0.02238576251,0.05 -0.05,0.05 l 0.0,0.0 c -0.02761423749,0.0 -0.05,-0.02238576251 -0.05,-0.05 l 0.0,0.0 c 0.0,-0.02761423749 0.02238576251,-0.05 0.05,-0.05 Z M 7.0,-9.0 c 0.0,0.0 -14.0,0.0 -14.0,0.0 c -1.1044921875,0.0 -2.0,0.8955078125 -2.0,2.0 c 0.0,0.0 0.0,14.0 0.0,14.0 c 0.0,1.1044921875 0.8955078125,2.0 2.0,2.0 c 0.0,0.0 14.0,0.0 14.0,0.0 c 1.1044921875,0.0 2.0,-0.8955078125 2.0,-2.0 c 0.0,0.0 0.0,-14.0 0.0,-14.0 c 0.0,-1.1044921875 -0.8955078125,-2.0 -2.0,-2.0 c 0.0,0.0 0.0,0.0 0.0,0.0 Z" itnue:valueType="pathType" itnue:propertyName="pathData"/>
+    <set itnue:ordering="sequentially">
+        <objectAnimator itnue:interpolator="@android:interpolator/linear" itnue:duration="166" itnue:valueFrom="1" itnue:valueTo="1" itnue:propertyName="fillAlpha"/>
+        <objectAnimator itnue:interpolator="@interpolator/c" itnue:duration="33" itnue:valueFrom="1" itnue:valueTo="0" itnue:propertyName="fillAlpha"/>
+    </set>
+</set>

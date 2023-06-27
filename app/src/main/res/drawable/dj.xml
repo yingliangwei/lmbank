@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:csOOL="http://schemas.android.com/apk/res/android">
+    <item csOOL:alpha="0.24" csOOL:color="@color/eu" csOOL:state_enabled="true" />
+    <item csOOL:alpha="0.12" csOOL:color="@color/ev" />
+</selector>

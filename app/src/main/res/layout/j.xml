@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:kwHEI="http://schemas.android.com/apk/res/android"
+    kwHEI:id="@+id/kv"
+    kwHEI:layout_width="match_parent"
+    kwHEI:layout_height="wrap_content"
+    kwHEI:gravity="start|top"
+    kwHEI:orientation="vertical">
+
+    <include layout="@layout/k" />
+
+    <FrameLayout
+        kwHEI:id="@+id/e4"
+        kwHEI:layout_width="match_parent"
+        kwHEI:layout_height="wrap_content"
+        kwHEI:minHeight="48dp">
+
+        <View
+            kwHEI:id="@+id/m8"
+            kwHEI:layout_width="match_parent"
+            kwHEI:layout_height="1dp"
+            kwHEI:layout_gravity="top"
+            kwHEI:visibility="gone" />
+
+        <androidx.core.widget.NestedScrollView
+            kwHEI:id="@+id/m9"
+            kwHEI:layout_width="match_parent"
+            kwHEI:layout_height="wrap_content"
+            kwHEI:clipToPadding="false">
+
+            <LinearLayout
+                kwHEI:layout_width="match_parent"
+                kwHEI:layout_height="wrap_content"
+                kwHEI:orientation="vertical">
+
+                <android.widget.Space
+                    kwHEI:id="@+id/o5"
+                    kwHEI:layout_width="match_parent"
+                    kwHEI:layout_height="@dimen/aa"
+                    kwHEI:visibility="gone" />
+
+                <TextView
+                    kwHEI:id="@android:id/message"
+                    style="@android:style/TextAppearance.Material.Subhead"
+                    kwHEI:layout_width="match_parent"
+                    kwHEI:layout_height="wrap_content" />
+
+                <android.widget.Space
+                    kwHEI:id="@+id/o4"
+                    kwHEI:layout_width="match_parent"
+                    kwHEI:layout_height="@dimen/aa"
+                    kwHEI:visibility="gone" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            kwHEI:id="@+id/m7"
+            kwHEI:layout_width="match_parent"
+            kwHEI:layout_height="1dp"
+            kwHEI:layout_gravity="bottom"
+            kwHEI:visibility="gone" />
+    </FrameLayout>
+
+    <FrameLayout
+        kwHEI:id="@+id/e9"
+        kwHEI:layout_width="match_parent"
+        kwHEI:layout_height="wrap_content"
+        kwHEI:minHeight="48dp">
+
+        <FrameLayout
+            kwHEI:id="@+id/e8"
+            kwHEI:layout_width="match_parent"
+            kwHEI:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <include
+        layout="@layout/i"
+        kwHEI:layout_width="match_parent"
+        kwHEI:layout_height="wrap_content" />
+</LinearLayout>

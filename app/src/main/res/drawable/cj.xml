@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:pPRAu="http://schemas.android.com/apk/res/android"
+    pPRAu:width="24dp"
+    pPRAu:height="24dp"
+    pPRAu:tint="@color/at"
+    pPRAu:viewportWidth="126"
+    pPRAu:viewportHeight="126">
+    <path
+        pPRAu:fillColor="#ff000000"
+        pPRAu:pathData="M39.3,26l-2.3,0.9 0,35.4c0,26.1 0.3,35.6 1.2,36.5 0.7,0.7 2.9,1.2 4.9,1.2 6.9,-0 6.9,-0.1 6.9,-37.5 0,-24.9 -0.3,-33.5 -1.2,-34.8 -1.6,-2.1 -6.5,-3 -9.5,-1.7z"
+        pPRAu:strokeColor="#00000000" />
+    <path
+        pPRAu:fillColor="#ff000000"
+        pPRAu:pathData="M79.3,26.5l-2.3,1.6 0,34.8c0,25.6 0.3,35 1.2,35.9 0.7,0.7 2.9,1.2 4.9,1.2 7.1,-0 6.9,0.9 6.9,-37.4 0,-27.6 -0.3,-34.6 -1.3,-35.5 -2.5,-2 -7.1,-2.3 -9.4,-0.6z"
+        pPRAu:strokeColor="#00000000" />
+</vector>

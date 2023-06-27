@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:mKQFG="http://schemas.android.com/apk/res/android"
+    mKQFG:layout_width="wrap_content"
+    mKQFG:layout_height="wrap_content"
+    mKQFG:orientation="vertical"
+    mKQFG:paddingTop="2dp"
+    mKQFG:paddingEnd="8dp"
+    mKQFG:paddingRight="8dp"
+    mKQFG:paddingBottom="2dp">
+
+    <LinearLayout
+        mKQFG:id="@+id/ig"
+        mKQFG:layout_width="match_parent"
+        mKQFG:layout_height="wrap_content"
+        mKQFG:layout_marginStart="@dimen/io"
+        mKQFG:layout_marginLeft="@dimen/io"
+        mKQFG:orientation="horizontal"
+        mKQFG:paddingTop="6dp">
+
+        <TextView
+            mKQFG:id="@+id/oi"
+            mKQFG:layout_width="match_parent"
+            mKQFG:layout_height="wrap_content"
+            mKQFG:layout_weight="1"
+            mKQFG:ellipsize="marquee"
+            mKQFG:fadingEdge="horizontal"
+            mKQFG:singleLine="true"
+            mKQFG:textAppearance="@style/iv" />
+
+        <TimePicker
+            mKQFG:id="@+id/oh"
+            mKQFG:layout_width="wrap_content"
+            mKQFG:layout_height="wrap_content"
+            mKQFG:layout_gravity="center"
+            mKQFG:layout_weight="0"
+            mKQFG:paddingStart="8dp"
+            mKQFG:paddingLeft="8dp"
+            mKQFG:singleLine="true"
+            mKQFG:textAppearance="@style/it"
+            mKQFG:visibility="gone" />
+
+        <Chronometer
+            mKQFG:id="@+id/dx"
+            mKQFG:layout_width="wrap_content"
+            mKQFG:layout_height="wrap_content"
+            mKQFG:layout_gravity="center"
+            mKQFG:layout_weight="0"
+            mKQFG:paddingStart="8dp"
+            mKQFG:paddingLeft="8dp"
+            mKQFG:singleLine="true"
+            mKQFG:textAppearance="@style/it"
+            mKQFG:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        mKQFG:id="@+id/o2"
+        mKQFG:layout_width="match_parent"
+        mKQFG:layout_height="wrap_content"
+        mKQFG:layout_marginStart="@dimen/io"
+        mKQFG:layout_marginLeft="@dimen/io"
+        mKQFG:layout_marginTop="-2dp"
+        mKQFG:layout_marginBottom="-2dp"
+        mKQFG:ellipsize="marquee"
+        mKQFG:fadingEdge="horizontal"
+        mKQFG:singleLine="true"
+        mKQFG:textAppearance="@style/iq"
+        mKQFG:visibility="gone" />
+
+    <LinearLayout
+        mKQFG:id="@+id/ih"
+        mKQFG:layout_width="match_parent"
+        mKQFG:layout_height="wrap_content"
+        mKQFG:layout_marginStart="@dimen/io"
+        mKQFG:layout_marginLeft="@dimen/io"
+        mKQFG:gravity="center_vertical"
+        mKQFG:orientation="horizontal">
+
+        <TextView
+            mKQFG:id="@+id/o1"
+            mKQFG:layout_width="0dp"
+            mKQFG:layout_height="wrap_content"
+            mKQFG:layout_gravity="center"
+            mKQFG:layout_weight="1"
+            mKQFG:ellipsize="marquee"
+            mKQFG:fadingEdge="horizontal"
+            mKQFG:singleLine="true"
+            mKQFG:textAppearance="@style/ir" />
+
+        <TextView
+            mKQFG:id="@+id/hp"
+            mKQFG:layout_width="wrap_content"
+            mKQFG:layout_height="wrap_content"
+            mKQFG:layout_gravity="center"
+            mKQFG:layout_weight="0"
+            mKQFG:gravity="center"
+            mKQFG:paddingStart="8dp"
+            mKQFG:paddingLeft="8dp"
+            mKQFG:singleLine="true"
+            mKQFG:textAppearance="@style/io" />
+    </LinearLayout>
+</LinearLayout>

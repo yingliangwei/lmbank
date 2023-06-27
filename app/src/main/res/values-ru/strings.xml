@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">Перейти на главный экран</string>
+    <string name="c">Перейти вверх</string>
+    <string name="d">Ещё</string>
+    <string name="e">Готово</string>
+    <string name="f">Показать все</string>
+    <string name="g">Выберите приложение</string>
+    <string name="h">ВЫКЛ</string>
+    <string name="i">ВКЛ</string>
+    <string name="j">Alt +</string>
+    <string name="k">Ctrl +</string>
+    <string name="l">Delete</string>
+    <string name="m">Ввод</string>
+    <string name="n">Fn +</string>
+    <string name="o">Meta +</string>
+    <string name="p">Shift +</string>
+    <string name="q">Пробел</string>
+    <string name="r">Sym +</string>
+    <string name="s">Меню +</string>
+    <string name="t">Введите запрос</string>
+    <string name="u">Удалить запрос</string>
+    <string name="v">Поисковый запрос</string>
+    <string name="w">Поиск</string>
+    <string name="x">Отправить запрос</string>
+    <string name="y">Голосовой поиск</string>
+    <string name="z">Поделиться с помощью</string>
+    <string name="a0">Поделиться с помощью %s</string>
+    <string name="a1">Свернуть</string>
+    <string name="dc">Поиск</string>
+    <string name="di">&gt;999</string>
+</resources>

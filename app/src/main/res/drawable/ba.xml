@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:pZGkc="http://schemas.android.com/apk/res/android">
+    <gradient pZGkc:startColor="#ff1d6b6b" pZGkc:endColor="#ff4a6d83" pZGkc:angle="315" pZGkc:centerX="60%" pZGkc:centerColor="#ff305371"/>
+</shape>

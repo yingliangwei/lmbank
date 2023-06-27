@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view xmlns:erEkq="http://schemas.android.com/apk/res/android"
+    xmlns:p2="http://schemas.android.com/apk/res-auto"
+    erEkq:id="@+id/mm"
+    class="androidx.appcompat.app.AlertController$RecycleListView"
+    erEkq:layout_width="match_parent"
+    erEkq:layout_height="match_parent"
+    erEkq:layout_gravity="start"
+    erEkq:cacheColorHint="@null"
+    erEkq:clipToPadding="false"
+    erEkq:fadingEdge="none"
+    erEkq:overScrollMode="ifContentScrolls"
+    erEkq:scrollbars="vertical"
+    erEkq:textAlignment="viewStart"
+    p2:paddingBottomNoButtons="@dimen/a6"
+    p2:paddingTopNoTitle="@dimen/a7" />

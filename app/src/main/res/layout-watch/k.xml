@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:qXbPL="http://schemas.android.com/apk/res/android"
+    qXbPL:id="@+id/oq"
+    qXbPL:layout_width="match_parent"
+    qXbPL:layout_height="wrap_content"
+    qXbPL:gravity="top|center_horizontal"
+    qXbPL:orientation="vertical">
+
+    <LinearLayout
+        qXbPL:id="@+id/ok"
+        qXbPL:layout_width="match_parent"
+        qXbPL:layout_height="wrap_content"
+        qXbPL:layout_marginTop="24dp"
+        qXbPL:gravity="center_horizontal"
+        qXbPL:orientation="vertical">
+
+        <ImageView
+            qXbPL:id="@android:id/icon"
+            qXbPL:layout_width="wrap_content"
+            qXbPL:layout_height="wrap_content"
+            qXbPL:layout_gravity="center_horizontal"
+            qXbPL:adjustViewBounds="true"
+            qXbPL:maxWidth="24dp"
+            qXbPL:maxHeight="24dp" />
+
+        <TextView
+            qXbPL:id="@+id/c6"
+            style="?android:attr/windowTitleStyle"
+            qXbPL:layout_width="match_parent"
+            qXbPL:layout_height="wrap_content"
+            qXbPL:gravity="center" />
+    </LinearLayout>
+
+    <android.widget.Space
+        qXbPL:id="@+id/oj"
+        qXbPL:layout_width="match_parent"
+        qXbPL:layout_height="@dimen/ab"
+        qXbPL:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view xmlns:iGdYF="http://schemas.android.com/apk/res/android"
+    style="@style/pa"
+    class="com.google.android.material.snackbar.Snackbar$SnackbarLayout"
+    iGdYF:layout_width="wrap_content"
+    iGdYF:layout_height="wrap_content"
+    iGdYF:layout_gravity="bottom|center_horizontal" />

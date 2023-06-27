@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:ondoj="http://schemas.android.com/apk/res/android"
+    ondoj:id="@+id/b3"
+    style="@style/p2"
+    ondoj:layout_width="0dp"
+    ondoj:layout_height="48dp"
+    ondoj:layout_weight="1"
+    ondoj:orientation="horizontal"
+    ondoj:paddingStart="4dp">
+
+    <ImageView
+        ondoj:id="@+id/b6"
+        ondoj:layout_width="@dimen/il"
+        ondoj:layout_height="@dimen/il"
+        ondoj:layout_gravity="start|center_vertical"
+        ondoj:scaleType="centerInside" />
+
+    <TextView
+        ondoj:id="@+id/bb"
+        style="@style/p3"
+        ondoj:layout_width="wrap_content"
+        ondoj:layout_height="wrap_content"
+        ondoj:layout_gravity="start|center_vertical"
+        ondoj:clickable="false"
+        ondoj:ellipsize="end"
+        ondoj:paddingStart="4dp"
+        ondoj:singleLine="true" />
+</LinearLayout>

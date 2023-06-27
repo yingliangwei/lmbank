@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textview.MaterialTextView xmlns:oShWz="http://schemas.android.com/apk/res/android"
+    oShWz:layout_width="match_parent"
+    oShWz:layout_height="wrap_content"
+    oShWz:textAppearance="@style/h6" />

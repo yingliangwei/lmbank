@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">گھر کی طرف نیویگیٹ کریں</string>
+    <string name="c">اوپر نیویگیٹ کریں</string>
+    <string name="d">مزید اختیارات</string>
+    <string name="e">ہو گیا</string>
+    <string name="f">سبھی دیکھیں</string>
+    <string name="g">ایک ایپ منتخب کریں</string>
+    <string name="h">آف</string>
+    <string name="i">آن</string>
+    <string name="j">Alt+‎</string>
+    <string name="k">Ctrl+‎</string>
+    <string name="l">delete</string>
+    <string name="m">enter</string>
+    <string name="n">Function+‎</string>
+    <string name="o">Meta+‎</string>
+    <string name="p">Shift+‎</string>
+    <string name="q">space</string>
+    <string name="r">Sym+‎</string>
+    <string name="s">Menu+‎</string>
+    <string name="t">تلاش کریں…</string>
+    <string name="u">استفسار صاف کریں</string>
+    <string name="v">تلاش کا استفسار</string>
+    <string name="w">تلاش کریں</string>
+    <string name="x">استفسار جمع کرائیں</string>
+    <string name="y">صوتی تلاش</string>
+    <string name="z">اس کے ساتھ اشتراک کریں</string>
+    <string name="a0">%s کے ساتھ اشتراک کریں</string>
+    <string name="a1">سکیڑیں</string>
+    <string name="dc">تلاش کریں</string>
+    <string name="di">+999</string>
+</resources>

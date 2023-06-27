@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:bkIMR="http://schemas.android.com/apk/res/android"
+    xmlns:p2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    bkIMR:id="@android:id/text1"
+    bkIMR:layout_width="match_parent"
+    bkIMR:layout_height="wrap_content"
+    bkIMR:drawablePadding="20dp"
+    bkIMR:ellipsize="marquee"
+    bkIMR:gravity="center"
+    bkIMR:paddingStart="@dimen/av"
+    bkIMR:paddingLeft="@dimen/av"
+    bkIMR:textAlignment="viewStart"
+    p2:drawableLeftCompat="?android:attr/listChoiceIndicatorMultiple"
+    p2:drawableStartCompat="?android:attr/listChoiceIndicatorMultiple"
+    tools:ignore="RtlCompat" />

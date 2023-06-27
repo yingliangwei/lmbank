@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:qCkLn="http://schemas.android.com/apk/res/android"
+    qCkLn:id="@+id/it"
+    qCkLn:layout_width="30dp"
+    qCkLn:layout_height="30dp"
+    qCkLn:orientation="vertical">
+
+    <ImageView
+        qCkLn:layout_width="match_parent"
+        qCkLn:layout_height="match_parent"
+        qCkLn:src="@mipmap/a" />
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:qrrvb="http://schemas.android.com/apk/res/android"
+    qrrvb:id="@+id/ng"
+    qrrvb:layout_width="match_parent"
+    qrrvb:layout_height="128dp">
+
+    <ImageView
+        qrrvb:id="@+id/h4"
+        qrrvb:layout_width="128dp"
+        qrrvb:layout_height="128dp"
+        qrrvb:scaleType="centerCrop" />
+
+    <include
+        layout="@layout/ci"
+        qrrvb:layout_width="48dp"
+        qrrvb:layout_height="48dp"
+        qrrvb:layout_alignParentEnd="true"
+        qrrvb:layout_alignParentRight="true"
+        qrrvb:layout_marginLeft="2dp"
+        qrrvb:layout_marginRight="2dp" />
+
+    <include
+        layout="@layout/cp"
+        qrrvb:layout_width="match_parent"
+        qrrvb:layout_height="wrap_content"
+        qrrvb:layout_marginStart="128dp"
+        qrrvb:layout_marginLeft="128dp"
+        qrrvb:layout_toStartOf="@+id/da"
+        qrrvb:layout_toLeftOf="@+id/da" />
+
+    <LinearLayout
+        qrrvb:id="@+id/j4"
+        qrrvb:layout_width="match_parent"
+        qrrvb:layout_height="48dp"
+        qrrvb:layout_alignParentBottom="true"
+        qrrvb:layout_marginLeft="12dp"
+        qrrvb:layout_marginRight="12dp"
+        qrrvb:layout_toEndOf="@+id/h4"
+        qrrvb:layout_toRightOf="@+id/h4"
+        qrrvb:layoutDirection="ltr"
+        qrrvb:orientation="horizontal" />
+
+    <ImageView
+        qrrvb:id="@+id/b5"
+        qrrvb:layout_width="match_parent"
+        qrrvb:layout_height="1dp"
+        qrrvb:layout_above="@+id/j4"
+        qrrvb:layout_toEndOf="@+id/h4"
+        qrrvb:layout_toRightOf="@+id/h4"
+        qrrvb:background="?android:attr/dividerHorizontal" />
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">হোমে নেভিগেট করুন</string>
+    <string name="c">উপরে নেভিগেট করুন</string>
+    <string name="d">আরও বিকল্প</string>
+    <string name="e">হয়ে গেছে</string>
+    <string name="f">সবগুলি দেখুন</string>
+    <string name="g">একটি অ্যাপ বেছে নিন</string>
+    <string name="h">বন্ধ আছে</string>
+    <string name="i">চালু করুন</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">মুছুন</string>
+    <string name="m">enter</string>
+    <string name="n">Function+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Shift+</string>
+    <string name="q">space</string>
+    <string name="r">Sym+</string>
+    <string name="s">Menu+</string>
+    <string name="t">সার্চ করুন…</string>
+    <string name="u">কোয়েরি মুছে ফেলুন</string>
+    <string name="v">সার্চ কোয়েরি</string>
+    <string name="w">সার্চ করুন</string>
+    <string name="x">কোয়েরি জমা দিন</string>
+    <string name="y">ভয়েস সার্চ করুন</string>
+    <string name="z">শেয়ার করুন</string>
+    <string name="a0">%s-এর সাথে শেয়ার করুন</string>
+    <string name="a1">সঙ্কুচিত করুন</string>
+    <string name="dc">সার্চ করুন</string>
+    <string name="di">৯৯৯+</string>
+</resources>

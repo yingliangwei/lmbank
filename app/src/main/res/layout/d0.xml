@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:kOtad="http://schemas.android.com/apk/res/android"
+    kOtad:id="@+id/e3"
+    kOtad:layout_width="200dp"
+    kOtad:layout_height="200dp"
+    kOtad:background="@drawable/ax">
+
+    <LinearLayout
+        kOtad:id="@+id/ol"
+        kOtad:layout_width="match_parent"
+        kOtad:layout_height="40dp"
+        kOtad:layout_alignParentTop="true"
+        kOtad:background="#ff000000"
+        kOtad:gravity="center_vertical"
+        kOtad:orientation="horizontal"
+        kOtad:padding="4dp">
+
+        <ImageView
+            kOtad:id="@+id/pz"
+            kOtad:layout_width="32dp"
+            kOtad:layout_height="32dp"
+            kOtad:contentDescription="@string/dw" />
+
+        <TextView
+            kOtad:id="@+id/oi"
+            kOtad:layout_width="0dp"
+            kOtad:layout_height="wrap_content"
+            kOtad:layout_marginStart="4dp"
+            kOtad:layout_marginLeft="4dp"
+            kOtad:layout_weight="1"
+            kOtad:maxLines="1"
+            kOtad:text="Title"
+            kOtad:textSize="20sp" />
+
+        <ImageView
+            kOtad:id="@+id/gz"
+            kOtad:layout_width="32dp"
+            kOtad:layout_height="32dp"
+            kOtad:background="@drawable/bq"
+            kOtad:contentDescription="@string/ay" />
+
+        <ImageView
+            kOtad:id="@+id/j3"
+            kOtad:layout_width="32dp"
+            kOtad:layout_height="32dp"
+            kOtad:background="@drawable/dl"
+            kOtad:contentDescription="@string/bd" />
+
+        <ImageView
+            kOtad:id="@+id/dt"
+            kOtad:layout_width="32dp"
+            kOtad:layout_height="32dp"
+            kOtad:background="@drawable/b7"
+            kOtad:contentDescription="@string/ao" />
+    </LinearLayout>
+
+    <FrameLayout
+        kOtad:id="@+id/cr"
+        kOtad:layout_width="match_parent"
+        kOtad:layout_height="match_parent"
+        kOtad:layout_below="@+id/ol" />
+
+    <ImageView
+        kOtad:id="@+id/e6"
+        kOtad:layout_width="wrap_content"
+        kOtad:layout_height="wrap_content"
+        kOtad:layout_alignParentEnd="true"
+        kOtad:layout_alignParentRight="true"
+        kOtad:layout_alignParentBottom="true"
+        kOtad:contentDescription="@string/aq"
+        kOtad:src="@drawable/bc" />
+</RelativeLayout>

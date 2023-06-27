@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:qdoEs="http://schemas.android.com/apk/res/android"
+    qdoEs:id="@+id/oq"
+    qdoEs:layout_width="match_parent"
+    qdoEs:layout_height="wrap_content"
+    qdoEs:orientation="vertical">
+
+    <LinearLayout
+        qdoEs:id="@+id/ok"
+        qdoEs:layout_width="match_parent"
+        qdoEs:layout_height="wrap_content"
+        qdoEs:gravity="start|center_vertical"
+        qdoEs:orientation="horizontal"
+        qdoEs:paddingTop="@dimen/aa"
+     >
+
+        <ImageView
+            qdoEs:id="@android:id/icon"
+            qdoEs:layout_width="32dp"
+            qdoEs:layout_height="32dp"
+            qdoEs:layout_marginEnd="8dp"
+            qdoEs:layout_marginRight="8dp"
+            qdoEs:scaleType="fitCenter"
+            qdoEs:src="@null" />
+
+        <TextView
+            qdoEs:id="@+id/c6"
+            style="?android:attr/windowTitleStyle"
+            qdoEs:layout_width="match_parent"
+            qdoEs:layout_height="wrap_content"
+            qdoEs:layout_gravity="start"
+            qdoEs:ellipsize="end"
+            qdoEs:singleLine="true"
+            qdoEs:textAlignment="viewStart" />
+    </LinearLayout>
+
+    <android.widget.Space
+        qdoEs:id="@+id/oj"
+        qdoEs:layout_width="match_parent"
+        qdoEs:layout_height="@dimen/ab"
+        qdoEs:visibility="gone" />
+</LinearLayout>

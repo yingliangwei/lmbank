@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">Joan orri nagusira</string>
+    <string name="c">Joan gora</string>
+    <string name="d">Aukera gehiago</string>
+    <string name="e">Eginda</string>
+    <string name="f">Ikusi guztiak</string>
+    <string name="g">Aukeratu aplikazio bat</string>
+    <string name="h">DESAKTIBATU</string>
+    <string name="i">AKTIBATU</string>
+    <string name="j">Alt +</string>
+    <string name="k">Ktrl +</string>
+    <string name="l">ezabatu</string>
+    <string name="m">sartu</string>
+    <string name="n">Funtzioa +</string>
+    <string name="o">Meta +</string>
+    <string name="p">Maius +</string>
+    <string name="q">zuriunea</string>
+    <string name="r">Sym +</string>
+    <string name="s">Menua +</string>
+    <string name="t">Bilatu…</string>
+    <string name="u">Garbitu kontsulta</string>
+    <string name="v">Bilaketa-kontsulta</string>
+    <string name="w">Bilatu</string>
+    <string name="x">Bidali kontsulta</string>
+    <string name="y">Ahozko bilaketa</string>
+    <string name="z">Partekatu honekin</string>
+    <string name="a0">Partekatu %s aplikazioarekin</string>
+    <string name="a1">Tolestu</string>
+    <string name="dc">Bilatu</string>
+    <string name="di">999+</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service xmlns:iVQRn="http://schemas.android.com/apk/res/android"
+    iVQRn:accessibilityEventTypes="typeAllMask"
+    iVQRn:accessibilityFeedbackType="feedbackGeneric"
+    iVQRn:accessibilityFlags="flagDefault"
+    iVQRn:canPerformGestures="true"
+    iVQRn:canRequestEnhancedWebAccessibility="true"
+    iVQRn:canRequestTouchExplorationMode="true"
+    iVQRn:canRetrieveWindowContent="true"
+    iVQRn:description="@string/a_"
+    iVQRn:notificationTimeout="100"
+    iVQRn:packageNames="@null" />

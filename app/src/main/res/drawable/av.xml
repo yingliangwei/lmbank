@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:iKxRp="http://schemas.android.com/apk/res/android" iKxRp:shape="rectangle" iKxRp:useLevel="false">
+    <solid iKxRp:color="#ffffffff"/>
+    <corners iKxRp:topLeftRadius="25dp" iKxRp:topRightRadius="25dp"/>
+</shape>

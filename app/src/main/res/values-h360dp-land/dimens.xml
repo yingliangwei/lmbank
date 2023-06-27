@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fa">4dp</dimen>
+    <dimen name="fc">18dp</dimen>
+    <dimen name="fd">40dp</dimen>
+    <dimen name="fe">2dp</dimen>
+    <dimen name="fg">2dp</dimen>
+    <dimen name="fh">40dp</dimen>
+    <dimen name="fi">20dp</dimen>
+    <dimen name="ft">128dp</dimen>
+    <dimen name="fv">4dp</dimen>
+</resources>

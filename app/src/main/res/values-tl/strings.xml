@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">Mag-navigate sa home</string>
+    <string name="c">Mag-navigate pataas</string>
+    <string name="d">Higit pang opsyon</string>
+    <string name="e">Tapos na</string>
+    <string name="f">Tingnan lahat</string>
+    <string name="g">Pumili ng app</string>
+    <string name="h">I-OFF</string>
+    <string name="i">I-ON</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">delete</string>
+    <string name="m">enter</string>
+    <string name="n">Function+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Shift+</string>
+    <string name="q">space</string>
+    <string name="r">Sym+</string>
+    <string name="s">Menu+</string>
+    <string name="t">Maghanap…</string>
+    <string name="u">I-clear ang query</string>
+    <string name="v">Query sa paghahanap</string>
+    <string name="w">Maghanap</string>
+    <string name="x">Isumite ang query</string>
+    <string name="y">Paghahanap gamit ang boses</string>
+    <string name="z">Ibahagi sa/kay</string>
+    <string name="a0">Ibahagi gamit ang %s</string>
+    <string name="a1">I-collapse</string>
+    <string name="dc">Maghanap</string>
+    <string name="di">999+</string>
+</resources>

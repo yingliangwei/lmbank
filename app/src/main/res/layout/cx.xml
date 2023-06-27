@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:mQWfD="http://schemas.android.com/apk/res/android"
+    mQWfD:id="@android:id/text1"
+    mQWfD:layout_width="match_parent"
+    mQWfD:layout_height="wrap_content"
+    mQWfD:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+    mQWfD:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+    mQWfD:drawablePadding="20dp"
+    mQWfD:ellipsize="marquee"
+    mQWfD:gravity="center_vertical"
+    mQWfD:paddingStart="@dimen/av"
+    mQWfD:paddingLeft="@dimen/av"
+    mQWfD:textAppearance="?android:attr/textAppearanceMedium" />

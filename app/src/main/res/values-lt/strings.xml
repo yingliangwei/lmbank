@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">Eiti į pagrindinį puslapį</string>
+    <string name="c">Naršyti aukštyn</string>
+    <string name="d">Daugiau parinkčių</string>
+    <string name="e">Atlikta</string>
+    <string name="f">Žr. viską</string>
+    <string name="g">Pasirinkite programą</string>
+    <string name="h">IŠJUNGTI</string>
+    <string name="i">ĮJUNGTI</string>
+    <string name="j">„Alt“ +</string>
+    <string name="k">„Ctrl“ +</string>
+    <string name="l">„delete“</string>
+    <string name="m">„enter“</string>
+    <string name="n">„Function“ +</string>
+    <string name="o">„Meta“ +</string>
+    <string name="p">„Shift“ +</string>
+    <string name="q">„space“</string>
+    <string name="r">„Sym“ +</string>
+    <string name="s">„Menu“ +</string>
+    <string name="t">Ieškoti…</string>
+    <string name="u">Išvalyti užklausą</string>
+    <string name="v">Paieškos užklausa</string>
+    <string name="w">Ieškoti</string>
+    <string name="x">Pateikti užklausą</string>
+    <string name="y">Paieška balsu</string>
+    <string name="z">Bendrinti su</string>
+    <string name="a0">Bendrinti naudojant programą „%s“</string>
+    <string name="a1">Sutraukti</string>
+    <string name="dc">Ieškoti</string>
+    <string name="di">999+</string>
+</resources>

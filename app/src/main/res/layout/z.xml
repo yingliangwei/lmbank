@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:dGUvW="http://schemas.android.com/apk/res/android"
+    dGUvW:id="@+id/mb"
+    dGUvW:layout_width="match_parent"
+    dGUvW:layout_height="match_parent"
+    dGUvW:orientation="horizontal">
+
+    <TextView
+        dGUvW:id="@+id/ma"
+        dGUvW:layout_width="wrap_content"
+        dGUvW:layout_height="match_parent"
+        dGUvW:layout_marginBottom="2dp"
+        dGUvW:drawablePadding="0dp"
+        dGUvW:gravity="center_vertical"
+        dGUvW:textAppearance="?android:attr/textAppearanceMedium"
+        dGUvW:textColor="?android:attr/textColorPrimary"
+        dGUvW:visibility="gone" />
+
+    <ImageView
+        dGUvW:id="@+id/mc"
+        dGUvW:layout_width="wrap_content"
+        dGUvW:layout_height="match_parent"
+        dGUvW:layout_gravity="center_vertical"
+        dGUvW:contentDescription="@string/w"
+        dGUvW:focusable="true" />
+
+    <LinearLayout
+        dGUvW:id="@+id/me"
+        dGUvW:layout_width="wrap_content"
+        dGUvW:layout_height="match_parent"
+        dGUvW:layout_marginLeft="8dp"
+        dGUvW:layout_marginRight="8dp"
+        dGUvW:layout_weight="1"
+        dGUvW:layoutDirection="locale"
+        dGUvW:orientation="horizontal">
+
+        <ImageView
+            dGUvW:id="@+id/mg"
+            style="@style/gd"
+            dGUvW:layout_width="@dimen/ae"
+            dGUvW:layout_height="wrap_content"
+            dGUvW:layout_gravity="center_vertical"
+            dGUvW:scaleType="centerInside"
+            dGUvW:visibility="gone" />
+
+        <LinearLayout
+            dGUvW:id="@+id/mh"
+            dGUvW:layout_width="wrap_content"
+            dGUvW:layout_height="match_parent"
+            dGUvW:layout_gravity="center_vertical"
+            dGUvW:layout_weight="1"
+            dGUvW:orientation="horizontal">
+
+            <view
+                dGUvW:id="@+id/mi"
+                class="androidx.appcompat.widget.SearchView$SearchAutoComplete"
+                dGUvW:layout_width="0dp"
+                dGUvW:layout_height="36dp"
+                dGUvW:layout_gravity="center_vertical"
+                dGUvW:layout_weight="1"
+                dGUvW:background="@null"
+                dGUvW:dropDownAnchor="@+id/me"
+                dGUvW:dropDownHeight="wrap_content"
+                dGUvW:dropDownHorizontalOffset="0dp"
+                dGUvW:dropDownVerticalOffset="0dp"
+                dGUvW:ellipsize="end"
+                dGUvW:imeOptions="actionSearch"
+                dGUvW:inputType="textNoSuggestions"
+                dGUvW:paddingLeft="@dimen/af"
+                dGUvW:paddingRight="@dimen/ag"
+                dGUvW:singleLine="true" />
+
+            <ImageView
+                dGUvW:id="@+id/md"
+                dGUvW:layout_width="wrap_content"
+                dGUvW:layout_height="match_parent"
+                dGUvW:layout_gravity="center_vertical"
+                dGUvW:contentDescription="@string/u"
+                dGUvW:focusable="true"
+                dGUvW:paddingLeft="8dp"
+                dGUvW:paddingRight="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            dGUvW:id="@+id/nl"
+            dGUvW:layout_width="wrap_content"
+            dGUvW:layout_height="match_parent"
+            dGUvW:orientation="horizontal">
+
+            <ImageView
+                dGUvW:id="@+id/mf"
+                dGUvW:layout_width="wrap_content"
+                dGUvW:layout_height="match_parent"
+                dGUvW:layout_gravity="center_vertical"
+                dGUvW:contentDescription="@string/x"
+                dGUvW:focusable="true"
+                dGUvW:paddingLeft="16dp"
+                dGUvW:paddingRight="16dp"
+                dGUvW:visibility="gone" />
+
+            <ImageView
+                dGUvW:id="@+id/mj"
+                dGUvW:layout_width="wrap_content"
+                dGUvW:layout_height="match_parent"
+                dGUvW:layout_gravity="center_vertical"
+                dGUvW:contentDescription="@string/y"
+                dGUvW:focusable="true"
+                dGUvW:paddingLeft="16dp"
+                dGUvW:paddingRight="16dp"
+                dGUvW:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

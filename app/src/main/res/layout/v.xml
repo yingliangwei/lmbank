@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:lYAEz="http://schemas.android.com/apk/res/android"
+    lYAEz:id="@+id/az"
+    lYAEz:layout_width="match_parent"
+    lYAEz:layout_height="match_parent"
+    lYAEz:fitsSystemWindows="true"
+    lYAEz:orientation="vertical">
+
+    <ViewStub
+        lYAEz:id="@+id/b_"
+        lYAEz:layout_width="match_parent"
+        lYAEz:layout_height="wrap_content"
+        lYAEz:inflatedId="@+id/b9"
+        lYAEz:layout="@layout/e" />
+
+    <include layout="@layout/u" />
+</LinearLayout>

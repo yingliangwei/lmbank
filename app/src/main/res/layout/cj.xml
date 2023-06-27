@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:aRWCF="http://schemas.android.com/apk/res/android"
+    aRWCF:id="@+id/ng"
+    aRWCF:layout_width="match_parent"
+    aRWCF:layout_height="128dp">
+
+    <include
+        layout="@layout/co"
+        aRWCF:layout_width="@dimen/iq"
+        aRWCF:layout_height="@dimen/ip" />
+
+    <include
+        layout="@layout/ci"
+        aRWCF:layout_width="48dp"
+        aRWCF:layout_height="48dp"
+        aRWCF:layout_alignParentEnd="true"
+        aRWCF:layout_alignParentRight="true"
+        aRWCF:layout_marginLeft="2dp"
+        aRWCF:layout_marginRight="2dp" />
+
+    <include
+        layout="@layout/cp"
+        aRWCF:layout_width="match_parent"
+        aRWCF:layout_height="wrap_content"
+        aRWCF:layout_gravity="fill_vertical"
+        aRWCF:layout_marginStart="@dimen/iq"
+        aRWCF:layout_marginLeft="@dimen/iq"
+        aRWCF:layout_toStartOf="@+id/da"
+        aRWCF:layout_toLeftOf="@+id/da" />
+
+    <LinearLayout
+        aRWCF:id="@+id/j4"
+        aRWCF:layout_width="match_parent"
+        aRWCF:layout_height="48dp"
+        aRWCF:layout_alignParentBottom="true"
+        aRWCF:layout_marginLeft="12dp"
+        aRWCF:layout_marginRight="12dp"
+        aRWCF:layoutDirection="ltr"
+        aRWCF:orientation="horizontal" />
+
+    <ImageView
+        aRWCF:id="@+id/b5"
+        aRWCF:layout_width="match_parent"
+        aRWCF:layout_height="1dp"
+        aRWCF:layout_above="@+id/j4"
+        aRWCF:background="?android:attr/dividerHorizontal" />
+</RelativeLayout>

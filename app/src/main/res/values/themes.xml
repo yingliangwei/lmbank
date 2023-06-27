@@ -1,0 +1,203 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyApplication" parent="Theme.AppCompat.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/b1</item>
+    </style>
+
+    <style name="fd" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ff333333</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="f_" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ff333333</item>
+        <item name="android:background">#ffdcdcdc</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
+
+    <style name="fb" parent="">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">60dp</item>
+    </style>
+
+    <style name="fc" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ff333333</item>
+        <item name="android:textColorHint">#ff999999</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="pa" parent="@android:style/Widget">
+        <item name="android:background">@drawable/bl</item>
+        <item name="android:paddingLeft">@dimen/cu</item>
+        <item name="android:paddingRight">@dimen/cu</item>
+        <item name="android:maxWidth">@dimen/cs</item>
+        <item name="android:minWidth">@dimen/ct</item>
+    </style>
+
+    <style name="en" parent="@android:style/Widget.Material.Spinner" />
+
+    <style name="jk" parent="@style/b5">
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="b5">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.0071</item>
+    </style>
+
+    <style name="p2" parent="">
+        <item name="android:background">@drawable/dw</item>
+    </style>
+
+    <style name="p3" parent="">
+        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
+        <item name="android:textSize">@dimen/im</item>
+        <item name="android:textColor">@color/a5</item>
+    </style>
+
+    <style name="it" parent="@style/is">
+        <item name="android:textColor">@color/fm</item>
+    </style>
+
+    <style name="is" parent="@android:style/TextAppearance.Material.Notification.Time"></style>
+
+    <style name="io" parent="@style/in">
+        <item name="android:textColor">@color/fm</item>
+    </style>
+
+    <style name="in" parent="@android:style/TextAppearance.Material.Notification.Info"></style>
+
+    <style name="iu" parent="@android:style/TextAppearance.Material.Notification.Title"></style>
+
+    <style name="iv" parent="@style/iu">
+        <item name="android:textColor">@color/f9</item>
+    </style>
+
+    <style name="ip" parent="@style/in"></style>
+
+    <style name="iq" parent="@style/io"></style>
+
+    <style name="ir" parent="@style/im">
+        <item name="android:textColor">@color/fm</item>
+    </style>
+
+    <style name="im" parent="@android:style/TextAppearance.Material.Notification"></style>
+
+    <style name="qb" parent="@android:style/Widget.Material.SeekBar"></style>
+
+    <style name="h6" parent="@style/h9"></style>
+
+    <style name="h7" parent="">
+        <item name="android:textAppearance">@style/h6</item>
+    </style>
+
+    <style name="h8" parent="@style/h9">
+
+    </style>
+
+    <style name="h9" parent="@style/i1">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="i1" parent="@style/ai"></style>
+
+    <style name="ai" parent="@android:style/TextAppearance.Material.Title"></style>
+
+    <style name="qe" parent="@style/ew">
+        <item name="android:checkable">true</item>
+    </style>
+
+    <style name="ew" parent="@android:style/Widget">
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:text">@null</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:checkable">false</item>
+    </style>
+
+    <style name="el" parent="@android:style/Widget.Material.SeekBar"></style>
+
+    <style name="em" parent="@style/el"></style>
+    <style name="g3" parent="@android:style/Widget">
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+
+    <style name="f8" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+    </style>
+    <style name="g8" parent="@android:style/Widget">
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+
+    <style name="g1" parent="@android:style/Widget">
+        <item name="android:layout_gravity">start|center_vertical</item>
+        <item name="android:paddingEnd">8dp</item>
+    </style>
+    <style name="g2" parent="@android:style/Widget">
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+    <style name="g4" parent="@android:style/Widget">
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+    <style name="g5" parent="@android:style/Widget">
+        <item name="android:textAlignment">viewEnd</item>
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+    <style name="g6" parent="@android:style/Widget">
+        <item name="android:layout_marginStart">8dp</item>
+    </style>
+    <style name="g7" parent="@android:style/Widget">
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="g9" parent="@android:style/Widget">
+        <item name="android:paddingStart">@dimen/af</item>
+        <item name="android:paddingEnd">4dp</item>
+    </style>
+    <style name="g_" parent="@android:style/Widget">
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="ga" parent="@android:style/Widget">
+        <item name="android:layout_toStartOf">@id/fh</item>
+    </style>
+    <style name="gb" parent="@android:style/Widget">
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+    <style name="gd" parent="@android:style/Widget">
+        <item name="android:layout_marginStart">@dimen/af</item>
+    </style>
+    <style name="ge" parent="@android:style/Widget">
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+</resources>

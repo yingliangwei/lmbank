@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:pyKgL="http://schemas.android.com/apk/res/android"
+    pyKgL:id="@+id/k0"
+    pyKgL:layout_width="@dimen/hh"
+    pyKgL:layout_height="@dimen/hh"
+    pyKgL:layout_gravity="end|bottom"
+    pyKgL:layout_marginTop="@dimen/fs"
+    pyKgL:layout_marginBottom="@dimen/fr" />

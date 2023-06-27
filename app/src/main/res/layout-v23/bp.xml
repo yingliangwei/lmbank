@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:rCdzC="http://schemas.android.com/apk/res/android"
+    rCdzC:id="@+id/cz"
+    rCdzC:layout_width="match_parent"
+    rCdzC:layout_height="wrap_content"
+    rCdzC:fillViewport="true"
+    rCdzC:scrollIndicators="bottom|top">
+
+    <LinearLayout
+        rCdzC:layout_width="match_parent"
+        rCdzC:layout_height="wrap_content"
+        rCdzC:gravity="bottom"
+        rCdzC:layoutDirection="locale"
+        rCdzC:orientation="horizontal"
+        rCdzC:paddingHorizontal="8dp"
+        rCdzC:paddingVertical="2dp"
+        rCdzC:paddingStart="8dp"
+        rCdzC:paddingLeft="8dp"
+        rCdzC:paddingTop="2dp"
+        rCdzC:paddingEnd="8dp"
+        rCdzC:paddingRight="8dp"
+        rCdzC:paddingBottom="2dp">
+
+        <Button
+            rCdzC:id="@android:id/button3"
+            rCdzC:layout_width="wrap_content"
+            rCdzC:layout_height="wrap_content" />
+
+        <android.widget.Space
+            rCdzC:id="@+id/n1"
+            rCdzC:layout_width="0dp"
+            rCdzC:layout_height="0dp"
+            rCdzC:layout_weight="1"
+            rCdzC:visibility="invisible" />
+
+        <Button
+            rCdzC:id="@android:id/button2"
+            rCdzC:layout_width="wrap_content"
+            rCdzC:layout_height="wrap_content" />
+
+        <Button
+            rCdzC:id="@android:id/button1"
+            rCdzC:layout_width="wrap_content"
+            rCdzC:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

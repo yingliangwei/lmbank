@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:tAaJI="http://schemas.android.com/apk/res/android"
+    tAaJI:layout_width="wrap_content"
+    tAaJI:layout_height="wrap_content"
+    tAaJI:ellipsize="end"
+    tAaJI:gravity="center"
+    tAaJI:maxLines="2" />

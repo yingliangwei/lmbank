@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tPTAr="http://schemas.android.com/apk/res/android"
+    tPTAr:layout_width="match_parent"
+    tPTAr:layout_height="match_parent">
+
+    <com.tencent.smtt.sdk.WebView
+        tPTAr:id="@+id/nv"
+        tPTAr:layout_width="match_parent"
+        tPTAr:layout_height="match_parent"
+        tPTAr:paddingLeft="5dp"
+        tPTAr:paddingRight="5dp" />
+</RelativeLayout>

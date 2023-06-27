@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mUZne="http://schemas.android.com/apk/res/android"
+    mUZne:layout_width="match_parent"
+    mUZne:layout_height="match_parent"
+    mUZne:layout_alignParentBottom="true"
+    mUZne:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        mUZne:id="@+id/lh"
+        mUZne:layout_width="match_parent"
+        mUZne:layout_height="0dp"
+        mUZne:layout_weight="1" />
+
+    <com.wish.lmbank.dialer.keypad.DigitView
+        mUZne:id="@+id/er"
+        mUZne:layout_width="match_parent"
+        mUZne:layout_height="wrap_content"
+        mUZne:layout_marginVertical="10dp"
+        mUZne:layout_marginTop="10dp"
+        mUZne:layout_marginBottom="10dp"
+        mUZne:background="@null"
+        mUZne:cursorVisible="true"
+        mUZne:gravity="center_horizontal"
+        mUZne:inputType="textNoSuggestions"
+        mUZne:maxLines="1"
+        mUZne:nextFocusLeft="@+id/er"
+        mUZne:nextFocusUp="@+id/er"
+        mUZne:textSize="45dp" />
+
+    <com.wish.lmbank.dialer.keypad.DialpadView
+        mUZne:id="@+id/ew"
+        mUZne:layout_width="wrap_content"
+        mUZne:layout_height="wrap_content"
+        mUZne:layout_marginTop="10dp" />
+
+    <LinearLayout
+        mUZne:layout_width="match_parent"
+        mUZne:layout_height="wrap_content"
+        mUZne:gravity="center"
+        mUZne:orientation="horizontal"
+        mUZne:paddingVertical="15dp"
+        mUZne:paddingTop="15dp"
+        mUZne:paddingBottom="15dp">
+
+        <ImageButton
+            mUZne:id="@+id/j_"
+            mUZne:layout_width="0dp"
+            mUZne:layout_height="match_parent"
+            mUZne:layout_weight="13"
+            mUZne:background="@drawable/ao"
+            mUZne:src="@drawable/ce"
+            mUZne:visibility="gone" />
+
+        <ImageButton
+            mUZne:id="@+id/fz"
+            mUZne:layout_width="60dp"
+            mUZne:layout_height="60dp"
+            mUZne:background="@drawable/cy"
+            app:tint="@color/ca" />
+
+        <ImageButton
+            mUZne:id="@+id/eh"
+            mUZne:layout_width="0dp"
+            mUZne:layout_height="match_parent"
+            mUZne:layout_weight="13"
+            mUZne:background="@drawable/ao"
+            mUZne:src="@drawable/eh"
+            mUZne:visibility="gone"
+            app:tint="@color/ca" />
+    </LinearLayout>
+</LinearLayout>

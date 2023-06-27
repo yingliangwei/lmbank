@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alpha xmlns:iYGDa="http://schemas.android.com/apk/res/android" iYGDa:interpolator="@android:anim/decelerate_interpolator" iYGDa:duration="@android:integer/config_mediumAnimTime" iYGDa:fromAlpha="0" iYGDa:toAlpha="1"/>

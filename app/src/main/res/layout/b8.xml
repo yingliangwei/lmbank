@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:lysEh="http://schemas.android.com/apk/res/android"
+    lysEh:layout_width="match_parent"
+    lysEh:layout_height="wrap_content"
+    lysEh:background="@android:drawable/list_selector_background"
+    lysEh:gravity="center_vertical"
+    lysEh:orientation="horizontal">
+
+    <ImageView
+        lysEh:id="@+id/h4"
+        lysEh:layout_width="32dp"
+        lysEh:layout_height="32dp"
+        lysEh:layout_margin="4dp"
+        lysEh:contentDescription="Icon" />
+
+    <TextView
+        lysEh:id="@+id/ek"
+        lysEh:layout_width="wrap_content"
+        lysEh:layout_height="wrap_content"
+        lysEh:layout_margin="4dp"
+        lysEh:text="Description"
+        lysEh:textAppearance="?android:attr/textAppearanceMedium" />
+</LinearLayout>

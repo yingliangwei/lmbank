@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:lNhcu="http://schemas.android.com/apk/res/android"
+    lNhcu:layout_width="match_parent"
+    lNhcu:layout_height="match_parent"
+    lNhcu:gravity="center"
+    lNhcu:orientation="vertical">
+
+    <ExpandableListView
+        lNhcu:id="@+id/fx"
+        lNhcu:layout_width="match_parent"
+        lNhcu:layout_height="match_parent"
+        lNhcu:layout_weight="1"
+        lNhcu:groupIndicator="@null" />
+
+    <LinearLayout
+        lNhcu:id="@+id/d3"
+        lNhcu:layout_width="wrap_content"
+        lNhcu:layout_height="wrap_content"
+        lNhcu:gravity="center"
+        lNhcu:orientation="vertical"
+        lNhcu:paddingLeft="50dp"
+        lNhcu:paddingTop="10dp"
+        lNhcu:paddingRight="50dp"
+        lNhcu:paddingBottom="10dp"
+        lNhcu:visibility="gone">
+
+        <ImageView
+            lNhcu:layout_width="20dp"
+            lNhcu:layout_height="20dp"
+            lNhcu:src="@drawable/c7" />
+
+        <TextView
+            lNhcu:layout_width="wrap_content"
+            lNhcu:layout_height="wrap_content"
+            lNhcu:layout_marginTop="@dimen/d6"
+            lNhcu:text="삭제"
+            lNhcu:textColor="@color/ak"
+            lNhcu:textSize="12dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:aMsWn="http://schemas.android.com/apk/res/android"
+    aMsWn:layout_width="match_parent"
+    aMsWn:layout_height="wrap_content"
+    aMsWn:minWidth="196dp"
+    aMsWn:orientation="vertical">
+
+    <ImageView
+        aMsWn:id="@+id/gt"
+        aMsWn:layout_width="match_parent"
+        aMsWn:layout_height="1dp"
+        aMsWn:layout_marginTop="4dp"
+        aMsWn:layout_marginBottom="4dp"
+        aMsWn:background="@drawable/a2" />
+
+    <LinearLayout
+        aMsWn:id="@+id/e3"
+        style="@style/g3"
+        aMsWn:layout_width="match_parent"
+        aMsWn:duplicateParentState="true">
+
+        <TextView
+            aMsWn:id="@+id/oi"
+            style="@style/g8"
+            aMsWn:layout_width="wrap_content"
+            aMsWn:layout_height="wrap_content"
+            aMsWn:layout_gravity="center_vertical"
+            aMsWn:duplicateParentState="true"
+            aMsWn:singleLine="true"
+            />
+
+        <Space
+            aMsWn:layout_width="0dp"
+            aMsWn:layout_height="1dp"
+            aMsWn:layout_weight="1" />
+
+        <TextView
+            aMsWn:id="@+id/mo"
+            style="@style/g5"
+            aMsWn:layout_width="wrap_content"
+            aMsWn:layout_height="wrap_content"
+            aMsWn:layout_gravity="center_vertical"
+            aMsWn:duplicateParentState="true"
+            aMsWn:singleLine="true" />
+
+        <ImageView
+            aMsWn:id="@+id/nk"
+            style="@style/g6"
+            aMsWn:layout_width="wrap_content"
+            aMsWn:layout_height="wrap_content"
+            aMsWn:layout_gravity="center"
+            aMsWn:scaleType="center"
+            aMsWn:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

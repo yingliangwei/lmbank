@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:evMyA="http://schemas.android.com/apk/res/android"
+    evMyA:layout_width="match_parent"
+    evMyA:layout_height="match_parent"
+    evMyA:gravity="center"
+    evMyA:orientation="vertical">
+
+    <include layout="@layout/bw" />
+
+    <View
+        evMyA:layout_width="match_parent"
+        evMyA:layout_height="1dp" />
+
+    <include layout="@layout/c1" />
+</LinearLayout>

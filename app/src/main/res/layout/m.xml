@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:bePuv="http://schemas.android.com/apk/res/android"
+    bePuv:layout_width="match_parent"
+    bePuv:layout_height="match_parent"
+    bePuv:fitsSystemWindows="true"
+    bePuv:orientation="vertical">
+
+    <TextView
+        bePuv:id="@+id/oi"
+        style="?android:attr/windowTitleStyle"
+        bePuv:layout_width="match_parent"
+        bePuv:layout_height="wrap_content"
+        bePuv:layout_gravity="start"
+        bePuv:ellipsize="end"
+        bePuv:paddingTop="@dimen/aa"
+        bePuv:singleLine="true"
+        bePuv:textAlignment="viewStart" />
+
+    <include
+        layout="@layout/u"
+        bePuv:layout_width="match_parent"
+        bePuv:layout_height="wrap_content"
+        bePuv:layout_weight="1" />
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:keutP="http://schemas.android.com/apk/res/android"
+    keutP:layout_width="match_parent"
+    keutP:layout_height="wrap_content"
+    keutP:layout_gravity="center"
+    keutP:gravity="center"
+    keutP:orientation="vertical">
+
+    <LinearLayout
+        keutP:layout_width="50dp"
+        keutP:layout_height="60dp"
+        keutP:background="@drawable/d8"
+        keutP:gravity="center"
+        keutP:orientation="vertical">
+
+        <TextView
+            keutP:id="@+id/kl"
+            keutP:layout_width="wrap_content"
+            keutP:layout_height="match_parent"
+            keutP:layout_centerHorizontal="true"
+            keutP:layout_weight="1"
+            keutP:gravity="center"
+            keutP:text="1"
+            keutP:textSize="30dp" />
+
+        <TextView
+            keutP:id="@+id/o7"
+            keutP:layout_width="wrap_content"
+            keutP:layout_height="wrap_content"
+            keutP:layout_centerHorizontal="true"
+            keutP:layout_marginTop="-5dp"
+            keutP:text="11111"
+            keutP:visibility="visible" />
+    </LinearLayout>
+</LinearLayout>

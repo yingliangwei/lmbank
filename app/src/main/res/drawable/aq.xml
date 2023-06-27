@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:aimMQ="http://schemas.android.com/apk/res/android" aimMQ:shape="rectangle" aimMQ:useLevel="false">
+    <solid aimMQ:color="#99ffffff"/>
+    <corners aimMQ:radius="25dp"/>
+</shape>

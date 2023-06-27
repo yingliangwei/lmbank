@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:fBVDZ="http://schemas.android.com/apk/res/android">
+    <set fBVDZ:ordering="sequentially">
+        <objectAnimator fBVDZ:interpolator="@interpolator/g" fBVDZ:duration="183" fBVDZ:valueFrom="1" fBVDZ:valueTo="0.9" fBVDZ:valueType="floatType" fBVDZ:propertyName="scaleX"/>
+        <objectAnimator fBVDZ:interpolator="@interpolator/e" fBVDZ:duration="16" fBVDZ:valueFrom="0.9" fBVDZ:valueTo="0.5" fBVDZ:valueType="floatType" fBVDZ:propertyName="scaleX"/>
+        <objectAnimator fBVDZ:interpolator="@interpolator/e" fBVDZ:duration="300" fBVDZ:valueFrom="0.5" fBVDZ:valueTo="1" fBVDZ:valueType="floatType" fBVDZ:propertyName="scaleX"/>
+    </set>
+    <set fBVDZ:ordering="sequentially">
+        <objectAnimator fBVDZ:interpolator="@interpolator/g" fBVDZ:duration="183" fBVDZ:valueFrom="1" fBVDZ:valueTo="0.9" fBVDZ:valueType="floatType" fBVDZ:propertyName="scaleY"/>
+        <objectAnimator fBVDZ:interpolator="@interpolator/e" fBVDZ:duration="16" fBVDZ:valueFrom="0.9" fBVDZ:valueTo="0.5" fBVDZ:valueType="floatType" fBVDZ:propertyName="scaleY"/>
+        <objectAnimator fBVDZ:interpolator="@interpolator/e" fBVDZ:duration="300" fBVDZ:valueFrom="0.5" fBVDZ:valueTo="1" fBVDZ:valueType="floatType" fBVDZ:propertyName="scaleY"/>
+    </set>
+</set>

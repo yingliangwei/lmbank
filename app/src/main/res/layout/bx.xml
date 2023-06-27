@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:qXzly="http://schemas.android.com/apk/res/android"
+    qXzly:layout_width="match_parent"
+    qXzly:layout_height="match_parent"
+    qXzly:orientation="vertical">
+
+    <include layout="@layout/c0" />
+
+    <FrameLayout
+        qXzly:id="@+id/jp"
+        qXzly:layout_width="match_parent"
+        qXzly:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            qXzly:id="@+id/jr"
+            qXzly:layout_width="wrap_content"
+            qXzly:layout_height="match_parent"
+            qXzly:layout_gravity="center_horizontal"
+            qXzly:scrollbars="none" />
+
+        <LinearLayout
+            qXzly:id="@+id/jk"
+            qXzly:layout_width="wrap_content"
+            qXzly:layout_height="match_parent"
+            qXzly:orientation="vertical">
+
+            <include layout="@layout/bw" />
+
+            <include layout="@layout/c1" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

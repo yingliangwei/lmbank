@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">ഹോമിലേക്ക് പോവുക</string>
+    <string name="c">മുകളിലേക്ക് പോവുക</string>
+    <string name="d">കൂടുതൽ ഓപ്ഷനുകൾ</string>
+    <string name="e">പൂർത്തിയായി</string>
+    <string name="f">എല്ലാം കാണുക</string>
+    <string name="g">ആപ്പ് തിരഞ്ഞെടുക്കുക</string>
+    <string name="h">ഓഫ്</string>
+    <string name="i">ഓൺ</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">ഇല്ലാതാക്കുക</string>
+    <string name="m">enter</string>
+    <string name="n">ഫംഗ്ഷന്‍+</string>
+    <string name="o">മെറ്റ+</string>
+    <string name="p">Shift+</string>
+    <string name="q">സ്‌പെയ്‌സ്</string>
+    <string name="r">Sym+</string>
+    <string name="s">മെനു+</string>
+    <string name="t">തിരയുക…</string>
+    <string name="u">ചോദ്യം മായ്‌ക്കുക</string>
+    <string name="v">ചോദ്യം തിരയുക</string>
+    <string name="w">തിരയുക</string>
+    <string name="x">ചോദ്യം സമർപ്പിക്കുക</string>
+    <string name="y">സംസാരത്തിലൂടെ തിരയുക</string>
+    <string name="z">ഇനിപ്പറയുന്നതുമായി പങ്കിടുക</string>
+    <string name="a0">%s എന്നതുമായി പങ്കിടുക</string>
+    <string name="a1">ചുരുക്കുക</string>
+    <string name="dc">തിരയുക</string>
+    <string name="di">999+</string>
+</resources>

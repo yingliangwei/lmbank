@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:cVske="http://schemas.android.com/apk/res/android"
+    cVske:layout_width="match_parent"
+    cVske:layout_height="wrap_content"
+    cVske:orientation="horizontal"
+    cVske:paddingLeft="@dimen/fb"
+    cVske:paddingTop="16dp"
+    cVske:paddingRight="@dimen/fb"
+    cVske:paddingBottom="16dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        cVske:id="@+id/k3"
+        cVske:layout_width="match_parent"
+        cVske:layout_height="wrap_content"
+        cVske:layout_weight="1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            cVske:layout_width="match_parent"
+            cVske:layout_height="wrap_content"
+            cVske:hint="@string/c7"
+            cVske:imeOptions="flagNoExtractUi"
+            cVske:inputType="date" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        cVske:layout_width="8dp"
+        cVske:layout_height="0dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        cVske:id="@+id/k2"
+        cVske:layout_width="match_parent"
+        cVske:layout_height="wrap_content"
+        cVske:layout_weight="1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            cVske:layout_width="match_parent"
+            cVske:layout_height="wrap_content"
+            cVske:hint="@string/c6"
+            cVske:imeOptions="flagNoExtractUi"
+            cVske:inputType="date" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

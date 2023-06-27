@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">นำทางไปหน้าแรก</string>
+    <string name="c">กลับ</string>
+    <string name="d">ตัวเลือกอื่น</string>
+    <string name="e">เสร็จ</string>
+    <string name="f">ดูทั้งหมด</string>
+    <string name="g">เลือกแอป</string>
+    <string name="h">ปิด</string>
+    <string name="i">เปิด</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">ลบ</string>
+    <string name="m">Enter</string>
+    <string name="n">Function+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Shift+</string>
+    <string name="q">Space</string>
+    <string name="r">Sym+</string>
+    <string name="s">เมนู+</string>
+    <string name="t">ค้นหา…</string>
+    <string name="u">ล้างคำค้นหา</string>
+    <string name="v">คำค้นหา</string>
+    <string name="w">ค้นหา</string>
+    <string name="x">ส่งคำค้นหา</string>
+    <string name="y">ค้นหาด้วยเสียง</string>
+    <string name="z">แชร์กับ</string>
+    <string name="a0">แชร์ทาง %s</string>
+    <string name="a1">ยุบ</string>
+    <string name="dc">ค้นหา</string>
+    <string name="di">999+</string>
+</resources>

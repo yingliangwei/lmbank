@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translate xmlns:phEyp="http://schemas.android.com/apk/res/android" phEyp:interpolator="@android:anim/decelerate_interpolator" phEyp:duration="@android:integer/config_mediumAnimTime" phEyp:fromYDelta="50%p" phEyp:toYDelta="0"/>

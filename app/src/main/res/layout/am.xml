@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:obrPQ="http://schemas.android.com/apk/res/android"
+    obrPQ:id="@+id/is"
+    obrPQ:layout_width="match_parent"
+    obrPQ:layout_height="wrap_content"
+    obrPQ:background="?android:attr/selectableItemBackground"
+    obrPQ:gravity="center"
+    obrPQ:orientation="horizontal"
+    obrPQ:padding="20dp">
+
+    <ImageView
+        obrPQ:id="@+id/hw"
+        obrPQ:layout_width="20dp"
+        obrPQ:layout_height="20dp"
+        obrPQ:layout_marginRight="20dp"
+        obrPQ:src="@drawable/cr"
+        obrPQ:visibility="gone" />
+
+    <ImageView
+        obrPQ:id="@+id/hx"
+        obrPQ:layout_width="20dp"
+        obrPQ:layout_height="20dp" />
+
+    <LinearLayout
+        obrPQ:layout_width="match_parent"
+        obrPQ:layout_height="wrap_content"
+        obrPQ:layout_marginStart="20dp"
+        obrPQ:orientation="vertical">
+
+        <TextView
+            obrPQ:id="@+id/p3"
+            obrPQ:layout_width="match_parent"
+            obrPQ:layout_height="wrap_content"
+            obrPQ:text="9:36"
+            obrPQ:textColor="@color/b2"
+            obrPQ:textSize="16sp" />
+
+        <TextView
+            obrPQ:id="@+id/p4"
+            obrPQ:layout_width="wrap_content"
+            obrPQ:layout_height="wrap_content"
+            obrPQ:text="발신전화, 0분 1초"
+            obrPQ:textColor="@color/co"
+            obrPQ:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

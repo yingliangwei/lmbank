@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:byzHm="http://schemas.android.com/apk/res/android"
+    byzHm:layout_width="@dimen/gb"
+    byzHm:layout_height="@dimen/g9" />

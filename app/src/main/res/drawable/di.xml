@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:gaSMB="http://schemas.android.com/apk/res/android">
+    <item gaSMB:alpha="0.54" gaSMB:color="@color/a" gaSMB:state_enabled="true" />
+    <item gaSMB:alpha="0.12" gaSMB:color="@color/a2" />
+</selector>

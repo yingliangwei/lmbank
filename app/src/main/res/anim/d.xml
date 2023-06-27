@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:guyQW="http://schemas.android.com/apk/res/android" guyQW:shareInterpolator="false">
+    <alpha guyQW:interpolator="@android:anim/decelerate_interpolator" guyQW:duration="@integer/b" guyQW:fromAlpha="0" guyQW:toAlpha="1"/>
+</set>

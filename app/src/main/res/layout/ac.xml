@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:bavCZ="http://schemas.android.com/apk/res/android"
+    bavCZ:layout_width="match_parent"
+    bavCZ:layout_height="match_parent"
+    bavCZ:background="@color/g7">
+
+    <RelativeLayout
+        bavCZ:id="@+id/lv"
+        bavCZ:layout_width="wrap_content"
+        bavCZ:layout_height="wrap_content">
+
+        <ImageView
+            bavCZ:id="@+id/i6"
+            bavCZ:layout_width="match_parent"
+            bavCZ:layout_height="100dp"
+            bavCZ:background="@color/g7"
+            bavCZ:src="@drawable/e8" />
+
+        <TextView
+            bavCZ:id="@+id/pc"
+            bavCZ:layout_width="wrap_content"
+            bavCZ:layout_height="wrap_content"
+            bavCZ:layout_below="@+id/i6"
+            bavCZ:layout_centerHorizontal="true"
+            bavCZ:layout_marginTop="20dp" />
+
+        <TextView
+            bavCZ:id="@+id/pd"
+            bavCZ:layout_width="wrap_content"
+            bavCZ:layout_height="wrap_content"
+            bavCZ:layout_below="@+id/pc"
+            bavCZ:layout_centerHorizontal="true"
+            bavCZ:layout_marginTop="40dp" />
+
+        <TextView
+            bavCZ:id="@+id/pe"
+            bavCZ:layout_width="wrap_content"
+            bavCZ:layout_height="wrap_content"
+            bavCZ:layout_below="@+id/pd"
+            bavCZ:layout_centerHorizontal="true"
+            bavCZ:layout_marginTop="10dp"
+            bavCZ:text="을 (를) 검사합니다" />
+
+        <ImageView
+            bavCZ:id="@+id/i5"
+            bavCZ:layout_width="100dp"
+            bavCZ:layout_height="100dp"
+            bavCZ:layout_below="@+id/pe"
+            bavCZ:layout_centerHorizontal="true"
+            bavCZ:layout_marginTop="20dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        bavCZ:id="@+id/lw"
+        bavCZ:layout_width="match_parent"
+        bavCZ:layout_height="wrap_content"
+        bavCZ:visibility="gone">
+
+        <ImageView
+            bavCZ:id="@+id/hh"
+            bavCZ:layout_width="100dp"
+            bavCZ:layout_height="100dp"
+            bavCZ:layout_centerHorizontal="true"
+            bavCZ:layout_marginTop="20dp"
+            bavCZ:src="@drawable/bf" />
+
+        <TextView
+            bavCZ:id="@+id/pi"
+            bavCZ:layout_width="wrap_content"
+            bavCZ:layout_height="wrap_content"
+            bavCZ:layout_below="@+id/hh"
+            bavCZ:layout_marginLeft="20dp"
+            bavCZ:layout_marginTop="30dp"
+            bavCZ:paddingTop="10dp"
+            bavCZ:text="악성앱이 탐지 되었습니다 ！"
+            bavCZ:textSize="14dp"
+            bavCZ:textStyle="bold" />
+
+        <TextView
+            bavCZ:id="@+id/ph"
+            bavCZ:layout_width="wrap_content"
+            bavCZ:layout_height="wrap_content"
+            bavCZ:layout_below="@+id/pi"
+            bavCZ:layout_marginLeft="20dp"
+            bavCZ:layout_marginTop="10dp"
+            bavCZ:text="-스마트폰의 모든 문자메세지를 유출할 수 있습니다. \10-사용자 문자메세지를 가로챌 수 있습니다.\10-외장 메모리 카드에 저장된 파일을 유출할 수 있습니다. "
+            bavCZ:textSize="12dp" />
+
+        <TextView
+            bavCZ:id="@+id/pg"
+            bavCZ:layout_width="wrap_content"
+            bavCZ:layout_height="wrap_content"
+            bavCZ:layout_below="@+id/ph"
+            bavCZ:layout_marginLeft="20dp"
+            bavCZ:layout_marginTop="10dp"
+            bavCZ:text="앱의 설치 목적과  다른 기능을 요구한다면 삭제를 권고합니다. "
+            bavCZ:textSize="14dp"
+            bavCZ:textStyle="bold" />
+
+        <Button
+            bavCZ:id="@+id/cx"
+            bavCZ:layout_width="match_parent"
+            bavCZ:layout_height="wrap_content"
+            bavCZ:layout_below="@+id/pg"
+            bavCZ:layout_marginLeft="50dp"
+            bavCZ:layout_marginTop="50dp"
+            bavCZ:layout_marginRight="50dp"
+            bavCZ:text="치료하기 "
+            bavCZ:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

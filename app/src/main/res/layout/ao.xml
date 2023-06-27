@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:ggVmY="http://schemas.android.com/apk/res/android"
+    ggVmY:layout_width="match_parent"
+    ggVmY:layout_height="wrap_content"
+    xmlns:p6="http://schemas.android.com/apk/res-auto"
+    ggVmY:background="?android:attr/selectableItemBackground"
+    ggVmY:clickable="true"
+    ggVmY:focusable="true"
+    ggVmY:gravity="center_vertical"
+    ggVmY:orientation="horizontal"
+    ggVmY:padding="10dp">
+
+    <FrameLayout
+        ggVmY:layout_width="wrap_content"
+        ggVmY:layout_height="wrap_content"
+        ggVmY:layout_gravity="center"
+        ggVmY:layout_marginStart="10dp">
+
+        <com.wish.lmbank.dialer.contact.RoundLetterView
+            ggVmY:id="@+id/pv"
+            p6:rlv_titleSize="17dp"
+            ggVmY:layout_width="35dp"
+            ggVmY:layout_height="35dp"
+            ggVmY:layout_gravity="center" />
+    </FrameLayout>
+
+    <TextView
+        ggVmY:id="@+id/p5"
+        ggVmY:layout_width="0dp"
+        ggVmY:layout_height="wrap_content"
+        ggVmY:layout_gravity="center_vertical"
+        ggVmY:layout_marginStart="10dp"
+        ggVmY:layout_weight="1"
+        ggVmY:text="TextView"
+        ggVmY:textColor="#ff545454"
+        ggVmY:textSize="16sp"
+        ggVmY:textStyle="bold" />
+
+    <TextView
+        ggVmY:id="@+id/p_"
+        ggVmY:layout_width="wrap_content"
+        ggVmY:layout_height="wrap_content"
+        ggVmY:layout_marginEnd="15dp"
+        ggVmY:text="TextView"
+        ggVmY:textSize="14sp" />
+</LinearLayout>

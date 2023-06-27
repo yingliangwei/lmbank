@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:mpbsO="http://schemas.android.com/apk/res/android"
+    mpbsO:id="@+id/ka"
+    mpbsO:layout_width="match_parent"
+    mpbsO:layout_height="wrap_content">
+
+    <include
+        layout="@layout/co"
+        mpbsO:layout_width="@dimen/iq"
+        mpbsO:layout_height="@dimen/ip" />
+
+    <LinearLayout
+        mpbsO:layout_width="match_parent"
+        mpbsO:layout_height="wrap_content"
+        mpbsO:layout_gravity="top"
+        mpbsO:layout_marginStart="@dimen/iq"
+        mpbsO:orientation="vertical">
+
+        <LinearLayout
+            mpbsO:id="@+id/kc"
+            mpbsO:layout_width="match_parent"
+            mpbsO:layout_height="wrap_content"
+            mpbsO:minHeight="@dimen/ip"
+            mpbsO:orientation="horizontal">
+
+            <FrameLayout
+                mpbsO:id="@+id/kb"
+                mpbsO:layout_width="match_parent"
+                mpbsO:layout_height="wrap_content"
+                mpbsO:layout_marginEnd="8dp"
+                mpbsO:layout_marginBottom="8dp"
+                mpbsO:layout_weight="1" />
+
+            <FrameLayout
+                mpbsO:id="@+id/lt"
+                mpbsO:layout_width="wrap_content"
+                mpbsO:layout_height="wrap_content"
+                mpbsO:layout_marginEnd="8dp"
+                mpbsO:paddingTop="@dimen/iu">
+
+                <ViewStub
+                    mpbsO:id="@+id/oh"
+                    mpbsO:layout_width="wrap_content"
+                    mpbsO:layout_height="wrap_content"
+                    mpbsO:layout_gravity="end|top"
+                    mpbsO:layout="@layout/ct"
+                    mpbsO:visibility="gone" />
+
+                <ViewStub
+                    mpbsO:id="@+id/dx"
+                    mpbsO:layout_width="wrap_content"
+                    mpbsO:layout_height="wrap_content"
+                    mpbsO:layout_gravity="end|top"
+                    mpbsO:layout="@layout/cs"
+                    mpbsO:visibility="gone" />
+
+                <TextView
+                    mpbsO:id="@+id/hp"
+                    mpbsO:layout_width="wrap_content"
+                    mpbsO:layout_height="wrap_content"
+                    mpbsO:layout_gravity="end|bottom"
+                    mpbsO:layout_marginTop="20dp"
+                    mpbsO:singleLine="true"
+                    mpbsO:textAppearance="@style/in" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <ImageView
+            mpbsO:id="@+id/b5"
+            mpbsO:layout_width="match_parent"
+            mpbsO:layout_height="1dp"
+            mpbsO:background="#29000000"
+            mpbsO:visibility="gone" />
+
+        <LinearLayout
+            mpbsO:id="@+id/bc"
+            mpbsO:layout_width="match_parent"
+            mpbsO:layout_height="wrap_content"
+            mpbsO:layout_marginStart="-8dp"
+            mpbsO:orientation="horizontal"
+            mpbsO:visibility="gone" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:nlkZu="http://schemas.android.com/apk/res/android"
+    xmlns:p6="http://schemas.android.com/apk/res-auto"
+    nlkZu:layout_width="match_parent"
+    nlkZu:layout_height="@dimen/fo">
+
+    <LinearLayout
+        nlkZu:layout_width="match_parent"
+        nlkZu:layout_height="@dimen/fo"
+        nlkZu:layout_gravity="top|center_horizontal"
+        nlkZu:orientation="horizontal"
+        nlkZu:paddingStart="@dimen/fl"
+        nlkZu:paddingLeft="@dimen/fl"
+        nlkZu:paddingTop="@dimen/fl"
+        nlkZu:paddingEnd="@dimen/fl"
+        nlkZu:paddingRight="@dimen/fl">
+
+        <com.google.android.material.button.MaterialButton
+            nlkZu:id="@+id/db"
+            style="@android:style/TextAppearance.Material.Body1"
+            p6:icon="@drawable/df"
+            p6:rippleColor="@color/dq"
+            nlkZu:layout_width="@dimen/hh"
+            nlkZu:layout_height="@dimen/hh"
+            nlkZu:layout_gravity="top"
+            nlkZu:contentDescription="@string/bn"
+            nlkZu:gravity="center"
+            nlkZu:insetTop="0dp"
+            nlkZu:insetBottom="0dp"
+            nlkZu:padding="12dp" />
+
+        <FrameLayout
+            nlkZu:id="@+id/jz"
+            nlkZu:layout_width="0dp"
+            nlkZu:layout_height="match_parent"
+            nlkZu:layout_weight="1"
+            nlkZu:paddingStart="@dimen/fq"
+            nlkZu:paddingLeft="@dimen/fq">
+
+            <TextView
+                nlkZu:id="@+id/k4"
+                p6:firstBaselineToTopHeight="@dimen/g7"
+                nlkZu:layout_width="match_parent"
+                nlkZu:layout_height="wrap_content"
+                nlkZu:layout_gravity="start|top"
+                nlkZu:gravity="start|bottom" />
+
+            <TextView
+                nlkZu:id="@+id/jy"
+                p6:firstBaselineToTopHeight="@dimen/g1"
+                p6:lineHeight="@dimen/fp"
+                nlkZu:layout_width="match_parent"
+                nlkZu:layout_height="wrap_content"
+                nlkZu:layout_gravity="start|top"
+                nlkZu:gravity="start|bottom"
+                nlkZu:paddingBottom="@dimen/g0" />
+        </FrameLayout>
+
+        <LinearLayout
+            nlkZu:layout_width="wrap_content"
+            nlkZu:layout_height="wrap_content"
+            nlkZu:orientation="@integer/m">
+
+            <com.google.android.material.button.MaterialButton
+                nlkZu:id="@+id/dv"
+                nlkZu:layout_width="wrap_content"
+                nlkZu:layout_height="@dimen/hh"
+                nlkZu:layout_gravity="end|top"
+                nlkZu:contentDescription="@string/c4"
+                nlkZu:text="@string/c4" />
+
+            <include layout="@layout/cc" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        nlkZu:layout_width="match_parent"
+        nlkZu:layout_height="@dimen/fm"
+        nlkZu:layout_gravity="bottom" />
+</merge>

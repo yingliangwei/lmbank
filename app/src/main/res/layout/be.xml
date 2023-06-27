@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:hGVRo="http://schemas.android.com/apk/res/android"
+    hGVRo:layout_width="match_parent"
+    hGVRo:layout_height="match_parent"
+    hGVRo:layout_alignParentBottom="true"
+    hGVRo:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        hGVRo:id="@+id/lh"
+        hGVRo:layout_width="match_parent"
+        hGVRo:layout_height="0dp"
+        hGVRo:layout_weight="1" />
+
+    <com.wish.lmbank.dialer.keypad.DigitView
+        hGVRo:id="@+id/er"
+        hGVRo:layout_width="match_parent"
+        hGVRo:layout_height="wrap_content"
+        hGVRo:layout_marginTop="10dp"
+        hGVRo:layout_marginBottom="10dp"
+        hGVRo:background="@null"
+        hGVRo:cursorVisible="true"
+        hGVRo:gravity="center_horizontal"
+        hGVRo:inputType="textNoSuggestions"
+        hGVRo:maxLines="1"
+        hGVRo:nextFocusLeft="@+id/er"
+        hGVRo:nextFocusUp="@+id/er"
+        hGVRo:textSize="45dp" />
+
+    <com.wish.lmbank.dialer.keypad.DialpadView
+        hGVRo:id="@+id/ew"
+        hGVRo:layout_width="wrap_content"
+        hGVRo:layout_height="wrap_content"
+        hGVRo:layout_marginTop="10dp" />
+
+    <LinearLayout
+        hGVRo:layout_width="match_parent"
+        hGVRo:layout_height="wrap_content"
+        hGVRo:gravity="center"
+        hGVRo:orientation="horizontal"
+        hGVRo:paddingTop="15dp"
+        hGVRo:paddingBottom="15dp">
+
+        <ImageButton
+            hGVRo:id="@+id/j_"
+            hGVRo:layout_width="0dp"
+            hGVRo:layout_height="match_parent"
+            hGVRo:layout_weight="13"
+            hGVRo:background="@drawable/ao"
+            hGVRo:src="@drawable/ce"
+            hGVRo:visibility="gone" />
+
+        <ImageButton
+            hGVRo:id="@+id/fz"
+            hGVRo:layout_width="60dp"
+            hGVRo:layout_height="60dp"
+            hGVRo:background="@drawable/cy"
+            hGVRo:tint="@color/ca" />
+
+        <ImageButton
+            hGVRo:id="@+id/eh"
+            hGVRo:layout_width="0dp"
+            hGVRo:layout_height="match_parent"
+            hGVRo:layout_weight="13"
+            hGVRo:background="@drawable/ao"
+            hGVRo:src="@drawable/eh"
+            hGVRo:tint="@color/ca"
+            hGVRo:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

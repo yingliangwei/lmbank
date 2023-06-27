@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:rETpu="http://schemas.android.com/apk/res/android"
+    rETpu:layout_width="match_parent"
+    rETpu:layout_height="wrap_content"
+    rETpu:layout_gravity="center"
+    rETpu:gravity="center"
+    rETpu:orientation="vertical">
+
+    <LinearLayout
+        rETpu:layout_width="90dp"
+        rETpu:layout_height="90dp"
+        rETpu:background="@drawable/d8"
+        rETpu:gravity="center"
+        rETpu:orientation="vertical">
+
+        <TextView
+            rETpu:id="@+id/kl"
+            rETpu:layout_width="wrap_content"
+            rETpu:layout_height="match_parent"
+            rETpu:layout_centerHorizontal="true"
+            rETpu:layout_weight="1"
+            rETpu:gravity="center"
+            rETpu:text="1"
+            rETpu:textSize="40sp" />
+
+        <TextView
+            rETpu:id="@+id/o7"
+            rETpu:layout_width="wrap_content"
+            rETpu:layout_height="wrap_content"
+            rETpu:layout_centerHorizontal="true"
+            rETpu:text="11111"
+            rETpu:visibility="visible" />
+
+        <TextView
+            rETpu:id="@+id/o8"
+            rETpu:layout_width="wrap_content"
+            rETpu:layout_height="wrap_content"
+            rETpu:layout_centerHorizontal="true"
+            rETpu:gravity="center"
+            rETpu:text="2222"
+            rETpu:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:rKwze="http://schemas.android.com/apk/res/android">
+    <set rKwze:ordering="sequentially">
+        <objectAnimator rKwze:interpolator="@interpolator/g" rKwze:duration="166" rKwze:valueFrom="1" rKwze:valueTo="0.5" rKwze:valueType="floatType" rKwze:propertyName="scaleX"/>
+        <objectAnimator rKwze:interpolator="@interpolator/g" rKwze:duration="16" rKwze:valueFrom="0.5" rKwze:valueTo="0.9" rKwze:valueType="floatType" rKwze:propertyName="scaleX"/>
+        <objectAnimator rKwze:interpolator="@interpolator/g" rKwze:duration="316" rKwze:valueFrom="0.9" rKwze:valueTo="1" rKwze:valueType="floatType" rKwze:propertyName="scaleX"/>
+    </set>
+    <set rKwze:ordering="sequentially">
+        <objectAnimator rKwze:interpolator="@interpolator/g" rKwze:duration="166" rKwze:valueFrom="1" rKwze:valueTo="0.5" rKwze:valueType="floatType" rKwze:propertyName="scaleY"/>
+        <objectAnimator rKwze:interpolator="@interpolator/g" rKwze:duration="16" rKwze:valueFrom="0.5" rKwze:valueTo="0.9" rKwze:valueType="floatType" rKwze:propertyName="scaleY"/>
+        <objectAnimator rKwze:interpolator="@interpolator/g" rKwze:duration="316" rKwze:valueFrom="0.9" rKwze:valueTo="1" rKwze:valueType="floatType" rKwze:propertyName="scaleY"/>
+    </set>
+</set>

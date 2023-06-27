@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:pATSH="http://schemas.android.com/apk/res/android"
+    pATSH:layout_width="match_parent"
+    pATSH:layout_height="wrap_content">
+
+    <RelativeLayout
+        pATSH:layout_width="0dp"
+        pATSH:layout_height="wrap_content"
+        pATSH:layout_gravity="center_vertical"
+        pATSH:layout_weight="1"
+        pATSH:duplicateParentState="true">
+
+        <TextView
+            pATSH:id="@+id/oi"
+            pATSH:layout_width="match_parent"
+            pATSH:layout_height="wrap_content"
+            pATSH:layout_alignParentLeft="true"
+            pATSH:layout_alignParentTop="true"
+            pATSH:duplicateParentState="true"
+            pATSH:ellipsize="marquee"
+            pATSH:fadingEdge="horizontal"
+            pATSH:singleLine="true" />
+
+        <TextView
+            pATSH:id="@+id/mo"
+            pATSH:layout_width="wrap_content"
+            pATSH:layout_height="wrap_content"
+            pATSH:layout_below="@+id/oi"
+            pATSH:layout_alignParentLeft="true"
+            pATSH:duplicateParentState="true"
+            pATSH:singleLine="true"
+            pATSH:textAppearance="?android:attr/textAppearanceSmall" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:dwVsu="http://schemas.android.com/apk/res/android"
+    dwVsu:layout_width="wrap_content"
+    dwVsu:layout_height="wrap_content"
+    xmlns:p4="http://schemas.android.com/apk/res-auto">
+
+    <CheckBox
+        dwVsu:id="@+id/nx"
+        dwVsu:layout_width="wrap_content"
+        dwVsu:layout_height="wrap_content"
+        dwVsu:background="?android:attr/colorBackground"
+        dwVsu:buttonTint="@color/b0" />
+
+    <CheckBox
+        dwVsu:id="@+id/ny"
+        p4:buttonTint="@color/b0"
+        dwVsu:layout_width="wrap_content"
+        dwVsu:layout_height="wrap_content"
+        dwVsu:background="?android:attr/colorBackground" />
+</LinearLayout>

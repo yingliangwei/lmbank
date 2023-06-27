@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:oPgnK="http://schemas.android.com/apk/res/android"
+    oPgnK:layout_width="match_parent"
+    oPgnK:layout_height="match_parent">
+
+    <Button
+        oPgnK:id="@+id/ev"
+        oPgnK:layout_width="100px"
+        oPgnK:layout_height="wrap_content"
+        oPgnK:layout_marginTop="5dp"
+        oPgnK:layout_marginRight="5dp"
+        oPgnK:text=" Ok " />
+</RelativeLayout>

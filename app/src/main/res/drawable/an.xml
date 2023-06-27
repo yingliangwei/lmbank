@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:jfxPr="http://schemas.android.com/apk/res/android"
+    jfxPr:shape="oval">
+    <size
+        jfxPr:width="60dp"
+        jfxPr:height="60dp" />
+    <solid jfxPr:color="@color/g8" />
+</shape>

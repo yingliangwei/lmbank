@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:dlvuw="http://schemas.android.com/apk/res/android"
+    dlvuw:id="@+id/ng"
+    dlvuw:layout_width="match_parent"
+    dlvuw:layout_height="64dp"
+    dlvuw:orientation="horizontal">
+
+    <include
+        layout="@layout/co"
+        dlvuw:layout_width="@dimen/iq"
+        dlvuw:layout_height="@dimen/ip" />
+
+    <include
+        layout="@layout/cp"
+        dlvuw:layout_width="0dp"
+        dlvuw:layout_height="wrap_content"
+        dlvuw:layout_weight="1" />
+
+    <LinearLayout
+        dlvuw:id="@+id/j4"
+        dlvuw:layout_width="wrap_content"
+        dlvuw:layout_height="match_parent"
+        dlvuw:layout_gravity="end|center_vertical"
+        dlvuw:layoutDirection="ltr"
+        dlvuw:orientation="horizontal" />
+
+    <include
+        layout="@layout/ci"
+        dlvuw:layout_width="48dp"
+        dlvuw:layout_height="match_parent"
+        dlvuw:layout_marginEnd="6dp"
+        dlvuw:layout_marginRight="6dp" />
+
+    <ImageView
+        dlvuw:id="@+id/fm"
+        dlvuw:layout_width="6dp"
+        dlvuw:layout_height="match_parent" />
+</LinearLayout>

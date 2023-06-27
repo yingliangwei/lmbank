@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:dHAzc="http://schemas.android.com/apk/res/android"
+    dHAzc:layout_width="wrap_content"
+    dHAzc:layout_height="match_parent">
+
+    <LinearLayout
+        dHAzc:id="@+id/jx"
+        dHAzc:layout_width="wrap_content"
+        dHAzc:layout_height="match_parent"
+        dHAzc:layout_gravity="start"
+        dHAzc:orientation="vertical"
+        dHAzc:paddingStart="@dimen/fk"
+        dHAzc:paddingLeft="@dimen/fk"
+        dHAzc:paddingEnd="@dimen/fk"
+        dHAzc:paddingRight="@dimen/fk"
+        dHAzc:paddingBottom="@dimen/fk">
+
+        <FrameLayout
+            dHAzc:id="@+id/jz"
+            dHAzc:layout_width="@dimen/ft"
+            dHAzc:layout_height="0dp"
+            dHAzc:layout_weight="1"
+            dHAzc:paddingStart="@dimen/fq"
+            dHAzc:paddingLeft="@dimen/fq">
+
+            <include layout="@layout/cb" />
+
+            <include layout="@layout/ca" />
+        </FrameLayout>
+
+        <include layout="@layout/cc" />
+    </LinearLayout>
+
+    <View
+        dHAzc:layout_width="@dimen/fm"
+        dHAzc:layout_height="match_parent"
+        dHAzc:layout_gravity="end" />
+</merge>

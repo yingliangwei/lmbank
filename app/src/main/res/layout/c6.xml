@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:jMEOT="http://schemas.android.com/apk/res/android"
+    jMEOT:id="@+id/eb"
+    jMEOT:layout_width="match_parent"
+    jMEOT:layout_height="@dimen/f9"
+    jMEOT:gravity="end"
+    jMEOT:orientation="horizontal"
+    jMEOT:paddingEnd="@dimen/f_"
+    jMEOT:paddingRight="@dimen/f_">
+
+    <Button
+        jMEOT:id="@+id/db"
+        jMEOT:layout_width="wrap_content"
+        jMEOT:layout_height="wrap_content"
+        jMEOT:layout_gravity="center_vertical"
+        jMEOT:text="@string/bn" />
+
+    <Button
+        jMEOT:id="@+id/dv"
+        jMEOT:layout_width="wrap_content"
+        jMEOT:layout_height="wrap_content"
+        jMEOT:layout_gravity="center_vertical"
+        jMEOT:text="@string/bo" />
+</LinearLayout>

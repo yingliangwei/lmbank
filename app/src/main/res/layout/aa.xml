@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:aZxFL="http://schemas.android.com/apk/res/android"
+    aZxFL:layout_width="match_parent"
+    aZxFL:layout_height="match_parent">
+
+    <ListView
+        aZxFL:id="@+id/bz"
+        aZxFL:layout_width="match_parent"
+        aZxFL:layout_height="match_parent" />
+</LinearLayout>

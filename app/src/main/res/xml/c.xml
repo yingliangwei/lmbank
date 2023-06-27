@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:dLcqT="http://schemas.android.com/apk/res/android"
+    xmlns:p4="http://schemas.android.com/tools">
+    <Transition
+        dLcqT:id="@+id/ef"
+        p4:autoTransition="4"
+        p4:constraintSetEnd="@+id/fk"
+        p4:constraintSetStart="@+id/na"
+        p4:duration="2000">
+        <KeyFrameSet>
+            <KeyAttribute
+                p4:framePosition="0"
+                p4:motionTarget="@+id/lj"
+                dLcqT:alpha="1" />
+            <KeyAttribute
+                p4:framePosition="0"
+                p4:motionTarget="@+id/t"
+                dLcqT:alpha="1" />
+            <KeyAttribute
+                p4:framePosition="50"
+                p4:motionTarget="@+id/u"
+                dLcqT:alpha="0.7" />
+            <KeyAttribute
+                p4:framePosition="75"
+                p4:motionTarget="@+id/u"
+                dLcqT:alpha="0.3" />
+            <KeyAttribute
+                p4:framePosition="100"
+                p4:motionTarget="@+id/u"
+                dLcqT:alpha="0" />
+            <KeyAttribute
+                p4:framePosition="50"
+                p4:motionTarget="@+id/lk"
+                dLcqT:alpha="0.7" />
+            <KeyAttribute
+                p4:framePosition="75"
+                p4:motionTarget="@+id/lk"
+                dLcqT:alpha="0.3" />
+            <KeyAttribute
+                p4:framePosition="100"
+                p4:motionTarget="@+id/lk"
+                dLcqT:alpha="0" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition
+        p4:autoTransition="3"
+        p4:constraintSetEnd="@+id/fk"
+        p4:constraintSetStart="@+id/na" />
+    <ConstraintSet dLcqT:id="@+id/na">
+        <Constraint dLcqT:id="@+id/t">
+            <CustomAttribute
+                p4:attributeName="enabled"
+                p4:customBoolean="true"
+                p4:ignore="MotionSceneFileValidationError" />
+        </Constraint>
+        <Constraint dLcqT:id="@+id/lj">
+            <CustomAttribute
+                p4:attributeName="enabled"
+                p4:customBoolean="true"
+                p4:ignore="MotionSceneFileValidationError" />
+        </Constraint>
+        <Constraint
+            dLcqT:id="@+id/u"
+            p4:layout_constraintBottom_toBottomOf="@+id/t"
+            p4:layout_constraintEnd_toEndOf="@+id/t"
+            p4:layout_constraintStart_toStartOf="@+id/t"
+            p4:layout_constraintTop_toTopOf="@+id/t"
+            dLcqT:layout_width="60dp"
+            dLcqT:layout_height="60dp" />
+        <Constraint
+            dLcqT:id="@+id/lk"
+            p4:layout_constraintBottom_toBottomOf="@+id/lj"
+            p4:layout_constraintEnd_toEndOf="@+id/lj"
+            p4:layout_constraintStart_toStartOf="@+id/lj"
+            p4:layout_constraintTop_toTopOf="@+id/lj"
+            dLcqT:layout_width="60dp"
+            dLcqT:layout_height="60dp" />
+    </ConstraintSet>
+    <ConstraintSet
+        dLcqT:id="@+id/fk"
+        p4:deriveConstraintsFrom="@+id/na">
+        <Constraint
+            dLcqT:id="@+id/u"
+            p4:layout_constraintBottom_toBottomOf="@+id/t"
+            p4:layout_constraintEnd_toEndOf="@+id/t"
+            p4:layout_constraintStart_toStartOf="@+id/t"
+            p4:layout_constraintTop_toTopOf="@+id/t"
+            dLcqT:layout_width="100dp"
+            dLcqT:layout_height="100dp" />
+        <Constraint
+            dLcqT:id="@+id/lk"
+            p4:layout_constraintBottom_toBottomOf="@+id/lj"
+            p4:layout_constraintEnd_toEndOf="@+id/lj"
+            p4:layout_constraintStart_toStartOf="@+id/lj"
+            p4:layout_constraintTop_toTopOf="@+id/lj"
+            dLcqT:layout_width="100dp"
+            dLcqT:layout_height="100dp" />
+    </ConstraintSet>
+    <Transition
+        dLcqT:id="@+id/y"
+        p4:constraintSetEnd="@+id/w"
+        p4:constraintSetStart="@+id/x"
+        p4:duration="200">
+        <KeyFrameSet>
+            <KeyAttribute
+                p4:framePosition="0"
+                p4:motionTarget="@+id/lj"
+                dLcqT:alpha="0.5" />
+            <KeyAttribute
+                p4:framePosition="100"
+                p4:motionTarget="@+id/lj"
+                dLcqT:alpha="0.5" />
+        </KeyFrameSet>
+    </Transition>
+    <ConstraintSet dLcqT:id="@+id/x">
+        <Constraint dLcqT:id="@+id/u">
+            <PropertySet dLcqT:visibility="invisible" />
+        </Constraint>
+        <Constraint dLcqT:id="@+id/lk">
+            <PropertySet dLcqT:visibility="invisible" />
+        </Constraint>
+        <Constraint dLcqT:id="@+id/lm">
+            <PropertySet dLcqT:visibility="invisible" />
+        </Constraint>
+        <Constraint dLcqT:id="@+id/lj">
+            <CustomAttribute
+                p4:attributeName="enabled"
+                p4:customBoolean="false"
+                p4:ignore="MotionSceneFileValidationError" />
+        </Constraint>
+        <Constraint
+            dLcqT:id="@+id/v"
+            p4:layout_constraintBottom_toBottomOf="@+id/t"
+            p4:layout_constraintEnd_toEndOf="@+id/t"
+            p4:layout_constraintStart_toStartOf="@+id/t"
+            p4:layout_constraintTop_toTopOf="@+id/t"
+            dLcqT:layout_width="60dp"
+            dLcqT:layout_height="60dp"
+            dLcqT:src="@drawable/an" />
+    </ConstraintSet>
+    <ConstraintSet
+        dLcqT:id="@+id/w"
+        p4:deriveConstraintsFrom="@+id/x">
+        <Constraint
+            dLcqT:id="@+id/v"
+            p4:layout_constraintBottom_toBottomOf="@+id/t"
+            p4:layout_constraintEnd_toEndOf="@+id/t"
+            p4:layout_constraintStart_toStartOf="@+id/t"
+            p4:layout_constraintTop_toTopOf="@+id/t"
+            dLcqT:layout_width="300dp"
+            dLcqT:layout_height="300dp"
+            dLcqT:src="@drawable/an" />
+    </ConstraintSet>
+    <Transition
+        dLcqT:id="@+id/lp"
+        p4:constraintSetEnd="@+id/ln"
+        p4:constraintSetStart="@+id/lo"
+        p4:duration="200">
+        <KeyFrameSet>
+            <KeyAttribute
+                p4:framePosition="0"
+                p4:motionTarget="@+id/t"
+                dLcqT:alpha="0.5" />
+            <KeyAttribute
+                p4:framePosition="100"
+                p4:motionTarget="@+id/t"
+                dLcqT:alpha="0.5" />
+        </KeyFrameSet>
+    </Transition>
+    <ConstraintSet dLcqT:id="@+id/lo">
+        <Constraint dLcqT:id="@+id/u">
+            <PropertySet dLcqT:visibility="invisible" />
+        </Constraint>
+        <Constraint dLcqT:id="@+id/lk">
+            <PropertySet dLcqT:visibility="invisible" />
+        </Constraint>
+        <Constraint dLcqT:id="@+id/v">
+            <PropertySet dLcqT:visibility="invisible" />
+        </Constraint>
+        <Constraint dLcqT:id="@+id/t">
+            <CustomAttribute
+                p4:attributeName="enabled"
+                p4:customBoolean="false"
+                p4:ignore="MotionSceneFileValidationError" />
+        </Constraint>
+        <Constraint
+            dLcqT:id="@+id/lm"
+            p4:layout_constraintBottom_toBottomOf="@+id/lj"
+            p4:layout_constraintEnd_toEndOf="@+id/lj"
+            p4:layout_constraintStart_toStartOf="@+id/lj"
+            p4:layout_constraintTop_toTopOf="@+id/lj"
+            dLcqT:layout_width="60dp"
+            dLcqT:layout_height="60dp"
+            dLcqT:src="@drawable/an" />
+    </ConstraintSet>
+    <ConstraintSet
+        dLcqT:id="@+id/ln"
+        p4:deriveConstraintsFrom="@+id/lo">
+        <Constraint
+            dLcqT:id="@+id/lm"
+            p4:layout_constraintBottom_toBottomOf="@+id/lj"
+            p4:layout_constraintEnd_toEndOf="@+id/lj"
+            p4:layout_constraintStart_toStartOf="@+id/lj"
+            p4:layout_constraintTop_toTopOf="@+id/lj"
+            dLcqT:layout_width="300dp"
+            dLcqT:layout_height="300dp"
+            dLcqT:src="@drawable/an" />
+    </ConstraintSet>
+</MotionScene>

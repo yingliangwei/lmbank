@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:nudoN="http://schemas.android.com/apk/res/android">
+    <gradient
+        nudoN:angle="225"
+        nudoN:centerColor="#ff305371"
+        nudoN:centerX="70%"
+        nudoN:endColor="#ff4a6d83"
+        nudoN:startColor="#ff1d6b6b" />
+</shape>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:pgLBt="http://schemas.android.com/apk/res/android" pgLBt:oneshot="false">
+    <item pgLBt:duration="250" pgLBt:drawable="@drawable/d_"/>
+    <item pgLBt:duration="250" pgLBt:drawable="@drawable/da"/>
+    <item pgLBt:duration="250" pgLBt:drawable="@drawable/db"/>
+    <item pgLBt:duration="250" pgLBt:drawable="@drawable/dc"/>
+</animation-list>

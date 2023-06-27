@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:iURwH="http://schemas.android.com/apk/res/android">
+    <set iURwH:ordering="sequentially">
+        <objectAnimator iURwH:interpolator="@interpolator/f" iURwH:duration="166" iURwH:valueFrom="2" iURwH:valueTo="18" iURwH:valueType="floatType" iURwH:propertyName="strokeWidth"/>
+        <objectAnimator iURwH:interpolator="@interpolator/g" iURwH:duration="16" iURwH:valueFrom="18" iURwH:valueTo="2" iURwH:valueType="floatType" iURwH:propertyName="strokeWidth"/>
+        <objectAnimator iURwH:interpolator="@interpolator/g" iURwH:duration="316" iURwH:valueFrom="2" iURwH:valueTo="2" iURwH:valueType="floatType" iURwH:propertyName="strokeWidth"/>
+    </set>
+</set>

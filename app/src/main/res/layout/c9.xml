@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:nOMfm="http://schemas.android.com/apk/res/android"
+    nOMfm:layout_width="match_parent"
+    nOMfm:layout_height="@dimen/fn">
+
+    <LinearLayout
+        nOMfm:id="@+id/jx"
+        nOMfm:layout_width="match_parent"
+        nOMfm:layout_height="@dimen/fn"
+        nOMfm:layout_gravity="top"
+        nOMfm:baselineAligned="false"
+        nOMfm:orientation="horizontal"
+        nOMfm:paddingStart="@dimen/fk"
+        nOMfm:paddingLeft="@dimen/fk"
+        nOMfm:paddingEnd="@dimen/fk"
+        nOMfm:paddingRight="@dimen/fk">
+
+        <FrameLayout
+            nOMfm:id="@+id/jz"
+            nOMfm:layout_width="0dp"
+            nOMfm:layout_height="match_parent"
+            nOMfm:layout_weight="1"
+            nOMfm:paddingStart="@dimen/fq"
+            nOMfm:paddingLeft="@dimen/fq">
+
+            <include layout="@layout/cb" />
+
+            <include layout="@layout/ca" />
+        </FrameLayout>
+
+        <include layout="@layout/cc" />
+    </LinearLayout>
+
+    <View
+        nOMfm:layout_width="match_parent"
+        nOMfm:layout_height="@dimen/fm"
+        nOMfm:layout_gravity="bottom" />
+</merge>

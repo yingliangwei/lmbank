@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton xmlns:fmTIy="http://schemas.android.com/apk/res/android"
+    fmTIy:id="@+id/da"
+    style="?android:attr/borderlessButtonStyle"
+    fmTIy:layout_width="48dp"
+    fmTIy:layout_height="match_parent"
+    fmTIy:layout_marginLeft="2dp"
+    fmTIy:layout_marginRight="2dp"
+    fmTIy:layout_weight="1"
+    fmTIy:gravity="center"
+    fmTIy:src="@android:drawable/ic_menu_close_clear_cancel"
+    fmTIy:visibility="gone" />

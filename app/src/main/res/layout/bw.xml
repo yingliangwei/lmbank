@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridView xmlns:mAqZO="http://schemas.android.com/apk/res/android"
+    mAqZO:id="@+id/jl"
+    mAqZO:layout_width="match_parent"
+    mAqZO:layout_height="@dimen/fi"
+    mAqZO:gravity="center_horizontal"
+    mAqZO:horizontalSpacing="@dimen/fv" />

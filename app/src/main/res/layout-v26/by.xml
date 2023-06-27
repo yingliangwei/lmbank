@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CalendarView xmlns:fqDaW="http://schemas.android.com/apk/res/android"
+    fqDaW:id="@+id/jc"
+    fqDaW:layout_width="match_parent"
+    fqDaW:layout_height="match_parent"
+    fqDaW:addStatesFromChildren="false"
+    fqDaW:defaultFocusHighlightEnabled="false"
+    fqDaW:descendantFocusability="afterDescendants"
+    fqDaW:gravity="center"
+    fqDaW:horizontalSpacing="@dimen/fv"
+    fqDaW:listSelector="@android:color/transparent"
+    fqDaW:verticalSpacing="@dimen/fw" />

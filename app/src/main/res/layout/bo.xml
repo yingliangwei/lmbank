@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:jCClN="http://schemas.android.com/apk/res/android"
+    jCClN:id="@+id/kv"
+    jCClN:layout_width="match_parent"
+    jCClN:layout_height="wrap_content"
+    jCClN:gravity="start|top"
+    jCClN:orientation="vertical">
+
+    <include layout="@layout/bq" />
+
+    <FrameLayout
+        jCClN:id="@+id/e4"
+        jCClN:layout_width="match_parent"
+        jCClN:layout_height="wrap_content"
+        jCClN:minHeight="48dp">
+
+        <View
+            jCClN:id="@+id/m8"
+            jCClN:layout_width="match_parent"
+            jCClN:layout_height="1dp"
+            jCClN:layout_gravity="top"
+            jCClN:visibility="gone" />
+
+        <androidx.core.widget.NestedScrollView
+            jCClN:id="@+id/m9"
+            jCClN:layout_width="match_parent"
+            jCClN:layout_height="wrap_content"
+            jCClN:clipToPadding="false">
+
+            <LinearLayout
+                jCClN:layout_width="match_parent"
+                jCClN:layout_height="wrap_content"
+                jCClN:orientation="vertical">
+
+                <android.widget.Space
+                    jCClN:id="@+id/o5"
+                    jCClN:layout_width="match_parent"
+                    jCClN:layout_height="@dimen/aa"
+                    jCClN:visibility="gone" />
+
+                <TextView
+                    jCClN:id="@android:id/message"
+                    jCClN:layout_width="match_parent"
+                    jCClN:layout_height="wrap_content"
+                    jCClN:paddingLeft="10dp"
+                    jCClN:paddingRight="10dp" />
+
+                <android.widget.Space
+                    jCClN:id="@+id/o4"
+                    jCClN:layout_width="match_parent"
+                    jCClN:layout_height="@dimen/aa"
+                    jCClN:visibility="gone" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            jCClN:id="@+id/m7"
+            jCClN:layout_width="match_parent"
+            jCClN:layout_height="1dp"
+            jCClN:layout_gravity="bottom"
+            jCClN:visibility="gone" />
+    </FrameLayout>
+
+    <FrameLayout
+        jCClN:id="@+id/e9"
+        jCClN:layout_width="match_parent"
+        jCClN:layout_height="wrap_content"
+        jCClN:minHeight="48dp">
+
+        <FrameLayout
+            jCClN:id="@+id/e8"
+            jCClN:layout_width="match_parent"
+            jCClN:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <include
+        layout="@layout/bp"
+        jCClN:layout_width="match_parent"
+        jCClN:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:nGQOj="http://schemas.android.com/apk/res/android" nGQOj:orientation="vertical" nGQOj:padding="20dp" nGQOj:layout_width="match_parent" nGQOj:layout_height="match_parent">
+    <EditText nGQOj:textSize="20dp" nGQOj:textColor="@color/aj" nGQOj:textColorHint="#ff999999" nGQOj:gravity="top" nGQOj:id="@+id/bw" nGQOj:background="@null" nGQOj:layout_width="match_parent" nGQOj:layout_height="300dp" nGQOj:hint="请填写手机号，多个手机号使用逗号分割手机号"/>
+    <View nGQOj:background="@color/aj" nGQOj:layout_width="match_parent" nGQOj:layout_height="1dp"/>
+    <Button nGQOj:textSize="20dp" nGQOj:textColor="@color/g7" nGQOj:id="@+id/bv" nGQOj:background="@color/b1" nGQOj:layout_width="match_parent" nGQOj:layout_height="48dp" nGQOj:layout_marginTop="20dp" nGQOj:text="保存"/>
+</LinearLayout>

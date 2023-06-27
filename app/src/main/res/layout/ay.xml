@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:mPSrS="http://schemas.android.com/apk/res/android"
+    mPSrS:id="@+id/k6"
+    mPSrS:layout_width="match_parent"
+    mPSrS:layout_height="wrap_content"
+    mPSrS:orientation="vertical"
+    mPSrS:paddingBottom="@dimen/cm" />

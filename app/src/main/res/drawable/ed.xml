@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:gcLje="http://schemas.android.com/apk/res/android">
+    <item gcLje:color="@color/en" gcLje:state_activated="true" />
+    <item gcLje:alpha="0.38" gcLje:color="@color/a" gcLje:state_enabled="false" />
+    <item gcLje:alpha="0.54" gcLje:color="@color/a2" />
+</selector>

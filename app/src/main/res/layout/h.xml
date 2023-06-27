@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:aIZlq="http://schemas.android.com/apk/res/android"
+    aIZlq:id="@+id/in"
+    aIZlq:layout_width="match_parent"
+    aIZlq:minWidth="196dp"
+    aIZlq:orientation="vertical"
+    aIZlq:paddingLeft="16dp"
+    aIZlq:paddingRight="16dp" aIZlq:layout_height="match_parent">
+
+    <LinearLayout
+        aIZlq:layout_width="wrap_content"
+        aIZlq:layout_height="match_parent"
+        aIZlq:duplicateParentState="true">
+
+        <ImageView
+            aIZlq:id="@+id/h4"
+            aIZlq:layout_width="32dp"
+            aIZlq:layout_height="32dp"
+            aIZlq:layout_gravity="center_vertical"
+            aIZlq:layout_marginRight="8dp"
+            aIZlq:duplicateParentState="true" />
+
+        <TextView
+            aIZlq:id="@+id/oi"
+            aIZlq:layout_width="wrap_content"
+            aIZlq:layout_height="wrap_content"
+            aIZlq:layout_gravity="center_vertical"
+            aIZlq:duplicateParentState="true"
+            aIZlq:ellipsize="marquee"
+            aIZlq:fadingEdge="horizontal"
+            aIZlq:singleLine="true" />
+    </LinearLayout>
+</LinearLayout>

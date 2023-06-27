@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton xmlns:oQeMZ="http://schemas.android.com/apk/res/android"
+    oQeMZ:id="@+id/av"
+    style="?android:attr/borderlessButtonStyle"
+    oQeMZ:layout_width="48dp"
+    oQeMZ:layout_height="match_parent"
+    oQeMZ:layout_marginLeft="2dp"
+    oQeMZ:layout_marginRight="2dp"
+    oQeMZ:layout_weight="1"
+    oQeMZ:gravity="center" />

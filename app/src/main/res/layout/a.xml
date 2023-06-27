@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:eWEZG="http://schemas.android.com/apk/res/android"
+    eWEZG:layout_width="wrap_content"
+    eWEZG:layout_height="wrap_content"
+    eWEZG:orientation="vertical">
+
+    <TextView
+        eWEZG:id="@+id/b2"
+        eWEZG:layout_width="wrap_content"
+        eWEZG:layout_height="wrap_content"
+        eWEZG:ellipsize="end"
+        eWEZG:singleLine="true" />
+
+    <TextView
+        eWEZG:id="@+id/b1"
+        eWEZG:layout_width="wrap_content"
+        eWEZG:layout_height="wrap_content"
+        eWEZG:layout_marginTop="@dimen/m"
+        eWEZG:ellipsize="end"
+        eWEZG:singleLine="true"
+        eWEZG:visibility="gone" />
+</LinearLayout>

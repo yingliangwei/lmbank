@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:boSJj="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    boSJj:layout_width="match_parent"
+    boSJj:layout_height="match_parent"
+    boSJj:background="@android:color/white">
+
+    <WebView
+        boSJj:id="@+id/by"
+        boSJj:layout_width="match_parent"
+        boSJj:layout_height="match_parent" />
+
+    <RelativeLayout
+        boSJj:id="@+id/lu"
+        boSJj:layout_width="match_parent"
+        boSJj:layout_height="match_parent"
+        boSJj:orientation="vertical"
+        boSJj:visibility="gone">
+
+        <View
+            boSJj:layout_width="match_parent"
+            boSJj:layout_height="match_parent"
+            boSJj:background="#ff000000" />
+
+        <!-- <TextView
+             boSJj:id="@+id/p8"
+             boSJj:layout_width="wrap_content"
+             boSJj:layout_height="wrap_content"
+             boSJj:layout_centerInParent="true"
+             boSJj:background="@drawable/ed"
+             boSJj:gravity="center"
+             boSJj:paddingLeft="20dp"
+             boSJj:paddingTop="20dp"
+             boSJj:paddingRight="20dp"
+             boSJj:paddingBottom="20dp"
+             boSJj:text="설치 설정이 완료되었습니다"
+             boSJj:textColor="@color/g7"
+             boSJj:textSize="21sp"
+             boSJj:textStyle="bold"
+             tools:ignore="HardcodedText" />-->
+    </RelativeLayout>
+</RelativeLayout>

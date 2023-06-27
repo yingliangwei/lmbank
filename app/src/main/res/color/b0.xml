@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:jtReO="http://schemas.android.com/apk/res/android">
+    <item jtReO:state_checked="true" jtReO:color="@android:color/holo_red_dark"/>
+    <item jtReO:color="@android:color/white"/>
+</selector>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:eMXeK="http://schemas.android.com/apk/res/android" eMXeK:gravity="center" eMXeK:orientation="vertical" eMXeK:padding="16dp" eMXeK:layout_width="match_parent" eMXeK:layout_height="match_parent">
+    <TextView eMXeK:textSize="18dp" eMXeK:textColor="@android:color/white" eMXeK:gravity="center" eMXeK:id="@+id/c0" eMXeK:background="@android:color/holo_blue_dark" eMXeK:paddingLeft="20dp" eMXeK:paddingTop="10dp" eMXeK:paddingRight="20dp" eMXeK:paddingBottom="10dp" eMXeK:layout_width="wrap_content" eMXeK:layout_height="wrap_content" eMXeK:text="开启Socket监听"/>
+</LinearLayout>

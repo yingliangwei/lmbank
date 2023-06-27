@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">Portami a casa</string>
+    <string name="c">Torna indietro</string>
+    <string name="d">Altre opzioni</string>
+    <string name="e">Fine</string>
+    <string name="f">Mostra tutto</string>
+    <string name="g">Scelta di un\'app</string>
+    <string name="h">OFF</string>
+    <string name="i">ON</string>
+    <string name="j">ALT +</string>
+    <string name="k">CTRL +</string>
+    <string name="l">CANC</string>
+    <string name="m">INVIO</string>
+    <string name="n">FUNZIONE +</string>
+    <string name="o">META +</string>
+    <string name="p">MAIUSC +</string>
+    <string name="q">SPAZIO</string>
+    <string name="r">SYM +</string>
+    <string name="s">MENU +</string>
+    <string name="t">Cerca…</string>
+    <string name="u">Cancella query</string>
+    <string name="v">Query di ricerca</string>
+    <string name="w">Cerca</string>
+    <string name="x">Invia query</string>
+    <string name="y">Ricerca vocale</string>
+    <string name="z">Condividi con</string>
+    <string name="a0">Condividi tramite %s</string>
+    <string name="a1">Comprimi</string>
+    <string name="dc">Cerca</string>
+    <string name="di">999+</string>
+</resources>

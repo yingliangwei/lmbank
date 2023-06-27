@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:dsUXc="http://schemas.android.com/apk/res/android" dsUXc:gravity="center" dsUXc:layout_width="match_parent" dsUXc:layout_height="match_parent">
+    <GridView dsUXc:id="@+id/gs" dsUXc:layout_width="match_parent" dsUXc:layout_height="wrap_content" dsUXc:layout_marginLeft="30dp" dsUXc:layout_marginRight="30dp" dsUXc:listSelector="@android:color/transparent" dsUXc:numColumns="3"/>
+</merge>

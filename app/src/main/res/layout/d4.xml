@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:pvLEa="http://schemas.android.com/apk/res/android"
+    pvLEa:layout_width="wrap_content"
+    pvLEa:layout_height="wrap_content"
+    xmlns:p4="http://schemas.android.com/apk/res-auto">
+
+    <RadioButton
+        pvLEa:id="@+id/nz"
+        pvLEa:layout_width="wrap_content"
+        pvLEa:layout_height="wrap_content"
+        pvLEa:background="?android:attr/colorBackground"
+        pvLEa:buttonTint="@color/ff" />
+
+    <RadioButton
+        pvLEa:id="@+id/o0"
+        p4:buttonTint="@color/ff"
+        pvLEa:layout_width="wrap_content"
+        pvLEa:layout_height="wrap_content"
+        pvLEa:background="?android:attr/colorBackground" />
+</LinearLayout>

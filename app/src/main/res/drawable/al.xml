@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:gAPkN="http://schemas.android.com/apk/res/android">
+    <item
+        gAPkN:bottom="-6dp"
+        gAPkN:left="-6dp"
+        gAPkN:right="-6dp"
+        gAPkN:top="0dp">
+        <shape gAPkN:shape="rectangle">
+            <solid gAPkN:color="@android:color/transparent" />
+            <stroke
+                gAPkN:width="1dp"
+                gAPkN:color="#ff757575" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton xmlns:onyOi="http://schemas.android.com/apk/res/android"
+    onyOi:id="@+id/ld"
+    onyOi:layout_width="wrap_content"
+    onyOi:layout_height="wrap_content"
+    onyOi:layout_gravity="center_vertical"
+    onyOi:clickable="false"
+    onyOi:duplicateParentState="true"
+    onyOi:focusable="false" />

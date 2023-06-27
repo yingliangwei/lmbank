@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:pTOfD="http://schemas.android.com/apk/res/android"
+    pTOfD:layout_width="match_parent"
+    pTOfD:layout_height="wrap_content">
+
+    <TextView
+        pTOfD:id="@+id/oi"
+        pTOfD:layout_width="match_parent"
+        pTOfD:layout_height="45dp"
+        pTOfD:gravity="center_vertical"
+        pTOfD:paddingStart="30dp"
+        pTOfD:textColor="#ff333333"
+        pTOfD:textSize="14sp" />
+</LinearLayout>

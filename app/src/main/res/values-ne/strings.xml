@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">गृह पृष्ठमा जानुहोस्</string>
+    <string name="c">माथि नेभिगेट गर्नुहोस्</string>
+    <string name="d">थप विकल्पहरू</string>
+    <string name="e">सम्पन्न भयो</string>
+    <string name="f">सबै हेर्नुहोस्</string>
+    <string name="g">एउटा अनुप्रयोग छान्नुहोस्</string>
+    <string name="h">निष्क्रिय</string>
+    <string name="i">सक्रिय</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">delete</string>
+    <string name="m">enter</string>
+    <string name="n">Function+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Shift+</string>
+    <string name="q">space</string>
+    <string name="r">Sym+</string>
+    <string name="s">Menu+</string>
+    <string name="t">खोज्नुहोस्…</string>
+    <string name="u">क्वेरी खाली गर्नुहोस्</string>
+    <string name="v">खोज प्रश्न</string>
+    <string name="w">खोज</string>
+    <string name="x">क्वेरी पेस गर्नुहोस्</string>
+    <string name="y">आवाजमा आधारित खोजी</string>
+    <string name="z">यसमार्फत आदान प्रदान गर्नुहोस्</string>
+    <string name="a0">%s मार्फत आदान प्रदान गर्नुहोस्</string>
+    <string name="a1">संक्षिप्त गर्नुहोस्</string>
+    <string name="dc">खोज</string>
+    <string name="di">९९९+</string>
+</resources>

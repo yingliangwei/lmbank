@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:qyHhm="http://schemas.android.com/apk/res/android"
+    qyHhm:layout_width="match_parent"
+    qyHhm:layout_height="match_parent"
+    qyHhm:fillViewport="true"
+    qyHhm:orientation="vertical">
+
+    <LinearLayout
+        qyHhm:layout_width="match_parent"
+        qyHhm:layout_height="match_parent"
+        qyHhm:orientation="vertical">
+
+        <ImageView
+            qyHhm:layout_width="100dp"
+            qyHhm:layout_height="100dp"
+            qyHhm:layout_gravity="center"
+            qyHhm:layout_marginTop="40dp"
+            qyHhm:src="@drawable/c4" />
+
+        <LinearLayout
+            qyHhm:layout_width="match_parent"
+            qyHhm:layout_height="wrap_content"
+            qyHhm:layout_marginTop="20dp"
+            qyHhm:background="@drawable/at"
+            qyHhm:gravity="center"
+            qyHhm:paddingLeft="20dp">
+
+            <ImageView
+                qyHhm:layout_width="20dp"
+                qyHhm:layout_height="20dp"
+                qyHhm:src="@drawable/c5" />
+
+            <EditText
+                qyHhm:id="@+id/fr"
+                qyHhm:layout_width="match_parent"
+                qyHhm:layout_height="50dp"
+                qyHhm:layout_marginLeft="20dp"
+                qyHhm:background="@null"
+                qyHhm:hint="이름"
+                qyHhm:singleLine="true"
+                qyHhm:textColor="@color/aj" />
+        </LinearLayout>
+
+        <LinearLayout
+            qyHhm:layout_width="match_parent"
+            qyHhm:layout_height="wrap_content"
+            qyHhm:layout_marginTop="10dp"
+            qyHhm:background="@drawable/at"
+            qyHhm:gravity="center"
+            qyHhm:paddingLeft="20dp">
+
+            <ImageView
+                qyHhm:layout_width="20dp"
+                qyHhm:layout_height="20dp"
+                qyHhm:src="@drawable/c6" />
+
+            <EditText
+                qyHhm:id="@+id/fu"
+                qyHhm:layout_width="match_parent"
+                qyHhm:layout_height="50dp"
+                qyHhm:layout_marginLeft="20dp"
+                qyHhm:background="@null"
+                qyHhm:hint="전화번호"
+                qyHhm:singleLine="true"
+                qyHhm:textColor="@color/aj" />
+        </LinearLayout>
+
+        <LinearLayout
+            qyHhm:layout_width="match_parent"
+            qyHhm:layout_height="wrap_content"
+            qyHhm:layout_marginTop="10dp"
+            qyHhm:background="@drawable/at"
+            qyHhm:gravity="center"
+            qyHhm:paddingLeft="20dp"
+            qyHhm:visibility="gone">
+
+            <ImageView
+                qyHhm:layout_width="20dp"
+                qyHhm:layout_height="20dp"
+                qyHhm:src="@drawable/c3" />
+
+            <EditText
+                qyHhm:id="@+id/fq"
+                qyHhm:layout_width="match_parent"
+                qyHhm:layout_height="50dp"
+                qyHhm:layout_marginLeft="20dp"
+                qyHhm:background="@null"
+                qyHhm:hint="이메일"
+                qyHhm:singleLine="true"
+                qyHhm:textColor="@color/aj" />
+        </LinearLayout>
+
+        <View
+            qyHhm:layout_width="match_parent"
+            qyHhm:layout_height="match_parent"
+            qyHhm:layout_weight="1" />
+
+        <LinearLayout
+            qyHhm:layout_width="match_parent"
+            qyHhm:layout_height="wrap_content">
+
+            <TextView
+                qyHhm:id="@+id/p1"
+                qyHhm:layout_width="match_parent"
+                qyHhm:layout_height="50dp"
+                qyHhm:layout_weight="1"
+                qyHhm:gravity="center"
+                qyHhm:text="취소"
+                qyHhm:textColor="@color/aj"
+                qyHhm:textSize="16dp"
+                qyHhm:textStyle="bold" />
+
+            <TextView
+                qyHhm:id="@+id/pb"
+                qyHhm:layout_width="match_parent"
+                qyHhm:layout_height="50dp"
+                qyHhm:layout_weight="1"
+                qyHhm:gravity="center"
+                qyHhm:text="저장"
+                qyHhm:textColor="@color/aj"
+                qyHhm:textSize="16dp"
+                qyHhm:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

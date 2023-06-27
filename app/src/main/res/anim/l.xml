@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alpha xmlns:rCYYB="http://schemas.android.com/apk/res/android" rCYYB:interpolator="@android:interpolator/accelerate_quad" rCYYB:duration="@integer/f" rCYYB:fromAlpha="1" rCYYB:toAlpha="0"/>

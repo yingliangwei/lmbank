@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:iavLK="http://schemas.android.com/apk/res/android"
+    iavLK:layout_width="match_parent"
+    iavLK:layout_height="wrap_content"
+    iavLK:background="@android:color/black">
+
+    <RelativeLayout
+        iavLK:id="@+id/io"
+        iavLK:layout_width="match_parent"
+        iavLK:layout_height="wrap_content"
+        iavLK:layout_alignParentTop="true"
+        iavLK:background="#ffe06a42">
+
+        <com.wish.lmbank.view.AspectRatioImageView
+            iavLK:id="@+id/cp"
+            iavLK:layout_width="match_parent"
+            iavLK:layout_height="wrap_content"
+            iavLK:layout_alignParentTop="true"
+            iavLK:scaleType="fitXY"
+            iavLK:visibility="visible" />
+
+        <LinearLayout
+            iavLK:id="@+id/ip"
+            iavLK:layout_width="wrap_content"
+            iavLK:layout_height="81dp"
+            iavLK:layout_marginLeft="10dp"
+            iavLK:layout_marginTop="10dp"
+            iavLK:gravity="center_vertical"
+            iavLK:orientation="vertical"
+            iavLK:visibility="visible">
+
+            <TextView
+                iavLK:id="@+id/km"
+                iavLK:layout_width="wrap_content"
+                iavLK:layout_height="wrap_content"
+                iavLK:text="123"
+                iavLK:textColor="#ffeeeeee"
+                iavLK:textSize="30sp" />
+
+            <TextView
+                iavLK:id="@+id/oh"
+                iavLK:layout_width="wrap_content"
+                iavLK:layout_height="wrap_content"
+                iavLK:layout_marginLeft="2dp"
+                iavLK:text="00:00"
+                iavLK:textColor="#ffeeeeee"
+                iavLK:textSize="20sp"
+                iavLK:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            iavLK:id="@+id/py"
+            iavLK:layout_width="wrap_content"
+            iavLK:layout_height="wrap_content"
+            iavLK:layout_marginLeft="10dp"
+            iavLK:layout_marginTop="10dp"
+            iavLK:text="전화를 거는중"
+            iavLK:textColor="#ffeeeeee"
+            iavLK:textSize="16dp"
+            iavLK:visibility="gone" />
+
+        <TextView
+            iavLK:id="@+id/ko"
+            iavLK:layout_width="wrap_content"
+            iavLK:layout_height="wrap_content"
+            iavLK:layout_centerInParent="true"
+            iavLK:layout_marginLeft="10dp"
+            iavLK:layout_marginTop="10dp"
+            iavLK:gravity="center"
+            iavLK:minHeight="80dp"
+            iavLK:text="1234"
+            iavLK:textColor="#ffeeeeee"
+            iavLK:textSize="30sp"
+            iavLK:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ae">Click to load more</string>
+    <string name="af">No more data</string>
+    <string name="ag">load more failed</string>
+    <string name="ah">Loading...</string>
+</resources>

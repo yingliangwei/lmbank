@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:cEFYP="http://schemas.android.com/apk/res/android"
+    cEFYP:orientation="vertical"
+    cEFYP:layout_width="match_parent"
+    cEFYP:layout_height="match_parent">
+
+    <LinearLayout
+        cEFYP:gravity="center_vertical"
+        cEFYP:layout_width="match_parent"
+        cEFYP:layout_height="80dp">
+
+        <ImageView
+            cEFYP:id="@+id/hv"
+            cEFYP:layout_width="60dp"
+            cEFYP:layout_height="30dp"
+            cEFYP:src="@drawable/bs" />
+    </LinearLayout>
+
+    <ScrollView
+        cEFYP:orientation="vertical"
+        cEFYP:layout_width="match_parent"
+        cEFYP:layout_height="match_parent"
+        cEFYP:fillViewport="true"
+        cEFYP:layout_weight="1">
+
+        <LinearLayout
+            cEFYP:orientation="vertical"
+            cEFYP:layout_width="match_parent"
+            cEFYP:layout_height="match_parent">
+
+            <RelativeLayout
+                cEFYP:layout_width="match_parent"
+                cEFYP:layout_height="wrap_content">
+
+                <LinearLayout
+                    cEFYP:orientation="vertical"
+                    cEFYP:background="@drawable/at"
+                    cEFYP:paddingTop="50dp"
+                    cEFYP:layout_width="match_parent"
+                    cEFYP:layout_height="wrap_content"
+                    cEFYP:layout_marginTop="50dp">
+
+                    <TextView
+                        cEFYP:textSize="20dp"
+                        cEFYP:textStyle="bold"
+                        cEFYP:textColor="@color/aj"
+                        cEFYP:gravity="center"
+                        cEFYP:id="@+id/p9"
+                        cEFYP:layout_width="match_parent"
+                        cEFYP:layout_height="wrap_content"
+                        cEFYP:layout_marginTop="10dp"
+                        cEFYP:text="Giggles" />
+
+                    <TextView
+                        cEFYP:textSize="18dp"
+                        cEFYP:textColor="@color/co"
+                        cEFYP:gravity="center"
+                        cEFYP:id="@+id/p_"
+                        cEFYP:layout_width="match_parent"
+                        cEFYP:layout_height="wrap_content"
+                        cEFYP:layout_marginTop="10dp"
+                        cEFYP:text="10086" />
+
+                    <LinearLayout
+                        cEFYP:layout_gravity="center"
+                        cEFYP:layout_width="wrap_content"
+                        cEFYP:layout_height="wrap_content"
+                        cEFYP:layout_marginTop="10dp"
+                        cEFYP:layout_marginBottom="20dp">
+
+                        <ImageView
+                            cEFYP:id="@+id/i0"
+                            cEFYP:background="@drawable/cy"
+                            cEFYP:layout_width="40dp"
+                            cEFYP:layout_height="40dp" />
+
+                        <View
+                            cEFYP:layout_width="40dp"
+                            cEFYP:layout_height="0dp"
+                            cEFYP:layout_weight="1" />
+
+                        <ImageView
+                            cEFYP:id="@+id/hz"
+                            cEFYP:background="@drawable/cx"
+                            cEFYP:layout_width="40dp"
+                            cEFYP:layout_height="40dp" />
+
+                        <View
+                            cEFYP:layout_width="40dp"
+                            cEFYP:layout_height="0dp"
+                            cEFYP:layout_weight="1" />
+
+                        <ImageView
+                            cEFYP:id="@+id/hy"
+                            cEFYP:background="@drawable/c2"
+                            cEFYP:layout_width="40dp"
+                            cEFYP:layout_height="40dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    cEFYP:layout_gravity="center"
+                    cEFYP:layout_width="100dp"
+                    cEFYP:layout_height="100dp"
+                    cEFYP:src="@drawable/c4"
+                    cEFYP:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <ExpandableListView
+                cEFYP:id="@+id/fi"
+                cEFYP:layout_width="match_parent"
+                cEFYP:layout_height="match_parent"
+                cEFYP:groupIndicator="@null" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        cEFYP:gravity="center"
+        cEFYP:layout_gravity="center"
+        cEFYP:orientation="vertical"
+        cEFYP:id="@+id/iq"
+        cEFYP:paddingLeft="50dp"
+        cEFYP:paddingTop="10dp"
+        cEFYP:paddingRight="50dp"
+        cEFYP:paddingBottom="10dp"
+        cEFYP:visibility="gone"
+        cEFYP:layout_width="wrap_content"
+        cEFYP:layout_height="wrap_content">
+
+        <ImageView
+            cEFYP:layout_width="20dp"
+            cEFYP:layout_height="20dp"
+            cEFYP:src="@drawable/c7" />
+
+        <TextView
+            cEFYP:textSize="12dp"
+            cEFYP:textColor="@color/ak"
+            cEFYP:layout_width="wrap_content"
+            cEFYP:layout_height="wrap_content"
+            cEFYP:layout_marginTop="@dimen/d6"
+            cEFYP:text="삭제" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:sJSOQ="http://schemas.android.com/apk/res/android"
+    sJSOQ:layout_width="match_parent"
+    sJSOQ:layout_height="match_parent"
+    sJSOQ:gravity="center">
+
+    <GridView
+        sJSOQ:id="@+id/gr"
+        sJSOQ:layout_width="match_parent"
+        sJSOQ:layout_height="wrap_content"
+        sJSOQ:layout_marginLeft="30dp"
+        sJSOQ:layout_marginRight="30dp"
+        sJSOQ:listSelector="@android:color/transparent"
+        sJSOQ:numColumns="3" />
+</merge>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="a">
+        <item>福建</item>
+        <item>Fujian</item>
+    </array>
+    <array name="b">
+        <item>金门</item>
+        <item>金門</item>
+        <item>Kinmen</item>
+    </array>
+    <array name="c">
+        <item>连江</item>
+        <item>連江</item>
+        <item>Lianjiang</item>
+    </array>
+    <array name="d">
+        <item>香港</item>
+        <item>Hong Kong</item>
+    </array>
+    <array name="e">
+        <item>澳门</item>
+        <item>澳門</item>
+        <item>Macao</item>
+    </array>
+    <array name="f">
+        <item>台湾</item>
+        <item>臺灣</item>
+        <item>Taiwan</item>
+    </array>
+</resources>

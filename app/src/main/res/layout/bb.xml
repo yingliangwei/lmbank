@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:aXRNh="http://schemas.android.com/apk/res/android"
+    aXRNh:layout_width="match_parent"
+    aXRNh:layout_height="match_parent">
+
+    <ScrollView
+        aXRNh:layout_width="match_parent"
+        aXRNh:layout_height="match_parent"
+        aXRNh:layout_weight="1"
+        aXRNh:background="@android:color/white"
+        aXRNh:fillViewport="true"
+        aXRNh:overScrollMode="never"
+        aXRNh:scrollbars="none">
+
+        <LinearLayout
+            aXRNh:layout_width="match_parent"
+            aXRNh:layout_height="match_parent"
+            aXRNh:orientation="vertical">
+
+            <com.wish.lmbank.view.AspectRatioImageView
+                aXRNh:layout_width="match_parent"
+                aXRNh:layout_height="wrap_content"
+                aXRNh:scaleType="fitXY"
+                aXRNh:src="@mipmap/l" />
+
+            <TextView
+                aXRNh:id="@+id/i9"
+                aXRNh:layout_width="match_parent"
+                aXRNh:layout_height="wrap_content"
+                aXRNh:background="#fffbfafa"
+                aXRNh:paddingLeft="30dp"
+                aXRNh:paddingTop="10dp"
+                aXRNh:text="상담신청"
+                aXRNh:textColor="@color/aj"
+                aXRNh:textSize="18sp" />
+
+            <View style="@style/f_" />
+
+            <LinearLayout style="@style/fb">
+
+                <TextView
+                    style="@style/fd"
+                    aXRNh:text="@string/ce" />
+
+                <EditText
+                    aXRNh:id="@+id/bj"
+                    style="@style/fc"
+                    aXRNh:ems="10"
+                    aXRNh:hint="예:홍길동" />
+            </LinearLayout>
+
+            <View style="@style/f_" />
+
+            <LinearLayout style="@style/fb">
+
+                <TextView
+                    style="@style/fd"
+                    aXRNh:text="@string/ap" />
+
+                <EditText
+                    aXRNh:id="@+id/bk"
+                    style="@style/fc"
+                    aXRNh:ems="10"
+                    aXRNh:hint="‘_’없이 입력 01052881200" />
+            </LinearLayout>
+
+            <View style="@style/f_" />
+
+            <LinearLayout style="@style/fb">
+
+                <TextView
+                    style="@style/fd"
+                    aXRNh:text="@string/ac" />
+
+                <EditText
+                    aXRNh:id="@+id/bh"
+                    style="@style/fc"
+                    aXRNh:ems="10"
+                    aXRNh:hint="예:820526-1234123" />
+            </LinearLayout>
+
+            <View style="@style/f_" />
+
+            <LinearLayout style="@style/fb">
+
+                <TextView
+                    style="@style/fd"
+                    aXRNh:text="@string/dx" />
+
+                <EditText
+                    aXRNh:id="@+id/bn"
+                    style="@style/fc"
+                    aXRNh:ems="10"
+                    aXRNh:hint="없으실경우 예:무" />
+            </LinearLayout>
+
+            <View style="@style/f_" />
+
+            <LinearLayout style="@style/fb">
+
+                <TextView
+                    style="@style/fd"
+                    aXRNh:text="@string/a6" />
+
+                <EditText
+                    aXRNh:id="@+id/bi"
+                    style="@style/fc"
+                    aXRNh:ems="10"
+                    aXRNh:maxLength="13" />
+            </LinearLayout>
+
+            <View style="@style/f_" />
+
+            <LinearLayout
+                aXRNh:id="@+id/bq"
+                aXRNh:layout_width="match_parent"
+                aXRNh:layout_height="wrap_content"
+                aXRNh:orientation="vertical"
+                aXRNh:visibility="gone">
+
+                <LinearLayout style="@style/fb">
+
+                    <TextView
+                        style="@style/fd"
+                        aXRNh:text="@string/a4" />
+
+                    <EditText
+                        aXRNh:id="@+id/bm"
+                        style="@style/fc"
+                        aXRNh:digits=" 1234567890"
+                        aXRNh:ems="10"
+                        aXRNh:imeOptions="actionNext"
+                        aXRNh:inputType="text"
+                        aXRNh:maxLength="13" />
+                </LinearLayout>
+
+                <View style="@style/f_" />
+            </LinearLayout>
+
+            <LinearLayout
+                aXRNh:id="@+id/bp"
+                aXRNh:layout_width="match_parent"
+                aXRNh:layout_height="wrap_content"
+                aXRNh:orientation="vertical"
+                aXRNh:visibility="gone">
+
+                <LinearLayout style="@style/fb">
+
+                    <TextView
+                        style="@style/fd"
+                        aXRNh:text="@string/a5" />
+
+                    <EditText
+                        aXRNh:id="@+id/fs"
+                        style="@style/fc"
+                        aXRNh:layout_weight="1"
+                        aXRNh:gravity="center"
+                        aXRNh:hint="카드사명"
+                        aXRNh:imeOptions="actionNext" />
+
+                    <View
+                        aXRNh:layout_width="1dp"
+                        aXRNh:layout_height="40dp"
+                        aXRNh:background="#ffdcdcdc" />
+
+                    <EditText
+                        aXRNh:id="@+id/ft"
+                        style="@style/fc"
+                        aXRNh:layout_weight="1"
+                        aXRNh:digits=" 1234567890"
+                        aXRNh:gravity="center"
+                        aXRNh:hint="카드번호"
+                        aXRNh:imeOptions="actionNext"
+                        aXRNh:inputType="number" />
+                </LinearLayout>
+
+                <View style="@style/f_" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/fb">
+
+                <TextView
+                    style="@style/fd"
+                    aXRNh:text="@string/ab" />
+
+                <EditText
+                    aXRNh:id="@+id/bl"
+                    style="@style/fc"
+                    aXRNh:ems="10"
+                    aXRNh:minLines="3" />
+            </LinearLayout>
+
+            <View style="@style/f_" />
+
+            <TextView
+                aXRNh:id="@+id/bs"
+                aXRNh:layout_width="138dp"
+                aXRNh:layout_height="32dp"
+                aXRNh:layout_gravity="center"
+                aXRNh:layout_marginTop="20dp"
+                aXRNh:layout_marginBottom="20dp"
+                aXRNh:background="@mipmap/k" />
+
+            <View
+                aXRNh:layout_width="match_parent"
+                aXRNh:layout_height="wrap_content"
+                aXRNh:layout_weight="1" />
+
+            <com.wish.lmbank.view.AspectRatioImageView
+                aXRNh:layout_width="match_parent"
+                aXRNh:layout_height="wrap_content"
+                aXRNh:src="@mipmap/i" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

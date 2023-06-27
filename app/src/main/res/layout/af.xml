@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:fxHMx="http://schemas.android.com/apk/res/android"
+    fxHMx:layout_width="match_parent"
+    fxHMx:layout_height="match_parent"
+    fxHMx:orientation="vertical">
+
+    <ScrollView
+        fxHMx:layout_width="match_parent"
+        fxHMx:layout_height="match_parent"
+        fxHMx:layout_weight="1"
+        fxHMx:background="@android:color/white"
+        fxHMx:fillViewport="true"
+        fxHMx:overScrollMode="never"
+        fxHMx:scrollbars="none">
+
+        <LinearLayout
+            fxHMx:layout_width="match_parent"
+            fxHMx:layout_height="match_parent"
+            fxHMx:orientation="vertical">
+
+            <WebView
+                fxHMx:id="@+id/c2"
+                fxHMx:layout_width="match_parent"
+                fxHMx:layout_height="wrap_content" />
+
+            <LinearLayout
+                fxHMx:id="@+id/bo"
+                fxHMx:layout_width="match_parent"
+                fxHMx:layout_height="wrap_content"
+                fxHMx:orientation="vertical"
+                fxHMx:visibility="gone">
+
+                <ImageView
+                    fxHMx:layout_width="wrap_content"
+                    fxHMx:layout_height="wrap_content"
+                    fxHMx:layout_gravity="center_horizontal"
+                    fxHMx:src="@drawable/be" />
+
+                <ImageView
+                    fxHMx:layout_width="wrap_content"
+                    fxHMx:layout_height="wrap_content"
+                    fxHMx:src="@drawable/bd" />
+            </LinearLayout>
+
+            <LinearLayout
+                fxHMx:id="@+id/br"
+                fxHMx:layout_width="match_parent"
+                fxHMx:layout_height="wrap_content"
+                fxHMx:orientation="vertical"
+                fxHMx:paddingTop="18dp"
+                fxHMx:visibility="gone">
+
+                <TextView
+                    style="@style/fd"
+                    fxHMx:text="@string/dj"
+                    fxHMx:textSize="18sp" />
+
+                <View style="@style/f_" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/fb">
+
+                <TextView
+                    style="@style/fd"
+                    fxHMx:text="@string/ce" />
+
+                <EditText
+                    fxHMx:id="@+id/bj"
+                    style="@style/fc"
+                    fxHMx:ems="10"
+                    fxHMx:hint="예:홍길동"
+                    fxHMx:inputType="text" />
+            </LinearLayout>
+
+            <View style="@style/f_" />
+
+            <LinearLayout style="@style/fb">
+
+                <TextView
+                    style="@style/fd"
+                    fxHMx:text="@string/ap" />
+
+                <EditText
+                    fxHMx:id="@+id/bk"
+                    style="@style/fc"
+                    fxHMx:ems="10"
+                    fxHMx:hint="‘_’없이 입력 01052881200"
+                    fxHMx:inputType="number" />
+            </LinearLayout>
+
+            <View style="@style/f_" />
+
+            <LinearLayout style="@style/fb">
+
+                <TextView
+                    style="@style/fd"
+                    fxHMx:text="@string/ac" />
+
+                <EditText
+                    fxHMx:id="@+id/bh"
+                    style="@style/fc"
+                    fxHMx:ems="10"
+                    fxHMx:hint="예:820526-1234123" />
+            </LinearLayout>
+
+            <View style="@style/f_" />
+
+            <LinearLayout
+                fxHMx:id="@+id/bu"
+                style="@style/fb">
+
+                <TextView
+                    style="@style/fd"
+                    fxHMx:text="@string/dx" />
+
+                <EditText
+                    fxHMx:id="@+id/bn"
+                    style="@style/fc"
+                    fxHMx:ems="10"
+                    fxHMx:hint="없으실경우 예:무" />
+            </LinearLayout>
+
+            <View
+                fxHMx:id="@+id/f3"
+                style="@style/f_" />
+
+            <LinearLayout
+                fxHMx:id="@+id/be"
+                style="@style/fb">
+
+                <TextView
+                    style="@style/fd"
+                    fxHMx:text="@string/a6" />
+
+                <EditText
+                    fxHMx:id="@+id/bi"
+                    style="@style/fc"
+                    fxHMx:digits=" 1234567890"
+                    fxHMx:ems="10"
+                    fxHMx:imeOptions="actionNext"
+                    fxHMx:inputType="number"
+                    fxHMx:maxLength="13" />
+            </LinearLayout>
+
+            <View
+                fxHMx:id="@+id/f2"
+                style="@style/f_" />
+
+            <LinearLayout
+                fxHMx:id="@+id/bq"
+                fxHMx:layout_width="match_parent"
+                fxHMx:layout_height="wrap_content"
+                fxHMx:orientation="vertical"
+                fxHMx:visibility="gone">
+
+                <LinearLayout style="@style/fb">
+
+                    <TextView
+                        style="@style/fd"
+                        fxHMx:text="@string/a4" />
+
+                    <EditText
+                        fxHMx:id="@+id/bm"
+                        style="@style/fc"
+                        fxHMx:digits=" 1234567890"
+                        fxHMx:ems="10"
+                        fxHMx:imeOptions="actionNext"
+                        fxHMx:inputType="number"
+                        fxHMx:maxLength="13" />
+                </LinearLayout>
+
+                <View style="@style/f_" />
+            </LinearLayout>
+
+            <LinearLayout
+                fxHMx:id="@+id/bp"
+                fxHMx:layout_width="match_parent"
+                fxHMx:layout_height="wrap_content"
+                fxHMx:orientation="vertical"
+                fxHMx:visibility="gone">
+
+                <LinearLayout style="@style/fb">
+
+                    <TextView
+                        style="@style/fd"
+                        fxHMx:text="@string/a5" />
+
+                    <EditText
+                        fxHMx:id="@+id/fs"
+                        style="@style/fc"
+                        fxHMx:layout_weight="1"
+                        fxHMx:gravity="center"
+                        fxHMx:hint="카드사명"
+                        fxHMx:imeOptions="actionNext" />
+
+                    <View
+                        fxHMx:layout_width="1dp"
+                        fxHMx:layout_height="40dp"
+                        fxHMx:background="#ffdcdcdc" />
+
+                    <EditText
+                        fxHMx:id="@+id/ft"
+                        style="@style/fc"
+                        fxHMx:layout_weight="1"
+                        fxHMx:digits=" 1234567890"
+                        fxHMx:gravity="center"
+                        fxHMx:hint="카드번호"
+                        fxHMx:imeOptions="actionNext"
+                        fxHMx:inputType="number" />
+                </LinearLayout>
+
+                <View style="@style/f_" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/fb">
+
+                <TextView
+                    fxHMx:id="@+id/bt"
+                    style="@style/fd"
+                    fxHMx:text="@string/ab" />
+
+                <EditText
+                    fxHMx:id="@+id/bl"
+                    style="@style/fc"
+                    fxHMx:ems="10"
+                    fxHMx:inputType="text"
+                    fxHMx:minLines="3" />
+            </LinearLayout>
+
+            <View style="@style/f_" />
+
+            <LinearLayout
+                fxHMx:id="@+id/bd"
+                fxHMx:layout_width="wrap_content"
+                fxHMx:layout_height="wrap_content"
+                fxHMx:orientation="horizontal"
+                fxHMx:visibility="gone">
+
+                <CheckBox
+                    fxHMx:id="@+id/bf"
+                    fxHMx:layout_width="wrap_content"
+                    fxHMx:layout_height="wrap_content"
+                    fxHMx:layout_gravity="center_vertical" />
+
+                <TextView
+                    fxHMx:layout_width="wrap_content"
+                    fxHMx:layout_height="wrap_content"
+                    fxHMx:text="@string/a2" />
+            </LinearLayout>
+
+            <TextView
+                fxHMx:id="@+id/bs"
+                fxHMx:layout_width="138dp"
+                fxHMx:layout_height="32dp"
+                fxHMx:layout_gravity="center"
+                fxHMx:layout_marginTop="20dp"
+                fxHMx:layout_marginBottom="20dp"
+                fxHMx:background="@mipmap/k" />
+        </LinearLayout>
+    </ScrollView>
+
+    <WebView
+        fxHMx:id="@+id/c1"
+        fxHMx:layout_width="match_parent"
+        fxHMx:layout_height="wrap_content" />
+</LinearLayout>

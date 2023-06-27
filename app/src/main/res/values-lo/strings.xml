@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">ກັບໄປໜ້າຫຼັກ</string>
+    <string name="c">ເລື່ອນຂຶ້ນເທິງ</string>
+    <string name="d">ຕົວເລືອກເພີ່ມເຕີມ</string>
+    <string name="e">ແລ້ວໆ</string>
+    <string name="f">ເບິ່ງທັງໝົດ</string>
+    <string name="g">ເລືອກແອັບ</string>
+    <string name="h">ປິດ</string>
+    <string name="i">ເປີດ</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">ລຶບ</string>
+    <string name="m">enter</string>
+    <string name="n">Function+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Shift+</string>
+    <string name="q">ຍະຫວ່າງ</string>
+    <string name="r">Sym+</string>
+    <string name="s">Menu+</string>
+    <string name="t">ຊອກຫາ…</string>
+    <string name="u">ລຶບຂໍ້ຄວາມຊອກຫາ</string>
+    <string name="v">ຄຳສຳລັບຄົ້ນຫາ</string>
+    <string name="w">ຊອກຫາ</string>
+    <string name="x">ສົ່ງຂໍ້ມູນ</string>
+    <string name="y">ຊອກຫາດ້ວຍສຽງ</string>
+    <string name="z">ແບ່ງປັນກັບ</string>
+    <string name="a0">ແບ່ງປັນດ້ວຍ %s</string>
+    <string name="a1">ຫຍໍ້ລົງ</string>
+    <string name="dc">ຊອກຫາ</string>
+    <string name="di">999+</string>
+</resources>

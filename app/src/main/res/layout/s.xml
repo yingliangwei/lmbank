@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:lmljH="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    lmljH:layout_width="match_parent"
+    lmljH:minWidth="196dp"
+    lmljH:paddingLeft="16dp"
+    lmljH:paddingRight="16dp" lmljH:layout_height="wrap_content">
+
+    <TextView
+        lmljH:id="@android:id/title"
+        lmljH:layout_width="match_parent"
+        lmljH:layout_height="wrap_content"
+        lmljH:layout_gravity="center_vertical"
+        lmljH:ellipsize="marquee"
+        lmljH:fadingEdge="horizontal"
+        lmljH:singleLine="true"
+        lmljH:textAlignment="viewStart"
+        tools:ignore="RtlCompat" />
+</FrameLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:qQPTX="http://schemas.android.com/apk/res/android"
+    qQPTX:id="@android:id/text1"
+    qQPTX:layout_width="match_parent"
+    qQPTX:layout_height="wrap_content"
+    qQPTX:drawableStart="?android:attr/listChoiceIndicatorSingle"
+    qQPTX:drawableLeft="?android:attr/listChoiceIndicatorSingle"
+    qQPTX:drawablePadding="20dp"
+    qQPTX:ellipsize="marquee"
+    qQPTX:gravity="center_vertical"
+    qQPTX:paddingStart="@dimen/av"
+    qQPTX:paddingLeft="@dimen/av"
+    qQPTX:textAppearance="?android:attr/textAppearanceMedium" />

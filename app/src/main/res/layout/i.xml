@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:aOlnd="http://schemas.android.com/apk/res/android"
+    aOlnd:id="@+id/cz"
+    aOlnd:layout_width="match_parent"
+    aOlnd:layout_height="wrap_content"
+    aOlnd:fillViewport="true">
+
+    <LinearLayout
+        aOlnd:layout_width="match_parent"
+        aOlnd:layout_height="wrap_content"
+        aOlnd:gravity="bottom"
+        aOlnd:layoutDirection="locale"
+        aOlnd:orientation="horizontal"
+        aOlnd:paddingLeft="12dp"
+        aOlnd:paddingTop="4dp"
+        aOlnd:paddingRight="12dp"
+        aOlnd:paddingBottom="4dp">
+
+        <Button
+            aOlnd:id="@android:id/button3"
+            aOlnd:layout_width="wrap_content"
+            aOlnd:layout_height="wrap_content" />
+
+        <android.widget.Space
+            aOlnd:id="@+id/n1"
+            aOlnd:layout_width="0dp"
+            aOlnd:layout_height="0dp"
+            aOlnd:layout_weight="1"
+            aOlnd:visibility="invisible" />
+
+        <Button
+            aOlnd:id="@android:id/button2"
+            aOlnd:layout_width="wrap_content"
+            aOlnd:layout_height="wrap_content" />
+
+        <Button
+            aOlnd:id="@android:id/button1"
+            aOlnd:layout_width="wrap_content"
+            aOlnd:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:flUcv="http://schemas.android.com/apk/res/android"
+    flUcv:layout_width="match_parent"
+    flUcv:layout_height="100dp"
+    flUcv:background="@drawable/e3"
+    flUcv:paddingLeft="20dp"
+    flUcv:paddingRight="20dp">
+
+    <ImageView
+        flUcv:id="@+id/kh"
+        flUcv:layout_width="@dimen/j0"
+        flUcv:layout_height="@dimen/j0"
+        flUcv:layout_alignParentRight="true"
+        flUcv:layout_alignParentBottom="true"
+        flUcv:layout_marginBottom="7dp"
+        flUcv:src="@mipmap/q" />
+
+    <ImageView
+        flUcv:id="@+id/kj"
+        flUcv:layout_width="@dimen/j0"
+        flUcv:layout_height="@dimen/j0"
+        flUcv:layout_alignTop="@+id/kh"
+        flUcv:layout_marginRight="4dp"
+        flUcv:layout_toLeftOf="@+id/kh"
+        flUcv:src="@mipmap/r" />
+
+    <ImageView
+        flUcv:id="@+id/kf"
+        flUcv:layout_width="@dimen/j0"
+        flUcv:layout_height="@dimen/j0"
+        flUcv:layout_alignTop="@+id/kh"
+        flUcv:layout_marginRight="4dp"
+        flUcv:layout_toLeftOf="@+id/kh"
+        flUcv:src="@mipmap/p"
+        flUcv:visibility="gone" />
+
+    <ImageView
+        flUcv:id="@+id/kk"
+        flUcv:layout_width="@dimen/j0"
+        flUcv:layout_height="@dimen/j0"
+        flUcv:layout_alignTop="@+id/kh"
+        flUcv:layout_marginRight="4dp"
+        flUcv:layout_toLeftOf="@+id/kf"
+        flUcv:src="@mipmap/s"
+        flUcv:visibility="gone" />
+
+    <TextView
+        flUcv:id="@+id/ki"
+        flUcv:layout_width="wrap_content"
+        flUcv:layout_height="wrap_content"
+        flUcv:layout_centerVertical="true"
+        flUcv:text=""
+        flUcv:textColor="@android:color/white"
+        flUcv:textSize="20sp" />
+
+    <TextView
+        flUcv:id="@+id/kd"
+        flUcv:layout_width="wrap_content"
+        flUcv:layout_height="20dp"
+        flUcv:layout_below="@+id/ki"
+        flUcv:text="00:00"
+        flUcv:textColor="@android:color/white"
+        flUcv:textSize="15sp" />
+
+    <ImageView
+        flUcv:id="@+id/ke"
+        flUcv:layout_width="20dp"
+        flUcv:layout_height="20dp"
+        flUcv:layout_above="@+id/ki"
+        flUcv:src="@mipmap/r" />
+
+    <TextView
+        flUcv:id="@+id/kg"
+        flUcv:layout_width="wrap_content"
+        flUcv:layout_height="20dp"
+        flUcv:layout_alignBottom="@+id/ke"
+        flUcv:layout_marginLeft="5dp"
+        flUcv:layout_toRightOf="@+id/ke"
+        flUcv:text=""
+        flUcv:textColor="@android:color/white"
+        flUcv:textSize="16sp" />
+</RelativeLayout>

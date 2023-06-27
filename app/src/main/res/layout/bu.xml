@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:ePwIB="http://schemas.android.com/apk/res/android"
+    ePwIB:layout_width="@dimen/fh"
+    ePwIB:layout_height="@dimen/fd" />

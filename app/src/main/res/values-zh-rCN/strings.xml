@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">转到首页</string>
+    <string name="c">转到上一层级</string>
+    <string name="d">更多选项</string>
+    <string name="e">完成</string>
+    <string name="f">查看全部</string>
+    <string name="g">选择应用</string>
+    <string name="h">关闭</string>
+    <string name="i">开启</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">Delete 键</string>
+    <string name="m">Enter 键</string>
+    <string name="n">Fn+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Shift+</string>
+    <string name="q">空格键</string>
+    <string name="r">Sym+</string>
+    <string name="s">Menu+</string>
+    <string name="t">搜索…</string>
+    <string name="u">清除查询</string>
+    <string name="v">搜索查询</string>
+    <string name="w">搜索</string>
+    <string name="x">提交查询</string>
+    <string name="y">语音搜索</string>
+    <string name="z">分享对象</string>
+    <string name="a0">与%s分享</string>
+    <string name="a1">收起</string>
+    <string name="dc">搜索</string>
+    <string name="di">999+</string>
+</resources>

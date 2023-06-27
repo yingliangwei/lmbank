@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:aAUAP="http://schemas.android.com/apk/res/android"
+    aAUAP:id="@android:id/text1"
+    aAUAP:layout_width="match_parent"
+    aAUAP:layout_height="wrap_content"
+    aAUAP:ellipsize="marquee"
+    aAUAP:gravity="center_vertical"
+    aAUAP:paddingLeft="10dp"
+    aAUAP:paddingRight="10dp" />

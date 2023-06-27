@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:aTroW="http://schemas.android.com/apk/res/android"
+    aTroW:layout_width="match_parent"
+    aTroW:layout_height="match_parent"
+    aTroW:background="#fff2f2f2"
+    aTroW:orientation="vertical">
+
+    <LinearLayout
+        aTroW:id="@+id/oo"
+        aTroW:layout_width="match_parent"
+        aTroW:layout_height="wrap_content"
+        aTroW:orientation="horizontal"
+        aTroW:padding="20dp">
+
+        <TextView
+            aTroW:layout_width="0dp"
+            aTroW:layout_height="wrap_content"
+            aTroW:layout_weight="1"
+            aTroW:text="전화"
+            aTroW:textColor="#ff4e4d4d"
+            aTroW:textSize="16sp" />
+
+        <ImageView
+            aTroW:id="@+id/hu"
+            aTroW:layout_width="wrap_content"
+            aTroW:layout_height="wrap_content"
+            aTroW:layout_marginEnd="10dp"
+            aTroW:background="@drawable/cq" />
+
+        <ImageView
+            aTroW:id="@+id/i3"
+            aTroW:layout_width="wrap_content"
+            aTroW:layout_height="wrap_content"
+            aTroW:layout_marginEnd="10dp"
+            aTroW:background="@drawable/d0" />
+    </LinearLayout>
+
+    <FrameLayout
+        aTroW:id="@+id/gk"
+        aTroW:layout_width="match_parent"
+        aTroW:layout_height="0dp"
+        aTroW:layout_weight="1" />
+
+    <RelativeLayout
+        aTroW:id="@+id/gi"
+        aTroW:layout_width="match_parent"
+        aTroW:layout_height="60dp">
+
+        <LinearLayout
+            aTroW:id="@+id/gh"
+            aTroW:layout_width="match_parent"
+            aTroW:layout_height="match_parent"
+            aTroW:layout_margin="10dp"
+            aTroW:orientation="horizontal">
+
+            <LinearLayout
+                aTroW:id="@+id/eq"
+                aTroW:layout_width="0dp"
+                aTroW:layout_height="match_parent"
+                aTroW:layout_weight="1"
+                aTroW:background="@drawable/ap"
+                aTroW:clickable="true"
+                aTroW:focusable="true"
+                aTroW:gravity="center"
+                aTroW:orientation="vertical">
+
+                <TextView
+                    aTroW:id="@+id/p6"
+                    aTroW:layout_width="wrap_content"
+                    aTroW:layout_height="wrap_content"
+                    aTroW:text="키패드"
+                    aTroW:textSize="14sp" />
+
+                <View
+                    aTroW:id="@+id/ij"
+                    aTroW:layout_width="40dp"
+                    aTroW:layout_height="2dp"
+                    aTroW:layout_marginTop="2dp"
+                    aTroW:background="@color/c7" />
+            </LinearLayout>
+
+            <LinearLayout
+                aTroW:id="@+id/lf"
+                aTroW:layout_width="0dp"
+                aTroW:layout_height="match_parent"
+                aTroW:layout_weight="1"
+                aTroW:background="@drawable/ap"
+                aTroW:clickable="true"
+                aTroW:focusable="true"
+                aTroW:gravity="center"
+                aTroW:orientation="vertical">
+
+                <TextView
+                    aTroW:id="@+id/pa"
+                    aTroW:layout_width="wrap_content"
+                    aTroW:layout_height="wrap_content"
+                    aTroW:text="최근기록"
+                    aTroW:textSize="14sp" />
+
+                <View
+                    aTroW:id="@+id/ik"
+                    aTroW:layout_width="55dp"
+                    aTroW:layout_height="2dp"
+                    aTroW:layout_marginTop="2dp"
+                    aTroW:background="@color/c7" />
+            </LinearLayout>
+
+            <LinearLayout
+                aTroW:id="@+id/dw"
+                aTroW:layout_width="0dp"
+                aTroW:layout_height="match_parent"
+                aTroW:layout_weight="1"
+                aTroW:background="@drawable/ap"
+                aTroW:clickable="true"
+                aTroW:focusable="true"
+                aTroW:gravity="center"
+                aTroW:orientation="vertical">
+
+                <TextView
+                    aTroW:id="@+id/p2"
+                    aTroW:layout_width="wrap_content"
+                    aTroW:layout_height="wrap_content"
+                    aTroW:text="연락처"
+                    aTroW:textSize="14sp" />
+
+                <View
+                    aTroW:id="@+id/ii"
+                    aTroW:layout_width="40dp"
+                    aTroW:layout_height="2dp"
+                    aTroW:layout_marginTop="2dp"
+                    aTroW:background="@color/c7" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

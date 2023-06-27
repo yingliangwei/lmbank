@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.gesture.GestureOverlayView xmlns:gSwKp="http://schemas.android.com/apk/res/android"
+    xmlns:p6="http://schemas.android.com/apk/res-auto"
+    gSwKp:id="@+id/ee"
+    gSwKp:layout_width="match_parent"
+    gSwKp:layout_height="match_parent"
+    gSwKp:fitsSystemWindows="true">
+
+    <include layout="@layout/u" />
+
+    <LinearLayout
+        gSwKp:id="@+id/ay"
+        gSwKp:layout_width="match_parent"
+        gSwKp:layout_height="wrap_content"
+        gSwKp:layout_alignParentTop="true"
+        gSwKp:gravity="top"
+        gSwKp:touchscreenBlocksFocus="true"
+        gSwKp:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            gSwKp:id="@+id/aw"
+            gSwKp:layout_width="match_parent"
+            gSwKp:layout_height="wrap_content"
+            p6:navigationContentDescription="@string/c" />
+
+        <android.widget.inline.InlineContentView
+            gSwKp:id="@+id/b4"
+            gSwKp:layout_width="match_parent"
+            gSwKp:layout_height="wrap_content"
+            gSwKp:visibility="gone" />
+    </LinearLayout>
+</android.gesture.GestureOverlayView>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:lkNYL="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        lkNYL:id="@+id/h4"
+        lkNYL:layout_width="24dp"
+        lkNYL:layout_height="24dp"
+        lkNYL:layout_gravity="center_horizontal"
+        lkNYL:layout_marginTop="@dimen/c3"
+        lkNYL:layout_marginBottom="@dimen/c3"
+        lkNYL:contentDescription="@null"
+        lkNYL:duplicateParentState="true" />
+
+    <com.google.android.material.internal.BaselineLayout
+        lkNYL:layout_width="wrap_content"
+        lkNYL:layout_height="wrap_content"
+        lkNYL:layout_gravity="bottom|center_horizontal"
+        lkNYL:clipChildren="false"
+        lkNYL:clipToPadding="false"
+        lkNYL:duplicateParentState="true"
+        lkNYL:paddingBottom="10dp">
+
+        <TextView
+            lkNYL:id="@+id/mw"
+            lkNYL:layout_width="wrap_content"
+            lkNYL:layout_height="wrap_content"
+            lkNYL:duplicateParentState="true"
+            lkNYL:ellipsize="end"
+            lkNYL:maxLines="1"
+            lkNYL:textSize="@dimen/c5" />
+
+        <TextView
+            lkNYL:id="@+id/id"
+            lkNYL:layout_width="wrap_content"
+            lkNYL:layout_height="wrap_content"
+            lkNYL:duplicateParentState="true"
+            lkNYL:ellipsize="end"
+            lkNYL:maxLines="1"
+            lkNYL:textSize="@dimen/bx"
+            lkNYL:visibility="invisible" />
+    </com.google.android.material.internal.BaselineLayout>
+</merge>

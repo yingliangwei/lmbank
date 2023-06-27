@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">ಹೋಮ್‌ಗೆ ನ್ಯಾವಿಗೇಟ್ ಮಾಡಿ</string>
+    <string name="c">ಮೇಲಕ್ಕೆ ನ್ಯಾವಿಗೇಟ್ ಮಾಡಿ</string>
+    <string name="d">ಇನ್ನಷ್ಟು ಆಯ್ಕೆಗಳು</string>
+    <string name="e">ಮುಗಿದಿದೆ</string>
+    <string name="f">ಎಲ್ಲವನ್ನೂ ನೋಡಿ</string>
+    <string name="g">ಆ್ಯಪ್‌ವೊಂದನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="h">ಆಫ್</string>
+    <string name="i">ಆನ್</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">delete</string>
+    <string name="m">enter</string>
+    <string name="n">Function+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Shift+</string>
+    <string name="q">space</string>
+    <string name="r">Sym+</string>
+    <string name="s">Menu+</string>
+    <string name="t">ಹುಡುಕಿ…</string>
+    <string name="u">ಪ್ರಶ್ನೆಯನ್ನು ತೆರವುಗೊಳಿಸಿ</string>
+    <string name="v">ಪ್ರಶ್ನೆಯನ್ನು ಹುಡುಕಿ</string>
+    <string name="w">ಹುಡುಕಿ</string>
+    <string name="x">ಪ್ರಶ್ನೆಯನ್ನು ಸಲ್ಲಿಸಿ</string>
+    <string name="y">ಧ್ವನಿ ಹುಡುಕಾಟ</string>
+    <string name="z">ಇವರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="a0">%s ನೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="a1">ಕುಗ್ಗಿಸಿ</string>
+    <string name="dc">ಹುಡುಕಿ</string>
+    <string name="di">999+</string>
+</resources>

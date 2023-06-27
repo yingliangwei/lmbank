@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">瀏覽主頁</string>
+    <string name="c">向上瀏覽</string>
+    <string name="d">更多選項</string>
+    <string name="e">完成</string>
+    <string name="f">查看全部</string>
+    <string name="g">選擇應用程式</string>
+    <string name="h">關閉</string>
+    <string name="i">開啟</string>
+    <string name="j">Alt +</string>
+    <string name="k">Ctrl +</string>
+    <string name="l">刪除</string>
+    <string name="m">Enter 鍵</string>
+    <string name="n">Fn +</string>
+    <string name="o">Meta +</string>
+    <string name="p">Shift +</string>
+    <string name="q">空白鍵</string>
+    <string name="r">Sym +</string>
+    <string name="s">Menu +</string>
+    <string name="t">搜尋…</string>
+    <string name="u">清除查詢</string>
+    <string name="v">搜尋查詢</string>
+    <string name="w">搜尋</string>
+    <string name="x">提交查詢</string>
+    <string name="y">語音搜尋</string>
+    <string name="z">分享對象</string>
+    <string name="a0">使用「%s」分享</string>
+    <string name="a1">收合</string>
+    <string name="ae">點擊加載更多</string>
+    <string name="af">沒有更多數據</string>
+    <string name="ag">加載失敗，請點我重試</string>
+    <string name="ah">正在加載中...</string>
+    <string name="dc">搜尋</string>
+    <string name="di">999+</string>
+</resources>

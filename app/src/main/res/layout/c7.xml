@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:qEpPF="http://schemas.android.com/apk/res/android"
+    qEpPF:layout_width="wrap_content"
+    qEpPF:layout_height="match_parent"
+    qEpPF:orientation="@integer/m">
+
+    <include layout="@layout/c9" />
+
+    <LinearLayout
+        qEpPF:id="@+id/jn"
+        qEpPF:layout_width="wrap_content"
+        qEpPF:layout_height="match_parent"
+        qEpPF:orientation="vertical">
+
+        <FrameLayout
+            qEpPF:id="@+id/jm"
+            qEpPF:layout_width="match_parent"
+            qEpPF:layout_height="0dp"
+            qEpPF:layout_weight="1"
+            qEpPF:paddingStart="@dimen/fb"
+            qEpPF:paddingLeft="@dimen/fb"
+            qEpPF:paddingEnd="@dimen/fb"
+            qEpPF:paddingRight="@dimen/fb"
+            qEpPF:paddingBottom="@dimen/fa" />
+
+        <include
+            layout="@layout/c6"
+            qEpPF:layout_width="match_parent"
+            qEpPF:layout_height="@dimen/f9" />
+    </LinearLayout>
+</LinearLayout>

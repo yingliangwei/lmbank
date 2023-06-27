@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view xmlns:ehznY="http://schemas.android.com/apk/res/android"
+    class="com.google.android.material.snackbar.SnackbarContentLayout"
+    ehznY:layout_width="match_parent"
+    ehznY:layout_height="wrap_content"
+    ehznY:layout_gravity="bottom">
+
+    <TextView
+        ehznY:id="@+id/my"
+        ehznY:layout_width="wrap_content"
+        ehznY:layout_height="wrap_content"
+        ehznY:layout_gravity="start|center_vertical"
+        ehznY:layout_weight="1"
+        ehznY:ellipsize="end"
+        ehznY:maxLines="@integer/g"
+        ehznY:paddingLeft="@dimen/cu"
+        ehznY:paddingTop="@dimen/cv"
+        ehznY:paddingRight="@dimen/cu"
+        ehznY:paddingBottom="@dimen/cv"
+        ehznY:textAlignment="viewStart" />
+
+    <Button
+        ehznY:id="@+id/mx"
+        ehznY:layout_width="wrap_content"
+        ehznY:layout_height="wrap_content"
+        ehznY:layout_gravity="end|center_vertical"
+        ehznY:layout_marginStart="@dimen/cr"
+        ehznY:layout_marginLeft="@dimen/cr"
+        ehznY:minWidth="48dp"
+        ehznY:visibility="gone" />
+</view>

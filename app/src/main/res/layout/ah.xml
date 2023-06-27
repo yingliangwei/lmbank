@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tzgcL="http://schemas.android.com/apk/res/android"
+    tzgcL:layout_width="match_parent"
+    tzgcL:layout_height="match_parent"
+    tzgcL:gravity="center"
+    tzgcL:orientation="vertical">
+
+    <Button
+        tzgcL:id="@+id/c3"
+        tzgcL:layout_width="200dp"
+        tzgcL:layout_height="50dp"
+        tzgcL:text="测试" />
+</LinearLayout>

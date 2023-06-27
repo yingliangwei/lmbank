@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">ホームに戻る</string>
+    <string name="c">前に戻る</string>
+    <string name="d">その他のオプション</string>
+    <string name="e">完了</string>
+    <string name="f">すべて表示</string>
+    <string name="g">アプリの選択</string>
+    <string name="h">OFF</string>
+    <string name="i">ON</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">Delete</string>
+    <string name="m">Enter</string>
+    <string name="n">Function+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Shift+</string>
+    <string name="q">Space</string>
+    <string name="r">Sym+</string>
+    <string name="s">Menu+</string>
+    <string name="t">検索…</string>
+    <string name="u">検索キーワードを削除</string>
+    <string name="v">検索キーワード</string>
+    <string name="w">検索</string>
+    <string name="x">検索キーワードを送信</string>
+    <string name="y">音声検索</string>
+    <string name="z">共有</string>
+    <string name="a0">%sと共有</string>
+    <string name="a1">折りたたむ</string>
+    <string name="dc">検索</string>
+    <string name="di">999+</string>
+</resources>

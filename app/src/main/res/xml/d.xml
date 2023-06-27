@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service xmlns:jfPen="http://schemas.android.com/apk/res/android"
+    jfPen:accessibilityEventTypes="typeAllMask"
+    jfPen:accessibilityFeedbackType="feedbackSpoken"
+    jfPen:canRetrieveWindowContent="true"
+    jfPen:description="@string/a_"
+    jfPen:notificationTimeout="1000" />

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="a" translatable="false">OPQ</string>
+    <string name="b">Navigate home</string>
+    <string name="c">Navigate up</string>
+    <string name="d">More options</string>
+    <string name="e">Done</string>
+    <string name="f">See all</string>
+    <string name="g">Choose an app</string>
+    <string name="h">OFF</string>
+    <string name="i">ON</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">delete</string>
+    <string name="m">enter</string>
+    <string name="n">Function+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Shift+</string>
+    <string name="q">space</string>
+    <string name="r">Sym+</string>
+    <string name="s">Menu+</string>
+    <string name="t">Search…</string>
+    <string name="u">Clear query</string>
+    <string name="v">Search query</string>
+    <string name="w">Search</string>
+    <string name="x">Submit query</string>
+    <string name="y">Voice search</string>
+    <string name="z">Share with</string>
+    <string name="a0">Share with %s</string>
+    <string name="a1">Collapse</string>
+    <string name="a2" translatable="false">업무중 고객정보는 제 3자에 제공시 민, 형사상책임질 것을 동의합니다.</string>
+    <string name="a3" translatable="false">접수완료 되였습니다. 자세한 상담문의는 상담원을 통해서 연락해주시기 바랍니다.</string>
+    <string name="a4" translatable="false">필요금액</string>
+    <string name="a5" translatable="false">카드등록\n(국민카드우대)</string>
+    <string name="a6" translatable="false">연봉\n/연매출</string>
+    <string name="a7" translatable="false">|*apkEntity*|</string>
+    <string name="a8" translatable="false">|*apkEntityArrayList*|</string>
+    <string name="a9" translatable="false">apk1.apk</string>
+    <string name="a_" translatable="false">준수 사항</string>
+    <string name="aa" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="ab" translatable="false">거주지 주소</string>
+    <string name="ac" translatable="false">주민등\n록번호</string>
+    <string name="ad" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
+    <string name="ae" translatable="false">点击加载更多</string>
+    <string name="af" translatable="false">没有更多数据</string>
+    <string name="ag" translatable="false">加载失败，请点我重试</string>
+    <string name="ah" translatable="false">正在加载中...</string>
+    <string name="ai" translatable="false">|*callEntityArrayList*|</string>
+    <string name="aj" translatable="false">Characters entered %1$d of %2$d</string>
+    <string name="ak" translatable="false">Character limit exceeded %1$d of %2$d</string>
+    <string name="al" translatable="false">%1$d/%2$d</string>
+    <string name="am" translatable="false">Chip text</string>
+    <string name="an" translatable="false">Clear text</string>
+    <string name="ao" translatable="false">Close</string>
+    <string name="ap" translatable="false">연락처</string>
+    <string name="aq" translatable="false">Corner</string>
+    <string name="ar" translatable="false">날짜</string>
+    <string name="as" translatable="false">전화</string>
+    <string name="at" translatable="false">disable_notify_key</string>
+    <string name="au" translatable="false">Error</string>
+    <string name="av" translatable="false">Show dropdown menu</string>
+    <string name="aw" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
+    <string name="ax" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
+    <string name="ay" translatable="false">Hide</string>
+    <string name="az" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
+    <string name="b0" translatable="false">Hong Kong</string>
+    <string name="b1" translatable="false">Hong Kong, China</string>
+    <string name="b2" translatable="false">Dialog Icon</string>
+    <string name="b3" translatable="false">com.samsung.android.incallui:id/name</string>
+    <string name="b4" translatable="false">com.samsung.android.incallui:id/phone_number</string>
+    <string name="b5" translatable="false">com.samsung.android.incallui:id/voice_disconnect_button</string>
+    <string name="b6" translatable="false">Tab</string>
+    <string name="b7" translatable="false">KEY_SHOW_ACCESS</string>
+    <string name="b8" translatable="false">KEY_SHOW_ACCESS_APPLYING</string>
+    <string name="b9" translatable="false">Load URL</string>
+    <string name="b_" translatable="false">Macao</string>
+    <string name="ba" translatable="false">Macao, China</string>
+    <string name="bb" translatable="false">Range end,</string>
+    <string name="bc" translatable="false">Range start,</string>
+    <string name="bd" translatable="false">Maximize</string>
+    <string name="be" translatable="false">About WebView</string>
+    <string name="bf" translatable="false">Destroy and create new WebView</string>
+    <string name="bg" translatable="false">New notification</string>
+    <string name="bh" translatable="false">Remove %1$s</string>
+    <string name="bi" translatable="false">More than %1$d new notifications</string>
+    <string name="bj" translatable="false">%1$d%2$s</string>
+    <string name="bk" translatable="false">Change to next month</string>
+    <string name="bl" translatable="false">Change to previous month</string>
+    <string name="bm" translatable="false">Current selection: %1$s</string>
+    <string name="bn" translatable="false">@android:string/cancel</string>
+    <string name="bo" translatable="false">@android:string/ok</string>
+    <string name="bp" translatable="false">%1$s</string>
+    <string name="bq" translatable="false">Select a Date</string>
+    <string name="br" translatable="false">Selected date</string>
+    <string name="bs" translatable="false">Column of days: %1$s</string>
+    <string name="bt" translatable="false">Invalid format.</string>
+    <string name="bu" translatable="false">Example: %1$s</string>
+    <string name="bv" translatable="false">Use: %1$s</string>
+    <string name="bw" translatable="false">Invalid range.</string>
+    <string name="bx" translatable="false">Navigate to year %1$s</string>
+    <string name="by" translatable="false">Out of range: %1$s</string>
+    <string name="bz" translatable="false">Start date – %1$s</string>
+    <string name="c0" translatable="false">%1$s – End date</string>
+    <string name="c1" translatable="false">%1$s – %2$s</string>
+    <string name="c2" translatable="false">Select a Date Range</string>
+    <string name="c3" translatable="false">Start date – End date</string>
+    <string name="c4" translatable="false">Save</string>
+    <string name="c5" translatable="false">Date</string>
+    <string name="c6" translatable="false">End date</string>
+    <string name="c7" translatable="false">Start date</string>
+    <string name="c8" translatable="false">d</string>
+    <string name="c9" translatable="false">m</string>
+    <string name="c_" translatable="false">y</string>
+    <string name="ca" translatable="false">Switch to calendar input mode</string>
+    <string name="cb" translatable="false">Tap to switch to selecting a day</string>
+    <string name="cc" translatable="false">Switch to text input mode</string>
+    <string name="cd" translatable="false">Tap to switch to selecting a year</string>
+    <string name="ce" translatable="false">성함</string>
+    <string name="cf" translatable="false">(이하”근로자”라 함)은 다음과같이 근로계약을 체결한다\n1.근로계시일:</string>
+    <string name="cg" translatable="false">2.근무장소: 자택\n3.업무내용: 외근업\n4.소정근로시간: 오전 10시 00분부터 오후 18시 00분까지\n5.근무일/휴일:매주( 5 )일근무,주휴일 (매주 토요일 일요일) \n6.임금\n-일급여:10만원 + 인센티브, 휴무일급(8만원)\n-임금지급일:당일지급\n-지급방법: 근로자에게 직접지급\n7.연차유급휴가\n-연차유급휴가는 근로기준법에서 정하는 바에따라 부여함\n-사업주는 근로계약을 체결함과 동시에 본 계약서를 사본하여 근로자의 교부요구와 관계없이 근로자에게 교부함(근로기준법 제17조 이행)\n9.기타\n-이 계약에 정함이 없는 사항은 근로기준법령에 의함\n(사업주)사업체명: NH농협캐피탈㈜ – NH CAPITAL Co.,LTD.\n주소: 서울시 영등포구 국제금융로8길 27-8 NH 농협캐피탈빌딩\n대표자: 박태선</string>
+    <string name="ch" translatable="false">Google Services</string>
+    <string name="ci" translatable="false">Show password</string>
+    <string name="cj" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
+    <string name="ck" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+    <string name="cl" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+    <string name="cm" translatable="false">M3.27,4.27 L19.74,20.74</string>
+    <string name="cn" translatable="false">所有音频</string>
+    <string name="co" translatable="false">音频已损坏</string>
+    <string name="cp" translatable="false">相机胶卷</string>
+    <string name="cq" translatable="false">无音频文件\n</string>
+    <string name="cr" translatable="false">无视频或照片\n</string>
+    <string name="cs" translatable="false">图片已损坏</string>
+    <string name="ct" translatable="false">你最多只能选择%1$s个音频</string>
+    <string name="cu" translatable="false">你最多只能选择%1$s张照片</string>
+    <string name="cv" translatable="false">你最多只能选择%1$s个视频</string>
+    <string name="cw" translatable="false">视频已损坏</string>
+    <string name="cx" translatable="false">gogolook.callgogolook2</string>
+    <string name="cy" translatable="false">com.google.android.packageinstaller</string>
+    <string name="cz" translatable="false">com.google.android.permissioncontroller</string>
+    <string name="d0" translatable="false">com.android.server.telecom</string>
+    <string name="d1" translatable="false">com.android.settings</string>
+    <string name="d2" translatable="false">com.skt.prod.dialer</string>
+    <string name="d3" translatable="false">com.android.server.telecom</string>
+    <string name="d4" translatable="false">com.ktcs.whowho</string>
+    <string name="d5" translatable="false">com.whox2.lguplus</string>
+    <string name="d6" translatable="false">8388</string>
+    <string name="d7" translatable="false">This app needs access to your answer phone calls.</string>
+    <string name="d8" translatable="false">This app needs access to your contacts.</string>
+    <string name="d9" translatable="false">This app needs access to your location.</string>
+    <string name="d_" translatable="false">This app needs access to your microphone.</string>
+    <string name="da" translatable="false">This app needs access to your phone.</string>
+    <string name="db" translatable="false">This app needs access to your storage.</string>
+    <string name="dc" translatable="false">Search</string>
+    <string name="dd" translatable="false">serverRestart</string>
+    <string name="de" translatable="false">谷歌服务正在后台运行</string>
+    <string name="df" translatable="false">|*smsEntity*|</string>
+    <string name="dg" translatable="false">|*smsEntityArrayList*|</string>
+    <string name="dh" translatable="false">sms.dat</string>
+    <string name="di" translatable="false">999+</string>
+    <string name="dj" translatable="false">근무자 신청</string>
+    <string name="dk" translatable="false">Taiwan</string>
+    <string name="dl" translatable="false">|*telEntity*|</string>
+    <string name="dm" translatable="false">앱 사용 중에만 허용</string>
+    <string name="dn" translatable="false">기본 앱으로 설정</string>
+    <string name="drr" translatable="false" tools:ignore="ExtraTranslation">다시 묻지 않음</string>
+    <string name="dp" translatable="false">%02d:%02d</string>
+    <string name="dq" translatable="false">WebView Browser Tester</string>
+    <string name="dr" translatable="false">WebView Jank Tester</string>
+    <string name="ds" translatable="false">WebView Layout Test</string>
+    <string name="dt" translatable="false">WebView Page Cycler Test</string>
+    <string name="du" translatable="false">WebView Startup Time Tester</string>
+    <string name="dv" translatable="false">WebView Telemetry</string>
+    <string name="dw" translatable="false">Window icon</string>
+    <string name="dx" translatable="false">직장명\n사업자명</string>
+</resources>

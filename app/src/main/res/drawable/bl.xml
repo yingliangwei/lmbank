@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:iqvUl="http://schemas.android.com/apk/res/android"
+    iqvUl:shape="rectangle">
+    <corners iqvUl:radius="@dimen/cp" />
+    <solid iqvUl:color="@color/c6" />
+</shape>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:fwGon="http://schemas.android.com/apk/res/android"
+    fwGon:layout_width="match_parent"
+    fwGon:layout_height="match_parent"
+    fwGon:gravity="center"
+    fwGon:orientation="vertical">
+
+    <ExpandableListView
+        fwGon:id="@+id/fx"
+        fwGon:layout_width="match_parent"
+        fwGon:layout_height="match_parent"
+        fwGon:layout_weight="1"
+        fwGon:groupIndicator="@null" />
+
+    <LinearLayout
+        fwGon:id="@+id/ir"
+        fwGon:layout_width="wrap_content"
+        fwGon:layout_height="wrap_content"
+        fwGon:gravity="center"
+        fwGon:orientation="vertical"
+        fwGon:paddingLeft="50dp"
+        fwGon:paddingTop="10dp"
+        fwGon:paddingRight="50dp"
+        fwGon:paddingBottom="10dp"
+        fwGon:visibility="gone">
+
+        <ImageView
+            fwGon:layout_width="20dp"
+            fwGon:layout_height="20dp"
+            fwGon:src="@drawable/c7" />
+
+        <TextView
+            fwGon:layout_width="wrap_content"
+            fwGon:layout_height="wrap_content"
+            fwGon:layout_marginTop="@dimen/d6"
+            fwGon:text="삭제"
+            fwGon:textColor="@color/ak"
+            fwGon:textSize="12dp" />
+    </LinearLayout>
+</LinearLayout>

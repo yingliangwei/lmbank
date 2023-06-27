@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:oiNvL="http://schemas.android.com/apk/res/android">
+    <item oiNvL:alpha="@dimen/hg" oiNvL:color="@color/a" oiNvL:state_pressed="true" />
+    <item oiNvL:alpha="@dimen/he" oiNvL:color="@color/a" oiNvL:state_focused="true" oiNvL:state_hovered="true" />
+    <item oiNvL:alpha="@dimen/he" oiNvL:color="@color/a" oiNvL:state_focused="true" />
+    <item oiNvL:alpha="@dimen/hf" oiNvL:color="@color/a" oiNvL:state_hovered="true" />
+    <item oiNvL:alpha="@dimen/hd" oiNvL:color="@color/a" />
+</selector>

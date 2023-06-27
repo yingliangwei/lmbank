@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.internal.NavigationMenuView xmlns:hvbrp="http://schemas.android.com/apk/res/android"
+    hvbrp:id="@+id/ep"
+    hvbrp:layout_width="match_parent"
+    hvbrp:layout_height="match_parent"
+    hvbrp:clipToPadding="false"
+    hvbrp:paddingBottom="@dimen/cl"
+    hvbrp:scrollbars="vertical" />

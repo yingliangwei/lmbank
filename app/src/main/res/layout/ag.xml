@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:jCVqE="http://schemas.android.com/apk/res/android"
+    jCVqE:layout_width="match_parent"
+    jCVqE:layout_height="match_parent"
+    jCVqE:gravity="center"
+    jCVqE:orientation="vertical">
+
+    <Button
+        jCVqE:id="@+id/nw"
+        jCVqE:layout_width="200dp"
+        jCVqE:layout_height="50dp"
+        jCVqE:text="测试" />
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:lqkJA="http://schemas.android.com/apk/res/android"
+    lqkJA:layout_width="50dp"
+    lqkJA:layout_height="wrap_content"
+    lqkJA:layout_gravity="center"
+    lqkJA:background="@drawable/ao"
+    lqkJA:gravity="center"
+    lqkJA:orientation="vertical"
+    lqkJA:paddingTop="8dp"
+    lqkJA:paddingBottom="8dp">
+
+    <TextView
+        lqkJA:id="@+id/es"
+        lqkJA:layout_width="wrap_content"
+        lqkJA:layout_height="wrap_content"
+        lqkJA:gravity="center"
+        lqkJA:text="1"
+        lqkJA:textColor="@color/g4"
+        lqkJA:textSize="32sp"
+        lqkJA:textStyle="normal" />
+
+    <TextView
+        lqkJA:id="@+id/eu"
+        lqkJA:layout_width="wrap_content"
+        lqkJA:layout_height="wrap_content"
+        lqkJA:layout_marginTop="-7dp"
+        lqkJA:text="11111"
+        lqkJA:textColor="@color/g5"
+        lqkJA:textSize="9dp"
+        lqkJA:visibility="visible" />
+
+    <TextView
+        lqkJA:id="@+id/et"
+        lqkJA:layout_width="wrap_content"
+        lqkJA:layout_height="wrap_content"
+        lqkJA:layout_marginTop="-3dp"
+        lqkJA:text="11111"
+        lqkJA:textColor="@color/g5"
+        lqkJA:textSize="9dp"
+        lqkJA:visibility="visible" />
+</LinearLayout>

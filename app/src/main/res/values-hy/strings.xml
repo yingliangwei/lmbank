@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">Անցնել գլխավոր էջ</string>
+    <string name="c">Անցնել վերև</string>
+    <string name="d">Այլ ընտրանքներ</string>
+    <string name="e">Պատրաստ է</string>
+    <string name="f">Տեսնել բոլորը</string>
+    <string name="g">Ընտրել հավելված</string>
+    <string name="h">ԱՆՋԱՏԵԼ</string>
+    <string name="i">ՄԻԱՑՆԵԼ</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">Delete</string>
+    <string name="m">Enter</string>
+    <string name="n">Function+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Shift+</string>
+    <string name="q">բացատ</string>
+    <string name="r">Sym+</string>
+    <string name="s">Menu+</string>
+    <string name="t">Որոնում…</string>
+    <string name="u">Ջնջել հարցումը</string>
+    <string name="v">Որոնման հարցում</string>
+    <string name="w">Որոնել</string>
+    <string name="x">Ուղարկել հարցումը</string>
+    <string name="y">Ձայնային որոնում</string>
+    <string name="z">Կիսվել…</string>
+    <string name="a0">Կիսվել %s հավելվածի միջոցով</string>
+    <string name="a1">Ծալել</string>
+    <string name="dc">Որոնել</string>
+    <string name="di">999+</string>
+</resources>

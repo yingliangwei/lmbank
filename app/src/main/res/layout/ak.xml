@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:mRIlN="http://schemas.android.com/apk/res/android"
+    mRIlN:layout_width="match_parent"
+    mRIlN:layout_height="@dimen/d7">
+
+    <LinearLayout
+        mRIlN:id="@+id/ix"
+        mRIlN:layout_width="match_parent"
+        mRIlN:layout_height="match_parent"
+        mRIlN:gravity="center"
+        mRIlN:orientation="horizontal">
+
+        <ProgressBar
+            mRIlN:id="@+id/iy"
+            style="?android:attr/progressBarStyleSmall"
+            mRIlN:layout_width="wrap_content"
+            mRIlN:layout_height="wrap_content"
+            mRIlN:layout_marginRight="@dimen/d6" />
+
+        <TextView
+            mRIlN:id="@+id/iz"
+            mRIlN:layout_width="wrap_content"
+            mRIlN:layout_height="wrap_content"
+            mRIlN:layout_marginLeft="@dimen/d6"
+            mRIlN:text="@string/ah"
+            mRIlN:textColor="@android:color/black"
+            mRIlN:textSize="@dimen/j3" />
+    </LinearLayout>
+
+    <FrameLayout
+        mRIlN:id="@+id/iw"
+        mRIlN:layout_width="match_parent"
+        mRIlN:layout_height="match_parent"
+        mRIlN:visibility="gone">
+
+        <TextView
+            mRIlN:id="@+id/pf"
+            mRIlN:layout_width="wrap_content"
+            mRIlN:layout_height="wrap_content"
+            mRIlN:layout_gravity="center"
+            mRIlN:text="@string/ag" />
+    </FrameLayout>
+
+    <FrameLayout
+        mRIlN:id="@+id/iu"
+        mRIlN:layout_width="match_parent"
+        mRIlN:layout_height="match_parent"
+        mRIlN:visibility="gone">
+
+        <TextView
+            mRIlN:layout_width="wrap_content"
+            mRIlN:layout_height="wrap_content"
+            mRIlN:layout_gravity="center"
+            mRIlN:text="@string/ae"
+            mRIlN:textColor="@android:color/darker_gray" />
+    </FrameLayout>
+
+    <FrameLayout
+        mRIlN:id="@+id/iv"
+        mRIlN:layout_width="match_parent"
+        mRIlN:layout_height="match_parent"
+        mRIlN:visibility="gone">
+
+        <TextView
+            mRIlN:layout_width="wrap_content"
+            mRIlN:layout_height="wrap_content"
+            mRIlN:layout_gravity="center"
+            mRIlN:text="@string/af"
+            mRIlN:textColor="@android:color/darker_gray" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:fjlcn="http://schemas.android.com/apk/res/android">
+
+    <CheckedTextView
+        fjlcn:id="@+id/eo"
+        fjlcn:layout_width="0dp"
+        fjlcn:layout_height="match_parent"
+        fjlcn:layout_weight="1"
+        fjlcn:drawablePadding="@dimen/cg"
+        fjlcn:gravity="start|center_vertical"
+        fjlcn:maxLines="1" />
+
+    <ViewStub
+        fjlcn:id="@+id/en"
+        fjlcn:layout_width="wrap_content"
+        fjlcn:layout_height="match_parent"
+        fjlcn:inflatedId="@+id/em"
+        fjlcn:layout="@layout/aw" />
+</merge>

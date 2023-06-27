@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="b">Navegar a la página principal</string>
+    <string name="c">Navegar hacia arriba</string>
+    <string name="d">Más opciones</string>
+    <string name="e">Listo</string>
+    <string name="f">Ver todas</string>
+    <string name="g">Elegir una app</string>
+    <string name="h">DESACTIVAR</string>
+    <string name="i">ACTIVAR</string>
+    <string name="j">Alt+</string>
+    <string name="k">Ctrl+</string>
+    <string name="l">borrar</string>
+    <string name="m">intro</string>
+    <string name="n">Función+</string>
+    <string name="o">Meta+</string>
+    <string name="p">Mayúscula+</string>
+    <string name="q">espacio</string>
+    <string name="r">Sym+</string>
+    <string name="s">Menú+</string>
+    <string name="t">Buscar…</string>
+    <string name="u">Borrar consulta</string>
+    <string name="v">Búsqueda</string>
+    <string name="w">Buscar</string>
+    <string name="x">Enviar consulta</string>
+    <string name="y">Búsqueda por voz</string>
+    <string name="z">Compartir con</string>
+    <string name="a0">Compartir con %s</string>
+    <string name="a1">Contraer</string>
+    <string name="dc">Buscar</string>
+    <string name="di">999+</string>
+</resources>

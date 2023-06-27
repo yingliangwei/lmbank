@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:tvvZZ="http://schemas.android.com/apk/res/android" tvvZZ:color="@color/a4">
+    <item tvvZZ:id="@android:id/mask">
+        <inset tvvZZ:insetLeft="@dimen/bl" tvvZZ:insetRight="@dimen/bl" tvvZZ:insetTop="@dimen/bm" tvvZZ:insetBottom="@dimen/bm">
+            <shape tvvZZ:shape="rectangle">
+                <corners tvvZZ:radius="@dimen/bp"/>
+                <solid tvvZZ:color="@android:color/white"/>
+                <padding tvvZZ:left="@dimen/bn" tvvZZ:top="@dimen/bo" tvvZZ:right="@dimen/bn" tvvZZ:bottom="@dimen/bo"/>
+            </shape>
+        </inset>
+    </item>
+</ripple>

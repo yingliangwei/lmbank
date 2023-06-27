@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:goVLK="http://schemas.android.com/apk/res/android" goVLK:tint="?android:attr/colorForeground">
+    <solid goVLK:color="#1f000000"/>
+    <size goVLK:height="1dp" goVLK:width="1dp"/>
+</shape>

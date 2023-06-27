@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:gAitz="http://schemas.android.com/apk/res/android"
+    gAitz:id="@+id/cz"
+    gAitz:layout_width="match_parent"
+    gAitz:layout_height="wrap_content"
+    gAitz:fillViewport="true">
+
+    <LinearLayout
+        gAitz:layout_width="match_parent"
+        gAitz:layout_height="wrap_content"
+        gAitz:gravity="bottom"
+        gAitz:layoutDirection="locale"
+        gAitz:orientation="horizontal"
+        gAitz:paddingStart="8dp"
+        gAitz:paddingLeft="8dp"
+        gAitz:paddingTop="2dp"
+        gAitz:paddingEnd="8dp"
+        gAitz:paddingRight="8dp"
+        gAitz:paddingBottom="2dp">
+
+        <Button
+            gAitz:id="@android:id/button3"
+            gAitz:layout_width="wrap_content"
+            gAitz:layout_height="wrap_content" />
+
+        <android.widget.Space
+            gAitz:id="@+id/n1"
+            gAitz:layout_width="0dp"
+            gAitz:layout_height="0dp"
+            gAitz:layout_weight="1"
+            gAitz:visibility="invisible" />
+
+        <Button
+            gAitz:id="@android:id/button2"
+            gAitz:layout_width="wrap_content"
+            gAitz:layout_height="wrap_content" />
+
+        <Button
+            gAitz:id="@android:id/button1"
+            gAitz:layout_width="wrap_content"
+            gAitz:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

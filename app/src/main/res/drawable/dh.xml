@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:amWzf="http://schemas.android.com/apk/res/android">
+    <item amWzf:alpha="0.24" amWzf:color="@color/a" amWzf:state_enabled="true" />
+    <item amWzf:color="@android:color/transparent" />
+</selector>

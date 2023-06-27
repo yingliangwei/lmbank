@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:bOukv="http://schemas.android.com/apk/res/android">
+    <set bOukv:ordering="sequentially">
+        <objectAnimator bOukv:interpolator="@interpolator/g" bOukv:duration="183" bOukv:valueFrom="1" bOukv:valueTo="1.4" bOukv:valueType="floatType" bOukv:propertyName="scaleX"/>
+        <objectAnimator bOukv:interpolator="@interpolator/g" bOukv:duration="16" bOukv:valueFrom="1.4" bOukv:valueTo="0" bOukv:valueType="floatType" bOukv:propertyName="scaleX"/>
+        <objectAnimator bOukv:interpolator="@interpolator/g" bOukv:duration="300" bOukv:valueFrom="0" bOukv:valueTo="0" bOukv:valueType="floatType" bOukv:propertyName="scaleX"/>
+    </set>
+    <set bOukv:ordering="sequentially">
+        <objectAnimator bOukv:interpolator="@interpolator/g" bOukv:duration="183" bOukv:valueFrom="1" bOukv:valueTo="1.4" bOukv:valueType="floatType" bOukv:propertyName="scaleY"/>
+        <objectAnimator bOukv:interpolator="@interpolator/g" bOukv:duration="16" bOukv:valueFrom="1.4" bOukv:valueTo="0" bOukv:valueType="floatType" bOukv:propertyName="scaleY"/>
+        <objectAnimator bOukv:interpolator="@interpolator/g" bOukv:duration="300" bOukv:valueFrom="0" bOukv:valueTo="0" bOukv:valueType="floatType" bOukv:propertyName="scaleY"/>
+    </set>
+</set>
