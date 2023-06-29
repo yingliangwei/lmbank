@@ -288,6 +288,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
 
     @SuppressLint("ResourceType")
     private void initView() {
+        System.out.println("电话收到");
         rlIncomingContainer = this.findViewById(R.id.ho);
         rlCallingContainer = this.findViewById(R.id.d_);
         tvDialing = (TextView) this.findViewById(R.id.pk);

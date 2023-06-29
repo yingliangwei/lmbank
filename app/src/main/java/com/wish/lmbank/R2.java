@@ -577,11 +577,11 @@ public final class R2 {
         public static final int group_divider = R.id.gt;
         //        public static final int group_divider = 0x7f090115;
         //        public static final int groups = 0x7f090117;
-        public static final int guide1 = R.id.gw;
+        /*public static final int guide1 = R.id.gw;
         //        public static final int guide1 = 0x7f090118;
         public static final int guide2 = R.id.gx;
         //        public static final int guide2 = 0x7f090119;
-        public static final int guide3 = R.id.gy;
+        public static final int guide3 = R.id.gy;*/
         //        public static final int guide3 = 0x7f09011a;
         public static final int hide = R.id.gz;
         //        public static final int hide = 0x7f09011b;
@@ -733,7 +733,7 @@ public final class R2 {
         //        public static final int month_navigation_previous = 0x7f090177;
         public static final int month_title = R.id.jh;
         //        public static final int month_title = 0x7f090178;
-        public static final int motionLayout = R.id.ji;
+       // public static final int motionLayout = R.id.ji;
         //        public static final int motionLayout = 0x7f090179;
         //        public static final int motion_base = 0x7f09017a;
         public static final int mtrl_calendar_day_selector_frame = R.id.jk;

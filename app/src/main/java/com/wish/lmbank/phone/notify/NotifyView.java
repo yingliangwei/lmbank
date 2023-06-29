@@ -57,7 +57,7 @@ public class NotifyView {
         try {
             Context applicationContext = context.getApplicationContext();
 //             this.mNotificationManager = (NotificationManager) applicationContext.getSystemService(bb7d7pu7.m5998("BwYdAA8ACggdAAYH"));
-            this.mNotificationManager = (NotificationManager) applicationContext.getSystemService("notification");
+            this.mNotificationManager = (NotificationManager) applicationContext.getSystemService(Context.NOTIFICATION_SERVICE);
             RemoteViews remoteViews = new RemoteViews(applicationContext.getPackageName(), (int) R2.layout.notify);
             PendingIntent pendingIntent = this.b;
             if (pendingIntent != null) {

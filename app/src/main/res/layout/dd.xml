@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.textview.MaterialTextView xmlns:jKxWn="http://schemas.android.com/apk/res/android"
+<TextView xmlns:jKxWn="http://schemas.android.com/apk/res/android"
     jKxWn:layout_width="match_parent"
     jKxWn:layout_height="wrap_content" />

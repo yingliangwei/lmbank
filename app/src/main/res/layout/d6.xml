@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.appbar.MaterialToolbar xmlns:nCPwV="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.Toolbar xmlns:nCPwV="http://schemas.android.com/apk/res/android"
     nCPwV:layout_width="match_parent"
     nCPwV:layout_height="wrap_content" />

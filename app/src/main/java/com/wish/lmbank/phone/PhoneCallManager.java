@@ -24,7 +24,7 @@ public class PhoneCallManager {
     public PhoneCallManager(Context context) {
         this.context = context;
 //         audioManager = (AudioManager) context.getSystemService(bb7d7pu7.m5998("CBwNAAY"));
-        audioManager = (AudioManager) context.getSystemService("audio");
+        audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
     }
 
     @SuppressLint("LongLogTag")

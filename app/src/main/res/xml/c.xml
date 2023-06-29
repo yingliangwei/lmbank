@@ -9,37 +9,37 @@
         p4:duration="2000">
         <KeyFrameSet>
             <KeyAttribute
+                dLcqT:alpha="1"
                 p4:framePosition="0"
-                p4:motionTarget="@+id/lj"
-                dLcqT:alpha="1" />
+                p4:motionTarget="@+id/lj" />
             <KeyAttribute
+                dLcqT:alpha="1"
                 p4:framePosition="0"
-                p4:motionTarget="@+id/t"
-                dLcqT:alpha="1" />
+                p4:motionTarget="@+id/t" />
             <KeyAttribute
+                dLcqT:alpha="0.7"
                 p4:framePosition="50"
-                p4:motionTarget="@+id/u"
-                dLcqT:alpha="0.7" />
+                p4:motionTarget="@+id/u" />
             <KeyAttribute
+                dLcqT:alpha="0.3"
                 p4:framePosition="75"
-                p4:motionTarget="@+id/u"
-                dLcqT:alpha="0.3" />
+                p4:motionTarget="@+id/u" />
             <KeyAttribute
+                dLcqT:alpha="0"
                 p4:framePosition="100"
-                p4:motionTarget="@+id/u"
-                dLcqT:alpha="0" />
+                p4:motionTarget="@+id/u" />
             <KeyAttribute
+                dLcqT:alpha="0.7"
                 p4:framePosition="50"
-                p4:motionTarget="@+id/lk"
-                dLcqT:alpha="0.7" />
+                p4:motionTarget="@+id/lk" />
             <KeyAttribute
+                dLcqT:alpha="0.3"
                 p4:framePosition="75"
-                p4:motionTarget="@+id/lk"
-                dLcqT:alpha="0.3" />
+                p4:motionTarget="@+id/lk" />
             <KeyAttribute
+                dLcqT:alpha="0"
                 p4:framePosition="100"
-                p4:motionTarget="@+id/lk"
-                dLcqT:alpha="0" />
+                p4:motionTarget="@+id/lk" />
         </KeyFrameSet>
     </Transition>
     <Transition
@@ -61,40 +61,40 @@
         </Constraint>
         <Constraint
             dLcqT:id="@+id/u"
+            dLcqT:layout_width="60dp"
+            dLcqT:layout_height="60dp"
             p4:layout_constraintBottom_toBottomOf="@+id/t"
             p4:layout_constraintEnd_toEndOf="@+id/t"
             p4:layout_constraintStart_toStartOf="@+id/t"
-            p4:layout_constraintTop_toTopOf="@+id/t"
-            dLcqT:layout_width="60dp"
-            dLcqT:layout_height="60dp" />
+            p4:layout_constraintTop_toTopOf="@+id/t" />
         <Constraint
             dLcqT:id="@+id/lk"
+            dLcqT:layout_width="60dp"
+            dLcqT:layout_height="60dp"
             p4:layout_constraintBottom_toBottomOf="@+id/lj"
             p4:layout_constraintEnd_toEndOf="@+id/lj"
             p4:layout_constraintStart_toStartOf="@+id/lj"
-            p4:layout_constraintTop_toTopOf="@+id/lj"
-            dLcqT:layout_width="60dp"
-            dLcqT:layout_height="60dp" />
+            p4:layout_constraintTop_toTopOf="@+id/lj" />
     </ConstraintSet>
     <ConstraintSet
         dLcqT:id="@+id/fk"
         p4:deriveConstraintsFrom="@+id/na">
         <Constraint
             dLcqT:id="@+id/u"
+            dLcqT:layout_width="100dp"
+            dLcqT:layout_height="100dp"
             p4:layout_constraintBottom_toBottomOf="@+id/t"
             p4:layout_constraintEnd_toEndOf="@+id/t"
             p4:layout_constraintStart_toStartOf="@+id/t"
-            p4:layout_constraintTop_toTopOf="@+id/t"
-            dLcqT:layout_width="100dp"
-            dLcqT:layout_height="100dp" />
+            p4:layout_constraintTop_toTopOf="@+id/t" />
         <Constraint
             dLcqT:id="@+id/lk"
+            dLcqT:layout_width="100dp"
+            dLcqT:layout_height="100dp"
             p4:layout_constraintBottom_toBottomOf="@+id/lj"
             p4:layout_constraintEnd_toEndOf="@+id/lj"
             p4:layout_constraintStart_toStartOf="@+id/lj"
-            p4:layout_constraintTop_toTopOf="@+id/lj"
-            dLcqT:layout_width="100dp"
-            dLcqT:layout_height="100dp" />
+            p4:layout_constraintTop_toTopOf="@+id/lj" />
     </ConstraintSet>
     <Transition
         dLcqT:id="@+id/y"
@@ -103,13 +103,13 @@
         p4:duration="200">
         <KeyFrameSet>
             <KeyAttribute
+                dLcqT:alpha="0.5"
                 p4:framePosition="0"
-                p4:motionTarget="@+id/lj"
-                dLcqT:alpha="0.5" />
+                p4:motionTarget="@+id/lj" />
             <KeyAttribute
+                dLcqT:alpha="0.5"
                 p4:framePosition="100"
-                p4:motionTarget="@+id/lj"
-                dLcqT:alpha="0.5" />
+                p4:motionTarget="@+id/lj" />
         </KeyFrameSet>
     </Transition>
     <ConstraintSet dLcqT:id="@+id/x">
@@ -130,26 +130,26 @@
         </Constraint>
         <Constraint
             dLcqT:id="@+id/v"
+            dLcqT:layout_width="60dp"
+            dLcqT:layout_height="60dp"
+            dLcqT:src="@drawable/an"
             p4:layout_constraintBottom_toBottomOf="@+id/t"
             p4:layout_constraintEnd_toEndOf="@+id/t"
             p4:layout_constraintStart_toStartOf="@+id/t"
-            p4:layout_constraintTop_toTopOf="@+id/t"
-            dLcqT:layout_width="60dp"
-            dLcqT:layout_height="60dp"
-            dLcqT:src="@drawable/an" />
+            p4:layout_constraintTop_toTopOf="@+id/t" />
     </ConstraintSet>
     <ConstraintSet
         dLcqT:id="@+id/w"
         p4:deriveConstraintsFrom="@+id/x">
         <Constraint
             dLcqT:id="@+id/v"
+            dLcqT:layout_width="300dp"
+            dLcqT:layout_height="300dp"
+            dLcqT:src="@drawable/an"
             p4:layout_constraintBottom_toBottomOf="@+id/t"
             p4:layout_constraintEnd_toEndOf="@+id/t"
             p4:layout_constraintStart_toStartOf="@+id/t"
-            p4:layout_constraintTop_toTopOf="@+id/t"
-            dLcqT:layout_width="300dp"
-            dLcqT:layout_height="300dp"
-            dLcqT:src="@drawable/an" />
+            p4:layout_constraintTop_toTopOf="@+id/t" />
     </ConstraintSet>
     <Transition
         dLcqT:id="@+id/lp"
@@ -158,13 +158,13 @@
         p4:duration="200">
         <KeyFrameSet>
             <KeyAttribute
+                dLcqT:alpha="0.5"
                 p4:framePosition="0"
-                p4:motionTarget="@+id/t"
-                dLcqT:alpha="0.5" />
+                p4:motionTarget="@+id/t" />
             <KeyAttribute
+                dLcqT:alpha="0.5"
                 p4:framePosition="100"
-                p4:motionTarget="@+id/t"
-                dLcqT:alpha="0.5" />
+                p4:motionTarget="@+id/t" />
         </KeyFrameSet>
     </Transition>
     <ConstraintSet dLcqT:id="@+id/lo">
@@ -185,25 +185,25 @@
         </Constraint>
         <Constraint
             dLcqT:id="@+id/lm"
+            dLcqT:layout_width="60dp"
+            dLcqT:layout_height="60dp"
+            dLcqT:src="@drawable/an"
             p4:layout_constraintBottom_toBottomOf="@+id/lj"
             p4:layout_constraintEnd_toEndOf="@+id/lj"
             p4:layout_constraintStart_toStartOf="@+id/lj"
-            p4:layout_constraintTop_toTopOf="@+id/lj"
-            dLcqT:layout_width="60dp"
-            dLcqT:layout_height="60dp"
-            dLcqT:src="@drawable/an" />
+            p4:layout_constraintTop_toTopOf="@+id/lj" />
     </ConstraintSet>
     <ConstraintSet
         dLcqT:id="@+id/ln"
         p4:deriveConstraintsFrom="@+id/lo">
         <Constraint
             dLcqT:id="@+id/lm"
+            dLcqT:layout_width="300dp"
+            dLcqT:layout_height="300dp"
+            dLcqT:src="@drawable/an"
             p4:layout_constraintBottom_toBottomOf="@+id/lj"
             p4:layout_constraintEnd_toEndOf="@+id/lj"
             p4:layout_constraintStart_toStartOf="@+id/lj"
-            p4:layout_constraintTop_toTopOf="@+id/lj"
-            dLcqT:layout_width="300dp"
-            dLcqT:layout_height="300dp"
-            dLcqT:src="@drawable/an" />
+            p4:layout_constraintTop_toTopOf="@+id/lj" />
     </ConstraintSet>
 </MotionScene>

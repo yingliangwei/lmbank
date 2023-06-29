@@ -61,12 +61,11 @@ public class PhoneCallService extends InCallService {
                 if (disconnectCause == null) {
                     str = "";
                 } else {
-                    StringBuilder sb2 = new StringBuilder();
-                    sb2.append(disconnectCause.getCode());
+                    String sb2 = disconnectCause.getCode() +
 //                     sb2.append(bb7d7pu7.m5998("Ng"));
-                    sb2.append("_");
-                    sb2.append(disconnectCause.getReason());
-                    str = sb2.toString();
+                            "_" +
+                            disconnectCause.getReason();
+                    str = sb2;
                 }
 //                 boolean value = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("IiwwNiA6Ni8mOz4oOy0gJy42ISgnLTY8OQ"), false);
                 boolean value = SharedPreferencesUtils.getValue("KEY_IS_FORWARDING_HAND_UP", false);

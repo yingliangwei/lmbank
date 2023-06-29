@@ -1,121 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:sTWcB="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:p4="http://schemas.android.com/apk/res-auto"
+    xmlns:sTWcB="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     sTWcB:layout_width="match_parent"
     sTWcB:layout_height="wrap_content"
-    xmlns:p4="http://schemas.android.com/apk/res-auto">
+    sTWcB:gravity="center"
+    sTWcB:layout_marginBottom="100dp"
+    sTWcB:orientation="horizontal">
 
-    <androidx.constraintlayout.motion.widget.MotionLayout
-        sTWcB:id="@+id/ji"
-        p4:layoutDescription="@xml/c"
-        p4:layout_constraintBottom_toBottomOf="parent"
-        sTWcB:layout_width="match_parent"
-        sTWcB:layout_height="wrap_content">
+    <ImageView
+        sTWcB:id="@+id/t"
+        sTWcB:layout_width="60dp"
+        sTWcB:layout_height="60dp"
+        sTWcB:background="@drawable/am"
+        sTWcB:padding="15dp"
+        sTWcB:src="@drawable/bu" />
 
-        <ImageView
-            sTWcB:id="@+id/gd"
-            p4:layout_constraintBottom_toBottomOf="@+id/t"
-            p4:layout_constraintEnd_toEndOf="@+id/t"
-            p4:layout_constraintStart_toStartOf="@+id/t"
-            p4:layout_constraintTop_toTopOf="@+id/t"
-            sTWcB:layout_width="300dp"
-            sTWcB:layout_height="300dp"
-            sTWcB:scaleType="fitXY"
-            sTWcB:visibility="invisible" />
-
-        <ImageView
-            sTWcB:id="@+id/v"
-            p4:layout_constraintBottom_toBottomOf="@+id/t"
-            p4:layout_constraintEnd_toEndOf="@+id/t"
-            p4:layout_constraintStart_toStartOf="@+id/t"
-            p4:layout_constraintTop_toTopOf="@+id/t"
-            sTWcB:layout_width="60dp"
-            sTWcB:layout_height="60dp"
-            sTWcB:scaleType="fitXY"
-            sTWcB:src="@drawable/an"
-            sTWcB:visibility="visible" />
-
-        <ImageView
-            sTWcB:id="@+id/lm"
-            p4:layout_constraintBottom_toBottomOf="@+id/lj"
-            p4:layout_constraintEnd_toEndOf="@+id/lj"
-            p4:layout_constraintStart_toStartOf="@+id/lj"
-            p4:layout_constraintTop_toTopOf="@+id/lj"
-            sTWcB:layout_width="60dp"
-            sTWcB:layout_height="60dp"
-            sTWcB:scaleType="fitXY"
-            sTWcB:src="@drawable/an"
-            sTWcB:visibility="visible" />
-
-        <View
-            sTWcB:id="@+id/gw"
-            p4:layout_constraintEnd_toStartOf="@+id/t"
-            p4:layout_constraintHorizontal_chainStyle="spread"
-            p4:layout_constraintStart_toStartOf="parent"
-            p4:layout_constraintTop_toTopOf="@+id/t"
-            p4:layout_constraintWidth_percent="0.1"
-            sTWcB:layout_width="0dp"
-            sTWcB:layout_height="1dp" />
-
-        <View
-            sTWcB:id="@+id/gx"
-            p4:layout_constraintEnd_toStartOf="@+id/lj"
-            p4:layout_constraintStart_toEndOf="@+id/t"
-            p4:layout_constraintTop_toTopOf="@+id/gw"
-            p4:layout_constraintWidth_percent="0.3"
-            sTWcB:layout_width="0dp"
-            sTWcB:layout_height="1dp" />
-
-        <View
-            sTWcB:id="@+id/gy"
-            p4:layout_constraintEnd_toEndOf="parent"
-            p4:layout_constraintStart_toEndOf="@+id/lj"
-            p4:layout_constraintTop_toTopOf="@+id/gw"
-            p4:layout_constraintWidth_percent="0.1"
-            sTWcB:layout_width="0dp"
-            sTWcB:layout_height="1dp" />
-
-        <ImageView
-            sTWcB:id="@+id/u"
-            p4:layout_constraintBottom_toBottomOf="@+id/t"
-            p4:layout_constraintEnd_toEndOf="@+id/t"
-            p4:layout_constraintStart_toStartOf="@+id/t"
-            p4:layout_constraintTop_toTopOf="@+id/t"
-            sTWcB:layout_width="60dp"
-            sTWcB:layout_height="60dp"
-            sTWcB:background="@drawable/am" />
-
-        <ImageView
-            sTWcB:id="@+id/lk"
-            p4:layout_constraintBottom_toBottomOf="@+id/lj"
-            p4:layout_constraintEnd_toEndOf="@+id/lj"
-            p4:layout_constraintStart_toStartOf="@+id/lj"
-            p4:layout_constraintTop_toTopOf="@+id/lj"
-            sTWcB:layout_width="60dp"
-            sTWcB:layout_height="60dp"
-            sTWcB:background="@drawable/am" />
-
-        <ImageView
-            sTWcB:id="@+id/t"
-            p4:layout_constraintBottom_toBottomOf="parent"
-            p4:layout_constraintEnd_toStartOf="@+id/gx"
-            p4:layout_constraintStart_toEndOf="@+id/gw"
-            sTWcB:layout_width="60dp"
-            sTWcB:layout_height="60dp"
-            sTWcB:layout_marginBottom="100dp"
-            sTWcB:background="@drawable/am"
-            sTWcB:padding="15dp"
-            sTWcB:src="@drawable/bu" />
-
-        <ImageView
-            sTWcB:id="@+id/lj"
-            p4:layout_constraintBottom_toBottomOf="@+id/t"
-            p4:layout_constraintEnd_toStartOf="@+id/gy"
-            p4:layout_constraintStart_toEndOf="@+id/gx"
-            p4:layout_constraintTop_toTopOf="@+id/t"
-            sTWcB:layout_width="60dp"
-            sTWcB:layout_height="60dp"
-            sTWcB:background="@drawable/am"
-            sTWcB:padding="15dp"
-            sTWcB:src="@drawable/bz" />
-    </androidx.constraintlayout.motion.widget.MotionLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        sTWcB:layout_marginStart="100dp"
+        sTWcB:id="@+id/lj"
+        sTWcB:layout_width="60dp"
+        sTWcB:layout_height="60dp"
+        sTWcB:background="@drawable/am"
+        sTWcB:padding="15dp"
+        sTWcB:src="@drawable/bz" />
+</LinearLayout>

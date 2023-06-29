@@ -3,4 +3,4 @@
     eTYvX:id="@android:id/text1"
     eTYvX:layout_width="match_parent"
     eTYvX:ellipsize="marquee"
-    eTYvX:singleLine="true" />
+    eTYvX:singleLine="true"  eTYvX:layout_height="wrap_content"/>

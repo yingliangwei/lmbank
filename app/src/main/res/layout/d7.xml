@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.appbar.MaterialToolbar xmlns:dwXEo="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.Toolbar xmlns:dwXEo="http://schemas.android.com/apk/res/android"
     dwXEo:layout_width="match_parent"
     dwXEo:layout_height="wrap_content"
     dwXEo:background="@drawable/ea" />
