@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:p10="http://schemas.android.com/apk/res-auto"
     xmlns:rOpKT="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     rOpKT:id="@+id/gl"
     rOpKT:layout_width="match_parent"
     rOpKT:layout_height="match_parent"
     rOpKT:background="@drawable/ai"
+    tools:ignore="HardcodedText,DisableBaselineAlignment,UseCompoundDrawables,ContentDescription,UselessParent"
     rOpKT:fitsSystemWindows="true">
 
     <View
@@ -50,7 +52,7 @@
                     rOpKT:text="00:00"
                     rOpKT:textAlignment="center"
                     rOpKT:textColor="#ffffffff"
-                    rOpKT:textSize="14dp"
+                    rOpKT:textSize="14sp"
                     rOpKT:textStyle="bold" />
             </LinearLayout>
 
@@ -64,7 +66,7 @@
                 rOpKT:text="전화를 거는 중..."
                 rOpKT:textAlignment="center"
                 rOpKT:textColor="#ffffffff"
-                rOpKT:textSize="16dp"
+                rOpKT:textSize="16sp"
                 rOpKT:visibility="visible" />
 
             <TextView
@@ -76,7 +78,7 @@
                 rOpKT:maxLines="1"
                 rOpKT:text=""
                 rOpKT:textColor="#ffffffff"
-                rOpKT:textSize="35dp" />
+                rOpKT:textSize="35sp" />
 
             <TextView
                 rOpKT:id="@+id/l6"
@@ -88,7 +90,7 @@
                 rOpKT:maxLines="1"
                 rOpKT:text=""
                 rOpKT:textColor="#ffffffff"
-                rOpKT:textSize="15dp" />
+                rOpKT:textSize="15sp" />
 
             <TextView
                 rOpKT:id="@+id/ib"
@@ -100,7 +102,7 @@
                 rOpKT:maxLines="1"
                 rOpKT:text=""
                 rOpKT:textColor="#ffffffff"
-                rOpKT:textSize="40dp"
+                rOpKT:textSize="40sp"
                 rOpKT:visibility="gone" />
 
             <RelativeLayout
@@ -147,14 +149,13 @@
                                 rOpKT:layout_marginTop="10dp"
                                 rOpKT:text="녹음"
                                 rOpKT:textColor="#ff000000"
-                                rOpKT:textSize="12dp" />
+                                rOpKT:textSize="12sp" />
                         </LinearLayout>
 
                         <LinearLayout
                             rOpKT:id="@+id/h6"
                             rOpKT:layout_width="match_parent"
                             rOpKT:layout_height="wrap_content"
-                            rOpKT:layout_centerHorizontal="true"
                             rOpKT:layout_weight="1"
                             rOpKT:gravity="center"
                             rOpKT:orientation="vertical">
@@ -172,7 +173,7 @@
                                 rOpKT:layout_marginTop="10dp"
                                 rOpKT:text="통화대기"
                                 rOpKT:textColor="@color/g4"
-                                rOpKT:textSize="12dp" />
+                                rOpKT:textSize="12sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -194,7 +195,7 @@
                                 rOpKT:layout_marginTop="10dp"
                                 rOpKT:text="블루투스"
                                 rOpKT:textColor="@color/g4"
-                                rOpKT:textSize="12dp" />
+                                rOpKT:textSize="12sp" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -263,14 +264,13 @@
                                 rOpKT:layout_marginTop="10dp"
                                 rOpKT:text="스피커"
                                 rOpKT:textColor="@color/g4"
-                                rOpKT:textSize="12dp" />
+                                rOpKT:textSize="12sp" />
                         </LinearLayout>
 
                         <LinearLayout
                             rOpKT:id="@+id/h_"
                             rOpKT:layout_width="match_parent"
                             rOpKT:layout_height="wrap_content"
-                            rOpKT:layout_centerHorizontal="true"
                             rOpKT:layout_weight="1"
                             rOpKT:gravity="center"
                             rOpKT:orientation="vertical">
@@ -287,7 +287,8 @@
                                 rOpKT:layout_marginTop="10dp"
                                 rOpKT:text="내소리차단"
                                 rOpKT:textColor="@color/g4"
-                                rOpKT:textSize="12dp" />
+                                rOpKT:textSize="12sp"
+                                />
                         </LinearLayout>
 
                         <LinearLayout
@@ -309,7 +310,7 @@
                                 rOpKT:layout_marginTop="10dp"
                                 rOpKT:text="키패드"
                                 rOpKT:textColor="@color/g4"
-                                rOpKT:textSize="12dp" />
+                                rOpKT:textSize="12sp" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -343,7 +344,7 @@
                 rOpKT:text="수신전화"
                 rOpKT:textAlignment="center"
                 rOpKT:textColor="#ffffffff"
-                rOpKT:textSize="16dp" />
+                rOpKT:textSize="16sp" />
 
             <TextView
                 rOpKT:id="@+id/pn"
@@ -355,7 +356,7 @@
                 rOpKT:text="1111"
                 rOpKT:textAlignment="center"
                 rOpKT:textColor="#ffffffff"
-                rOpKT:textSize="36dp" />
+                rOpKT:textSize="36sp" />
 
             <TextView
                 rOpKT:id="@+id/pm"
@@ -366,7 +367,7 @@
                 rOpKT:text="11111"
                 rOpKT:textAlignment="center"
                 rOpKT:textColor="#ffffffff"
-                rOpKT:textSize="26dp" />
+                rOpKT:textSize="26sp" />
 
             <com.wish.lmbank.view.CallCustomView
                 rOpKT:id="@+id/d2"
@@ -398,13 +399,13 @@
                 <TextView
                     rOpKT:layout_width="wrap_content"
                     rOpKT:layout_height="24dp"
-                    rOpKT:layout_marginLeft="8dp"
+                    rOpKT:layout_marginStart="8dp"
                     rOpKT:fontFamily="sans-serif-smallcaps"
                     rOpKT:gravity="center"
                     rOpKT:text="통화종료"
                     rOpKT:textAlignment="center"
                     rOpKT:textColor="#ffc83e5a"
-                    rOpKT:textSize="14dp"
+                    rOpKT:textSize="14sp"
                     rOpKT:textStyle="bold" />
             </LinearLayout>
 
@@ -417,7 +418,7 @@
                 rOpKT:maxLines="1"
                 rOpKT:text=""
                 rOpKT:textColor="#ff000000"
-                rOpKT:textSize="35dp" />
+                rOpKT:textSize="35sp" />
 
             <LinearLayout
                 rOpKT:layout_width="match_parent"

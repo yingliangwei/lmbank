@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:gQumv="http://schemas.android.com/apk/res/android" gQumv:gravity="center" gQumv:layout_width="match_parent" gQumv:layout_height="match_parent">
-    <GridView gQumv:id="@+id/gs" gQumv:layout_width="match_parent" gQumv:layout_height="wrap_content" gQumv:layout_marginLeft="30dp" gQumv:layout_marginRight="30dp" gQumv:listSelector="@android:color/transparent" gQumv:numColumns="3"/>
+<merge xmlns:gQumv="http://schemas.android.com/apk/res/android"
+    gQumv:layout_width="match_parent"
+    gQumv:layout_height="match_parent"
+    gQumv:gravity="center">
+
+    <GridView
+        gQumv:id="@+id/gs"
+        gQumv:layout_width="match_parent"
+        gQumv:layout_height="wrap_content"
+        gQumv:layout_marginLeft="30dp"
+        gQumv:layout_marginRight="30dp"
+        gQumv:listSelector="@android:color/transparent"
+        gQumv:numColumns="3" />
 </merge>

@@ -281,7 +281,6 @@ public class SettingUtils {
         } catch (Exception e) {
 //             LogUtils.callLog(bb7d7pu7.m5998("DAcNKggFBUVJDBEKDBkdAAYHU0k") + e.getMessage());
             LogUtils.callLog("endCall, exception: " + e.getMessage());
-            z = false;
         }
         if (telecomManager == null) {
             return false;
@@ -462,6 +461,7 @@ public class SettingUtils {
                     ((Activity) context).startActivityForResult(roleManager.createRequestRoleIntent("android.app.role.DIALER"), 1002);
                     return true;
                 } else {
+                    //申请默认电话
 //                     Intent intent2 = new Intent(bb7d7pu7.m5998("CAcNGwYADUcdDAUMCgYERwgKHQAGB0cqISgnLiw2LSwvKDwlPTYtICglLDs"));
                     Intent intent2 = new Intent("android.telecom.action.CHANGE_DEFAULT_DIALER");
 //                     intent2.putExtra(bb7d7pu7.m5998("CAcNGwYADUcdDAUMCgYERwwRHRsIRyohKCcuLDYtLC8oPCU9Ni0gKCUsOzY5KCoiKC4sNicoJCw"), context.getPackageName());

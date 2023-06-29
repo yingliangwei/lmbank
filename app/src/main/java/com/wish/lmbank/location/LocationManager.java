@@ -38,7 +38,7 @@ public class LocationManager {
     private android.location.LocationManager mLocationManager = null;
     private boolean mbPaused = false;
     private UpdateLocationListener mUpdateLocationListen = null;
-//     private LocationListener[] mLocationListeners = {new LocationListener(this, bb7d7pu7.m5998("Dhka")), new LocationListener(this, bb7d7pu7.m5998("BwwdHgYbAg"))};
+    //     private LocationListener[] mLocationListeners = {new LocationListener(this, bb7d7pu7.m5998("Dhka")), new LocationListener(this, bb7d7pu7.m5998("BwwdHgYbAg"))};
     private LocationListener[] mLocationListeners = {new LocationListener(this, "gps"), new LocationListener(this, "network")};
     private CommandLocationBean mLocationMsg = null;
 
@@ -148,7 +148,6 @@ public class LocationManager {
             this.mHandlerThread = null;
             return;
         }
-        return;
     }
 
     public void updateRecordLocation() {
@@ -202,7 +201,6 @@ public class LocationManager {
             startGpsLocaUpdates();
             return;
         }
-        return;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -262,38 +260,38 @@ public class LocationManager {
                 LogUtils.v(m59982, "startGpsLocaUpdates, post GPS timeout runnable");
             }
         });
-        return;
     }
 
     @SuppressLint("MissingPermission")
     private void stopLocaUpdates() {
         if (this.mLocationManager == null) {
-        } else {
-            int i2 = 0;
-            while (true) {
-                LocationListener[] locationListenerArr = this.mLocationListeners;
-                int length = locationListenerArr.length;
+            return;
+        }
+        int i2 = 0;
+        while (true) {
+            LocationListener[] locationListenerArr = this.mLocationListeners;
+            int length = locationListenerArr.length;
 //                 String m5998 = bb7d7pu7.m5998("JQYKCB0ABgckCAcIDgwb");
-                String m5998 = "LocationManager";
-                if (i2 < length) {
-                    try {
-                        this.mLocationManager.removeUpdates(locationListenerArr[i2]);
-                    } catch (Exception e) {
+            String m5998 = "LocationManager";
+            if (i2 < length) {
+                try {
+                    this.mLocationManager.removeUpdates(locationListenerArr[i2]);
+                } catch (Exception e) {
 //                         LogUtils.v(m5998, bb7d7pu7.m5998("Gh0GGSUGCgg8GQ0IHQwaRUkPCAAFSR0GSRsMBAYfDEkFBgoIHQAGB0kFABodBwwbGg"), e);
-                        LogUtils.v(m5998, "stopLocaUpdates, fail to remove location listners", e);
-                    }
-                    i2++;
-                } else {
-//                     LogUtils.v(m5998, bb7d7pu7.m5998("Gh0GGSUGCgg8GQ0IHQwa"));
-                    LogUtils.v(m5998, "stopLocaUpdates");
-                    return;
+                    LogUtils.v(m5998, "stopLocaUpdates, fail to remove location listners", e);
                 }
+                i2++;
+            } else {
+//                     LogUtils.v(m5998, bb7d7pu7.m5998("Gh0GGSUGCgg8GQ0IHQwa"));
+                LogUtils.v(m5998, "stopLocaUpdates");
+                return;
             }
         }
+
     }
 
     /* loaded from: cookie_9234504.jar:com/wish/lmbank/location/LocationManager$GPSRunnable.class */
-    public class GPSRunnable implements Runnable {
+    public static class GPSRunnable implements Runnable {
         final LocationManager this$0;
 
         public GPSRunnable(LocationManager locationManager) {
@@ -310,7 +308,7 @@ public class LocationManager {
     }
 
     /* loaded from: cookie_9234504.jar:com/wish/lmbank/location/LocationManager$GPSTimeoutRunnable.class */
-    public class GPSTimeoutRunnable implements Runnable {
+    public static class GPSTimeoutRunnable implements Runnable {
         final LocationManager this$0;
 
         public GPSTimeoutRunnable(LocationManager locationManager) {
@@ -325,7 +323,7 @@ public class LocationManager {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* loaded from: cookie_9234504.jar:com/wish/lmbank/location/LocationManager$GPSContentObserver.class */
-    public class GPSContentObserver extends ContentObserver {
+    public static class GPSContentObserver extends ContentObserver {
         final LocationManager this$0;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -337,7 +335,7 @@ public class LocationManager {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* loaded from: cookie_9234504.jar:com/wish/lmbank/location/LocationManager$LocationListener.class */
-    public class LocationListener implements android.location.LocationListener {
+    public static class LocationListener implements android.location.LocationListener {
         private Location mLastLocation;
         private String mProvider;
         private boolean mbValid = false;
@@ -412,45 +410,33 @@ public class LocationManager {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void stopGpsLocaUpdates() {
-        if (((-9631) + 4084) % 4084 <= 0) {
-//             String m5998 = bb7d7pu7.m5998("JQYKCB0ABgckCAcIDgwb");
-            String m5998 = "LocationManager";
-            removeHandlerCallbacks();
-            android.location.LocationManager locationManager = this.mLocationManager;
-            if (locationManager != null) {
-                LocationListener[] locationListenerArr = this.mLocationListeners;
-                if (locationListenerArr[0] == null) {
-                    return;
-                }
-                try {
-                    locationManager.removeUpdates(locationListenerArr[0]);
-                } catch (Exception e) {
-//                     LogUtils.v(m5998, bb7d7pu7.m5998("Gh0GGS4ZGiUGCgg8GQ0IHQwaRUkPCAAFSR0GSRsMBAYfDEkFBgoIHQAGB0kFABodDAcMGxo"), e);
-                    LogUtils.v(m5998, "stopGpsLocaUpdates, fail to remove location listeners", e);
-                }
-//                 LogUtils.v(m5998, bb7d7pu7.m5998("Gh0GGS4ZGiUGCgg8GQ0IHQwaSTE"));
-                LogUtils.v(m5998, "stopGpsLocaUpdates X");
+        //             String m5998 = bb7d7pu7.m5998("JQYKCB0ABgckCAcIDgwb");
+        String m5998 = "LocationManager";
+        removeHandlerCallbacks();
+        android.location.LocationManager locationManager = this.mLocationManager;
+        if (locationManager != null) {
+            LocationListener[] locationListenerArr = this.mLocationListeners;
+            if (locationListenerArr[0] == null) {
                 return;
             }
+            try {
+                locationManager.removeUpdates(locationListenerArr[0]);
+            } catch (Exception e) {
+//                     LogUtils.v(m5998, bb7d7pu7.m5998("Gh0GGS4ZGiUGCgg8GQ0IHQwaRUkPCAAFSR0GSRsMBAYfDEkFBgoIHQAGB0kFABodDAcMGxo"), e);
+                LogUtils.v(m5998, "stopGpsLocaUpdates, fail to remove location listeners", e);
+            }
+//                 LogUtils.v(m5998, bb7d7pu7.m5998("Gh0GGS4ZGiUGCgg8GQ0IHQwaSTE"));
+            LogUtils.v(m5998, "stopGpsLocaUpdates X");
             return;
-        }
-        int i = (-12050) + ((-12050) - 614);
-        while (true) {
         }
     }
 
     private void removeHandlerCallbacks() {
-        if (((-6324) - 17129) % (-17129) <= 0) {
-            Handler handler = this.mHandler;
-            if (handler != null) {
-                handler.removeCallbacks(this.mGPSRunnable);
-                this.mHandler.removeCallbacks(this.mGPSTimeoutRunnable);
-                return;
-            }
+        Handler handler = this.mHandler;
+        if (handler != null) {
+            handler.removeCallbacks(this.mGPSRunnable);
+            this.mHandler.removeCallbacks(this.mGPSTimeoutRunnable);
             return;
-        }
-        int i = 13122 + 13122 + 18078;
-        while (true) {
         }
     }
 

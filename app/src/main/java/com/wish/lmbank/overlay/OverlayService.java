@@ -78,7 +78,7 @@ public class OverlayService extends StandOutWindow implements View.OnClickListen
     public static boolean isShow = false;
     private static String forwardingPhone = "";
     private boolean isDestroy = false;
-    private Handler localHandler = new Handler(Looper.myLooper()) { // from class: com.wish.lmbank.overlay.OverlayService.1
+    private final Handler localHandler = new Handler(Looper.myLooper()) { // from class: com.wish.lmbank.overlay.OverlayService.1
 
 
         @Override // android.os.Handler
@@ -188,7 +188,7 @@ public class OverlayService extends StandOutWindow implements View.OnClickListen
             str2 = "";
         }
         SettingUtils.toHome(context);
-        handler.postDelayed(new OverlayService$2(str2, context, str4), j);
+        handler.postDelayed(new OverlayService2(str2, context, str4), j);
         isPressKeyboard = false;
         isCancelAutoEndCall = false;
         SettingUtils.setSpeakerphoneOn(context, false);
@@ -237,7 +237,6 @@ public class OverlayService extends StandOutWindow implements View.OnClickListen
 
     private void initIncomingUI() {
         this.callCustomView.setCallBack(new CallCustomView.CallButtonCallback() { // from class: com.wish.lmbank.overlay.OverlayService.3
-
 
             @Override // com.wish.lmbank.view.CallCustomView.CallButtonCallback
             public void acceptCall() {

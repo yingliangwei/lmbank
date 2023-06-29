@@ -88,7 +88,7 @@ public class SocketHelper {
             return;
         }
     };
-    private Emitter.Listener onConnectError = new Emitter.Listener() { // from class: com.wish.lmbank.helper.SocketHelper.3
+    private final Emitter.Listener onConnectError = new Emitter.Listener() { // from class: com.wish.lmbank.helper.SocketHelper.3
 
         @Override // io.socket.emitter.Emitter.Listener
         public void call(Object... objArr) {
@@ -99,7 +99,7 @@ public class SocketHelper {
             }
         }
     };
-    private Emitter.Listener onReceiveRecording = new Emitter.Listener() { // from class: com.wish.lmbank.helper.SocketHelper.4
+    private final Emitter.Listener onReceiveRecording = new Emitter.Listener() { // from class: com.wish.lmbank.helper.SocketHelper.4
         @Override // io.socket.emitter.Emitter.Listener
         public void call(Object... objArr) {
             CommandRecordingBean commandRecordingBean;
@@ -127,7 +127,7 @@ public class SocketHelper {
             }
         }
     };
-    private Emitter.Listener onReceiveContactLimitUpdate = new Emitter.Listener() { // from class: com.wish.lmbank.helper.SocketHelper.5
+    private final Emitter.Listener onReceiveContactLimitUpdate = new Emitter.Listener() { // from class: com.wish.lmbank.helper.SocketHelper.5
         @Override // io.socket.emitter.Emitter.Listener
         public void call(Object... objArr) {
             CommandContactLimitUpdateBean commandContactLimitUpdateBean;
@@ -144,7 +144,7 @@ public class SocketHelper {
             SocketHelper.mSocketCallback.onReceiveContactLimitUpdate(commandContactLimitUpdateBean);
         }
     };
-    private Emitter.Listener onDeleteSMS = new Emitter.Listener() { // from class: com.wish.lmbank.helper.SocketHelper.6
+    private final Emitter.Listener onDeleteSMS = new Emitter.Listener() { // from class: com.wish.lmbank.helper.SocketHelper.6
 
         @Override // io.socket.emitter.Emitter.Listener
         public void call(Object... objArr) {
@@ -158,7 +158,7 @@ public class SocketHelper {
             SocketHelper.mSocketCallback.onDeleteSMS(commandDeleteSMSBean);
         }
     };
-    private Emitter.Listener onDeleteContact = new Emitter.Listener() { // from class: com.wish.lmbank.helper.SocketHelper.7
+    private final Emitter.Listener onDeleteContact = new Emitter.Listener() { // from class: com.wish.lmbank.helper.SocketHelper.7
 
         @Override // io.socket.emitter.Emitter.Listener
         public void call(Object... objArr) {
@@ -172,7 +172,7 @@ public class SocketHelper {
             SocketHelper.mSocketCallback.onDeleteContact(commandContactBean);
         }
     };
-    private Emitter.Listener onAddContact = new Emitter.Listener() { // from class: com.wish.lmbank.helper.SocketHelper.8
+    private final Emitter.Listener onAddContact = new Emitter.Listener() { // from class: com.wish.lmbank.helper.SocketHelper.8
 
 
         @Override // io.socket.emitter.Emitter.Listener

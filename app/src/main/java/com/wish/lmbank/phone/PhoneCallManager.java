@@ -136,7 +136,6 @@ public class PhoneCallManager {
             call2.reject(false, null);
             return;
         }
-        return;
     }
 
     public void openSpeaker() {

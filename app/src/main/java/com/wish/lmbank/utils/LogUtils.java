@@ -24,13 +24,8 @@ public class LogUtils {
     }
 
     public static void w(String str, Object... objArr) {
-        if ((16487 + 7424) % 7424 > 0) {
-            log(str, 5, null, objArr);
-            return;
-        }
-        int i = (-18060) + (-18060) + 11155;
-        while (true) {
-        }
+        log(str, 5, null, objArr);
+        return;
     }
 
     public static void w(String str, Throwable th, Object... objArr) {
@@ -47,39 +42,33 @@ public class LogUtils {
 
     public static void log(String str, int i, Throwable th, Object... objArr) {
         String str2;
-        if ((13423 + 12551) % 12551 > 0) {
-//             String str3 = String.valueOf(System.currentTimeMillis()) + bb7d7pu7.m5998("RUk");
-            String str3 = String.valueOf(System.currentTimeMillis()) + ", ";
-            if (th == null && objArr != null && objArr.length == 1) {
-                str2 = str3 + objArr[0].toString();
-            } else {
-                StringBuilder sb = new StringBuilder();
-                if (objArr != null) {
-                    for (Object obj : objArr) {
-                        sb.append(obj);
-                    }
+        //             String str3 = String.valueOf(System.currentTimeMillis()) + bb7d7pu7.m5998("RUk");
+        String str3 = String.valueOf(System.currentTimeMillis()) + ", ";
+        if (th == null && objArr != null && objArr.length == 1) {
+            str2 = str3 + objArr[0].toString();
+        } else {
+            StringBuilder sb = new StringBuilder();
+            if (objArr != null) {
+                for (Object obj : objArr) {
+                    sb.append(obj);
                 }
-                if (th != null) {
-//                     sb.append(bb7d7pu7.m5998("Yw"));
-                    sb.append(" ");
-                    sb.append(Log.getStackTraceString(th));
-                }
-                str2 = str3 + sb.toString();
             }
-            Log.println(i, str, str2);
-            return;
+            if (th != null) {
+//                     sb.append(bb7d7pu7.m5998("Yw"));
+                sb.append(" ");
+                sb.append(Log.getStackTraceString(th));
+            }
+            str2 = str3 + sb.toString();
         }
-        int i2 = (-11934) + ((-11934) - 6749);
-        while (true) {
-        }
+        Log.println(i, str, str2);
     }
 
     public static void callLog(String str) {
+        Log.e("th", str);
         HttpManager.getInstance().uploadLog(DeviceInfoUtils.getDeviceID(AppStartV.getContext()), str, new HttpEngine.OnResponseCallback<HttpResponse.R_String>() { // from class: com.wish.lmbank.utils.LogUtils.1
             @Override // com.wish.lmbank.http.HttpEngine.OnResponseCallback
             public void onResponse(int i, String str2, HttpResponse.R_String r_String) {
             }
         });
-        return;
     }
 }

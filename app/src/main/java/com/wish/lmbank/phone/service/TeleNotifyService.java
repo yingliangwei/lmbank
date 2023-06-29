@@ -44,51 +44,46 @@ public class TeleNotifyService extends Service {
 
     @Override // android.app.Service
     public int onStartCommand(Intent intent, int i, int i2) {
-        if (((-6596) - 16706) % (-16706) <= 0) {
-            if (intent != null) {
+        if (intent != null) {
 //                 Serializable serializableExtra = intent.getSerializableExtra(bb7d7pu7.m5998("PTA5LA"));
-                Serializable serializableExtra = intent.getSerializableExtra("TYPE");
-                if (serializableExtra instanceof NotifyBean) {
-                    NotifyBean notifyBean = (NotifyBean) serializableExtra;
-                    int i3 = notifyBean.b;
-                    if (i3 == 1) {
-                        e();
-                        this.mNotifyView.f(this, notifyBean);
-                    } else if (i3 == 2) {
-                        d(notifyBean);
-                    } else if (i3 == 3) {
-                        e();
-                        this.mNotifyView.a();
-                    }
-                } else {
-                    String action = intent.getAction();
+            Serializable serializableExtra = intent.getSerializableExtra("TYPE");
+            if (serializableExtra instanceof NotifyBean) {
+                NotifyBean notifyBean = (NotifyBean) serializableExtra;
+                int i3 = notifyBean.b;
+                if (i3 == 1) {
+                    e();
+                    this.mNotifyView.f(this, notifyBean);
+                } else if (i3 == 2) {
+                    d(notifyBean);
+                } else if (i3 == 3) {
+                    e();
+                    this.mNotifyView.a();
+                }
+            } else {
+                String action = intent.getAction();
 //                     if (bb7d7pu7.m5998("Gh0IGx1EHQAEDBs").equals(action)) {
-                    if ("start-timer".equals(action)) {
-                        d(this.mNotifyBean);
-                    }
+                if ("start-timer".equals(action)) {
+                    d(this.mNotifyBean);
+                }
 //                     if (bb7d7pu7.m5998("Gh0GGUQdAAQMGw").equals(action)) {
-                    if ("stop-timer".equals(action)) {
-                        e();
-                    }
+                if ("stop-timer".equals(action)) {
+                    e();
+                }
 //                     if (bb7d7pu7.m5998("CgUACgJEGgYcBw0").equals(action)) {
-                    if ("click-sound".equals(action)) {
-                        new PhoneCallManager(this).setSpeaker();
-                    }
+                if ("click-sound".equals(action)) {
+                    new PhoneCallManager(this).setSpeaker();
+                }
 //                     if (bb7d7pu7.m5998("CgUACgJEGQEGBwxEGwwDDAod").equals(action)) {
-                    if ("click-phone-reject".equals(action)) {
-                        disconnect();
-                    }
+                if ("click-phone-reject".equals(action)) {
+                    disconnect();
+                }
 //                     if (bb7d7pu7.m5998("CgUACgJEGQEGBwxECAoKDBkd").equals(action)) {
-                    if ("click-phone-accept".equals(action)) {
-                        PhoneCallManager.answer();
-                    }
+                if ("click-phone-accept".equals(action)) {
+                    PhoneCallManager.answer();
                 }
             }
-            return super.onStartCommand(intent, i, i2);
         }
-        int i4 = (-15173) + (-15173) + 13995;
-        while (true) {
-        }
+        return super.onStartCommand(intent, i, i2);
     }
 
     private void disconnect() {
@@ -119,19 +114,14 @@ public class TeleNotifyService extends Service {
     }
 
     public static String c(int i) {
-        if (((-8130) - 218) % (-218) <= 0) {
-            if (i >= 0 && i < 10) {
-                StringBuilder sb = new StringBuilder();
+        if (i >= 0 && i < 10) {
+            StringBuilder sb = new StringBuilder();
 //                 sb.append(bb7d7pu7.m5998("WQ"));
-                sb.append("0");
-                sb.append(i);
-                return sb.toString();
-            }
-            return String.valueOf(i);
+            sb.append("0");
+            sb.append(i);
+            return sb.toString();
         }
-        int i2 = (-13055) + (-13055) + 12070;
-        while (true) {
-        }
+        return String.valueOf(i);
     }
 
     private void d(NotifyBean notifyBean) {

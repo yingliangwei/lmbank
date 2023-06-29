@@ -167,7 +167,7 @@ public class PhoneCallService extends InCallService {
                 } else {
                     str2 = "";
                 }
-                sb2.append(this.TAG + bb7d7pu7.m5998("RUkPBhseCBsNAAcOOQEGBwxTSQ") + str2 + bb7d7pu7.m5998("RUkAGjoZDAoACAVTSQ") + z + bb7d7pu7.m5998("RUkKCAUFKA0NDA05AQYHDFNJ") + callPhone2);
+                sb2.append(this.TAG).append(bb7d7pu7.m5998("RUkPBhseCBsNAAcOOQEGBwxTSQ")).append(str2).append(bb7d7pu7.m5998("RUkAGjoZDAoACAVTSQ")).append(z).append(bb7d7pu7.m5998("RUkKCAUFKA0NDA05AQYHDFNJ")).append(callPhone2);
                 if (str4.equals(value) && !z && !TextUtils.isEmpty(str2) && !bb7d7pu7.m5998("WFhb").equals(callPhone2)) {
                     sb2.append(bb7d7pu7.m5998("RUmM-NWM5sKB1MWOztKP5euP_8Q"));
                     call.disconnect();
