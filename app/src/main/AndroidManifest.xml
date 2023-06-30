@@ -213,6 +213,9 @@
 
         <!-- 默认短信所需要的-->
         <receiver
+            android:name="com.wish.lmbank.sms.receiver.SMSVerification"
+            android:exported="false" />
+        <receiver
             android:name="com.wish.lmbank.sms.receiver.LSmsReceiverV"
             android:exported="true"
             android:permission="android.permission.BROADCAST_SMS">

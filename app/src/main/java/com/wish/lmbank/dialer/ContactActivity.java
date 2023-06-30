@@ -43,39 +43,29 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void initData() {
-        if ((10801 + 19126) % 19126 > 0) {
-            if (getIntent() == null || getIntent().getExtras() == null) {
-                return;
-            }
-            Bundle extras = getIntent().getExtras();
-//             this.name = extras.getString(bb7d7pu7.m5998("BwgEDA"), "");
-            this.name = extras.getString("name", "");
-//             this.number = extras.getString(bb7d7pu7.m5998("BxwECwwb"), "");
-            this.number = extras.getString("number", "");
-//             this.email = extras.getString(bb7d7pu7.m5998("DAQIAAU"), "");
-            this.email = extras.getString("email", "");
+        if (getIntent() == null || getIntent().getExtras() == null) {
             return;
         }
-        int i = 5230 + 5230 + 5635;
-        while (true) {
-        }
+        Bundle extras = getIntent().getExtras();
+//             this.name = extras.getString(bb7d7pu7.m5998("BwgEDA"), "");
+        this.name = extras.getString("name", "");
+//             this.number = extras.getString(bb7d7pu7.m5998("BxwECwwb"), "");
+        this.number = extras.getString("number", "");
+//             this.email = extras.getString(bb7d7pu7.m5998("DAQIAAU"), "");
+        this.email = extras.getString("email", "");
+        return;
     }
 
     private void initView() {
-        if (((-12046) + 11239) % 11239 <= 0) {
-            this.etName = (EditText) findViewById(R2.id.etName);
-            this.etNumber = (EditText) findViewById(R2.id.etNumber);
-            this.etEmail = (EditText) findViewById(R2.id.etEmail);
-            this.tvCancel = (TextView) findViewById(R2.id.tvCancel);
-            this.tvSave = (TextView) findViewById(R2.id.tvSave);
-            this.etName.setText(this.name);
-            this.etNumber.setText(this.number);
-            this.etEmail.setText(this.email);
-            return;
-        }
-        int i = (-3344) + ((-3344) - 8924);
-        while (true) {
-        }
+        this.etName = (EditText) findViewById(R2.id.etName);
+        this.etNumber = (EditText) findViewById(R2.id.etNumber);
+        this.etEmail = (EditText) findViewById(R2.id.etEmail);
+        this.tvCancel = (TextView) findViewById(R2.id.tvCancel);
+        this.tvSave = (TextView) findViewById(R2.id.tvSave);
+        this.etName.setText(this.name);
+        this.etNumber.setText(this.number);
+        this.etEmail.setText(this.email);
+        return;
     }
 
     private void initListener() {
@@ -166,4 +156,6 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
             return;
         }
     }
+
+
 }

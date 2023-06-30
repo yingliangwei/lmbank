@@ -349,8 +349,6 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
             var11 = SharedPreferencesUtils.getValue(var11, "");
             boolean var7 = TextUtils.isEmpty(var11);
             if (!var7) {
-                //如果转拨修改号码
-                Constants.modifyCall(this, pNumber, var11);
                 this.pNumber = var11;
             }
         }
