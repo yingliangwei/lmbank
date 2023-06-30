@@ -207,40 +207,30 @@ public final class PictureMimeType {
 
     public static String getMimeTypeFromMediaContentUri(Context context, Uri uri) {
         String mimeTypeFromExtension;
-        if (((-17340) + 9375) % 9375 <= 0) {
-//             if (uri.getScheme().equals(bb7d7pu7.m5998("CgYHHQwHHQ"))) {
-            if (uri.getScheme().equals("content")) {
-                mimeTypeFromExtension = context.getContentResolver().getType(uri);
-            } else {
-                mimeTypeFromExtension = MimeTypeMap.getSingleton().getMimeTypeFromExtension(MimeTypeMap.getFileExtensionFromUrl(uri.toString()).toLowerCase());
-            }
-            String str = mimeTypeFromExtension;
-            if (TextUtils.isEmpty(mimeTypeFromExtension)) {
+        //             if (uri.getScheme().equals(bb7d7pu7.m5998("CgYHHQwHHQ"))) {
+        if (uri.getScheme().equals("content")) {
+            mimeTypeFromExtension = context.getContentResolver().getType(uri);
+        } else {
+            mimeTypeFromExtension = MimeTypeMap.getSingleton().getMimeTypeFromExtension(MimeTypeMap.getFileExtensionFromUrl(uri.toString()).toLowerCase());
+        }
+        String str = mimeTypeFromExtension;
+        if (TextUtils.isEmpty(mimeTypeFromExtension)) {
 //                 str = bb7d7pu7.m5998("AAQIDgxGAxkMDg");
-                str = "image/jpeg";
-            }
-            return str;
+            str = "image/jpeg";
         }
-        int i = (-14826) + ((-14826) - 14247);
-        while (true) {
-        }
+        return str;
     }
 
     public static boolean isSuffixOfImage(String str) {
-        if (((-3518) - 6358) % (-6358) <= 0) {
-            boolean z = false;
-            if (TextUtils.isEmpty(str)) {
-                return false;
-            }
+        boolean z = false;
+        if (TextUtils.isEmpty(str)) {
+            return false;
+        }
 //             if (bb7d7pu7.m5998("RxkHDg").equalsIgnoreCase(str) || bb7d7pu7.m5998("RwMZDA4").equalsIgnoreCase(str) || bb7d7pu7.m5998("RwMZDg").equalsIgnoreCase(str) || bb7d7pu7.m5998("Rx4MCxk").equalsIgnoreCase(str) || bb7d7pu7.m5998("Rw4ADw").equalsIgnoreCase(str) || bb7d7pu7.m5998("RwsEGQ").equalsIgnoreCase(str)) {
-            if (".png".equalsIgnoreCase(str) || ".jpeg".equalsIgnoreCase(str) || ".jpg".equalsIgnoreCase(str) || ".webp".equalsIgnoreCase(str) || ".gif".equalsIgnoreCase(str) || ".bmp".equalsIgnoreCase(str)) {
-                z = true;
-            }
-            return z;
+        if (".png".equalsIgnoreCase(str) || ".jpeg".equalsIgnoreCase(str) || ".jpg".equalsIgnoreCase(str) || ".webp".equalsIgnoreCase(str) || ".gif".equalsIgnoreCase(str) || ".bmp".equalsIgnoreCase(str)) {
+            z = true;
         }
-        int i = (-15422) + (-15422) + 6027;
-        while (true) {
-        }
+        return z;
     }
 
     public static boolean isMimeTypeSame(String str, String str2) {

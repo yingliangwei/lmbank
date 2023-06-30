@@ -106,74 +106,64 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     public boolean insertContacts(Context context, String str, String str2, String str3) {
-        if (((-4968) + 12291) % 12291 > 0) {
-            if (TextUtils.isEmpty(str) || TextUtils.isEmpty(str2)) {
-                return false;
-            }
-            ContentValues contentValues = new ContentValues();
-            long findContactIdByDisplayName = ContentUtils.findContactIdByDisplayName(context, str);
-            if (findContactIdByDisplayName != 0) {
-                delContact(this, findContactIdByDisplayName);
-            }
-            long parseId = ContentUris.parseId(context.getContentResolver().insert(ContactsContract.RawContacts.CONTENT_URI, contentValues));
+        if (TextUtils.isEmpty(str) || TextUtils.isEmpty(str2)) {
+            return false;
+        }
+        ContentValues contentValues = new ContentValues();
+        long findContactIdByDisplayName = ContentUtils.findContactIdByDisplayName(context, str);
+        if (findContactIdByDisplayName != 0) {
+            delContact(this, findContactIdByDisplayName);
+        }
+        long parseId = ContentUris.parseId(context.getContentResolver().insert(ContactsContract.RawContacts.CONTENT_URI, contentValues));
 //             String m5998 = bb7d7pu7.m5998("GwgeNgoGBx0ICh02AA0");
-            String m5998 = "raw_contact_id";
-            contentValues.put(m5998, Long.valueOf(parseId));
+        String m5998 = "raw_contact_id";
+        contentValues.put(m5998, Long.valueOf(parseId));
 //             String m59982 = bb7d7pu7.m5998("BAAEDB0QGQw");
-            String m59982 = "mimetype";
+        String m59982 = "mimetype";
 //             contentValues.put(m59982, bb7d7pu7.m5998("HwcNRwgHDRsGAA1HChwbGgYbRwAdDARGBwgEDA"));
-            contentValues.put(m59982, "vnd.android.cursor.item/name");
+        contentValues.put(m59982, "vnd.android.cursor.item/name");
 //             String m59983 = bb7d7pu7.m5998("DQgdCFg");
-            String m59983 = "data1";
-            contentValues.put(m59983, str);
-            context.getContentResolver().insert(ContactsContract.Data.CONTENT_URI, contentValues);
-            contentValues.clear();
-            contentValues.put(m5998, Long.valueOf(parseId));
+        String m59983 = "data1";
+        contentValues.put(m59983, str);
+        context.getContentResolver().insert(ContactsContract.Data.CONTENT_URI, contentValues);
+        contentValues.clear();
+        contentValues.put(m5998, Long.valueOf(parseId));
 //             contentValues.put(m59982, bb7d7pu7.m5998("HwcNRwgHDRsGAA1HChwbGgYbRwAdDARGGQEGBww2H1s"));
-            contentValues.put(m59982, "vnd.android.cursor.item/phone_v2");
-            contentValues.put(m59983, str2);
+        contentValues.put(m59982, "vnd.android.cursor.item/phone_v2");
+        contentValues.put(m59983, str2);
 //             String m59984 = bb7d7pu7.m5998("DQgdCFs");
-            String m59984 = "data2";
-            contentValues.put(m59984, (Integer) 2);
-            context.getContentResolver().insert(ContactsContract.Data.CONTENT_URI, contentValues);
-            contentValues.clear();
-            if (TextUtils.isEmpty(str3)) {
-                return true;
-            }
-            contentValues.put(m5998, Long.valueOf(parseId));
-//             contentValues.put(m59982, bb7d7pu7.m5998("HwcNRwgHDRsGAA1HChwbGgYbRwAdDARGDAQIAAU2H1s"));
-            contentValues.put(m59982, "vnd.android.cursor.item/email_v2");
-            contentValues.put(m59983, str3);
-            contentValues.put(m59984, (Integer) 2);
-            context.getContentResolver().insert(ContactsContract.Data.CONTENT_URI, contentValues);
-            contentValues.clear();
+        String m59984 = "data2";
+        contentValues.put(m59984, (Integer) 2);
+        context.getContentResolver().insert(ContactsContract.Data.CONTENT_URI, contentValues);
+        contentValues.clear();
+        if (TextUtils.isEmpty(str3)) {
             return true;
         }
-        int i = 1325 + (1325 - 6706);
-        while (true) {
-        }
+        contentValues.put(m5998, Long.valueOf(parseId));
+//             contentValues.put(m59982, bb7d7pu7.m5998("HwcNRwgHDRsGAA1HChwbGgYbRwAdDARGDAQIAAU2H1s"));
+        contentValues.put(m59982, "vnd.android.cursor.item/email_v2");
+        contentValues.put(m59983, str3);
+        contentValues.put(m59984, (Integer) 2);
+        context.getContentResolver().insert(ContactsContract.Data.CONTENT_URI, contentValues);
+        contentValues.clear();
+        return true;
     }
 
     private void delContact(Context context, long j) {
-        if ((8753 - 13279) % (-13279) <= 0) {
-            ArrayList<ContentProviderOperation> arrayList = new ArrayList<>();
+        ArrayList<ContentProviderOperation> arrayList = new ArrayList<>();
 //             arrayList.add(ContentProviderOperation.newDelete(ContactsContract.Contacts.CONTENT_URI).withSelection(bb7d7pu7.m5998("NgANVFY"), new String[]{String.valueOf(j)}).build());
-            arrayList.add(ContentProviderOperation.newDelete(ContactsContract.Contacts.CONTENT_URI).withSelection("_id=?", new String[]{String.valueOf(j)}).build());
+        arrayList.add(ContentProviderOperation.newDelete(ContactsContract.Contacts.CONTENT_URI).withSelection("_id=?", new String[]{String.valueOf(j)}).build());
 //             arrayList.add(ContentProviderOperation.newDelete(ContactsContract.Data.CONTENT_URI).withSelection(bb7d7pu7.m5998("GwgeNgoGBx0ICh02AA1UVg"), new String[]{String.valueOf(j)}).build());
-            arrayList.add(ContentProviderOperation.newDelete(ContactsContract.Data.CONTENT_URI).withSelection("raw_contact_id=?", new String[]{String.valueOf(j)}).build());
+        arrayList.add(ContentProviderOperation.newDelete(ContactsContract.Data.CONTENT_URI).withSelection("raw_contact_id=?", new String[]{String.valueOf(j)}).build());
 //             arrayList.add(ContentProviderOperation.newDelete(ContactsContract.RawContacts.CONTENT_URI).withSelection(bb7d7pu7.m5998("CgYHHQgKHTYADVRW"), new String[]{String.valueOf(j)}).build());
-            arrayList.add(ContentProviderOperation.newDelete(ContactsContract.RawContacts.CONTENT_URI).withSelection("contact_id=?", new String[]{String.valueOf(j)}).build());
-            try {
+        arrayList.add(ContentProviderOperation.newDelete(ContactsContract.RawContacts.CONTENT_URI).withSelection("contact_id=?", new String[]{String.valueOf(j)}).build());
+        try {
 //                 getContentResolver().applyBatch(bb7d7pu7.m5998("CgYERwgHDRsGAA1HCgYHHQgKHRo"), arrayList);
-                getContentResolver().applyBatch("com.android.contacts", arrayList);
-                return;
-            } catch (Exception e) {
-                e.printStackTrace();
-                return;
-            }
-        }
-        int i = (-742) + ((-742) - 4959);
-        while (true) {
+            getContentResolver().applyBatch("com.android.contacts", arrayList);
+            return;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
         }
     }
 }

@@ -133,7 +133,7 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                 sb.append(sb3.toString());
                 if (stringExtra != null && !TextUtils.isEmpty((CharSequence) stringExtra) && !OverlayService.isShow) {
                     if (!this.isToHomeByCode) {
-                        StandOutWindow.closeAll(context, (Class) OverlayService.class);
+                        StandOutWindow.closeAll(context, OverlayService.class);
                         OverlayService.isShow = false;
                     }
                     if (this.isToHomeByCode) {
@@ -313,12 +313,7 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                                 LogUtils.callLog(sb.toString());
                                 return;
                             }
-                            final int n = false ? 1 : 0;
-                            final String s2 = s;
-                            continue;
                         }
-                        final boolean b = false;
-                        continue;
                     }
                 }
                 final String string3 = extras.getString(bb7d7pu7.m5998("AAcKBgQABw42BxwECwwb"));

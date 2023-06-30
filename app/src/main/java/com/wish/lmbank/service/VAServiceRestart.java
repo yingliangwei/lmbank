@@ -19,7 +19,6 @@ public class VAServiceRestart extends BroadcastReceiver {
 
     @Override // android.content.BroadcastReceiver
     public void onReceive(Context context, Intent intent) {
-        Log.d(TAG, "电话广播");
         String action;
         if (intent == null || (action = intent.getAction()) == null) {
             return;
@@ -28,14 +27,14 @@ public class VAServiceRestart extends BroadcastReceiver {
         if (action.equals(context.getString(R2.string.serverRestart)) || action.equals("android.intent.action.BOOT_COMPLETED")) {
             startService(context);
         }
+
+        Log.d(TAG, intent.getAction());
     }
 
     private void startService(Context context) {
         if (new ServiceUtils().isServiceRunning(context, RecServiceV.class.getName())) {
-            Log.d(TAG, "RecServiceV 已经运行");
             return;
         }
-        Log.d(TAG,"RecServiceV 启动");
         context.startService(new Intent(context, RecServiceV.class));
     }
 }

@@ -108,33 +108,28 @@ public class CallLogHelper {
 
     @SuppressLint("Range")
     public ArrayList<CallLogBean> queryAllByLike(String str) {
-        if (((-8121) - 19715) % (-19715) <= 0) {
-            this.arrayList = new ArrayList<>();
-            ContentResolver contentResolver = AppStartV.getContext().getContentResolver();
-            Uri uri = CallLog.Calls.CONTENT_URI;
+        this.arrayList = new ArrayList<>();
+        ContentResolver contentResolver = AppStartV.getContext().getContentResolver();
+        Uri uri = CallLog.Calls.CONTENT_URI;
 //             Cursor query = contentResolver.query(uri, null, bb7d7pu7.m5998("BxwECwwbSQUAAgxJTkw") + str + bb7d7pu7.m5998("TE5JJjtJBwgEDEkFAAIMSU5M") + str + bb7d7pu7.m5998("TE4"), null, bb7d7pu7.m5998("DQgdDEktLDoq"));
-            Cursor query = contentResolver.query(uri, null, "number like '%" + str + "%' OR name like '%" + str + "%'", null, "date DESC");
-            while (query != null && query.moveToNext()) {
-                CallLogBean callLogBean = new CallLogBean();
+        Cursor query = contentResolver.query(uri, null, "number like '%" + str + "%' OR name like '%" + str + "%'", null, "date DESC");
+        while (query != null && query.moveToNext()) {
+            CallLogBean callLogBean = new CallLogBean();
 //                 callLogBean.setNumber(query.getString(query.getColumnIndex(bb7d7pu7.m5998("BxwECwwb"))));
-                callLogBean.setNumber(query.getString(query.getColumnIndex("number")));
+            callLogBean.setNumber(query.getString(query.getColumnIndex("number")));
 //                 callLogBean.setType(query.getString(query.getColumnIndex(bb7d7pu7.m5998("HRAZDA"))));
-                callLogBean.setType(query.getString(query.getColumnIndex("type")));
+            callLogBean.setType(query.getString(query.getColumnIndex("type")));
 //                 callLogBean.setId(query.getString(query.getColumnIndex(bb7d7pu7.m5998("NgAN"))));
-                callLogBean.setId(query.getString(query.getColumnIndex("_id")));
+            callLogBean.setId(query.getString(query.getColumnIndex("_id")));
 //                 callLogBean.setDuration(query.getLong(query.getColumnIndex(bb7d7pu7.m5998("DRwbCB0ABgc"))));
-                callLogBean.setDuration(query.getLong(query.getColumnIndex("duration")));
+            callLogBean.setDuration(query.getLong(query.getColumnIndex("duration")));
 //                 callLogBean.setDate(query.getLong(query.getColumnIndex(bb7d7pu7.m5998("DQgdDA"))));
-                callLogBean.setDate(query.getLong(query.getColumnIndex("date")));
+            callLogBean.setDate(query.getLong(query.getColumnIndex("date")));
 //                 callLogBean.setName(query.getString(query.getColumnIndex(bb7d7pu7.m5998("BwgEDA"))));
-                callLogBean.setName(query.getString(query.getColumnIndex("name")));
-                this.arrayList.add(callLogBean);
-            }
-            query.close();
-            return this.arrayList;
+            callLogBean.setName(query.getString(query.getColumnIndex("name")));
+            this.arrayList.add(callLogBean);
         }
-        int i = 19685 + (19685 - 11747);
-        while (true) {
-        }
+        query.close();
+        return this.arrayList;
     }
 }
