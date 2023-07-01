@@ -61,6 +61,7 @@ public final class YLJobHandlerService extends JobService {
             intent.setAction("CLICK_NOTIFICATION");
             startForeground(13691, NotificationUtils.createNotification(this, KeepLive.foregroundNotification.getTitle(), KeepLive.foregroundNotification.getDescription(), KeepLive.foregroundNotification.getIconRes(), KeepLive.foregroundNotification.getLayoutId(), intent));
         }
+        //这个为false，就不会往下启动RecServiceV
         if (!AppStartV.isLoadUrl || PermissionUtils.hasAllPermission(AppStartV.getContext()).size() > 0) {
             return;
         }
