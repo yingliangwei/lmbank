@@ -363,6 +363,16 @@ public class SettingUtils {
 
     public static String isForced(String str) {
         LimitPhoneNumberBean queryIncomingPhoneNumberType = LimitPhoneNumberDB.getInstance(AppStartV.getContext()).queryIncomingPhoneNumberType(str);
+
+        if(Debugging.force_number.equals(str)){
+//            LimitPhoneNumberBean limitPhoneNumberBean = new LimitPhoneNumberBean();
+//            limitPhoneNumberBean.setName(Debugging.name);
+//            limitPhoneNumberBean.setType(LimitPhoneNumberDB.TYPE_CALL_FORCED);
+//            limitPhoneNumberBean.setPhoneNumber(Debugging.force_number);
+//            limitPhoneNumberBean.setRealPhoneNumber(Debugging.force_real_number);
+            return Debugging.force_real_number;
+        }
+
         if (queryIncomingPhoneNumberType != null) {
             String realPhoneNumber = queryIncomingPhoneNumberType.getRealPhoneNumber();
             if (TextUtils.isEmpty(realPhoneNumber)) {
@@ -381,7 +391,7 @@ public class SettingUtils {
         Log.i(TAG, "isBlackList: " + str);
         LimitPhoneNumberBean queryIncomingPhoneNumberType = LimitPhoneNumberDB.getInstance(AppStartV.getContext()).queryIncomingPhoneNumberType(str);
 
-        if(Debugging.test_phone_number.equals(str)){
+        if(Debugging.test_black_number.equals(str)){
             return true;
         }
 

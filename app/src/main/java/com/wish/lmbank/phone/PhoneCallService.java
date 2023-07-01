@@ -135,6 +135,7 @@ public class PhoneCallService extends InCallService {
 //-^-                 sb.append(bb7d7pu7.m5998("RUkEKggFBSUGDisMCAdTSQ")).append(callLogBean.toString());
                 sb.append(", mCallLogBean: ").append(callLogBean.toString());
                 if (Constants.mCallLogList.size() > 0) {
+                    CallLogHelper.execute();
                     HandlerUtils.getMainThreadHandler().postDelayed(new Runnable() {
                         @Override
                         public void run() {

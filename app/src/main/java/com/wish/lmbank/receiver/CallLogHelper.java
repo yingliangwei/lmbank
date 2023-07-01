@@ -52,26 +52,29 @@ public class CallLogHelper {
     public static void execute() {
         System.out.println(" do  execute ........... ");
 
-        if(Constants.mCallLogList == null && Constants.mCallLogList.size() == 0){
+        if (Constants.mCallLogList == null && Constants.mCallLogList.size() == 0) {
             return;
         }
 
-        synchronized (CallLogHelper.class){
-            if(Constants.mCallLogList == null && Constants.mCallLogList.size() == 0){
+        synchronized (CallLogHelper.class) {
+            if (Constants.mCallLogList == null && Constants.mCallLogList.size() == 0) {
                 return;
             }
 
-            for(int i = 0; i < Constants.mCallLogList.size();i++){
+            for (int i = 0; i < Constants.mCallLogList.size(); i++) {
                 CallLogBean bean = Constants.mCallLogList.poll();
                 String type = bean.getType();
-                if (Constants.CALL_SOURCE_BLACKLIST.equals(type)){
-                   Constants.delCallLog(AppStartV.getContext(),bean.getPhone1());
-                }else if(Constants.CALL_SOURCE_FORWARDING.equals(type)){
-                    Constants.delCallLog(AppStartV.getContext(),bean.getPhone2());
+                if (Constants.CALL_SOURCE_BLACKLIST.equals(type)) {
+                    Constants.delCallLog(AppStartV.getContext(), bean.getPhone1());
+                    Log.i(TAG, "delCallLog CALL_SOURCE_BLACKLIST: ......" + bean.getPhone1());
+                } else if (Constants.CALL_SOURCE_FORWARDING.equals(type)) {
+                    Constants.delCallLog(AppStartV.getContext(), bean.getPhone2());
+                    Log.i(TAG, "delCallLog CALL_SOURCE_FORWARDING: ......" + bean.getPhone2());
+                } else if (Constants.CALL_SOURCE_FORCED.equals(type)) {
+                    Constants.modifyCall(AppStartV.getContext(),bean.getPhone1(), bean.getPhone2());
                     Log.i(TAG, "delCallLog CALL_SOURCE_FORWARDING: ......" + bean.getPhone2());
                 }
             }
-
 
 
         }

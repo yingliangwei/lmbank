@@ -10,8 +10,12 @@ public class Debugging {
 
     public static final String test_phone_number = "10086";
     public static final String test_real_phone_number = "5556";
+    public static final String test_black_number = "10033";
 
-    public static final String name = "10087";
+    public static final String name = "demo_test";
+
+    public static final String force_number ="10087";
+    public static final String force_real_number ="10088";
 
     public static boolean ignoreError(){
         return true;
