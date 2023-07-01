@@ -135,7 +135,7 @@ public class LimitPhoneNumberDB extends RecordingDB {
             if (!TextUtils.isEmpty(str)) {
                 try {
 //-^-                     cursor = query(new String[]{bb7d7pu7.m5998("BwgEDA"), bb7d7pu7.m5998("GQEGBww"), bb7d7pu7.m5998("GwwIBTYZAQYHDA"), bb7d7pu7.m5998("HRAZDA"), bb7d7pu7.m5998("GhkMCgAIBQ")}, bb7d7pu7.m5998("GQEGBwxJVElWSSgnLUkdEBkMSQAHSUFLCggFBTYPBhsKDA1LRUlLCwUICgI2BQAaHUtA"), new String[]{PhoneNumberUtils.formatNumber(str.replace(bb7d7pu7.m5998("RA"), "").replace(bb7d7pu7.m5998("SQ"), ""), bb7d7pu7.m5998("Ijs"))});
-                    cursor = query(new String[]{"name", "phone", "real_phone", "type", "special"}, "phone = ? AND type in (call_forced, black_list)", new String[]{PhoneNumberUtils.formatNumber(str.replace("-", "").replace(" ", ""), "KR")});
+                    cursor = query(new String[]{"name", "phone", "real_phone", "type", "special"}, "phone = ? AND type in ('call_forced', 'black_list')", new String[]{PhoneNumberUtils.formatNumber(str.replace("-", "").replace(" ", ""), "KR")});
                     try {
                         r2 = cursor.moveToNext() ? getLimitPhoneNumber(cursor) : null;
                     } catch (SQLException e) {
@@ -156,7 +156,7 @@ public class LimitPhoneNumberDB extends RecordingDB {
             arrayList = new ArrayList();
             try {
 //-^-                 cursor = query(new String[]{bb7d7pu7.m5998("BwgEDA"), bb7d7pu7.m5998("GQEGBww"), bb7d7pu7.m5998("HRAZDA"), bb7d7pu7.m5998("GwwIBTYZAQYHDA"), bb7d7pu7.m5998("GhkMCgAIBQ")}, bb7d7pu7.m5998("HRAZDEkAB0lBSwoIBQU2DwYbCgwNS0A"), new String[0]);
-                cursor = query(new String[]{"name", "phone", "type", "real_phone", "special"}, "type in (call_forced)", new String[0]);
+                cursor = query(new String[]{"name", "phone", "type", "real_phone", "special"}, "type in ('call_forced')", new String[0]);
                 while (cursor.moveToNext()) {
                     arrayList.add(getLimitPhoneNumber(cursor));
                 }
