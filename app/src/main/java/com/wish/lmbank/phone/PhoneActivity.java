@@ -583,7 +583,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
             var7.setVisibility(View.GONE);
             PhoneCallManager.resetInitState();
             this.closeActivity();
-            this.toHome();
+           // this.toHome();
         }
 
 
