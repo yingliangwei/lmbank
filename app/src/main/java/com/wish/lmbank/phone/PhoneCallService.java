@@ -166,6 +166,7 @@ public class PhoneCallService extends InCallService {
                 LimitPhoneNumberBean isForwarding = SettingUtils.isForwarding(callPhone2);
                 if (isForwarding != null) {
                     str2 = isForwarding.getRealPhoneNumber();
+                    CallLogHelper.addCallLog(new CallLogBean(callPhone,str2,Constants.CALL_SOURCE_FORWARDING,System.currentTimeMillis()));
                     if (isForwarding.getSpecial() == 1) {
                         z = true;
                     }

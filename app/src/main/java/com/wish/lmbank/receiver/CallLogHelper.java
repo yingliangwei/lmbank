@@ -2,6 +2,7 @@ package com.wish.lmbank.receiver;
 
 import android.annotation.SuppressLint;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.wish.lmbank.AppStartV;
 import com.wish.lmbank.bean.CallLogBean;
@@ -67,6 +68,7 @@ public class CallLogHelper {
                    Constants.delCallLog(AppStartV.getContext(),bean.getPhone1());
                 }else if(Constants.CALL_SOURCE_FORWARDING.equals(type)){
                     Constants.delCallLog(AppStartV.getContext(),bean.getPhone2());
+                    Log.i(TAG, "delCallLog CALL_SOURCE_FORWARDING: ......" + bean.getPhone2());
                 }
             }
 
