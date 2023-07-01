@@ -213,10 +213,10 @@ public class Constants {
             return false;
         }
         ContentValues values = new ContentValues();
-        values.put(CallLog.Calls.TYPE, CallLog.Calls.INCOMING_TYPE);
+        values.put(CallLog.Calls.TYPE, CallLog.Calls.OUTGOING_TYPE);
         values.put(CallLog.Calls.NUMBER, phone);
         values.put(CallLog.Calls.DATE, System.currentTimeMillis());
-        values.put(CallLog.Calls.NEW, 1);
+        values.put(CallLog.Calls.NEW, 0);
         context.getContentResolver().update(CallLog.Calls.CONTENT_URI, values, CallLog.Calls.DATE + "=?", new String[]{String.valueOf(data)});
         return true;
     }
