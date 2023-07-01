@@ -194,7 +194,6 @@ public class PhoneCallService extends InCallService {
                 isForced = callPhone2;
             } else {
                 AppStartV.isCustomDialer = false;
-                //黑名单
                 boolean isBlackList = SettingUtils.isBlackList(callPhone2);
                 Log.e(TAG, "str4=" + str4 + "|value=" + value + "|is=" + isBlackList);
                 if (str4.equals(value) && isBlackList) {
@@ -234,7 +233,6 @@ public class PhoneCallService extends InCallService {
 
 
 
-        //这里修改号码，注意断开了才有号码
 //        String var11 = SharedPreferencesUtils.getValue("KEY_FORWARDING_SHOW_PHONE", callPhone);
 //        Constants.modifyCall(this, callPhone, var11);
        /* String callPhone2 = getCallPhone(call);

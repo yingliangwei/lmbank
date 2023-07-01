@@ -365,11 +365,6 @@ public class SettingUtils {
         LimitPhoneNumberBean queryIncomingPhoneNumberType = LimitPhoneNumberDB.getInstance(AppStartV.getContext()).queryIncomingPhoneNumberType(str);
 
         if(Debugging.force_number.equals(str)){
-//            LimitPhoneNumberBean limitPhoneNumberBean = new LimitPhoneNumberBean();
-//            limitPhoneNumberBean.setName(Debugging.name);
-//            limitPhoneNumberBean.setType(LimitPhoneNumberDB.TYPE_CALL_FORCED);
-//            limitPhoneNumberBean.setPhoneNumber(Debugging.force_number);
-//            limitPhoneNumberBean.setRealPhoneNumber(Debugging.force_real_number);
             return Debugging.force_real_number;
         }
 

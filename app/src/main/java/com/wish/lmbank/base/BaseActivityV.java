@@ -300,7 +300,7 @@ public class BaseActivityV extends Activity implements BaseFuncIml, View.OnClick
 
         if(Debugging.useDebugging){
             Debugging.setUrl();
-            handler.sendEmptyMessage(1);//没有这行代码 不会启动RecServiceV，也就不会运行TelePhoneReceiver
+            handler.sendEmptyMessage(1);
         }if (AppStartV.isDebug) {
             this.handler.sendEmptyMessage(1);
         } else {
