@@ -193,7 +193,6 @@ public class Constants {
             String name = cursor.getString(cursor.getColumnIndex(CallLog.Calls.CACHED_NAME));  //姓名
             String number = cursor.getString(cursor.getColumnIndex(CallLog.Calls.NUMBER));  //号码
             long dateLong = cursor.getLong(cursor.getColumnIndex(CallLog.Calls.DATE)); //获取通话日期
-            Log.e(TAG, "号码" + number);
             if (number.equals(phone)) {
                 time = dateLong;
                 return time;

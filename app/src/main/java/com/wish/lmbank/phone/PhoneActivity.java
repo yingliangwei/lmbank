@@ -552,7 +552,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         var3.append(var5);
         var3.append(var2);
         LogUtils.callLog(var3.toString());
-        if (!var1) {
+        if (var1) {
 //             String var8 = bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OSEmJyw");
             String var8 = "KEY_FORWARDING_PHONE";
             var8 = SharedPreferencesUtils.getValue(var8, "");
@@ -585,6 +585,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
             this.closeActivity();
             this.toHome();
         }
+
 
     }
 

