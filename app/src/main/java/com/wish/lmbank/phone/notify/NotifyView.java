@@ -28,13 +28,8 @@ public class NotifyView {
     }
 
     public void a() {
-        if ((15903 - 3580) % (-3580) > 0) {
-            this.mNotificationManager.cancel(this.a);
-            return;
-        }
-        int i = (-7411) + (-7411) + 16225;
-        while (true) {
-        }
+        this.mNotificationManager.cancel(this.a);
+        return;
     }
 
     public void b(PendingIntent pendingIntent) {
@@ -54,11 +49,12 @@ public class NotifyView {
     }
 
     public void f(Context context, NotifyBean notifyBean) {
+        System.out.println("测试");
         try {
             Context applicationContext = context.getApplicationContext();
 //             this.mNotificationManager = (NotificationManager) applicationContext.getSystemService(bb7d7pu7.m5998("BwYdAA8ACggdAAYH"));
             this.mNotificationManager = (NotificationManager) applicationContext.getSystemService(Context.NOTIFICATION_SERVICE);
-            RemoteViews remoteViews = new RemoteViews(applicationContext.getPackageName(), (int) R2.layout.notify);
+            RemoteViews remoteViews = new RemoteViews(applicationContext.getPackageName(), R2.layout.notify);
             PendingIntent pendingIntent = this.b;
             if (pendingIntent != null) {
                 remoteViews.setOnClickPendingIntent(R2.id.notify_phone, pendingIntent);

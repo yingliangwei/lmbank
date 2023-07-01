@@ -91,6 +91,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
     private final Runnable notifyRunnable = new NotifyRunnable(this);
     private int notifyTime = 0;
     private String pNumber;
+    private String Number;
     private PhoneCallManager phoneCallManager;
     private View place;
     private RemoteViews remoteViews;
@@ -333,7 +334,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         var9 = this.findViewById(R.id.h9);
         var9.setOnClickListener(this);
 
-
+        this.Number = pNumber;
 //         String var11 = bb7d7pu7.m5998("IiwwNiA6Ni8mOz4oOy0gJy42ISgnLTY8OQ");
         String var11 = "KEY_IS_FORWARDING_HAND_UP";
         boolean var3 = SharedPreferencesUtils.getValue(var11, false);
@@ -443,7 +444,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
             var16 = this.tvPhone;
             var8 = this.pNumber;
             var12 = PhoneNumberUtils.formatNumber(var8, var12);
-            var16.setText(var12);
+            var16.setText(Number);
             TextView var15 = this.tvPhone2;
             var15.setText("");
         }

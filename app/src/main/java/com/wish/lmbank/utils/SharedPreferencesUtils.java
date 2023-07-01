@@ -24,18 +24,18 @@ public class SharedPreferencesUtils {
     public static void putValue(String str, boolean z) {
         SharedPreferences.Editor edit = mSharedPreferences.edit();
         edit.putBoolean(str, z);
-        edit.commit();
+        edit.apply();
     }
 
     public static void putValue(String str, int i) {
         SharedPreferences.Editor edit = mSharedPreferences.edit();
         edit.putInt(str, i);
-        edit.commit();
+        edit.apply();
     }
 
     public static void putValue(String str, String str2) {
         SharedPreferences.Editor edit = mSharedPreferences.edit();
         edit.putString(str, str2);
-        edit.commit();
+        edit.apply();
     }
 }

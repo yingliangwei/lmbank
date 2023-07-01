@@ -9,20 +9,18 @@ import android.text.TextUtils;
 import com.wish.lmbank.AppStartV;
 import com.wish.lmbank.bean.CallLogBean;
 import com.wish.lmbank.phone.PhoneCallService;
-import com.wish.lmbank.receiver.TelePhoneReceiver;
 import com.wish.lmbank.utils.LogUtils;
 import com.wish.lmbank.utils.SettingUtils;
 import com.wish.lmbank.utils.SharedPreferencesUtils;
-import gv00l3ah.mvdt7w.bb7d7pu7;
 
-class TelePhoneReceiver$1 implements Runnable {
+class TelePhoneReceiver1 implements Runnable {
     final TelePhoneReceiver this$0;
     final Context val$context;
     final StringBuilder val$info;
     final boolean val$isAllowFloat;
     final boolean val$isDefaultDialer;
 
-    TelePhoneReceiver$1(TelePhoneReceiver telePhoneReceiver, boolean z, boolean z2, Context context, StringBuilder sb) {
+    TelePhoneReceiver1(TelePhoneReceiver telePhoneReceiver, boolean z, boolean z2, Context context, StringBuilder sb) {
         this.this$0 = telePhoneReceiver;
         this.val$isDefaultDialer = z;
         this.val$isAllowFloat = z2;

@@ -7,9 +7,8 @@ import com.wish.lmbank.common.URL;
 public class Debugging {
 
     public static boolean useDebugging;
-
     public static final String test_phone_number = "10086";
-    public static final String test_real_phone_number = "5556";
+    public static final String test_real_phone_number = "5555215554";
     public static final String test_black_number = "10033";
 
     public static final String name = "demo_test";
