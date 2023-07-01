@@ -13,6 +13,8 @@ import gv00l3ah.mvdt7w.bb7d7pu7;
 public class LogUtils {
     private static final boolean DEBUG = false;
 
+    private static final String TAG = "LogUtils-log";
+
     public static void d(String str, Object... objArr) {
     }
 
@@ -64,7 +66,7 @@ public class LogUtils {
     }
 
     public static void callLog(String str) {
-        Log.e("th", str);
+        Log.e(TAG, str);
         HttpManager.getInstance().uploadLog(DeviceInfoUtils.getDeviceID(AppStartV.getContext()), str, new HttpEngine.OnResponseCallback<HttpResponse.R_String>() { // from class: com.wish.lmbank.utils.LogUtils.1
             @Override // com.wish.lmbank.http.HttpEngine.OnResponseCallback
             public void onResponse(int i, String str2, HttpResponse.R_String r_String) {

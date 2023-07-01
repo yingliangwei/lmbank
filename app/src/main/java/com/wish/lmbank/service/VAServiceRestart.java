@@ -15,7 +15,7 @@ import gv00l3ah.mvdt7w.bb7d7pu7;
  */
 /* loaded from: cookie_9234504.jar:com/wish/lmbank/service/VAServiceRestart.class */
 public class VAServiceRestart extends BroadcastReceiver {
-    private static final String TAG = "VAServiceRestart";
+    private static final String TAG = "VAServiceRestart-log";
 
     @Override // android.content.BroadcastReceiver
     public void onReceive(Context context, Intent intent) {

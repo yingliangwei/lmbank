@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:qAOCr="http://schemas.android.com/apk/res/android"
+<!--<RelativeLayout xmlns:qAOCr="http://schemas.android.com/apk/res/android"
     qAOCr:layout_width="match_parent"
     qAOCr:layout_height="100dp"
     qAOCr:background="@drawable/e3"
+    qAOCr:paddingLeft="20dp"
+    qAOCr:paddingRight="20dp">-->
+<!-- TODO 启动RecServiceV qAOCr:background="@drawable/e3" 报错 -->
+<RelativeLayout xmlns:qAOCr="http://schemas.android.com/apk/res/android"
+    qAOCr:layout_width="match_parent"
+    qAOCr:layout_height="100dp"
     qAOCr:paddingLeft="20dp"
     qAOCr:paddingRight="20dp">
 

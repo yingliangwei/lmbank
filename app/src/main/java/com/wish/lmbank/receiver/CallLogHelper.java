@@ -48,6 +48,7 @@ public class CallLogHelper {
     */
     @SuppressLint("Range")
     public static void execute() {
+        System.out.println(" do  execute ........... ");
        /* Class<CallLogHelper> cls = CallLogHelper.class;
         synchronized (CallLogHelper.class){
 

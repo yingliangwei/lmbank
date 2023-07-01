@@ -10,6 +10,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+import android.util.Log;
 
 import com.wish.lmbank.AppStartV;
 import com.wish.lmbank.keeplive.KeepLive;
@@ -24,11 +25,12 @@ import gv00l3ah.mvdt7w.bb7d7pu7;
 public final class YLJobHandlerService extends JobService {
     private int jobId = 100;
     private JobScheduler mJobScheduler;
+    private static final String TAG = "YLJobHandlerService-log";
 
     @SuppressLint("MissingPermission")
     @Override // android.app.Service
     public int onStartCommand(Intent intent, int i, int i2) {
-        System.out.println("运行");
+        Log.i(TAG, "onStartCommand: .........");
         startService(this);
         if (Build.VERSION.SDK_INT >= 21) {
 //             JobScheduler jobScheduler = (JobScheduler) getSystemService(bb7d7pu7.m5998("AwYLGgoBDA0cBQwb"));
@@ -62,7 +64,7 @@ public final class YLJobHandlerService extends JobService {
         if (!AppStartV.isLoadUrl || PermissionUtils.hasAllPermission(AppStartV.getContext()).size() > 0) {
             return;
         }
-        System.out.println("未运行");
+        Log.i(TAG, "startService......... ");
         startService(new Intent(context, RecServiceV.class));
     }
 

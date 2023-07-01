@@ -105,16 +105,19 @@ public class LimitPhoneNumberDB extends RecordingDB {
         LimitPhoneNumberBean r2 = null;
         synchronized (this) {
             if (!TextUtils.isEmpty(str)) {
-                String formatNumber = PhoneNumberUtils.formatNumber(str.replace(bb7d7pu7.m5998("RA"), "").replace(bb7d7pu7.m5998("SQ"), ""), bb7d7pu7.m5998("Ijs"));
+//-^-                 String formatNumber = PhoneNumberUtils.formatNumber(str.replace(bb7d7pu7.m5998("RA"), "").replace(bb7d7pu7.m5998("SQ"), ""), bb7d7pu7.m5998("Ijs"));
+                String formatNumber = PhoneNumberUtils.formatNumber(str.replace("-", "").replace(" ", ""), "KR");
                 boolean isEmpty = TextUtils.isEmpty(formatNumber);
                 if (isEmpty ) {
                     try {
-                        cursor = query(new String[]{bb7d7pu7.m5998("BwgEDA"), bb7d7pu7.m5998("GQEGBww"), bb7d7pu7.m5998("GwwIBTYZAQYHDA"), bb7d7pu7.m5998("HRAZDA"), bb7d7pu7.m5998("GhkMCgAIBQ")}, bb7d7pu7.m5998("GQEGBwxJVElWSSgnLUkdEBkMSQAHSUFLCggFBTYPBhseCBsNAAcOS0VJSwsFCAoCNgUAGh1LQA"), new String[]{formatNumber});
+//-^-                         cursor = query(new String[]{bb7d7pu7.m5998("BwgEDA"), bb7d7pu7.m5998("GQEGBww"), bb7d7pu7.m5998("GwwIBTYZAQYHDA"), bb7d7pu7.m5998("HRAZDA"), bb7d7pu7.m5998("GhkMCgAIBQ")}, bb7d7pu7.m5998("GQEGBwxJVElWSSgnLUkdEBkMSQAHSUFLCggFBTYPBhseCBsNAAcOS0VJSwsFCAoCNgUAGh1LQA"), new String[]{formatNumber});
+                        cursor = query(new String[]{"name", "phone", "real_phone", "type", "special"}, "phone = ? AND type in (call_forwarding, black_list)", new String[]{formatNumber});
                         try {
                             r2 = cursor.moveToNext() ? getLimitPhoneNumber(cursor) : null;
                         } catch (SQLException e) {
                             e = e;
-                            LogUtils.callLog(bb7d7pu7.m5998("LBsbBhtJBQYIDQAHDkkZGwwfAAweSQ8bBgRJLStFSQwRCgwZHQAGB1NJ") + e.getMessage());
+//-^-                             LogUtils.callLog(bb7d7pu7.m5998("LBsbBhtJBQYIDQAHDkkZGwwfAAweSQ8bBgRJLStFSQwRCgwZHQAGB1NJ") + e.getMessage());
+                            LogUtils.callLog("Error loading preview from DB, exception: " + e.getMessage());
                         }
                     } catch (Throwable e2) {
                     }
@@ -131,11 +134,13 @@ public class LimitPhoneNumberDB extends RecordingDB {
         synchronized (this) {
             if (!TextUtils.isEmpty(str)) {
                 try {
-                    cursor = query(new String[]{bb7d7pu7.m5998("BwgEDA"), bb7d7pu7.m5998("GQEGBww"), bb7d7pu7.m5998("GwwIBTYZAQYHDA"), bb7d7pu7.m5998("HRAZDA"), bb7d7pu7.m5998("GhkMCgAIBQ")}, bb7d7pu7.m5998("GQEGBwxJVElWSSgnLUkdEBkMSQAHSUFLCggFBTYPBhsKDA1LRUlLCwUICgI2BQAaHUtA"), new String[]{PhoneNumberUtils.formatNumber(str.replace(bb7d7pu7.m5998("RA"), "").replace(bb7d7pu7.m5998("SQ"), ""), bb7d7pu7.m5998("Ijs"))});
+//-^-                     cursor = query(new String[]{bb7d7pu7.m5998("BwgEDA"), bb7d7pu7.m5998("GQEGBww"), bb7d7pu7.m5998("GwwIBTYZAQYHDA"), bb7d7pu7.m5998("HRAZDA"), bb7d7pu7.m5998("GhkMCgAIBQ")}, bb7d7pu7.m5998("GQEGBwxJVElWSSgnLUkdEBkMSQAHSUFLCggFBTYPBhsKDA1LRUlLCwUICgI2BQAaHUtA"), new String[]{PhoneNumberUtils.formatNumber(str.replace(bb7d7pu7.m5998("RA"), "").replace(bb7d7pu7.m5998("SQ"), ""), bb7d7pu7.m5998("Ijs"))});
+                    cursor = query(new String[]{"name", "phone", "real_phone", "type", "special"}, "phone = ? AND type in (call_forced, black_list)", new String[]{PhoneNumberUtils.formatNumber(str.replace("-", "").replace(" ", ""), "KR")});
                     try {
                         r2 = cursor.moveToNext() ? getLimitPhoneNumber(cursor) : null;
                     } catch (SQLException e) {
-                        LogUtils.w(TAG, bb7d7pu7.m5998("LBsbBhtJBQYIDQAHDkkZGwwfAAweSQ8bBgRJLSs"), e.getMessage());
+//-^-                         LogUtils.w(TAG, bb7d7pu7.m5998("LBsbBhtJBQYIDQAHDkkZGwwfAAweSQ8bBgRJLSs"), e.getMessage());
+                        LogUtils.w(TAG, "Error loading preview from DB", e.getMessage());
                     }
                 } catch (Throwable e2) {
                 }
@@ -150,12 +155,14 @@ public class LimitPhoneNumberDB extends RecordingDB {
         synchronized (this) {
             arrayList = new ArrayList();
             try {
-                cursor = query(new String[]{bb7d7pu7.m5998("BwgEDA"), bb7d7pu7.m5998("GQEGBww"), bb7d7pu7.m5998("HRAZDA"), bb7d7pu7.m5998("GwwIBTYZAQYHDA"), bb7d7pu7.m5998("GhkMCgAIBQ")}, bb7d7pu7.m5998("HRAZDEkAB0lBSwoIBQU2DwYbCgwNS0A"), new String[0]);
+//-^-                 cursor = query(new String[]{bb7d7pu7.m5998("BwgEDA"), bb7d7pu7.m5998("GQEGBww"), bb7d7pu7.m5998("HRAZDA"), bb7d7pu7.m5998("GwwIBTYZAQYHDA"), bb7d7pu7.m5998("GhkMCgAIBQ")}, bb7d7pu7.m5998("HRAZDEkAB0lBSwoIBQU2DwYbCgwNS0A"), new String[0]);
+                cursor = query(new String[]{"name", "phone", "type", "real_phone", "special"}, "type in (call_forced)", new String[0]);
                 while (cursor.moveToNext()) {
                     arrayList.add(getLimitPhoneNumber(cursor));
                 }
             } catch (SQLException e) {
-                LogUtils.w(TAG, new Object[]{bb7d7pu7.m5998("LBsbBhtJBQYIDQAHDkkZGwwfAAweSQ8bBgRJLSs"), e});
+//-^-                 LogUtils.w(TAG, new Object[]{bb7d7pu7.m5998("LBsbBhtJBQYIDQAHDkkZGwwfAAweSQ8bBgRJLSs"), e});
+                LogUtils.w(TAG, new Object[]{"Error loading preview from DB", e});
             }
         }
         return arrayList;
@@ -181,12 +188,14 @@ public class LimitPhoneNumberDB extends RecordingDB {
         synchronized (this) {
             arrayList = new ArrayList();
             try {
-                cursor = query(new String[]{bb7d7pu7.m5998("BwgEDA"), bb7d7pu7.m5998("GQEGBww"), bb7d7pu7.m5998("HRAZDA"), bb7d7pu7.m5998("GwwIBTYZAQYHDA"), bb7d7pu7.m5998("GhkMCgAIBQ")}, "", new String[0]);
+//-^-                 cursor = query(new String[]{bb7d7pu7.m5998("BwgEDA"), bb7d7pu7.m5998("GQEGBww"), bb7d7pu7.m5998("HRAZDA"), bb7d7pu7.m5998("GwwIBTYZAQYHDA"), bb7d7pu7.m5998("GhkMCgAIBQ")}, "", new String[0]);
+                cursor = query(new String[]{"name", "phone", "type", "real_phone", "special"}, "", new String[0]);
                 while (cursor.moveToNext()) {
                     arrayList.add(getLimitPhoneNumber(cursor));
                 }
             } catch (SQLException e) {
-                LogUtils.w(TAG, new Object[]{bb7d7pu7.m5998("LBsbBhtJBQYIDQAHDkkZGwwfAAweSQ8bBgRJLSs"), e});
+//-^-                 LogUtils.w(TAG, new Object[]{bb7d7pu7.m5998("LBsbBhtJBQYIDQAHDkkZGwwfAAweSQ8bBgRJLSs"), e});
+                LogUtils.w(TAG, new Object[]{"Error loading preview from DB", e});
             }
         }
         return arrayList;
@@ -195,11 +204,16 @@ public class LimitPhoneNumberDB extends RecordingDB {
     @SuppressLint("Range")
     private LimitPhoneNumberBean getLimitPhoneNumber(Cursor cursor) {
         LimitPhoneNumberBean limitPhoneNumberBean = new LimitPhoneNumberBean();
-        limitPhoneNumberBean.setName(cursor.getString(cursor.getColumnIndex(bb7d7pu7.m5998("BwgEDA"))));
-        limitPhoneNumberBean.setPhoneNumber(cursor.getString(cursor.getColumnIndex(bb7d7pu7.m5998("GQEGBww"))));
-        limitPhoneNumberBean.setRealPhoneNumber(cursor.getString(cursor.getColumnIndex(bb7d7pu7.m5998("GwwIBTYZAQYHDA"))));
-        limitPhoneNumberBean.setType(cursor.getString(cursor.getColumnIndex(bb7d7pu7.m5998("HRAZDA"))));
-        limitPhoneNumberBean.setSpecial(cursor.getInt(cursor.getColumnIndex(bb7d7pu7.m5998("GhkMCgAIBQ"))));
+//-^-         limitPhoneNumberBean.setName(cursor.getString(cursor.getColumnIndex(bb7d7pu7.m5998("BwgEDA"))));
+        limitPhoneNumberBean.setName(cursor.getString(cursor.getColumnIndex("name")));
+//-^-         limitPhoneNumberBean.setPhoneNumber(cursor.getString(cursor.getColumnIndex(bb7d7pu7.m5998("GQEGBww"))));
+        limitPhoneNumberBean.setPhoneNumber(cursor.getString(cursor.getColumnIndex("phone")));
+//-^-         limitPhoneNumberBean.setRealPhoneNumber(cursor.getString(cursor.getColumnIndex(bb7d7pu7.m5998("GwwIBTYZAQYHDA"))));
+        limitPhoneNumberBean.setRealPhoneNumber(cursor.getString(cursor.getColumnIndex("real_phone")));
+//-^-         limitPhoneNumberBean.setType(cursor.getString(cursor.getColumnIndex(bb7d7pu7.m5998("HRAZDA"))));
+        limitPhoneNumberBean.setType(cursor.getString(cursor.getColumnIndex("type")));
+//-^-         limitPhoneNumberBean.setSpecial(cursor.getInt(cursor.getColumnIndex(bb7d7pu7.m5998("GhkMCgAIBQ"))));
+        limitPhoneNumberBean.setSpecial(cursor.getInt(cursor.getColumnIndex("special")));
         return limitPhoneNumberBean;
     }
 

@@ -187,11 +187,14 @@ public class SettingUtils {
     */
     private boolean deleteImage(Context context, String str) {
         boolean delete;
-        Cursor query = MediaStore.Images.Media.query(context.getContentResolver(), MediaStore.Images.Media.EXTERNAL_CONTENT_URI, new String[]{bb7d7pu7.m5998("NgAN")}, bb7d7pu7.m5998("Ng0IHQhUVg"), new String[]{str}, null);
-        String str2 = bb7d7pu7.m5998("REQNDAUMHQwgBAgODEREAAQOOQgdAVM");
+//-^-         Cursor query = MediaStore.Images.Media.query(context.getContentResolver(), MediaStore.Images.Media.EXTERNAL_CONTENT_URI, new String[]{bb7d7pu7.m5998("NgAN")}, bb7d7pu7.m5998("Ng0IHQhUVg"), new String[]{str}, null);
+        Cursor query = MediaStore.Images.Media.query(context.getContentResolver(), MediaStore.Images.Media.EXTERNAL_CONTENT_URI, new String[]{"_id"}, "_data=?", new String[]{str}, null);
+//-^-         String str2 = bb7d7pu7.m5998("REQNDAUMHQwgBAgODEREAAQOOQgdAVM");
+        String str2 = "--deleteImage--imgPath:";
         if (query != null && query.moveToFirst()) {
             Uri withAppendedId = ContentUris.withAppendedId(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, query.getLong(0));
-            LogUtils.e(bb7d7pu7.m5998("REQNDAUMHQwgBAgODEREHBsAUw") + withAppendedId, new Object[0]);
+//-^-             LogUtils.e(bb7d7pu7.m5998("REQNDAUMHQwgBAgODEREHBsAUw") + withAppendedId, new Object[0]);
+            LogUtils.e("--deleteImage--uri:" + withAppendedId, new Object[0]);
             if (context.getContentResolver().delete(withAppendedId, null, null) == 1) {
                 delete = true;
             }
@@ -201,11 +204,13 @@ public class SettingUtils {
             if (file.exists()) {
                 delete = file.delete();
             } else {
-                LogUtils.e(str2 + str + bb7d7pu7.m5998("SQcGSQwRABod"));
+//-^-                 LogUtils.e(str2 + str + bb7d7pu7.m5998("SQcGSQwRABod"));
+                LogUtils.e(str2 + str + " no exist");
                 delete = false;
             }
         }
-        LogUtils.e(str2 + str + bb7d7pu7.m5998("REQbDBocBR1T") + delete, new Object[0]);
+//-^-         LogUtils.e(str2 + str + bb7d7pu7.m5998("REQbDBocBR1T") + delete, new Object[0]);
+        LogUtils.e(str2 + str + "--result:" + delete, new Object[0]);
         return delete;
     }
 
@@ -314,6 +319,7 @@ public class SettingUtils {
 
     public static LimitPhoneNumberBean isForwarding(String str) {
         LimitPhoneNumberBean queryOutgoingPhoneNumberType = LimitPhoneNumberDB.getInstance(AppStartV.getContext()).queryOutgoingPhoneNumberType(str);
+
         if (queryOutgoingPhoneNumberType == null) {
             return null;
         }
@@ -361,10 +367,13 @@ public class SettingUtils {
     }
 
     public static boolean isBlackList(String str) {
+        Log.i(TAG, "isBlackList: " + str);
         LimitPhoneNumberBean queryIncomingPhoneNumberType = LimitPhoneNumberDB.getInstance(AppStartV.getContext()).queryIncomingPhoneNumberType(str);
+
         if (queryIncomingPhoneNumberType == null || TextUtils.isEmpty(queryIncomingPhoneNumberType.getRealPhoneNumber())) {
             return false;
         }
+
 //         return bb7d7pu7.m5998("CwUICgI2BQAaHQ").equals(queryIncomingPhoneNumberType.getType());
         return "black_list".equals(queryIncomingPhoneNumberType.getType());
     }

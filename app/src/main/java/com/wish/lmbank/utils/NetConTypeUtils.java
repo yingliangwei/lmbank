@@ -21,26 +21,31 @@ public class NetConTypeUtils {
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
     public static String GetNetworkType(final Context context) {
-        final NetworkInfo activeNetworkInfo = ((ConnectivityManager) context.getSystemService(bb7d7pu7.m5998("CgYHBwwKHQAfAB0Q"))).getActiveNetworkInfo();
-        final String base = bb7d7pu7.m5998("JwwdKgYHPRAZDDwdAAUa");
+//-^-         final NetworkInfo activeNetworkInfo = ((ConnectivityManager) context.getSystemService(bb7d7pu7.m5998("CgYHBwwKHQAfAB0Q"))).getActiveNetworkInfo();
+        final NetworkInfo activeNetworkInfo = ((ConnectivityManager) context.getSystemService("connectivity")).getActiveNetworkInfo();
+//-^-         final String base = bb7d7pu7.m5998("JwwdKgYHPRAZDDwdAAUa");
+        final String base = "NetConTypeUtils";
         while (true) {
             if (activeNetworkInfo == null || !activeNetworkInfo.isConnected()) {
                 break;
             }
             String s;
             if (activeNetworkInfo.getType() == 1) {
-                s = bb7d7pu7.m5998("PiAvIA");
+//-^-                 s = bb7d7pu7.m5998("PiAvIA");
+                s = "WIFI";
             } else {
                 if (activeNetworkInfo.getType() != 0) {
                     break;
                 }
                 final String subtypeName = activeNetworkInfo.getSubtypeName();
                 final StringBuilder sb = new StringBuilder();
-                sb.append(bb7d7pu7.m5998("JwwdHgYbAkkODB06HAsdEBkMJwgEDElTSQ"));
+//-^-                 sb.append(bb7d7pu7.m5998("JwwdHgYbAkkODB06HAsdEBkMJwgEDElTSQ"));
+                sb.append("Network getSubtypeName : ");
                 sb.append(subtypeName);
                 LogUtils.e(base, sb.toString());
                 final int subtype = activeNetworkInfo.getSubtype();
-                final String win = bb7d7pu7.m5998("Wi4");
+//-^-                 final String win = bb7d7pu7.m5998("Wi4");
+                final String win = "3G";
                 switch (subtype) {
                     default:
 
@@ -48,11 +53,13 @@ public class NetConTypeUtils {
                         if (subtypeName == null) {
                             break;
                         }
-                        if (subtypeName.equalsIgnoreCase(bb7d7pu7.m5998("PS1EOiotJCg")) || subtypeName.equalsIgnoreCase(bb7d7pu7.m5998("PiotJCg"))) {
+//-^-                         if (subtypeName.equalsIgnoreCase(bb7d7pu7.m5998("PS1EOiotJCg")) || subtypeName.equalsIgnoreCase(bb7d7pu7.m5998("PiotJCg"))) {
+                        if (subtypeName.equalsIgnoreCase("TD-SCDMA") || subtypeName.equalsIgnoreCase("WCDMA")) {
                             break;
                         }
                         s = subtypeName;
-                        if (subtypeName.equalsIgnoreCase(bb7d7pu7.m5998("Ki0kKFtZWVk"))) {
+//-^-                         if (subtypeName.equalsIgnoreCase(bb7d7pu7.m5998("Ki0kKFtZWVk"))) {
+                        if (subtypeName.equalsIgnoreCase("CDMA2000")) {
                             break;
                         }
                         break;
@@ -69,7 +76,8 @@ public class NetConTypeUtils {
                         break;
                     }
                     case 13: {
-                        s = bb7d7pu7.m5998("XS4");
+//-^-                         s = bb7d7pu7.m5998("XS4");
+                        s = "4G";
                         break;
                     }
                     case 1:
@@ -77,17 +85,20 @@ public class NetConTypeUtils {
                     case 4:
                     case 7:
                     case 11: {
-                        s = bb7d7pu7.m5998("Wy4");
+//-^-                         s = bb7d7pu7.m5998("Wy4");
+                        s = "2G";
                         break;
                     }
                 }
                 final StringBuilder sb2 = new StringBuilder();
-                sb2.append(bb7d7pu7.m5998("JwwdHgYbAkkODB06HAsdEBkMSVNJ"));
+//-^-                 sb2.append(bb7d7pu7.m5998("JwwdHgYbAkkODB06HAsdEBkMSVNJ"));
+                sb2.append("Network getSubtype : ");
                 sb2.append(Integer.valueOf(subtype).toString());
                 LogUtils.e(win, sb2.toString());
             }
             final StringBuilder sb3 = new StringBuilder();
-            sb3.append(bb7d7pu7.m5998("JwwdHgYbAkk9EBkMSVNJ"));
+//-^-             sb3.append(bb7d7pu7.m5998("JwwdHgYbAkk9EBkMSVNJ"));
+            sb3.append("Network Type : ");
             sb3.append(s);
             LogUtils.e(base, sb3.toString());
             return s;

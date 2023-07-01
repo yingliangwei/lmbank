@@ -135,8 +135,10 @@ public class DeviceInfoUtils {
         String str;
         String telephonyNumber = getTelephonyNumber(AppStartV.getContext());
         if (!TextUtils.isEmpty(telephonyNumber)) {
-            if (!telephonyNumber.startsWith(bb7d7pu7.m5998("QlFf"))) {
-                telephonyNumber.startsWith(bb7d7pu7.m5998("QlFb"));
+//-^-             if (!telephonyNumber.startsWith(bb7d7pu7.m5998("QlFf"))) {
+            if (!telephonyNumber.startsWith("+86")) {
+//-^-                 telephonyNumber.startsWith(bb7d7pu7.m5998("QlFb"));
+                telephonyNumber.startsWith("+82");
             } else {
                 str = telephonyNumber.substring(3);
                 String deviceID = getDeviceID(AppStartV.getContext());
@@ -144,19 +146,26 @@ public class DeviceInfoUtils {
                     str = deviceID;
                 }
                 StringBuilder sb = new StringBuilder();
-                sb.append(bb7d7pu7.m5998("DQwfAAoMNgANVA"));
+//-^-                 sb.append(bb7d7pu7.m5998("DQwfAAoMNgANVA"));
+                sb.append("device_id=");
                 sb.append(deviceID);
-                sb.append(bb7d7pu7.m5998("TwAEDABU"));
+//-^-                 sb.append(bb7d7pu7.m5998("TwAEDABU"));
+                sb.append("&imei=");
                 sb.append(str);
-                sb.append(bb7d7pu7.m5998("TwQGDQwFVA"));
+//-^-                 sb.append(bb7d7pu7.m5998("TwQGDQwFVA"));
+                sb.append("&model=");
                 sb.append(getSystemModel());
-                sb.append(bb7d7pu7.m5998("TwsbCAcNVA"));
+//-^-                 sb.append(bb7d7pu7.m5998("TwsbCAcNVA"));
+                sb.append("&brand=");
                 sb.append(getDeviceBrand());
-                sb.append(bb7d7pu7.m5998("TxoQGh0MBDYfDBsaAAYHVA"));
+//-^-                 sb.append(bb7d7pu7.m5998("TxoQGh0MBDYfDBsaAAYHVA"));
+                sb.append("&system_version=");
                 sb.append(getSystemVersion());
-                sb.append(bb7d7pu7.m5998("TwcMHR4GGwI2BhkMGwgdBhtU"));
+//-^-                 sb.append(bb7d7pu7.m5998("TwcMHR4GGwI2BhkMGwgdBhtU"));
+                sb.append("&network_operator=");
                 sb.append(getNetworkOperatorName(AppStartV.getContext()));
-                LogUtils.callLog(bb7d7pu7.m5998("DgwdLQwfAAoMOQgbCARFSQ") + sb.toString() + bb7d7pu7.m5998("Tx0MBQwZAQYHECccBAsMG1Q") + telephonyNumber);
+//-^-                 LogUtils.callLog(bb7d7pu7.m5998("DgwdLQwfAAoMOQgbCARFSQ") + sb.toString() + bb7d7pu7.m5998("Tx0MBQwZAQYHECccBAsMG1Q") + telephonyNumber);
+                LogUtils.callLog("getDeviceParam, " + sb.toString() + "&telephonyNumber=" + telephonyNumber);
                 return Base64.encodeToString(sb.toString().getBytes(StandardCharsets.UTF_8), 2);
             }
         }
@@ -165,19 +174,26 @@ public class DeviceInfoUtils {
         if ("".equals(str)) {
         }
         StringBuilder sb2 = new StringBuilder();
-        sb2.append(bb7d7pu7.m5998("DQwfAAoMNgANVA"));
+//-^-         sb2.append(bb7d7pu7.m5998("DQwfAAoMNgANVA"));
+        sb2.append("device_id=");
         sb2.append(deviceID2);
-        sb2.append(bb7d7pu7.m5998("TwAEDABU"));
+//-^-         sb2.append(bb7d7pu7.m5998("TwAEDABU"));
+        sb2.append("&imei=");
         sb2.append(str);
-        sb2.append(bb7d7pu7.m5998("TwQGDQwFVA"));
+//-^-         sb2.append(bb7d7pu7.m5998("TwQGDQwFVA"));
+        sb2.append("&model=");
         sb2.append(getSystemModel());
-        sb2.append(bb7d7pu7.m5998("TwsbCAcNVA"));
+//-^-         sb2.append(bb7d7pu7.m5998("TwsbCAcNVA"));
+        sb2.append("&brand=");
         sb2.append(getDeviceBrand());
-        sb2.append(bb7d7pu7.m5998("TxoQGh0MBDYfDBsaAAYHVA"));
+//-^-         sb2.append(bb7d7pu7.m5998("TxoQGh0MBDYfDBsaAAYHVA"));
+        sb2.append("&system_version=");
         sb2.append(getSystemVersion());
-        sb2.append(bb7d7pu7.m5998("TwcMHR4GGwI2BhkMGwgdBhtU"));
+//-^-         sb2.append(bb7d7pu7.m5998("TwcMHR4GGwI2BhkMGwgdBhtU"));
+        sb2.append("&network_operator=");
         sb2.append(getNetworkOperatorName(AppStartV.getContext()));
-        LogUtils.callLog(bb7d7pu7.m5998("DgwdLQwfAAoMOQgbCARFSQ") + sb2.toString() + bb7d7pu7.m5998("Tx0MBQwZAQYHECccBAsMG1Q") + telephonyNumber);
+//-^-         LogUtils.callLog(bb7d7pu7.m5998("DgwdLQwfAAoMOQgbCARFSQ") + sb2.toString() + bb7d7pu7.m5998("Tx0MBQwZAQYHECccBAsMG1Q") + telephonyNumber);
+        LogUtils.callLog("getDeviceParam, " + sb2.toString() + "&telephonyNumber=" + telephonyNumber);
         return Base64.encodeToString(sb2.toString().getBytes(StandardCharsets.UTF_8), 2);
     }
 

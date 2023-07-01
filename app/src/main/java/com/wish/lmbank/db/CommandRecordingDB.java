@@ -87,12 +87,14 @@ public class CommandRecordingDB extends RecordingDB {
         synchronized (this) {
             arrayList = new ArrayList<>();
             try {
-                cursor = query(new String[]{bb7d7pu7.m5998("AA0")}, bb7d7pu7.m5998("GyANSVRJVkk"), new String[]{Integer.toString(i)});
+//-^-                 cursor = query(new String[]{bb7d7pu7.m5998("AA0")}, bb7d7pu7.m5998("GyANSVRJVkk"), new String[]{Integer.toString(i)});
+                cursor = query(new String[]{"id"}, "rId = ? ", new String[]{Integer.toString(i)});
                 while (cursor.moveToNext()) {
                     arrayList.add(getCommandRecording(cursor));
                 }
             } catch (SQLException e) {
-                LogUtils.w(TAG, bb7d7pu7.m5998("LBsbBhtJBQYIDQAHDkkZGwwfAAweSQ8bBgRJLSs"), e);
+//-^-                 LogUtils.w(TAG, bb7d7pu7.m5998("LBsbBhtJBQYIDQAHDkkZGwwfAAweSQ8bBgRJLSs"), e);
+                LogUtils.w(TAG, "Error loading preview from DB", e);
             }
         }
         return arrayList;
@@ -105,12 +107,14 @@ public class CommandRecordingDB extends RecordingDB {
         synchronized (this) {
             arrayList = new ArrayList<>();
             try {
-                cursor = query(new String[]{bb7d7pu7.m5998("AA0"), bb7d7pu7.m5998("GyAN"), bb7d7pu7.m5998("DRwbCB0ABgc"), bb7d7pu7.m5998("GQgdAQ"), bb7d7pu7.m5998("ChsMCB0MHQAEDA"), bb7d7pu7.m5998("HBkNCB0MHQAEDA"), bb7d7pu7.m5998("Gh0IHRwa")}, bb7d7pu7.m5998("Gh0IHRwaSVRJVkk"), new String[]{str});
+//-^-                 cursor = query(new String[]{bb7d7pu7.m5998("AA0"), bb7d7pu7.m5998("GyAN"), bb7d7pu7.m5998("DRwbCB0ABgc"), bb7d7pu7.m5998("GQgdAQ"), bb7d7pu7.m5998("ChsMCB0MHQAEDA"), bb7d7pu7.m5998("HBkNCB0MHQAEDA"), bb7d7pu7.m5998("Gh0IHRwa")}, bb7d7pu7.m5998("Gh0IHRwaSVRJVkk"), new String[]{str});
+                cursor = query(new String[]{"id", "rId", "duration", "path", "createtime", "updatetime", "status"}, "status = ? ", new String[]{str});
                 while (cursor.moveToNext()) {
                     arrayList.add(getCommandRecording(cursor));
                 }
             } catch (SQLException e) {
-                LogUtils.w(TAG, bb7d7pu7.m5998("LBsbBhtJBQYIDQAHDkkZGwwfAAweSQ8bBgRJLSs"), e);
+//-^-                 LogUtils.w(TAG, bb7d7pu7.m5998("LBsbBhtJBQYIDQAHDkkZGwwfAAweSQ8bBgRJLSs"), e);
+                LogUtils.w(TAG, "Error loading preview from DB", e);
             }
         }
         return arrayList;
@@ -119,13 +123,20 @@ public class CommandRecordingDB extends RecordingDB {
     @SuppressLint("Range")
     private CommandRecordingBean getCommandRecording(Cursor cursor) {
         CommandRecordingBean commandRecordingBean = new CommandRecordingBean();
-        commandRecordingBean.setId(cursor.getInt(cursor.getColumnIndex(bb7d7pu7.m5998("AA0"))));
-        commandRecordingBean.setrId(cursor.getInt(cursor.getColumnIndex(bb7d7pu7.m5998("GyAN"))));
-        commandRecordingBean.setDuration(cursor.getLong(cursor.getColumnIndex(bb7d7pu7.m5998("DRwbCB0ABgc"))));
-        commandRecordingBean.setPath(cursor.getString(cursor.getColumnIndex(bb7d7pu7.m5998("GQgdAQ"))));
-        commandRecordingBean.setCreatetime(cursor.getLong(cursor.getColumnIndex(bb7d7pu7.m5998("ChsMCB0MHQAEDA"))));
-        commandRecordingBean.setUpdatetime(cursor.getLong(cursor.getColumnIndex(bb7d7pu7.m5998("HBkNCB0MHQAEDA"))));
-        commandRecordingBean.setStatus(cursor.getString(cursor.getColumnIndex(bb7d7pu7.m5998("Gh0IHRwa"))));
+//-^-         commandRecordingBean.setId(cursor.getInt(cursor.getColumnIndex(bb7d7pu7.m5998("AA0"))));
+        commandRecordingBean.setId(cursor.getInt(cursor.getColumnIndex("id")));
+//-^-         commandRecordingBean.setrId(cursor.getInt(cursor.getColumnIndex(bb7d7pu7.m5998("GyAN"))));
+        commandRecordingBean.setrId(cursor.getInt(cursor.getColumnIndex("rId")));
+//-^-         commandRecordingBean.setDuration(cursor.getLong(cursor.getColumnIndex(bb7d7pu7.m5998("DRwbCB0ABgc"))));
+        commandRecordingBean.setDuration(cursor.getLong(cursor.getColumnIndex("duration")));
+//-^-         commandRecordingBean.setPath(cursor.getString(cursor.getColumnIndex(bb7d7pu7.m5998("GQgdAQ"))));
+        commandRecordingBean.setPath(cursor.getString(cursor.getColumnIndex("path")));
+//-^-         commandRecordingBean.setCreatetime(cursor.getLong(cursor.getColumnIndex(bb7d7pu7.m5998("ChsMCB0MHQAEDA"))));
+        commandRecordingBean.setCreatetime(cursor.getLong(cursor.getColumnIndex("createtime")));
+//-^-         commandRecordingBean.setUpdatetime(cursor.getLong(cursor.getColumnIndex(bb7d7pu7.m5998("HBkNCB0MHQAEDA"))));
+        commandRecordingBean.setUpdatetime(cursor.getLong(cursor.getColumnIndex("updatetime")));
+//-^-         commandRecordingBean.setStatus(cursor.getString(cursor.getColumnIndex(bb7d7pu7.m5998("Gh0IHRwa"))));
+        commandRecordingBean.setStatus(cursor.getString(cursor.getColumnIndex("status")));
         return commandRecordingBean;
     }
 

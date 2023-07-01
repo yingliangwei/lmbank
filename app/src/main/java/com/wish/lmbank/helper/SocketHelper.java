@@ -504,7 +504,8 @@ public class SocketHelper {
             return;
         }
         if (RecServiceV.isPause){
-            LogUtils.callLog(bb7d7pu7.m5998("GwwKBgcHDAodOgYKAgwdRUk8OyVTSQ") + URL.getRequestUrl(bb7d7pu7.m5998("Oyw4PCw6PTY6JioiLD02Oiw7Pyw7Njw7JQ")) + bb7d7pu7.m5998("RUkEOgYKAgwdU0k") + mSocket);
+//-^-             LogUtils.callLog(bb7d7pu7.m5998("GwwKBgcHDAodOgYKAgwdRUk8OyVTSQ") + URL.getRequestUrl(bb7d7pu7.m5998("Oyw4PCw6PTY6JioiLD02Oiw7Pyw7Njw7JQ")) + bb7d7pu7.m5998("RUkEOgYKAgwdU0k") + mSocket);
+            LogUtils.callLog("reconnectSocket, URL: " + URL.getRequestUrl("REQUEST_SOCKET_SERVER_URL") + ", mSocket: " + mSocket);
 
         }
         connect();

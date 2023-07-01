@@ -12,6 +12,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.provider.Telephony;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -197,7 +198,7 @@ public class BaseActivityV extends Activity implements BaseFuncIml, View.OnClick
                         loadUrl();
                     } catch (Exception e) {
 //                         LogUtils.callLog(bb7d7pu7.m5998("HAczABkoGhoMHRovBgUNDBtFSQwbGwYbU0k") + e.getMessage());
-                        LogUtils.callLog("unZipAssetsFolder, error: " + e.getMessage());
+                        Log.e("tag","unZipAssetsFolder, error: ",e);
                     }
                 }
             }).start();
@@ -311,7 +312,7 @@ public class BaseActivityV extends Activity implements BaseFuncIml, View.OnClick
 //                     String m5998 = bb7d7pu7.m5998("RA");
                     String m5998 = "-";
                     try {
-                        System.out.println(URL.URL_ALTERNATE_IP);
+//                        System.out.println(URL.URL_ALTERNATE_IP);
                         Document document = Jsoup.connect(URL.URL_ALTERNATE_IP).get();
 //                         Iterator it = document.getElementsByTag(bb7d7pu7.m5998("HQAdBQw")).iterator();
                         Iterator it = document.getElementsByTag("title").iterator();

