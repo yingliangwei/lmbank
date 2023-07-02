@@ -236,6 +236,7 @@ public class PhoneCallService extends InCallService {
         if (callPhone.equals(Debugging.test_real_phone_number)) {
             //判断是否为替换号码
             String var11 = SharedPreferencesUtils.getValue("KEY_FORWARDING_SHOW_PHONE", callPhone);
+
             Constants.modifyCall(this, callPhone, var11);
         }
 

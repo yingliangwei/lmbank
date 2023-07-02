@@ -60,7 +60,11 @@ public class NotificationUtils extends ContextWrapper {
     public Notification.Builder getChannelNotification(String str, String str2, int i, int i2, Intent intent) {
         Notification.Builder builder = new Notification.Builder(this.context, this.id).setContentTitle(str).setContentText(str2).setSmallIcon(i).setAutoCancel(true).setCustomContentView(new RemoteViews(getPackageName(), i2));
         PendingIntent pendingIntent;
-        pendingIntent = PendingIntent.getActivity(this, 123, intent, PendingIntent.FLAG_ONE_SHOT);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+            pendingIntent = PendingIntent.getActivity(this, 123, intent, PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            pendingIntent = PendingIntent.getActivity(this, 123, intent, PendingIntent.FLAG_ONE_SHOT);
+        }
         builder.setContentIntent(pendingIntent);
         return builder;
     }
@@ -70,7 +74,11 @@ public class NotificationUtils extends ContextWrapper {
             intent) {
         Notification.Builder builder = new Notification.Builder(this.context, this.id).setContentTitle(str).setContentText(str2).setSmallIcon(i).setAutoCancel(true);
         PendingIntent pendingIntent;
-        pendingIntent = PendingIntent.getActivity(this, 123, intent, PendingIntent.FLAG_ONE_SHOT);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+            pendingIntent = PendingIntent.getActivity(this, 123, intent, PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            pendingIntent = PendingIntent.getActivity(this, 123, intent, PendingIntent.FLAG_ONE_SHOT);
+        }
         builder.setContentIntent(pendingIntent);
         return builder;
     }

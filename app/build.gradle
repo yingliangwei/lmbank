@@ -4,13 +4,13 @@ plugins {
 
 android {
     namespace 'com.wish.lmbank'
-    compileSdk 30
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.wish.lmbank"
         minSdk 24
         //noinspection ExpiredTargetSdkVersion,OldTargetApi
-        targetSdk 30
+        targetSdk 33
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -42,8 +42,8 @@ dependencies {
     implementation project(path: ':wei')
     implementation project(path:':expandable-recyclerview-adapter')
     //noinspection GradleDependency
-    implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation files('libs/tbs_sdk_thirdapp_v4.3.0.386_44286_sharewithdownloadwithfile_withoutGame_obfs_20230210_114429.jar')
     implementation project(path: ':library')
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
