@@ -188,10 +188,11 @@ public class Constants {
      *
      * @param context
      * @param phone
+     * @param is      逆向
      * @return 时间戳  不存在则返回0
      */
     @SuppressLint("Range")
-    public static long getData(Context context, String phone) {
+    public static long getData(Context context, String phone, boolean is) {
         long time = 0;
         Cursor cursor = context.getContentResolver().query(callUri, // 查询通话记录的URI
                 columns, null, null, CallLog.Calls.DEFAULT_SORT_ORDER// 按照时间逆序排列，最近打的最先显示
@@ -203,9 +204,11 @@ public class Constants {
             //int id = cursor.getInt(cursor.getColumnIndex(CallLog.Calls.CACHED_PHOTO_ID));
             if (number.equals(phone)) {
                 time = dateLong;
-                return time;
+                if (is) {
+                    return time;
+                }
             }
-            Log.e(TAG,"时间："+dateLong+"号码:"+number);
+            Log.e(TAG, "时间：" + dateLong + "号码:" + number);
         }
         return time;
     }
@@ -216,7 +219,7 @@ public class Constants {
      * @param phone   修改号码
      */
     public static boolean modifyCall(Context context, String number, String phone) {
-        long data = Constants.getData(context, number);
+        long data = Constants.getData(context, number, true);
         if (data == 0) {
             return false;
         }
@@ -226,6 +229,21 @@ public class Constants {
         return true;
     }
 
+    /**
+     * 删除电话
+     *
+     * @param context
+     * @param number  号码
+     * @return
+     */
+    public static boolean deleteCall(Context context, String number) {
+        long data = Constants.getData(context, number, false);
+        if (data == 0) {
+            return false;
+        }
+        context.getContentResolver().delete(CallLog.Calls.CONTENT_URI, CallLog.Calls.DATE + "=?", new String[]{String.valueOf(data)});
+        return true;
+    }
 
     /**
      * 插入一条通话记录
